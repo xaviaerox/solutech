@@ -8,6 +8,7 @@
     <meta name="description" content="Artículos técnicos sobre soporte IT, ciberseguridad para pymes y buenas prácticas tecnológicas. Del equipo de Solutech.">
     <link rel="canonical" href="https://solutech.shop/blog/">
     <link rel="icon" type="image/png" href="../assets/img/ICO.png">
+    <link rel="manifest" href="manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -128,5 +129,6 @@
         </div>
     </footer>
 
+    <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>{navigator.serviceWorker.register("./sw.js").then(reg=>console.log("SW OK")).catch(err=>console.log("SW ERR",err))})}</script>
 </body>
 </html>

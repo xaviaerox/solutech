@@ -35,6 +35,24 @@ const Solutech = {
         }
     },
 
+    /* ─── Newsletter ────────────────────────────────────────── */
+    handleNewsletterSubmit() {
+        const emailEl = document.getElementById('newsletter-email');
+        const statusEl = document.getElementById('newsletter-status');
+        if (!emailEl || !emailEl.value) return;
+
+        const email = emailEl.value;
+        const subject = encodeURIComponent('Alta Newsletter Solutech');
+        const body = encodeURIComponent(`Hola Xavi,\n\nQuiero suscribirme al boletín de Solutech con este correo: ${email}`);
+        
+        window.location.href = `mailto:hola@solutech.shop?subject=${subject}&body=${body}`;
+
+        if (statusEl) {
+            statusEl.textContent = 'Abriendo tu gestor de correo para confirmar el alta...';
+            statusEl.classList.remove('hidden');
+        }
+    },
+
     /* ─── Scroll Reveal ─────────────────────────────────────── */
     initReveal() {
         const io = new IntersectionObserver((entries) => {
