@@ -146,6 +146,15 @@ const SOLUTECH = {
 
     blog: [
         {
+            slug:    'posts/it-murcia-almeria.html',
+            tag:     'Informe Sectorial',
+            date:    '7 May 2026',
+            title:   'Radiografía IT: Pymes en Murcia y Almería',
+            excerpt: 'Análisis de la obsolescencia tecnológica y los riesgos de ciberseguridad en el sector agrícola y logístico del sureste.',
+            readTime: '10 min',
+            image:   'assets/img/it-murcia-almeria.png',
+        },
+        {
             slug:    'posts/soporte-reactivo-coste.html',
             tag:     'Estrategia IT',
             date:    '13 Abr 2026',
