@@ -115,7 +115,7 @@ const Solutech = {
         const el = document.getElementById('pricing-grid');
         if (!el) return;
         el.innerHTML = SOLUTECH.pricing.map(plan => `
-            <div class="glass p-10 rounded-[40px] border ${plan.highlight ? 'border-orange-500/30' : 'border-white/5'} flex flex-col relative overflow-hidden card-hover reveal">
+            <div class="glass p-10 rounded-[40px] border ${plan.highlight ? 'border-orange-500' : 'border-white/5'} flex flex-col relative overflow-hidden card-hover reveal">
                 ${plan.highlight ? `<div class="absolute top-0 right-0 bg-orange-500 text-black font-black text-[9px] px-6 py-2 rounded-bl-2xl uppercase tracking-widest">${plan.badge}</div>` : ''}
                 <p class="text-white/30 text-xs mb-4 uppercase tracking-widest">${plan.target}</p>
                 <h3 class="text-2xl font-bold mb-2">${plan.name}</h3>

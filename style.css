@@ -1,40 +1,28 @@
-/* ============================================
-   SOLUTECH — Design System
-   Versión limpia. Sin duplicados. Sin código muerto.
-   ============================================ */
-
-/* --- Tokens --- */
 :root {
-    --primary:    #f97316;
-    --primary-dk: #ea580c;
-    --bg:         #000000;
-    --bg-2:       #0e0e0e;
-    --bg-3:       #191919;
-    --text:       #ffffff;
-    --text-muted: #ababab;
-    --glass-bg:   rgba(25, 25, 25, 0.6);
-    --glass-bd:   rgba(255, 107, 0, 0.08);
-    --radius-xl:  32px;
-    --radius-lg:  20px;
-    --radius-md:  12px;
-    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --primary:      #ff6b00;
+    --primary-dark: #e65100;
+    --bg:           #0a0a0a;
+    --bg-card:      rgba(25, 25, 25, 0.6);
+    --border:       rgba(255, 107, 0, 0.15);
+    --text:         #ffffff;
+    --text-muted:   rgba(255, 255, 255, 0.5);
+    --radius-xl:    32px;
+    --radius-lg:    20px;
+    --radius-md:    12px;
+    --transition:   0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --- Reset base --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
-
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-}
+html, body { overflow-x: hidden; width: 100%; }
 
 body {
     background: radial-gradient(circle at 50% 0%, #151515 0%, #0a0a0a 100%);
-    color: #fff;
+    color: var(--text);
     line-height: 1.6;
     min-height: 100vh;
+    font-family: 'Inter', sans-serif;
 }
 
 h1, h2, h3, h4, .font-display {
@@ -48,40 +36,49 @@ img { max-width: 100%; display: block; }
 
 /* --- Glassmorphism --- */
 .glass {
-    background: var(--card);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--border);
+    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.4);
 }
 
 /* --- Gradientes de acción --- */
 .btn-primary {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: #fff;
-    font-weight: 700;
-    border-radius: 12px;
-    padding: 14px 28px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    border-radius: var(--radius-md);
+    padding: 14px 32px;
+    transition: var(--transition);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border: none;
     cursor: pointer;
-}
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(248, 113, 22, 0.4);
+    box-shadow: 0 8px 20px -6px rgba(255, 107, 0, 0.3);
 }
 
-/* Alias Tailwind-compatible */
-.orange-gradient { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); }
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 28px -5px rgba(255, 107, 0, 0.5);
+    filter: brightness(1.1);
+}
+
+.orange-gradient { 
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); 
+    box-shadow: 0 8px 20px -6px rgba(255, 107, 0, 0.3);
+}
+.orange-gradient:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 12px 28px -5px rgba(255, 107, 0, 0.5);
+}
 
 /* --- Text effects --- */
-.text-primary    { color: var(--primary); }
+.text-primary { color: var(--primary); }
 .text-glow-primary {
-    text-shadow:
-        0 0 35px rgba(255, 107, 0, 0.4),
-        0 0 10px rgba(255, 107, 0, 0.2);
+    text-shadow: 0 0 35px rgba(255, 107, 0, 0.4), 0 0 10px rgba(255, 107, 0, 0.2);
 }
 
 /* --- Animations --- */
@@ -121,12 +118,14 @@ img { max-width: 100%; display: block; }
 .card-hover {
     transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
                 box-shadow 0.6s cubic-bezier(0.23, 1, 0.32, 1),
-                border-color 0.6s ease;
+                border-color 0.6s ease,
+                background-color 0.6s ease;
 }
 .card-hover:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 40px rgba(255, 107, 0, 0.12);
     border-color: rgba(255, 107, 0, 0.35);
+    background-color: rgba(35, 35, 35, 0.7);
 }
 
 /* Operational status pulse */
@@ -145,5 +144,4 @@ img { max-width: 100%; display: block; }
     aspect-ratio: 1 / 1;
 }
 
-/* Nav min-height to prevent layout shift */
 #main-nav { min-height: 80px; }
