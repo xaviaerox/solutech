@@ -16,7 +16,7 @@ const SOLUTECH = {
 
     social: {
         instagram: 'https://www.instagram.com/xavi.solutech/',
-        linkedin:  'https://linkedin.com/company/solutech-it',
+        linkedin:  'https://www.linkedin.com/in/xaviaerox',
         whatsapp:  'https://wa.me/34684248465',
         youtube:   'https://www.youtube.com/@solutech-it',
     },
@@ -124,7 +124,7 @@ const SOLUTECH = {
             client:      'Edificio Residencial — Almería',
             title:       'Infraestructura de Red Estructural',
             description: 'Instalación integral de cableado estructurado en edificio de 4 plantas. Habilitación de tomas de alta velocidad en todas las estancias, centralización de rack de comunicaciones y optimización de cobertura WiFi total.',
-            image:       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
+            image:       'assets/img/redes-rack.png',
         },
         {
             tag:         'Software',
@@ -132,7 +132,7 @@ const SOLUTECH = {
             client:      'Stockflow Electrodomésticos',
             title:       'UX/UI para Software de Gestión',
             description: 'Diseño y maquetación de plataforma de gestión de inventario para empresa de climatización. Optimización de flujos de trabajo para almacén y control de stock en tiempo real.',
-            image:       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+            image:       'assets/img/software-ui.png',
         },
         {
             tag:         'Seguridad',
@@ -140,7 +140,7 @@ const SOLUTECH = {
             client:      'Residencial Particular',
             title:       'Videovigilancia IP y Fusión de Fibra',
             description: 'Instalación de sistema de videovigilancia IP de alta definición y despliegue de fibra óptica doméstica. Configuración de perímetros de seguridad electrónica y acceso remoto seguro.',
-            image:       'https://images.unsplash.com/photo-1557597774-9d2739f85a76?auto=format&fit=crop&w=800&q=80',
+            image:       'assets/img/cctv-fiber.png',
         },
     ],
 
@@ -152,7 +152,7 @@ const SOLUTECH = {
             title:   '¿Por qué el soporte reactivo te cuesta dinero?',
             excerpt: 'Cuando la IT solo aparece cuando algo se rompe, pagas mucho más de lo que crees. Descubre el coste oculto del modelo reactivo.',
             readTime: '6 min',
-            image:   'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80',
+            image:   'assets/img/blog-it.png',
         },
     ],
 };

@@ -187,11 +187,15 @@ const Solutech = {
     renderBlogIndex() {
         const el = document.getElementById('blog-grid');
         if (!el) return;
+
+        const isSubdir = document.body.dataset.page === 'blog' || document.body.dataset.page === 'post';
+        const prefix = isSubdir ? '../' : '';
+
         el.innerHTML = SOLUTECH.blog.map(post => `
-            <a href="${post.slug}" class="block rounded-[28px] overflow-hidden card-hover reveal" style="background:rgba(30,30,30,0.5);border:1px solid rgba(255,255,255,0.07);">
+            <a href="${isSubdir ? post.slug : 'blog/' + post.slug}" class="block rounded-[28px] overflow-hidden card-hover reveal" style="background:rgba(30,30,30,0.5);border:1px solid rgba(255,255,255,0.07);">
                 ${ post.image ? `
                 <div class="relative h-48 overflow-hidden">
-                    <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover opacity-80 hover:opacity-95 transition-opacity duration-500" loading="lazy">
+                    <img src="${post.image.startsWith('http') ? post.image : prefix + post.image}" alt="${post.title}" class="w-full h-full object-cover opacity-80 hover:opacity-95 transition-opacity duration-500" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <span class="absolute top-4 left-4 text-[9px] font-black uppercase tracking-widest text-white bg-orange-500 px-3 py-1 rounded-full">${post.tag}</span>
                 </div>` : '' }
