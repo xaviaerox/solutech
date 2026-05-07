@@ -1,74 +1,44 @@
-# Solutech — MSP & Outsourcing IT Platform
+# Solutech — Managed Service Provider & Outsourcing IT
 
-**Plataforma web estática de alta gama para el negocio MSP de Solutech.**
+**Solutech** es una firma boutique de servicios gestionados IT (MSP) especializada en proporcionar infraestructura de alta disponibilidad y ciberseguridad para pequeñas y medianas empresas.
 
-🌐 **Producción:** [solutech.shop](https://solutech.shop)  
-📦 **GitHub Pages:** activar en Settings → Pages → main branch → `/root`
+Nuestra misión es simple: **que la tecnología de tu negocio sea invisible.** Creemos que un departamento IT excelente es aquel que no genera noticias, porque todo funciona exactamente como debería.
 
 ---
 
-## Arquitectura
+## 👤 El Factor Humano: Xavi Alonso
 
-```
-solutech-clean/
-├── index.html          # Inicio
-├── servicios.html      # Planes y precios
-├── nosotros.html       # Sobre Xavi Alonso
-├── soporte.html        # Contacto
-├── privacidad.html     # Política de privacidad
-├── sitemap.xml
-├── robots.txt
-│
-├── style.css           # Design System — fuente única de estilos
-├── data.js             # Datos del negocio — fuente única de contenido
-├── solutech.js         # Motor JS — sin dependencias externas
-│
-├── assets/
-│   └── img/
-│       ├── ICO.png
-│       ├── xavi-alonso.jpg
-│       └── banner.png
-│
-└── blog/
-    ├── index.html
-    ├── assets/
-    │   └── blog.css
-    └── posts/
-        └── soporte-reactivo-coste.html
-```
+Detrás de Solutech no hay un call center, ni un sistema de tickets infinito, ni subcontratas opacas.
 
-## Cómo actualizar contenido
+**Xavi Alonso** es el Fundador y Técnico Superior de Sistemas responsable de cada intervención. Con años de experiencia en infraestructura de red, seguridad perimetral y administración de sistemas, Xavi fundó Solutech bajo una premisa de honestidad técnica absoluta.
 
-**Cambiar precios o testimonios:**  
-Editar únicamente `data.js` → objeto `SOLUTECH.pricing` o `SOLUTECH.testimonials`.
+- **Trato 1:1**: Hablas directamente con el técnico que conoce tu infraestructura.
+- **Enfoque Senior**: Soluciones pensadas para durar, no parches temporales.
+- **Compromiso Local**: Presencia física en el Levante (Almería/Murcia) y capacidad de respuesta nacional remota.
 
-**Añadir un artículo del blog:**  
-1. Crear `blog/posts/nuevo-articulo.html` (copiar estructura de `soporte-reactivo-coste.html`)
-2. Añadir entrada al array `SOLUTECH.blog` en `data.js`
+---
 
-**Actualizar info de contacto o redes sociales:**  
-Editar únicamente `data.js` → objetos `SOLUTECH.brand` y `SOLUTECH.social`.
+## 🛡️ Nuestros Pilares Operativos
 
-## Stack técnico
+### 1. Continuidad de Negocio
+Minimizamos el tiempo de parada. Implementamos sistemas de backup redundantes y planes de recuperación ante desastres para que tu empresa nunca se detenga.
 
-- **HTML5** estático (SSR-style, cero build step)
-- **Tailwind CSS CDN** (utilidades) + `style.css` (design tokens)
-- **Vanilla JS** — Zero frameworks, zero dependencias externas
-- **Google Analytics** G-Q14TRWX9LY
-- **Fonts:** Inter + Space Grotesk via Google Fonts
+### 2. Seguridad Preventiva
+No esperamos a que ocurra un incidente. Monitorizamos proactivamente tus sistemas para detectar y neutralizar amenazas antes de que afecten a tu operativa.
 
-## Deploy en GitHub Pages
+### 3. Infraestructura de Alto Rendimiento
+Desde el cableado estructurado hasta la configuración de servidores cloud, diseñamos redes rápidas, seguras y escalables.
 
-```bash
-# Desde el directorio solutech-clean:
-git init
-git add .
-git commit -m "feat: Solutech clean deploy"
-git branch -M main
-git remote add origin https://github.com/TU_USUARIO/solutech.git
-git push -u origin main
-```
+---
 
-Luego: Settings → Pages → Branch: main → Folder: / (root) → Save
+## 🚀 Filosofía "Premium Lean"
 
-> ⚠️ El VPS en solutech.shop sigue siendo independiente. Este repo es la copia limpia para GitHub Pages.
+Este repositorio representa la evolución técnica de Solutech hacia la **máxima estabilidad**. 
+
+Hemos abandonado las arquitecturas pesadas y dependientes de terceros en favor de un sistema "Lean": código limpio, carga instantánea y una infraestructura resiliente que garantiza que nuestra ventana al mundo (esta web) sea tan estable y eficiente como los sistemas que gestionamos para nuestros clientes.
+
+---
+
+🌐 **Web Oficial:** [solutech.shop](https://solutech.shop)  
+📧 **Contacto:** [hola@solutech.shop](mailto:hola@solutech.shop)  
+📱 **WhatsApp:** [+34 684 248 465](https://wa.me/34684248465)
