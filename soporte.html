@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <style>body{visibility:hidden}#main-nav{min-height:80px}.nav-logo-img{height:32px!important;width:auto!important}.glass{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);background:rgba(25,25,25,0.6)}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto & Soporte — Solutech | Cita Previa Gratuita</title>
+    <meta name="description" content="Solicita una cita previa con Xavi. Primera consulta sin coste. Diagnóstico real de tu infraestructura IT sin compromiso.">
+    <link rel="canonical" href="https://solutech.shop/soporte.html">
+    <link rel="icon" type="image/png" href="assets/img/ICO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js"></script>
+    <script src="solutech.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q14TRWX9LY"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-Q14TRWX9LY');</script>
+</head>
+
+<body data-page="soporte" class="bg-black text-white overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav id="main-nav">
+        <div class="fixed top-0 left-0 w-full z-[100] px-4 py-6" id="nav-wrapper">
+            <div class="max-w-7xl mx-auto glass rounded-[32px] px-8 py-4 flex items-center justify-between shadow-2xl">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="assets/img/ICO.png" alt="Solutech Logo" class="nav-logo-img">
+                    <div class="flex flex-col">
+                        <span class="text-white font-black tracking-tighter text-xl leading-none group-hover:text-orange-500 transition-colors">SOLUTECH</span>
+                        <span class="text-[8px] text-white/20 uppercase tracking-[0.4em] font-bold mt-0.5">Especialistas IT</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center gap-10">
+                    <a href="index.html"    class="text-[11px] font-black uppercase tracking-[0.2em] text-white/40 hover:text-white transition-colors">Inicio</a>
+                    <a href="servicios.html"class="text-[11px] font-black uppercase tracking-[0.2em] text-white/40 hover:text-white transition-colors">Planes</a>
+                    <a href="nosotros.html" class="text-[11px] font-black uppercase tracking-[0.2em] text-white/40 hover:text-white transition-colors">Sobre Mí</a>
+                    <a href="blog/"         class="text-[11px] font-black uppercase tracking-[0.2em] text-white/40 hover:text-white transition-colors">Blog</a>
+                    <a href="soporte.html"  class="text-[11px] font-black uppercase tracking-[0.2em] text-orange-500">Contacto</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="soporte.html" class="hidden lg:block btn-primary">Cita Previa</a>
+                    <button id="nav-mobile-btn" class="md:hidden text-white p-2" aria-label="Abrir menú">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div id="nav-mobile" class="hidden mt-3 glass rounded-[28px] p-8 flex flex-col gap-6 md:hidden shadow-2xl">
+                <a href="index.html"    class="text-xl font-black text-white">Inicio</a>
+                <a href="servicios.html"class="text-xl font-black text-white">Planes</a>
+                <a href="nosotros.html" class="text-xl font-black text-white">Sobre Mí</a>
+                <a href="blog/"         class="text-xl font-black text-white">Blog</a>
+                <a href="soporte.html"  class="text-xl font-black text-orange-500">Contacto</a>
+                <a href="soporte.html"  class="btn-primary text-center mt-2">Cita Previa</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-36 max-w-7xl mx-auto px-6 pb-32">
+
+        <!-- Header -->
+        <div class="mb-20 max-w-2xl reveal">
+            <span class="text-orange-500 font-black tracking-[0.3em] uppercase text-[10px]">Hablemos</span>
+            <h1 class="text-5xl md:text-6xl font-bold mt-4 tracking-tight leading-tight">
+                Primera consulta.<br>
+                <span class="text-orange-500">Sin coste. Sin compromiso.</span>
+            </h1>
+            <p class="text-white/40 mt-6 text-lg leading-relaxed font-light">
+                Cuéntame tu situación. En menos de 24 horas tienes respuesta directa — sin formularios, sin call centers.
+            </p>
+        </div>
+
+        <!-- Contact layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+            <!-- Contact form -->
+            <div class="glass p-10 rounded-[40px] reveal" id="reservas">
+                <h2 class="text-2xl font-bold mb-8 tracking-tight">Envíame tu consulta</h2>
+                <form id="contact-form" class="space-y-5">
+                    <div>
+                        <label class="text-xs font-bold uppercase tracking-wider text-white/40 mb-2 block" for="nombre">Nombre</label>
+                        <input id="nombre" name="nombre" type="text" required placeholder="Tu nombre"
+                               class="w-full glass rounded-xl px-5 py-3 text-white text-sm placeholder-white/20 outline-none focus:border-orange-500 border border-white/5 transition-colors">
+                    </div>
+                    <div>
+                        <label class="text-xs font-bold uppercase tracking-wider text-white/40 mb-2 block" for="empresa">Empresa (opcional)</label>
+                        <input id="empresa" name="empresa" type="text" placeholder="Nombre de tu empresa"
+                               class="w-full glass rounded-xl px-5 py-3 text-white text-sm placeholder-white/20 outline-none focus:border-orange-500 border border-white/5 transition-colors">
+                    </div>
+                    <div>
+                        <label class="text-xs font-bold uppercase tracking-wider text-white/40 mb-2 block" for="email">Email</label>
+                        <input id="email" name="email" type="email" required placeholder="tu@email.com"
+                               class="w-full glass rounded-xl px-5 py-3 text-white text-sm placeholder-white/20 outline-none focus:border-orange-500 border border-white/5 transition-colors">
+                    </div>
+                    <div>
+                        <label class="text-xs font-bold uppercase tracking-wider text-white/40 mb-2 block" for="mensaje">¿Qué necesitas?</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Cuéntame tu situación brevemente..."
+                                  class="w-full glass rounded-xl px-5 py-3 text-white text-sm placeholder-white/20 outline-none focus:border-orange-500 border border-white/5 transition-colors resize-none"></textarea>
+                    </div>
+                    <button type="submit" id="form-submit" class="btn-primary w-full py-4 text-sm">
+                        Enviar consulta
+                    </button>
+                    <p id="form-status" class="text-center text-sm text-white/40 hidden"></p>
+                </form>
+            </div>
+
+            <!-- Contact info -->
+            <div class="space-y-8 reveal">
+                <!-- WhatsApp CTA -->
+                <a href="https://wa.me/34684248465?text=Hola%20Xavi%2C%20me%20interesa%20una%20consulta%20de%20soporte%20IT"
+                   target="_blank" rel="noopener"
+                   class="glass p-8 rounded-[28px] flex items-center gap-6 hover:border-green-500/30 transition-colors card-hover block">
+                    <div class="w-14 h-14 rounded-2xl bg-green-500/15 flex items-center justify-center flex-shrink-0">
+                        <svg class="w-7 h-7 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412 0 6.556-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.29-4.115l.374.223c1.528.91 3.284 1.39 5.084 1.391 5.346 0 9.7-4.354 9.7-9.7 0-5.346-4.353-9.699-9.7-9.699-5.347 0-9.702 4.354-9.702 9.7 0 2.036.634 4.026 1.833 5.713l.245.345-.997 3.644 3.738-.981zm10.51-6.195c-.29-.145-1.711-.844-1.976-.94-.265-.096-.458-.145-.65.145-.192.291-.745.94-.913 1.133-.169.193-.337.217-.627.072-.29-.145-1.225-.451-2.333-1.441-.861-.769-1.442-1.718-1.611-2.008-.168-.29-.018-.447.127-.591.13-.13.29-.338.434-.506.145-.169.193-.289.289-.482.096-.193.048-.362-.024-.506-.072-.145-.65-1.56-.89-2.14-.235-.564-.471-.487-.65-.496-.168-.008-.361-.01-.553-.01-.192 0-.506.072-.771.361-.264.29-.814.892-.814 2.169 0 1.277.928 2.51 1.056 2.679.128.169 1.826 2.787 4.425 3.91 1.48.641 2.502.94 3.32.96 1.131.026 2.176-.051 2.996-.173.914-.136 1.71-.844 1.976-1.58.265-.735.265-1.365.185-1.49-.072-.125-.265-.199-.554-.344z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-bold text-white">WhatsApp directo</p>
+                        <p class="text-white/40 text-sm mt-1">+34 684 248 465 — Respondo en el día</p>
+                    </div>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:hola@solutech.shop"
+                   class="glass p-8 rounded-[28px] flex items-center gap-6 hover:border-orange-500/20 transition-colors card-hover block">
+                    <div class="w-14 h-14 rounded-2xl bg-orange-500/15 flex items-center justify-center flex-shrink-0">
+                        <svg class="w-7 h-7 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-bold text-white">Email</p>
+                        <p class="text-white/40 text-sm mt-1">hola@solutech.shop</p>
+                    </div>
+                </a>
+
+                <!-- Guarantee badge -->
+                <div class="glass p-8 rounded-[28px]">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-3 h-3 rounded-full bg-emerald-500 status-pulse"></div>
+                        <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest">Garantía de respuesta</span>
+                    </div>
+                    <p class="text-white font-bold text-2xl mb-2">&lt; 2 horas</p>
+                    <p class="text-white/30 text-sm">En horario laboral. Para emergencias críticas, disponibilidad ampliada.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#050505] pt-24 pb-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-end mb-16">
+                <div class="flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/[0.02] border border-white/5">
+                    <span class="relative flex h-1.5 w-1.5">
+                        <span class="status-pulse absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+                    </span>
+                    <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-white/30">Infraestructura Operativa: Online</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="assets/img/ICO.png" class="nav-logo-img" alt="Solutech">
+                        <span class="font-bold text-2xl tracking-tighter">SOLUTECH</span>
+                    </div>
+                    <p class="text-white/30 text-sm leading-relaxed">Informática con nombre y apellidos. Soporte preventivo y ciberseguridad para pymes.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-xs uppercase tracking-widest">Servicios</h4>
+                    <ul class="space-y-3">
+                        <li><a href="servicios.html" class="text-white/30 hover:text-orange-500 transition-colors text-sm">Pack Esencial</a></li>
+                        <li><a href="servicios.html" class="text-white/30 hover:text-orange-500 transition-colors text-sm">Pack Profesional</a></li>
+                        <li><a href="servicios.html" class="text-white/30 hover:text-orange-500 transition-colors text-sm">Blindaje Total</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-xs uppercase tracking-widest">Compañía</h4>
+                    <ul class="space-y-3">
+                        <li><a href="nosotros.html" class="text-white/30 hover:text-orange-500 transition-colors text-sm">Sobre Mí</a></li>
+                        <li><a href="blog/"         class="text-white/30 hover:text-orange-500 transition-colors text-sm">Blog IT</a></li>
+                        <li><a href="soporte.html"  class="text-white/30 hover:text-orange-500 transition-colors text-sm">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-xs uppercase tracking-widest">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="privacidad.html" class="text-white/30 hover:text-orange-500 transition-colors text-sm">Privacidad</a></li>
+                        <li><a href="sitemap.xml"     class="text-white/30 hover:text-orange-500 transition-colors text-sm">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-[10px] text-white/20 uppercase tracking-[0.2em]">© 2026 Solutech IT · <span class="text-emerald-500/50 italic">Garantía de Respuesta: &lt; 2h</span></p>
+                <p class="text-[10px] text-white/20 uppercase tracking-[0.15em] italic">Especialistas en continuidad de negocio</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Form handler — static mailto fallback, no external APIs -->
+    <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const nombre  = document.getElementById('nombre').value.trim();
+        const empresa = document.getElementById('empresa').value.trim();
+        const email   = document.getElementById('email').value.trim();
+        const mensaje = document.getElementById('mensaje').value.trim();
+
+        const body = encodeURIComponent(
+            `Nombre: ${nombre}\nEmpresa: ${empresa || 'No indicada'}\nEmail: ${email}\n\nMensaje:\n${mensaje}`
+        );
+        const subject = encodeURIComponent(`Consulta IT — ${nombre}`);
+
+        // Open mailto — works without any backend
+        window.location.href = `mailto:hola@solutech.shop?subject=${subject}&body=${body}`;
+
+        const status = document.getElementById('form-status');
+        status.textContent = 'Redirigiendo a tu cliente de correo…';
+        status.classList.remove('hidden');
+    });
+    </script>
+
+</body>
+</html>
