@@ -24,12 +24,12 @@ const SOLUTECH = {
     founder: {
         name: 'Xavi Alonso',
         role: 'Fundador & Técnico Superior de Sistemas',
-        bio:  'Técnico superior informático especializado en infraestructura y seguridad. Fundé Solutech con un objetivo claro: que las empresas pequeñas y los profesionales tengan acceso al mismo nivel de atención técnica que una gran corporación, pero con el trato directo y la honestidad de alguien que se juega su nombre en cada trabajo.',
+        bio:  'Llevo años metido en infraestructura, redes y seguridad. He trabajado en proyectos de todo tipo — desde el cableado estructurado de un edificio hasta la securización de entornos con datos sensibles. En algún momento decidí que prefería trabajar directamente con las empresas, sin capas de por medio. Así nació Solutech: sin socios, sin subcontratas, sin call centers. Cuando contratas soporte, hablas conmigo. Cuando hay un problema, lo resuelvo yo.',
         values: [
-            'Trato directo — sin call centers, sin intermediarios',
-            'Precio cerrado — sabes cuánto cuesta antes de empezar',
-            'Sin tecnicismos — te explico todo en lenguaje normal',
-            'Presencia real — estoy aquí, no en una oficina remota',
+            'Trato directo — sin intermediarios ni delegaciones',
+            'Precio cerrado antes de empezar — sin sorpresas en la factura',
+            'Diagnóstico honesto — si no lo necesitas, te lo digo',
+            'Presencia física en el Levante, remoto avanzado a nivel nacional',
         ],
     },
 
@@ -116,24 +116,31 @@ const SOLUTECH = {
         },
     ],
 
-    testimonials: [
+    // Casos reales de trabajo — sin reseñas inventadas
+    portfolio: [
         {
-            initial: 'A',
-            name:    'Antonio R.',
-            role:    'Empresario — Almería',
-            text:    'Xavi nos da la tranquilidad de saber que si algo falla, él estará aquí para solucionarlo. Llevamos 8 meses con el plan Profesional y no hemos tenido ni un solo día de parada.',
+            tag:         'Redes',
+            label:       'Instalación',
+            client:      'Edificio Residencial — Almería',
+            title:       'Infraestructura de Red Estructural',
+            description: 'Instalación integral de cableado estructurado en edificio de 4 plantas. Habilitación de tomas de alta velocidad en todas las estancias, centralización de rack de comunicaciones y optimización de cobertura WiFi total.',
+            image:       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
         },
         {
-            initial: 'L',
-            name:    'Lucía M.',
-            role:    'Autónoma — Murcia',
-            text:    'Servicio honesto. Me explicó qué fallaba sin tecnicismos y el precio fue exactamente el presupuestado. Ahora tengo mis copias de seguridad automatizadas y duermo tranquila.',
+            tag:         'Software',
+            label:       'Producto',
+            client:      'Stockflow Electrodomésticos',
+            title:       'UX/UI para Software de Gestión',
+            description: 'Diseño y maquetación de plataforma de gestión de inventario para empresa de climatización. Optimización de flujos de trabajo para almacén y control de stock en tiempo real.',
+            image:       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
         },
         {
-            initial: 'C',
-            name:    'Carlos D.',
-            role:    'Director de Asesoría — Almería',
-            text:    'Necesitábamos cumplir con el RGPD y no sabíamos por dónde empezar. Xavi nos hizo la auditoría, implementó todo y nos dejó la documentación lista para cualquier inspección.',
+            tag:         'Seguridad',
+            label:       'Sistemas',
+            client:      'Residencial Particular',
+            title:       'Videovigilancia IP y Fusión de Fibra',
+            description: 'Instalación de sistema de videovigilancia IP de alta definición y despliegue de fibra óptica doméstica. Configuración de perímetros de seguridad electrónica y acceso remoto seguro.',
+            image:       'https://images.unsplash.com/photo-1557597774-9d2739f85a76?auto=format&fit=crop&w=800&q=80',
         },
     ],
 
@@ -145,6 +152,7 @@ const SOLUTECH = {
             title:   '¿Por qué el soporte reactivo te cuesta dinero?',
             excerpt: 'Cuando la IT solo aparece cuando algo se rompe, pagas mucho más de lo que crees. Descubre el coste oculto del modelo reactivo.',
             readTime: '6 min',
+            image:   'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80',
         },
     ],
 };

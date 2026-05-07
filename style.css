@@ -31,18 +31,14 @@ html, body {
 }
 
 body {
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    background: radial-gradient(circle at 50% 0%, #151515 0%, #0a0a0a 100%);
+    color: #fff;
     line-height: 1.6;
-    letter-spacing: -0.01em;
-    visibility: hidden; /* Anti-FOUC — solutech-main.js lo revierte en DOMContentLoaded */
+    min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, .font-display {
-    font-family: 'Space Grotesk', 'Outfit', sans-serif;
-    letter-spacing: -0.035em;
+h1, h2, h3, h4, .font-display {
+    font-family: 'Space Grotesk', sans-serif;
     line-height: 1.1;
     text-wrap: balance;
 }
@@ -52,34 +48,33 @@ img { max-width: 100%; display: block; }
 
 /* --- Glassmorphism --- */
 .glass {
-    background: var(--glass-bg);
+    background: var(--card);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-bd);
+    border: 1px solid var(--border);
 }
 
 /* --- Gradientes de acción --- */
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dk) 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: #fff;
     font-weight: 700;
-    border-radius: var(--radius-md);
-    padding: 0.75rem 1.75rem;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    transition: filter var(--transition), box-shadow var(--transition), transform var(--transition);
-    display: inline-block;
+    border-radius: 12px;
+    padding: 14px 28px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
 }
 .btn-primary:hover {
-    filter: brightness(1.12);
-    box-shadow: 0 10px 40px -10px rgba(249, 115, 22, 0.5);
-    transform: scale(1.03);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(248, 113, 22, 0.4);
 }
 
 /* Alias Tailwind-compatible */
-.orange-gradient { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dk) 100%); }
-.orange-gradient:hover { filter: brightness(1.12); }
+.orange-gradient { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); }
 
 /* --- Text effects --- */
 .text-primary    { color: var(--primary); }
@@ -89,42 +84,29 @@ img { max-width: 100%; display: block; }
         0 0 10px rgba(255, 107, 0, 0.2);
 }
 
-/* --- Backgrounds --- */
-.animated-mesh {
-    background: linear-gradient(-45deg, #000000, #051923, #001219, #0a1f28);
-    background-size: 400% 400%;
-    animation: meshFlow 15s ease infinite;
-}
-@keyframes meshFlow {
-    0%   { background-position: 0%   50%; }
-    50%  { background-position: 100% 50%; }
-    100% { background-position: 0%   50%; }
-}
-
 /* --- Animations --- */
-/* Scroll reveal */
 .reveal {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Staggered children */
 .reveal-group > * {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.reveal-group > *:nth-child(1) { transition-delay: 0.05s; }
-.reveal-group > *:nth-child(2) { transition-delay: 0.12s; }
-.reveal-group > *:nth-child(3) { transition-delay: 0.19s; }
-.reveal-group > *:nth-child(4) { transition-delay: 0.26s; }
 .reveal-group.active > * { opacity: 1; transform: translateY(0); }
+
+/* Delays for groups */
+.reveal-group.active > *:nth-child(1) { transition-delay: 0.1s; }
+.reveal-group.active > *:nth-child(2) { transition-delay: 0.2s; }
+.reveal-group.active > *:nth-child(3) { transition-delay: 0.3s; }
+.reveal-group.active > *:nth-child(4) { transition-delay: 0.4s; }
 
 /* Hero image entrance */
 .hero-reveal {

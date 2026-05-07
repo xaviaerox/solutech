@@ -70,7 +70,7 @@ const Solutech = {
     /* ─── Index Page ────────────────────────────────────────── */
     renderIndex() {
         this._renderServices('services-grid');
-        this._renderTestimonials('testimonials-grid');
+        this._renderPortfolio('portfolio-grid');
     },
 
     _renderServices(containerId) {
@@ -88,21 +88,23 @@ const Solutech = {
         this.initReveal();
     },
 
-    _renderTestimonials(containerId) {
+    _renderPortfolio(containerId) {
         const el = document.getElementById(containerId);
-        if (!el) return;
-        el.innerHTML = SOLUTECH.testimonials.map(t => `
-            <div class="glass p-8 rounded-[28px] reveal">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-12 h-12 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center font-black text-lg">
-                        ${t.initial}
-                    </div>
-                    <div>
-                        <p class="font-bold text-sm">${t.name}</p>
-                        <p class="text-white/30 text-xs">${t.role}</p>
+        if (!el || !SOLUTECH.portfolio) return;
+        el.innerHTML = SOLUTECH.portfolio.map(p => `
+            <div class="glass rounded-[28px] overflow-hidden card-hover reveal">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover opacity-70 hover:opacity-90 transition-opacity duration-500">
+                    <div class="absolute top-4 left-4 flex gap-2">
+                        <span class="text-[9px] font-black uppercase tracking-widest bg-orange-500 text-white px-3 py-1 rounded-full">${p.tag}</span>
+                        <span class="text-[9px] font-black uppercase tracking-widest bg-white/10 text-white/70 px-3 py-1 rounded-full">${p.label}</span>
                     </div>
                 </div>
-                <p class="text-white/60 text-sm leading-relaxed italic">"${t.text}"</p>
+                <div class="p-7">
+                    <p class="text-white/30 text-xs uppercase tracking-widest mb-2">${p.client}</p>
+                    <h3 class="text-lg font-bold mb-3 tracking-tight">${p.title}</h3>
+                    <p class="text-white/40 text-sm leading-relaxed">${p.description}</p>
+                </div>
             </div>
         `).join('');
         this.initReveal();
@@ -153,9 +155,11 @@ const Solutech = {
         if (bioEl)  bioEl.textContent  = f.bio;
         if (valsEl) {
             valsEl.innerHTML = f.values.map(v => `
-                <li class="flex items-center gap-3 text-white/60 text-sm">
-                    <span class="w-1.5 h-1.5 rounded-full bg-orange-500 flex-shrink-0"></span>
-                    ${v}
+                <li class="flex items-start gap-3 text-white/60 text-sm leading-relaxed">
+                    <svg class="w-4 h-4 text-orange-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>${v}</span>
                 </li>
             `).join('');
         }
@@ -166,18 +170,24 @@ const Solutech = {
         const el = document.getElementById('blog-grid');
         if (!el) return;
         el.innerHTML = SOLUTECH.blog.map(post => `
-            <a href="${post.slug}" class="glass rounded-[28px] overflow-hidden card-hover reveal block">
+            <a href="${post.slug}" class="block rounded-[28px] overflow-hidden card-hover reveal" style="background:rgba(30,30,30,0.5);border:1px solid rgba(255,255,255,0.07);">
+                ${ post.image ? `
+                <div class="relative h-48 overflow-hidden">
+                    <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover opacity-80 hover:opacity-95 transition-opacity duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <span class="absolute top-4 left-4 text-[9px] font-black uppercase tracking-widest text-white bg-orange-500 px-3 py-1 rounded-full">${post.tag}</span>
+                </div>` : '' }
                 <div class="p-8">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="text-[9px] font-black uppercase tracking-widest text-orange-500 border border-orange-500/30 px-3 py-1 rounded-full">
-                            ${post.tag}
-                        </span>
-                        <span class="text-white/20 text-xs">${post.date}</span>
+                    <div class="flex items-center gap-3 mb-4 ${ post.image ? '' : '' }">
+                        ${ !post.image ? `<span class="text-[9px] font-black uppercase tracking-widest text-orange-500 border border-orange-500/30 px-3 py-1 rounded-full">${post.tag}</span>` : '' }
+                        <span class="text-white/30 text-xs">${post.date}</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 leading-tight">${post.title}</h3>
-                    <p class="text-white/40 text-sm leading-relaxed mb-4">${post.excerpt}</p>
-                    <span class="text-orange-500 text-xs font-bold uppercase tracking-wider">
-                        Leer artículo → (${post.readTime})
+                    <h3 class="text-xl font-bold mb-3 leading-tight text-white">${post.title}</h3>
+                    <p class="text-white/50 text-sm leading-relaxed mb-5">${post.excerpt}</p>
+                    <span class="inline-flex items-center gap-1.5 text-orange-500 text-xs font-bold uppercase tracking-wider">
+                        Leer artículo
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        <span class="text-white/20 font-normal normal-case tracking-normal">${post.readTime}</span>
                     </span>
                 </div>
             </a>
