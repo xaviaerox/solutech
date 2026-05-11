@@ -1,0 +1,23 @@
+{
+  "name": "Solutech — Tu Informático de Confianza",
+  "short_name": "Solutech",
+  "description": "Soporte informático, ciberseguridad y mantenimiento para empresas y autónomos.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#f87116",
+  "icons": [
+    {
+      "src": "assets/img/ICO.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/img/ICO.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

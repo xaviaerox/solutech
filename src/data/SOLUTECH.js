@@ -3,7 +3,7 @@
  * Fuente única de verdad para todos los datos del sitio.
  * Edita aquí para actualizar precios, testimonios, servicios, etc.
  */
-const SOLUTECH = {
+export const SOLUTECH = {
 
     brand: {
         name:     'Solutech',
