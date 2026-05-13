@@ -67,26 +67,26 @@
 <section class="problems r" id="problema">
   <div class="section-tag">El problema</div>
   <h2 class="section-h">Lo que le pasa a <em>tu empresa</em> ahora mismo</h2>
-  <div class="prob-grid">
-    <div class="prob">
-      <div class="prob-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-      <div class="prob-t">Todo roto, nadie avisa</div>
-      <div class="prob-d">Te enteras de los fallos cuando ya afectan al negocio. Sin monitorización, la reacción siempre llega tarde.</div>
+  <div class="svc-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+    <div class="svc">
+      <div class="svc-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+      <div class="svc-name" style="font-size: 20px;">Todo roto, nadie avisa</div>
+      <div class="svc-desc">Te enteras de los fallos cuando ya afectan al negocio. Sin monitorización, la reacción siempre llega tarde.</div>
     </div>
-    <div class="prob">
-      <div class="prob-ico"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
-      <div class="prob-t">Copias de seguridad de mentira</div>
-      <div class="prob-d">El pendrive en el cajón no cuenta. El ransomware no distingue entre empresas grandes y pequeñas.</div>
+    <div class="svc">
+      <div class="svc-icon-wrap"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+      <div class="svc-name" style="font-size: 20px;">Copias de seguridad de mentira</div>
+      <div class="svc-desc">El pendrive en el cajón no cuenta. El ransomware no distingue entre empresas grandes y pequeñas.</div>
     </div>
-    <div class="prob">
-      <div class="prob-ico"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-      <div class="prob-t">Contraseñas sin control</div>
-      <div class="prob-d">Post-its, Excel sin cifrar, contraseñas compartidas por WhatsApp. Una brecha esperando a ocurrir.</div>
+    <div class="svc">
+      <div class="svc-icon-wrap"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+      <div class="svc-name" style="font-size: 20px;">Contraseñas sin control</div>
+      <div class="svc-desc">Post-its, Excel sin cifrar, contraseñas compartidas por WhatsApp. Una brecha esperando a ocurrir.</div>
     </div>
-    <div class="prob">
-      <div class="prob-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-      <div class="prob-t">Tiempo perdido cada día</div>
-      <div class="prob-d">Software desactualizado, procesos repetitivos, herramientas que no se hablan entre sí.</div>
+    <div class="svc">
+      <div class="svc-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <div class="svc-name" style="font-size: 20px;">Tiempo perdido cada día</div>
+      <div class="svc-desc">Software desactualizado, procesos repetitivos, herramientas que no se hablan entre sí.</div>
     </div>
   </div>
 </section>
@@ -159,7 +159,7 @@
 
 <!-- RISK SIMULATOR -->
 <section class="risk r" id="simulador">
-  <div class="risk-card glass">
+  <div class="risk-card">
     <div id="risk-sim-content">
       <div class="section-tag">Autodiagnóstico</div>
       <h3 class="risk-h">Calcula el riesgo de tu empresa</h3>
@@ -169,63 +169,23 @@
   </div>
 </section>
 
-<style>
-.meth-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-top: 60px; }
-.meth-step { position: relative; padding: 32px; background: var(--s2); border: 1px solid var(--br); border-radius: 24px; transition: all 0.3s ease; }
-.meth-step:hover { border-color: var(--o); background: rgba(248, 113, 22, 0.05); }
-.meth-num { font-family: var(--f-m); color: var(--o); font-size: 14px; font-weight: 700; margin-bottom: 16px; opacity: 0.5; }
-.meth-t { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
-.meth-d { font-size: 13px; color: var(--ts); line-height: 1.6; }
-
-.risk { padding: 80px 0; }
-.risk-card { max-width: 600px; margin: 0 auto; padding: 60px; text-align: center; border-radius: 40px; border: 1px solid var(--br); }
-.risk-h { font-size: 24px; font-weight: 700; margin: 16px 0; }
-.risk-p { color: var(--ts); font-size: 14px; margin-bottom: 32px; }
-
-.sim-btn { display: block; width: 100%; padding: 16px; background: var(--s3); border: 1px solid var(--br); border-radius: 12px; color: var(--t); margin-bottom: 8px; text-align: left; transition: all 0.2s; cursor: pointer; }
-.sim-btn:hover { border-color: var(--o); background: var(--s2); }
-</style>
-
 <script>
 let step = 1;
 const answers = {};
-
-function startSim() {
-  renderStep();
-}
-
+function startSim() { renderStep(); }
 function simSet(s, val) {
   answers[s] = val;
   step++;
   renderStep();
 }
-
 function renderStep() {
   const container = document.getElementById('risk-sim-content');
   if (step === 1) {
-    container.innerHTML = `
-      <h4 class="risk-h">Paso 1: Dimensión</h4>
-      <p class="risk-p">¿Cuántos equipos dependen de tu conexión principal?</p>
-      <button onclick="simSet(1, '1-5')" class="sim-btn">1 - 5 equipos</button>
-      <button onclick="simSet(1, '5-20')" class="sim-btn">5 - 20 equipos</button>
-      <button onclick="simSet(1, '+20')" class="sim-btn">Más de 20 equipos</button>
-    `;
+    container.innerHTML = `<h4 class="risk-h">Paso 1: Dimensión</h4><p class="risk-p">¿Cuántos equipos dependen de tu conexión principal?</p><button onclick="simSet(1, '1-5')" class="sim-btn">1 - 5 equipos</button><button onclick="simSet(1, '5-20')" class="sim-btn">5 - 20 equipos</button><button onclick="simSet(1, '+20')" class="sim-btn">Más de 20 equipos</button>`;
   } else if (step === 2) {
-    container.innerHTML = `
-      <h4 class="risk-h">Paso 2: Continuidad</h4>
-      <p class="risk-p">¿Tienes copias de seguridad externas automatizadas?</p>
-      <button onclick="simSet(2, 'Si')" class="sim-btn">Sí, verificadas diariamente</button>
-      <button onclick="simSet(2, 'Incierto')" class="sim-btn">Tengo algo, pero no estoy seguro</button>
-      <button onclick="simSet(2, 'No')" class="sim-btn">No tengo copias externas</button>
-    `;
+    container.innerHTML = `<h4 class="risk-h">Paso 2: Continuidad</h4><p class="risk-p">¿Tienes copias de seguridad externas automatizadas?</p><button onclick="simSet(2, 'Si')" class="sim-btn">Sí, verificadas diariamente</button><button onclick="simSet(2, 'Incierto')" class="sim-btn">Tengo algo, pero no estoy seguro</button><button onclick="simSet(2, 'No')" class="sim-btn">No tengo copias externas</button>`;
   } else if (step === 3) {
-    container.innerHTML = `
-      <h4 class="risk-h">Paso 3: Estabilidad</h4>
-      <p class="risk-p">¿Has sufrido lentitud o bloqueos en el último mes?</p>
-      <button onclick="simSet(3, 'No')" class="sim-btn">Todo funciona fluido</button>
-      <button onclick="simSet(3, 'A veces')" class="sim-btn">A veces (afecta un poco)</button>
-      <button onclick="simSet(3, 'Frecuente')" class="sim-btn">Frecuentemente (perdemos tiempo)</button>
-    `;
+    container.innerHTML = `<h4 class="risk-h">Paso 3: Estabilidad</h4><p class="risk-p">¿Has sufrido lentitud o bloqueos en el último mes?</p><button onclick="simSet(3, 'No')" class="sim-btn">Todo funciona fluido</button><button onclick="simSet(3, 'A veces')" class="sim-btn">A veces (afecta un poco)</button><button onclick="simSet(3, 'Frecuente')" class="sim-btn">Frecuentemente (perdemos tiempo)</button>`;
   } else {
     let risk = 20;
     if (answers[1] === '5-20') risk += 15;
@@ -235,15 +195,8 @@ function renderStep() {
     if (answers[3] === 'A veces') risk += 15;
     if (answers[3] === 'Frecuente') risk += 30;
     risk = Math.min(risk, 100);
-    
     const color = risk > 70 ? '#ef4444' : risk > 40 ? '#f97316' : '#10b981';
-    
-    container.innerHTML = `
-      <div style="font-size: 48px; font-weight: 900; color: ${color}; margin-bottom: 10px;">${risk}%</div>
-      <h4 class="risk-h">Riesgo Detectado</h4>
-      <p class="risk-p">Tu infraestructura presenta vulnerabilidades que podrían comprometer tu negocio.</p>
-      <a href="#contacto" class="btn-p" style="display:inline-block; width: 100%; text-decoration:none;">Solicitar Auditoría Gratis</a>
-    `;
+    container.innerHTML = `<div style="font-size: 48px; font-weight: 900; color: ${color}; margin-bottom: 10px;">${risk}%</div><h4 class="risk-h">Riesgo Detectado</h4><p class="risk-p">Tu infraestructura presenta vulnerabilidades que podrían comprometer tu negocio.</p><a href="#contacto" class="btn-p" style="display:inline-block; width: 100%; text-decoration:none;">Solicitar Auditoría Gratis</a>`;
   }
 }
 </script>
@@ -292,16 +245,6 @@ function renderStep() {
     {{ end }}
   </div>
 </section>
-
-<style>
-.test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 60px; }
-.test-card { padding: 40px; background: var(--s2); border: 1px solid var(--br); border-radius: 32px; display: flex; flex-direction: column; justify-content: space-between; }
-.test-text { font-size: 14px; line-height: 1.6; color: var(--ts); margin-bottom: 32px; font-style: italic; }
-.test-author { display: flex; align-items: center; gap: 16px; }
-.test-initial { width: 40px; h: 40px; border-radius: 12px; background: var(--o-a); color: var(--o); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
-.test-name { font-size: 13px; font-weight: 700; }
-.test-role { font-size: 10px; color: var(--ts); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
-</style>
 
 <!-- BLOG -->
 <section class="blog r" id="blog">
