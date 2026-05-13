@@ -24,7 +24,13 @@ dist/
 .vscode/
 .idea/
 
+# Hugo
+public/
+resources/
+hugo_stats.json
+
 # Legacy & Reference (Private)
 .old/
 private/
 scratch/
+.docs_ai/
