@@ -1,0 +1,14 @@
+name: Xavi Alonso
+role: Fundador & Técnico Superior de Sistemas
+location: Almería & Murcia
+bio: Técnico superior informático especializado en infraestructura y seguridad. Después de años trabajando en proyectos de sistemas complejos, fundé Solutech con una idea clara: que las empresas pequeñas y los profesionales de Almería y Murcia tengan acceso al mismo nivel de atención técnica que una gran corporación, pero con el trato directo y la honestidad de alguien que se juega su nombre en cada trabajo.
+values:
+  - title: Cuando me contratas, hablas conmigo
+    desc: Sin call centers. Sin técnicos diferentes cada vez. Yo conozco tu red y entiendo tu negocio.
+    icon: <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+  - title: Precio cerrado antes de empezar
+    desc: Sin sorpresas en la factura. Te digo cuánto cuesta antes de tocar nada. Si sale más caro, lo absorbo yo.
+    icon: <svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+  - title: Local y presente
+    desc: Si tu servidor se cae un martes a las 10:00, puedo estar en tu oficina el mismo día.
+    icon: <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>

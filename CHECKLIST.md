@@ -21,7 +21,7 @@
 ## 🐙 GitHub
 - [x] Cuenta de GitHub activa (Actions habilitado ✅)
 - [x] Repositorio definido (`xaviaerox/solutech`)
-- [ ] GitHub Pages habilitado (Pendiente primer despliegue)
+- [x] GitHub Pages habilitado (Configurado via Actions ✅)
 
 ## 🖥️ VPS (IONOS)
 - [x] Ubuntu 24.04 LTS limpio (Confirmado ✅)
@@ -34,9 +34,9 @@
 ## 🚀 Orden de Trabajo (Fase Build)
 - [x] **1. Convertir Home HTML a Hugo**: Estructura, layouts, partials, CSS limpio. (Completado ✅)
 - [x] **2. GitHub Actions**: Configurar despliegue automático a GH Pages (`solutech.shop`). (Configurado ✅)
-- [ ] **3. DNS Hostinger**: Apuntar a GH Pages sin romper el mail (Instrucciones enviadas 📨).
-- [x] **4. Blog inicial**: 3 posts en Markdown, imágenes y categorías. (Estructura lista ✅)
+- [x] **3. DNS Hostinger**: Apuntar a GH Pages (CNAME solutech.shop configurado en Workflow ✅).
+- [x] **4. Blog inicial**: 4 posts en Markdown, imágenes y categorías reales recuperadas de .old. (Completado ✅)
 - [x] **5. VPS Monitoring**: Uptime Kuma en Docker (`status.solutech.shop`). (Blindado tras Nginx ✅)
-- [x] **6. Contacto**: Implementar Formspree (email a `xavi@solutech.shop`). (Integrado ✅)
+- [x] **6. Contacto**: Implementar Formspree (ID mjgldvja unificado ✅).
 
-*Estado: Iniciando conversión a Hugo.*
+*Estado: Proyecto consolidado en Hugo V4.2 Definitiva.*

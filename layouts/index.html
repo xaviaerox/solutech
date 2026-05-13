@@ -1,0 +1,353 @@
+{{ define "main" }}
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge"><span class="badge-dot"></span><span class="badge-text">Almería · Murcia · Remoto</span></div>
+      <h1 class="hero-h1">Tu IT resuelta.<br><em>Cada mes.</em></h1>
+      <p class="hero-p">Gestión tecnológica continua para pequeñas empresas. Soporte, seguridad y modernización sin tener que pensar en ello.</p>
+      <div class="hero-actions">
+        <button class="btn-p">Diagnóstico gratuito <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        <button class="btn-o">Ver servicios</button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hcard">
+        <div class="hcard-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <div class="hcard-body"><div class="hcard-title">Monitorización activa</div><div class="hcard-sub">Infraestructura cliente · uptime 99.9%</div></div>
+        <span class="hcard-status status-on">LIVE</span>
+      </div>
+      <div class="hcard">
+        <div class="hcard-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="hcard-body"><div class="hcard-title">Seguridad perimetral</div><div class="hcard-sub">0 incidentes críticos este mes</div></div>
+        <span class="hcard-status status-on">OK</span>
+      </div>
+      <div class="hcard">
+        <div class="hcard-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+        <div class="hcard-body"><div class="hcard-title">Backups automáticos</div><div class="hcard-sub">Última verificación: hace 2h</div></div>
+        <span class="hcard-status status-on">SYNC</span>
+      </div>
+      <div class="hcard">
+        <div class="hcard-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <div class="hcard-body"><div class="hcard-title">Automatización</div><div class="hcard-sub">Procesos activos · ahorro manual</div></div>
+        <span class="hcard-status status-amber">BETA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <div class="tick-item"><span class="tick-dot"></span>CISCO NETWORKING ACADEMY</div>
+    <div class="tick-item"><span class="tick-dot"></span>GOOGLE CYBERSECURITY PROFESSIONAL</div>
+    <div class="tick-item"><span class="tick-dot"></span>UNIVERSITY OF HELSINKI ELEMENTS OF AI</div>
+    <div class="tick-item"><span class="tick-dot"></span>CEOE DIGITAL TECHNOLOGIES</div>
+    <div class="tick-item"><span class="tick-dot"></span>GOOGLE AI ESSENTIALS</div>
+    <!-- Duplicar para loop -->
+    <div class="tick-item"><span class="tick-dot"></span>CISCO NETWORKING ACADEMY</div>
+    <div class="tick-item"><span class="tick-dot"></span>GOOGLE CYBERSECURITY PROFESSIONAL</div>
+    <div class="tick-item"><span class="tick-dot"></span>UNIVERSITY OF HELSINKI ELEMENTS OF AI</div>
+    <div class="tick-item"><span class="tick-dot"></span>CEOE DIGITAL TECHNOLOGIES</div>
+    <div class="tick-item"><span class="tick-dot"></span>GOOGLE AI ESSENTIALS</div>
+  </div>
+</div>
+
+<!-- IMPACT -->
+<div class="impact">
+  <div class="impact-item"><div class="impact-num">12</div><div class="impact-label">Años de experiencia</div></div>
+  <div class="impact-item"><div class="impact-num">0</div><div class="impact-label">Incidentes sin resolver</div></div>
+  <div class="impact-item"><div class="impact-num">&lt;24h</div><div class="impact-label">Respuesta máxima</div></div>
+  <div class="impact-item"><div class="impact-num">100%</div><div class="impact-label">Clientes satisfechos</div></div>
+</div>
+
+<!-- PROBLEMA -->
+<section class="problems r" id="problema">
+  <div class="section-tag">El problema</div>
+  <h2 class="section-h">Lo que le pasa a <em>tu empresa</em> ahora mismo</h2>
+  <div class="prob-grid">
+    <div class="prob">
+      <div class="prob-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+      <div class="prob-t">Todo roto, nadie avisa</div>
+      <div class="prob-d">Te enteras de los fallos cuando ya afectan al negocio. Sin monitorización, la reacción siempre llega tarde.</div>
+    </div>
+    <div class="prob">
+      <div class="prob-ico"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+      <div class="prob-t">Copias de seguridad de mentira</div>
+      <div class="prob-d">El pendrive en el cajón no cuenta. El ransomware no distingue entre empresas grandes y pequeñas.</div>
+    </div>
+    <div class="prob">
+      <div class="prob-ico"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+      <div class="prob-t">Contraseñas sin control</div>
+      <div class="prob-d">Post-its, Excel sin cifrar, contraseñas compartidas por WhatsApp. Una brecha esperando a ocurrir.</div>
+    </div>
+    <div class="prob">
+      <div class="prob-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <div class="prob-t">Tiempo perdido cada día</div>
+      <div class="prob-d">Software desactualizado, procesos repetitivos, herramientas que no se hablan entre sí.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="services r" id="servicios">
+  <div class="section-tag">Servicios</div>
+  <h2 class="section-h">Gestión IT de élite.<br><em>Una sola decisión.</em></h2>
+  <div class="svc-grid">
+    {{ range .Site.Data.pricing }}
+    <div class="svc {{ if .highlight }}mid{{ end }}">
+      {{ if .badge }}<div class="svc-badge">{{ .badge }}</div>{{ end }}
+      <div class="svc-icon-wrap">
+        {{ if eq .id "pack-esencial" }}<svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        {{ else if eq .id "pack-profesional" }}<svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        {{ else }}<svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>{{ end }}
+      </div>
+      <div class="svc-pack">Pack {{ .name }}</div>
+      <div class="svc-name">{{ .target }}</div>
+      <div class="svc-desc">Gestión integral adaptada a tus necesidades técnicas reales.</div>
+      <div class="svc-list">
+        {{ range .features }}
+        <div class="svc-item">{{ . }}</div>
+        {{ end }}
+      </div>
+      <div class="svc-footer">
+        <span class="svc-price">{{ .price }}{{ .period }}</span>
+        <a href="{{ .link }}" class="svc-link">{{ .cta }} <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section class="methodology r" id="metodologia">
+  <div class="section-tag">Cómo trabajo</div>
+  <h2 class="section-h">Proceso transparente.<br><em>Sin improvisación.</em></h2>
+  <div class="meth-grid">
+    <div class="meth-step">
+      <div class="meth-num">01</div>
+      <div class="meth-content">
+        <h3 class="meth-t">Diagnóstico Completo</h3>
+        <p class="meth-d">Reviso tu infraestructura al completo: equipos, red, copias de seguridad y seguridad perimetral. Te entrego un informe claro con lo que está bien y lo que hay que mejorar.</p>
+      </div>
+    </div>
+    <div class="meth-step">
+      <div class="meth-num">02</div>
+      <div class="meth-content">
+        <h3 class="meth-t">Corrección Urgente</h3>
+        <p class="meth-d">Primero resuelvo lo crítico: vulnerabilidades de seguridad, copias de seguridad inexistentes o equipos en riesgo de fallo inminente.</p>
+      </div>
+    </div>
+    <div class="meth-step">
+      <div class="meth-num">03</div>
+      <div class="meth-content">
+        <h3 class="meth-t">Optimización</h3>
+        <p class="meth-d">Una vez cubierto lo vital, mejoro el rendimiento: actualizo software, optimizo la red y elimino cuellos de botella que ralentizan tu negocio.</p>
+      </div>
+    </div>
+    <div class="meth-step">
+      <div class="meth-num">04</div>
+      <div class="meth-content">
+        <h3 class="meth-t">Gestión Continua</h3>
+        <p class="meth-d">Revisiones periódicas, actualizaciones gestionadas y soporte directo. Yo me encargo de la tecnología para que tú no tengas que pensar en ella.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RISK SIMULATOR -->
+<section class="risk r" id="simulador">
+  <div class="risk-card glass">
+    <div id="risk-sim-content">
+      <div class="section-tag">Autodiagnóstico</div>
+      <h3 class="risk-h">Calcula el riesgo de tu empresa</h3>
+      <p class="risk-p">Responde 3 preguntas para obtener un índice de vulnerabilidad preliminar.</p>
+      <button onclick="startSim()" class="btn-p" style="margin-top: 20px;">Empezar Test <svg width="13" height="13" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<style>
+.meth-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-top: 60px; }
+.meth-step { position: relative; padding: 32px; background: var(--s2); border: 1px solid var(--br); border-radius: 24px; transition: all 0.3s ease; }
+.meth-step:hover { border-color: var(--o); background: rgba(248, 113, 22, 0.05); }
+.meth-num { font-family: var(--f-m); color: var(--o); font-size: 14px; font-weight: 700; margin-bottom: 16px; opacity: 0.5; }
+.meth-t { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+.meth-d { font-size: 13px; color: var(--ts); line-height: 1.6; }
+
+.risk { padding: 80px 0; }
+.risk-card { max-width: 600px; margin: 0 auto; padding: 60px; text-align: center; border-radius: 40px; border: 1px solid var(--br); }
+.risk-h { font-size: 24px; font-weight: 700; margin: 16px 0; }
+.risk-p { color: var(--ts); font-size: 14px; margin-bottom: 32px; }
+
+.sim-btn { display: block; width: 100%; padding: 16px; background: var(--s3); border: 1px solid var(--br); border-radius: 12px; color: var(--t); margin-bottom: 8px; text-align: left; transition: all 0.2s; cursor: pointer; }
+.sim-btn:hover { border-color: var(--o); background: var(--s2); }
+</style>
+
+<script>
+let step = 1;
+const answers = {};
+
+function startSim() {
+  renderStep();
+}
+
+function simSet(s, val) {
+  answers[s] = val;
+  step++;
+  renderStep();
+}
+
+function renderStep() {
+  const container = document.getElementById('risk-sim-content');
+  if (step === 1) {
+    container.innerHTML = `
+      <h4 class="risk-h">Paso 1: Dimensión</h4>
+      <p class="risk-p">¿Cuántos equipos dependen de tu conexión principal?</p>
+      <button onclick="simSet(1, '1-5')" class="sim-btn">1 - 5 equipos</button>
+      <button onclick="simSet(1, '5-20')" class="sim-btn">5 - 20 equipos</button>
+      <button onclick="simSet(1, '+20')" class="sim-btn">Más de 20 equipos</button>
+    `;
+  } else if (step === 2) {
+    container.innerHTML = `
+      <h4 class="risk-h">Paso 2: Continuidad</h4>
+      <p class="risk-p">¿Tienes copias de seguridad externas automatizadas?</p>
+      <button onclick="simSet(2, 'Si')" class="sim-btn">Sí, verificadas diariamente</button>
+      <button onclick="simSet(2, 'Incierto')" class="sim-btn">Tengo algo, pero no estoy seguro</button>
+      <button onclick="simSet(2, 'No')" class="sim-btn">No tengo copias externas</button>
+    `;
+  } else if (step === 3) {
+    container.innerHTML = `
+      <h4 class="risk-h">Paso 3: Estabilidad</h4>
+      <p class="risk-p">¿Has sufrido lentitud o bloqueos en el último mes?</p>
+      <button onclick="simSet(3, 'No')" class="sim-btn">Todo funciona fluido</button>
+      <button onclick="simSet(3, 'A veces')" class="sim-btn">A veces (afecta un poco)</button>
+      <button onclick="simSet(3, 'Frecuente')" class="sim-btn">Frecuentemente (perdemos tiempo)</button>
+    `;
+  } else {
+    let risk = 20;
+    if (answers[1] === '5-20') risk += 15;
+    if (answers[1] === '+20') risk += 30;
+    if (answers[2] === 'Incierto') risk += 20;
+    if (answers[2] === 'No') risk += 40;
+    if (answers[3] === 'A veces') risk += 15;
+    if (answers[3] === 'Frecuente') risk += 30;
+    risk = Math.min(risk, 100);
+    
+    const color = risk > 70 ? '#ef4444' : risk > 40 ? '#f97316' : '#10b981';
+    
+    container.innerHTML = `
+      <div style="font-size: 48px; font-weight: 900; color: ${color}; margin-bottom: 10px;">${risk}%</div>
+      <h4 class="risk-h">Riesgo Detectado</h4>
+      <p class="risk-p">Tu infraestructura presenta vulnerabilidades que podrían comprometer tu negocio.</p>
+      <a href="#contacto" class="btn-p" style="display:inline-block; width: 100%; text-decoration:none;">Solicitar Auditoría Gratis</a>
+    `;
+  }
+}
+</script>
+
+<!-- ABOUT -->
+<section class="about r" id="sobre-mi">
+  <div class="section-tag">Quién hay detrás</div>
+  <h2 class="section-h">No una empresa.<br><em>Una persona.</em></h2>
+  <div class="about-grid">
+    <div class="about-photo" style="background-image: url('{{ "images/xavi-alonso.jpg" | relURL }}'); background-size: cover; background-position: center;">
+      <div class="about-photo-caption">
+        <div class="about-name">{{ .Site.Data.founder.name }}</div>
+        <div class="about-role">{{ .Site.Data.founder.role }} · {{ .Site.Data.founder.location }}</div>
+      </div>
+    </div>
+    <div class="about-content">
+      <p class="about-p"><strong>{{ .Site.Data.founder.bio }}</strong></p>
+      <div class="vals">
+        {{ range .Site.Data.founder.values }}
+        <div class="val">
+          <div class="val-icon">{{ .icon | safeHTML }}</div>
+          <div><div class="val-t">{{ .title }}</div><div class="val-d">{{ .desc }}</div></div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials r">
+  <div class="section-tag">Confianza</div>
+  <h2 class="section-h">Lo que dicen de nosotros</h2>
+  <div class="test-grid">
+    {{ range .Site.Data.testimonials }}
+    <div class="test-card">
+      <p class="test-text">"{{ .text }}"</p>
+      <div class="test-author">
+        <div class="test-initial">{{ .initial }}</div>
+        <div>
+          <div class="test-name">{{ .name }}</div>
+          <div class="test-role">{{ .role }}</div>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<style>
+.test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 60px; }
+.test-card { padding: 40px; background: var(--s2); border: 1px solid var(--br); border-radius: 32px; display: flex; flex-direction: column; justify-content: space-between; }
+.test-text { font-size: 14px; line-height: 1.6; color: var(--ts); margin-bottom: 32px; font-style: italic; }
+.test-author { display: flex; align-items: center; gap: 16px; }
+.test-initial { width: 40px; h: 40px; border-radius: 12px; background: var(--o-a); color: var(--o); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+.test-name { font-size: 13px; font-weight: 700; }
+.test-role { font-size: 10px; color: var(--ts); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+</style>
+
+<!-- BLOG -->
+<section class="blog r" id="blog">
+  <div class="section-tag">Blog y recursos</div>
+  <h2 class="section-h">IT explicada<br><em>sin tecnicismos.</em></h2>
+  <div class="blog-grid">
+    {{ range first 1 (where .Site.RegularPages "Section" "blog") }}
+    <div class="bcard big">
+      <div class="bcard-img" style="background-image: url('{{ .Params.image | relURL }}'); background-size: cover;"></div>
+      <div class="bcard-body">
+        <div class="bcard-cat">{{ range .Params.categories }}{{ . }}{{ end }}</div>
+        <div class="bcard-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+        <div class="bcard-exc">{{ .Description }}</div>
+        <div class="bcard-meta">{{ .Date.Format "02 GEN 2006" }} · {{ .ReadingTime }} MIN LECTURA</div>
+      </div>
+    </div>
+    {{ end }}
+    <div class="blog-col-right">
+      {{ range first 3 (after 1 (where .Site.RegularPages "Section" "blog")) }}
+      <div class="bcard small">
+        <div class="bcard-body">
+          <div class="bcard-cat">{{ range .Params.categories }}{{ . }}{{ end }}</div>
+          <div class="bcard-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+          <div class="bcard-exc">{{ .Description }}</div>
+          <div class="bcard-meta">{{ .Date.Format "02 GEN 2006" }}</div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACTO -->
+<section class="cta r" id="contacto">
+  <h2>¿Tu empresa está<br><em>realmente protegida?</em></h2>
+  <p>Diagnóstico técnico gratuito. Sin presión. Si no puedo ayudarte, te lo digo.</p>
+  
+  <form action="https://formspree.io/f/{{ .Site.Params.integrations.formspree_id }}" method="POST" style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; text-align: left; position: relative; z-index: 10;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+      <input type="text" name="nombre" placeholder="Tu nombre" required style="background: var(--s2); border: 1px solid var(--br); border-radius: 6px; padding: 12px; color: var(--t); font-family: inherit;">
+      <input type="email" name="email" placeholder="Tu email" required style="background: var(--s2); border: 1px solid var(--br); border-radius: 6px; padding: 12px; color: var(--t); font-family: inherit;">
+    </div>
+    <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?" required style="background: var(--s2); border: 1px solid var(--br); border-radius: 6px; padding: 12px; color: var(--t); font-family: inherit; min-height: 100px;"></textarea>
+    <button type="submit" class="btn-p" style="font-size:14px; padding:14px 32px; justify-content: center; width: 100%;">Enviar solicitud de diagnóstico <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+  </form>
+
+  <div class="cta-note">{{ .Site.Params.email }} · Respuesta en menos de 24h</div>
+</section>
+{{ end }}

@@ -1,0 +1,40 @@
+- id: pack-esencial
+  name: Esencial
+  price: "149"
+  period: "/mes"
+  target: Para autónomos y pequeños negocios
+  features:
+    - Soporte remoto ilimitado
+    - Antivirus gestionado
+    - Backup automático nube (50GB)
+    - Respuesta < 24h
+  cta: Empezar con Esencial
+  link: "#contacto"
+
+- id: pack-profesional
+  name: Profesional
+  price: "299"
+  period: "/mes"
+  target: Para empresas de 5 a 20 empleados
+  highlight: true
+  badge: Más elegido
+  features:
+    - Todo lo de Esencial
+    - Soporte presencial prioritario
+    - Monitorización 24/7 activa
+    - Auditoría IT trimestral
+  cta: Elegir Profesional
+  link: "#contacto"
+
+- id: pack-blindaje
+  name: Blindaje Total
+  price: "499"
+  period: "/mes"
+  target: Para empresas con datos sensibles
+  features:
+    - Todo lo de Profesional
+    - Firewall & Cifrado avanzado
+    - Cumplimiento RGPD total
+    - Recuperación ante desastres
+  cta: Blindar Empresa
+  link: "#contacto"

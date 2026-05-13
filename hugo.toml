@@ -1,0 +1,19 @@
+baseURL = 'https://solutech.shop/'
+languageCode = 'es'
+title = 'Solutech — Especialistas IT'
+theme = []
+
+[params]
+  description = 'Gestión tecnológica continua para pequeñas empresas. Soporte, seguridad y modernización.'
+  email = 'hola@solutech.shop'
+  
+[params.social]
+  linkedin = 'https://www.linkedin.com/in/xaviaerox'
+  instagram = 'https://www.instagram.com/xavi.solutech/'
+  github = 'https://github.com/xaviaerox'
+  youtube = 'https://www.youtube.com/@solutech-it'
+  whatsapp = 'https://wa.me/34684248465'
+
+[params.integrations]
+  google_analytics = 'G-Q14TRWX9LY'
+  formspree_id = 'mjgldvja'

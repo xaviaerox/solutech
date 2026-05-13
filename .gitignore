@@ -34,3 +34,6 @@ hugo_stats.json
 private/
 scratch/
 .docs_ai/
+.gemini/
+CHECKLIST.md
+CHANGELOG.md
