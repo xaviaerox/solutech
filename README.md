@@ -1,23 +1,26 @@
-# 🚀 Solutech — Especialistas IT
+# Solutech - Boutique IT Consultancy
 
-Infraestructura web V4 para Solutech.shop.
+Portal web oficial de **Solutech**, consultoría técnica especializada en pymes de Almería y Murcia.
 
-## 📁 Estructura del Proyecto
-Este repositorio utiliza **Hugo** como generador de sitio estático.
+## 🚀 Arquitectura
+Este proyecto es una implementación de **alto rendimiento en HTML/CSS/JS puro**, diseñada bajo el estándar **"Tech Elite"**. No utiliza frameworks de build (ni Hugo, ni Astro) para garantizar una carga instantánea y una mantenibilidad total sin dependencias.
 
-- `layouts/`: Plantillas y componentes.
-- `content/`: Contenido en Markdown (Blog).
-- `assets/`: Recursos procesados (CSS).
-- `static/`: Recursos estáticos (Imágenes).
-- `.github/`: Flujos de despliegue automático.
+- **Frontend**: HTML5 Semántico + CSS3 (Geist & Instrument Serif)
+- **Despliegue**: GitHub Actions (Static Deployment)
+- **Formulario**: Integración AJAX nativa con Formspree
+- **Infraestructura**: VPS IONOS (Uptime Kuma & n8n)
 
-## 📖 Documentación para IA / Desarrolladores
-Para mantener la consistencia y seguridad del proyecto, consulta los documentos en la carpeta `.docs_ai/`:
-- [Reglas de Desarrollo](.docs_ai/RULES.md)
-- [Guía de Estilo](.docs_ai/STYLEGUIDE.md)
-- [Stack Tecnológico](.docs_ai/TECH_STACK.md)
-- [Contexto de Negocio](.docs_ai/BUSINESS_CONTEXT.md)
-- [Historial de Cambios (CHANGELOG)](CHANGELOG.md)
+## 📁 Estructura
+- `/css/`: Estilos globales y sistema de diseño.
+- `/images/`: Activos visuales y fotografías reales.
+- `/blog/`: Artículos de visión técnica y ciberseguridad.
+- `index.html`: Home de alto impacto.
+
+## 🛠️ Desarrollo Local
+Simplemente abre `index.html` en cualquier navegador moderno o usa una extensión tipo "Live Server".
+
+## 🔒 Privacidad
+Las versiones previas, configuraciones sensibles y llaves SSH se encuentran en los directorios `.old/` y `private/`, los cuales están excluidos del repositorio público por seguridad.
 
 ---
-*Fundado por Xavi Alonso · Almería & Murcia · 2026*
+© 2026 Solutech · All systems operational.
