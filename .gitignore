@@ -1,12 +1,30 @@
 # Solutech — .gitignore
+# System files
 .DS_Store
 Thumbs.db
 *.log
 *.tmp
 *.bak
+
+# Environment & Secrets
 .env
+.env.*
+
+# Dependencies
 node_modules/
+
+# Build & Cache
 dist/
 .astro/
+.next/
+.vite/
+.cache/
+
+# IDEs
 .vscode/
-.env
+.idea/
+
+# Legacy & Reference (Private)
+.old/
+private/
+scratch/

@@ -1,0 +1,16 @@
+baseURL = 'https://solutech.shop/'
+languageCode = 'es'
+title = 'Solutech — Especialistas IT'
+theme = []
+
+[params]
+  description = 'Gestión tecnológica continua para pequeñas empresas. Soporte, seguridad y modernización.'
+  author = 'Xavi Alonso'
+  email = 'hola@solutech.shop'
+  phone = '684 248 465'
+  
+[params.social]
+  linkedin = 'https://www.linkedin.com/in/xaviaerox'
+  instagram = 'https://www.instagram.com/xavi.solutech/'
+  github = 'https://github.com/xaviaerox'
+  youtube = 'https://www.youtube.com/@solutech-it'
