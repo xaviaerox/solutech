@@ -1,4 +1,5 @@
 {{ define "main" }}
+
 <!-- HERO -->
 <section class="hero">
   <div class="hero-glow"></div>
@@ -7,16 +8,16 @@
     <div class="hero-left">
       <div class="hero-badge"><span class="badge-dot"></span><span class="badge-text">Almería · Murcia · Remoto</span></div>
       <h1 class="hero-h1">Tu infraestructura IT.<br><em>Bajo control.</em></h1>
-      <p class="hero-p">Operativa tecnológica blindada para pequeñas empresas. Monitorización silenciosa, prevención activa y gestión proactiva para que tu negocio nunca se detenga.</p>
+      <p class="hero-p">Departamento IT externo para pequeñas empresas. Monitorización continua, seguridad real y gestión proactiva. Sin sorpresas, sin improvisación.</p>
       <div class="hero-actions">
         <a href="#contacto" class="btn-p">Diagnóstico gratuito <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <a href="#servicios" class="btn-o">Ver servicios</a>
+        <a href="#servicios" class="btn-o">Ver planes</a>
       </div>
     </div>
     <div class="hero-right">
       <div class="hcard">
         <div class="hcard-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-        <div class="hcard-body"><div class="hcard-title">Monitorización activa</div><div class="hcard-sub">Infraestructura cliente · uptime 99.9%</div></div>
+        <div class="hcard-body"><div class="hcard-title">Monitorización activa</div><div class="hcard-sub">Infraestructura cliente · Uptime Kuma</div></div>
         <span class="hcard-status status-on">LIVE</span>
       </div>
       <div class="hcard">
@@ -26,13 +27,13 @@
       </div>
       <div class="hcard">
         <div class="hcard-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
-        <div class="hcard-body"><div class="hcard-title">Backups automáticos</div><div class="hcard-sub">Última verificación: hace 2h</div></div>
+        <div class="hcard-body"><div class="hcard-title">Backups verificados</div><div class="hcard-sub">Restic · Última verificación: hace 2h</div></div>
         <span class="hcard-status status-on">SYNC</span>
       </div>
       <div class="hcard">
-        <div class="hcard-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-        <div class="hcard-body"><div class="hcard-title">Automatización</div><div class="hcard-sub">Procesos activos · ahorro manual</div></div>
-        <span class="hcard-status status-amber">BETA</span>
+        <div class="hcard-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="hcard-body"><div class="hcard-title">Identidades gestionadas</div><div class="hcard-sub">Vaultwarden · Zero-knowledge</div></div>
+        <span class="hcard-status status-on">SEC</span>
       </div>
     </div>
   </div>
@@ -96,8 +97,8 @@
 
 <!-- SERVICIOS -->
 <section class="services r" id="servicios">
-  <div class="section-tag">Servicios</div>
-  <h2 class="section-h">Gestión IT de élite.<br><em>Una sola decisión.</em></h2>
+  <div class="section-tag">Planes de Gestión</div>
+  <h2 class="section-h">Precio fijo mensual.<br><em>Sin sorpresas.</em></h2>
   <div class="svc-grid">
     {{ range hugo.Data.pricing }}
     <div class="svc {{ if .highlight }}mid{{ end }}">
@@ -107,9 +108,8 @@
         {{ else if eq .id "pack-profesional" }}<svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         {{ else }}<svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>{{ end }}
       </div>
-      <div class="svc-pack">Pack {{ .name }}</div>
+      <div class="svc-pack">{{ .name }}</div>
       <div class="svc-name">{{ .target }}</div>
-      <div class="svc-desc">Gestión integral adaptada a tus necesidades técnicas reales.</div>
       <div class="svc-list">
         {{ range .features }}
         <div class="svc-item">{{ . }}</div>
@@ -124,119 +124,10 @@
   </div>
 </section>
 
-<!-- METHODOLOGY -->
-<section class="methodology r" id="metodologia">
-  <div class="section-tag">Cómo trabajo</div>
-  <h2 class="section-h">Proceso transparente.<br><em>Sin improvisación.</em></h2>
-  <div class="meth-grid">
-    <div class="meth-step">
-      <div class="meth-num">01</div>
-      <div class="meth-content">
-        <h3 class="meth-t">Diagnóstico Completo</h3>
-        <p class="meth-d">Reviso tu infraestructura al completo: equipos, red, copias de seguridad y seguridad perimetral. Te entrego un informe claro con lo que está bien y lo que hay que mejorar.</p>
-      </div>
-    </div>
-    <div class="meth-step">
-      <div class="meth-num">02</div>
-      <div class="meth-content">
-        <h3 class="meth-t">Corrección Urgente</h3>
-        <p class="meth-d">Primero resuelvo lo crítico: vulnerabilidades de seguridad, copias de seguridad inexistentes o equipos en riesgo de fallo inminente.</p>
-      </div>
-    </div>
-    <div class="meth-step">
-      <div class="meth-num">03</div>
-      <div class="meth-content">
-        <h3 class="meth-t">Optimización</h3>
-        <p class="meth-d">Una vez cubierto lo vital, mejoro el rendimiento: actualizo software, optimizo la red y elimino cuellos de botella que ralentizan tu negocio.</p>
-      </div>
-    </div>
-    <div class="meth-step">
-      <div class="meth-num">04</div>
-      <div class="meth-content">
-        <h3 class="meth-t">Gestión Continua</h3>
-        <p class="meth-d">Revisiones periódicas, actualizaciones gestionadas y soporte directo. Yo me encargo de la tecnología para que tú no tengas que pensar en ella.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-{{ partial "stack.html" . }}
-
-{{ partial "onboarding.html" . }}
-
-<!-- RISK SIMULATOR -->
-<section class="risk r" id="simulador">
-  <div class="risk-card">
-    <div id="risk-sim-content">
-      <div class="section-tag">Autodiagnóstico</div>
-      <h3 class="risk-h">Calcula el riesgo de tu empresa</h3>
-      <p class="risk-p">Responde 3 preguntas para obtener un índice de vulnerabilidad preliminar.</p>
-      <button onclick="startSim()" class="btn-p" style="margin-top: 20px;">Empezar Test <svg width="13" height="13" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-    </div>
-  </div>
-</section>
-
-<script>
-let step = 1;
-const answers = {};
-function startSim() { renderStep(); }
-function simSet(s, val) {
-  answers[s] = val;
-  step++;
-  renderStep();
-}
-function renderStep() {
-  const container = document.getElementById('risk-sim-content');
-  if (step === 1) {
-    container.innerHTML = `<h4 class="risk-h">Paso 1: Dimensión</h4><p class="risk-p">¿Cuántos equipos dependen de tu conexión principal?</p><button onclick="simSet(1, '1-5')" class="sim-btn">1 - 5 equipos</button><button onclick="simSet(1, '5-20')" class="sim-btn">5 - 20 equipos</button><button onclick="simSet(1, '+20')" class="sim-btn">Más de 20 equipos</button>`;
-  } else if (step === 2) {
-    container.innerHTML = `<h4 class="risk-h">Paso 2: Continuidad</h4><p class="risk-p">¿Tienes copias de seguridad externas automatizadas?</p><button onclick="simSet(2, 'Si')" class="sim-btn">Sí, verificadas diariamente</button><button onclick="simSet(2, 'Incierto')" class="sim-btn">Tengo algo, pero no estoy seguro</button><button onclick="simSet(2, 'No')" class="sim-btn">No tengo copias externas</button>`;
-  } else if (step === 3) {
-    container.innerHTML = `<h4 class="risk-h">Paso 3: Estabilidad</h4><p class="risk-p">¿Has sufrido lentitud o bloqueos en el último mes?</p><button onclick="simSet(3, 'No')" class="sim-btn">Todo funciona fluido</button><button onclick="simSet(3, 'A veces')" class="sim-btn">A veces (afecta un poco)</button><button onclick="simSet(3, 'Frecuente')" class="sim-btn">Frecuentemente (perdemos tiempo)</button>`;
-  } else {
-    let risk = 20;
-    if (answers[1] === '5-20') risk += 15;
-    if (answers[1] === '+20') risk += 30;
-    if (answers[2] === 'Incierto') risk += 20;
-    if (answers[2] === 'No') risk += 40;
-    if (answers[3] === 'A veces') risk += 15;
-    if (answers[3] === 'Frecuente') risk += 30;
-    risk = Math.min(risk, 100);
-    const color = risk > 70 ? '#ef4444' : risk > 40 ? '#f97316' : '#10b981';
-    container.innerHTML = `<div style="font-size: 48px; font-weight: 900; color: ${color}; margin-bottom: 10px;">${risk}%</div><h4 class="risk-h">Riesgo Detectado</h4><p class="risk-p">Tu infraestructura presenta vulnerabilidades que podrían comprometer tu negocio.</p><a href="#contacto" class="btn-p" style="display:inline-block; width: 100%; text-decoration:none;">Solicitar Auditoría Gratis</a>`;
-  }
-}
-</script>
-
-<!-- ABOUT -->
-<section class="about r" id="sobre-mi">
-  <div class="section-tag">Quién hay detrás</div>
-  <h2 class="section-h">No una empresa.<br><em>Una persona.</em></h2>
-  <div class="about-grid">
-    <div class="about-photo" style="background-image: url('{{ "images/xavi-alonso.jpg" | relURL }}'); background-size: cover; background-position: center;">
-      <div class="about-photo-caption">
-        <div class="about-name">{{ hugo.Data.founder.name }}</div>
-        <div class="about-role">{{ hugo.Data.founder.role }} · {{ hugo.Data.founder.location }}</div>
-      </div>
-    </div>
-    <div class="about-content">
-      <p class="about-p"><strong>{{ hugo.Data.founder.bio }}</strong></p>
-      <div class="vals">
-        {{ range hugo.Data.founder.values }}
-        <div class="val">
-          <div class="val-icon">{{ .icon | safeHTML }}</div>
-          <div><div class="val-t">{{ .title }}</div><div class="val-d">{{ .desc }}</div></div>
-        </div>
-        {{ end }}
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- TESTIMONIALS -->
-<section class="testimonials r">
-  <div class="section-tag">Confianza</div>
-  <h2 class="section-h">Lo que dicen de nosotros</h2>
+<section class="testimonials r" id="clientes">
+  <div class="section-tag">Clientes reales</div>
+  <h2 class="section-h">Lo que dicen<br><em>los que confían en Solutech.</em></h2>
   <div class="test-grid">
     {{ range hugo.Data.testimonials }}
     <div class="test-card">
@@ -252,6 +143,34 @@ function renderStep() {
     {{ end }}
   </div>
 </section>
+
+<!-- ABOUT -->
+<section class="about r" id="sobre-mi">
+  <div class="section-tag">Quién hay detrás</div>
+  <h2 class="section-h">No una empresa.<br><em>Una persona.</em></h2>
+  <div class="about-grid">
+    <div class="about-photo" style="background-image: url('{{ "images/xavi-alonso.jpg" | relURL }}'); background-size: cover; background-position: center;">
+      <div class="about-photo-caption">
+        <div class="about-name">{{ hugo.Data.founder.name }}</div>
+        <div class="about-role">{{ hugo.Data.founder.role }} · {{ hugo.Data.founder.location }}</div>
+      </div>
+    </div>
+    <div class="about-content">
+      <p class="about-p">{{ hugo.Data.founder.bio }}</p>
+      <div class="vals">
+        {{ range hugo.Data.founder.values }}
+        <div class="val">
+          <div class="val-icon">{{ .icon | safeHTML }}</div>
+          <div><div class="val-t">{{ .title }}</div><div class="val-d">{{ .desc }}</div></div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO / ONBOARDING -->
+{{ partial "onboarding.html" . }}
 
 <!-- BLOG -->
 <section class="blog r" id="blog">
@@ -287,17 +206,18 @@ function renderStep() {
 <!-- CTA / CONTACTO -->
 <section class="cta r" id="contacto">
   <h2>¿Tu empresa está<br><em>realmente protegida?</em></h2>
-  <p>Diagnóstico técnico gratuito. Sin presión. Si no puedo ayudarte, te lo digo.</p>
+  <p>Diagnóstico técnico gratuito. Sin presión. Si no puedo ayudarte, te lo digo directamente.</p>
   
   <form action="https://formspree.io/f/{{ .Site.Params.integrations.formspree_id }}" method="POST" style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; text-align: left; position: relative; z-index: 10;">
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
       <input type="text" name="nombre" placeholder="Tu nombre" required style="background: var(--s2); border: 1px solid var(--br); border-radius: 6px; padding: 12px; color: var(--t); font-family: inherit;">
       <input type="email" name="email" placeholder="Tu email" required style="background: var(--s2); border: 1px solid var(--br); border-radius: 6px; padding: 12px; color: var(--t); font-family: inherit;">
     </div>
-    <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?" required style="background: var(--s2); border: 1px solid var(--br); border-radius: 6px; padding: 12px; color: var(--t); font-family: inherit; min-height: 100px;"></textarea>
-    <button type="submit" class="btn-p" style="font-size:14px; padding:14px 32px; justify-content: center; width: 100%;">Enviar solicitud de diagnóstico <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+    <input type="text" name="empresa" placeholder="Tu empresa (opcional)" style="background: var(--s2); border: 1px solid var(--br); border-radius: 6px; padding: 12px; color: var(--t); font-family: inherit;">
+    <textarea name="mensaje" placeholder="¿Cuál es tu mayor preocupación tecnológica ahora mismo?" required style="background: var(--s2); border: 1px solid var(--br); border-radius: 6px; padding: 12px; color: var(--t); font-family: inherit; min-height: 100px;"></textarea>
+    <button type="submit" class="btn-p" style="font-size:14px; padding:14px 32px; justify-content: center; width: 100%;">Solicitar Diagnóstico Gratuito <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
   </form>
 
-  <div class="cta-note">{{ .Site.Params.email }} · Respuesta en menos de 24h</div>
+  <div class="cta-note">{{ .Site.Params.email }} · Respuesta en menos de 24h · Sin compromiso</div>
 </section>
 {{ end }}
