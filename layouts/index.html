@@ -1,266 +1,132 @@
 {{ define "main" }}
+
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
-  <div class="hero-inner">
+  <div class="hero-bg"></div>
+  <div class="hero-inner r">
     <div class="hero-left">
-      <div class="hero-badge"><span class="badge-dot"></span><span class="badge-text">Almería · Murcia · Remoto</span></div>
-      <h1 class="hero-h1">Tu IT resuelta.<br><em>Cada mes.</em></h1>
-      <p class="hero-p">Gestión tecnológica continua para pequeñas empresas. Soporte, seguridad y modernización sin tener que pensar en ello.</p>
+      <div class="hero-badge">
+        <span class="logo-pip"></span>
+        <span class="badge-text">Almería · Murcia · Soporte Élite</span>
+      </div>
+      <h1 class="hero-h1">Tu IT resuelta por una <em>persona</em>, no por un call center.</h1>
+      <p class="hero-p">Gestión tecnológica premium para empresas que buscan tranquilidad, honestidad técnica y un socio de confianza en la era de la IA.</p>
       <div class="hero-actions">
-        <button class="btn-p">Diagnóstico gratuito <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-        <button class="btn-o">Ver servicios</button>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="hcard">
-        <div class="hcard-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-        <div class="hcard-body"><div class="hcard-title">Monitorización activa</div><div class="hcard-sub">Infraestructura cliente · uptime 99.9%</div></div>
-        <span class="hcard-status status-on">LIVE</span>
-      </div>
-      <div class="hcard">
-        <div class="hcard-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <div class="hcard-body"><div class="hcard-title">Seguridad perimetral</div><div class="hcard-sub">0 incidentes críticos este mes</div></div>
-        <span class="hcard-status status-on">OK</span>
-      </div>
-      <div class="hcard">
-        <div class="hcard-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
-        <div class="hcard-body"><div class="hcard-title">Backups automáticos</div><div class="hcard-sub">Última verificación: hace 2h</div></div>
-        <span class="hcard-status status-on">SYNC</span>
-      </div>
-      <div class="hcard">
-        <div class="hcard-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-        <div class="hcard-body"><div class="hcard-title">Automatización</div><div class="hcard-sub">Procesos activos · ahorro manual</div></div>
-        <span class="hcard-status status-amber">BETA</span>
+        <a href="#contacto" class="btn-p">Diagnóstico gratuito <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#servicios" class="btn-o">Ver planes de gestión</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TICKER -->
-<div class="ticker-wrap">
-  <div class="ticker-track">
-    <div class="tick-item"><span class="tick-dot"></span>SOPORTE REMOTO</div>
-    <div class="tick-item"><span class="tick-dot"></span>MONITORIZACIÓN 24/7</div>
-    <div class="tick-item"><span class="tick-dot"></span>BACKUPS AUTOMÁTICOS</div>
-    <div class="tick-item"><span class="tick-dot"></span>CIBERSEGURIDAD</div>
-    <div class="tick-item"><span class="tick-dot"></span>GESTIÓN DE INCIDENCIAS</div>
-    <div class="tick-item"><span class="tick-dot"></span>ACCESO REMOTO SEGURO</div>
-    <div class="tick-item"><span class="tick-dot"></span>DOCUMENTACIÓN TÉCNICA</div>
-    <div class="tick-item"><span class="tick-dot"></span>AUTOMATIZACIÓN</div>
-    <div class="tick-item"><span class="tick-dot"></span>IA APLICADA</div>
-    <div class="tick-item"><span class="tick-dot"></span>SOPORTE REMOTO</div>
-    <div class="tick-item"><span class="tick-dot"></span>MONITORIZACIÓN 24/7</div>
-    <div class="tick-item"><span class="tick-dot"></span>BACKUPS AUTOMÁTICOS</div>
-    <div class="tick-item"><span class="tick-dot"></span>CIBERSEGURIDAD</div>
-    <div class="tick-item"><span class="tick-dot"></span>GESTIÓN DE INCIDENCIAS</div>
-    <div class="tick-item"><span class="tick-dot"></span>ACCESO REMOTO SEGURO</div>
-    <div class="tick-item"><span class="tick-dot"></span>DOCUMENTACIÓN TÉCNICA</div>
-    <div class="tick-item"><span class="tick-dot"></span>AUTOMATIZACIÓN</div>
-    <div class="tick-item"><span class="tick-dot"></span>IA APLICADA</div>
+<!-- MARQUEE CERTIFICACIONES -->
+<div class="certs-marquee">
+  <div class="certs-track">
+    <div class="cert-item"><span class="cert-dot"></span>Cisco Networking Academy</div>
+    <div class="cert-item"><span class="cert-dot"></span>Google Cybersecurity Professional</div>
+    <div class="cert-item"><span class="cert-dot"></span>CEOE Tecnologías Digitales</div>
+    <div class="cert-item"><span class="cert-dot"></span>University of Helsinki Elements of AI</div>
+    <div class="cert-item"><span class="cert-dot"></span>Udemy Machine Learning A-Z</div>
+    <div class="cert-item"><span class="cert-dot"></span>Google AI Essentials</div>
+    <!-- Repetición para el efecto infinito -->
+    <div class="cert-item"><span class="cert-dot"></span>Cisco Networking Academy</div>
+    <div class="cert-item"><span class="cert-dot"></span>Google Cybersecurity Professional</div>
+    <div class="cert-item"><span class="cert-dot"></span>CEOE Tecnologías Digitales</div>
+    <div class="cert-item"><span class="cert-dot"></span>University of Helsinki Elements of AI</div>
   </div>
 </div>
-
-<!-- IMPACT -->
-<div class="impact">
-  <div class="impact-item"><div class="impact-num">12</div><div class="impact-label">Años en el sector</div></div>
-  <div class="impact-item"><div class="impact-num">24/7</div><div class="impact-label">Monitorización</div></div>
-  <div class="impact-item"><div class="impact-num">&lt;4h</div><div class="impact-label">Respuesta garantizada</div></div>
-  <div class="impact-item"><div class="impact-num">100%</div><div class="impact-label">Trato directo</div></div>
-</div>
-
-<!-- PROBLEMA -->
-<section class="problems r" id="problema">
-  <div class="section-tag">El problema</div>
-  <h2 class="section-h">Lo que le pasa a <em>tu empresa</em> ahora mismo</h2>
-  <div class="prob-grid">
-    <div class="prob">
-      <div class="prob-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-      <div class="prob-t">Todo roto, nadie avisa</div>
-      <div class="prob-d">Te enteras de los fallos cuando ya afectan al negocio. Sin monitorización, la reacción siempre llega tarde.</div>
-    </div>
-    <div class="prob">
-      <div class="prob-ico"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
-      <div class="prob-t">Copias de seguridad de mentira</div>
-      <div class="prob-d">El pendrive en el cajón no cuenta. El ransomware no distingue entre empresas grandes y pequeñas.</div>
-    </div>
-    <div class="prob">
-      <div class="prob-ico"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-      <div class="prob-t">Contraseñas sin control</div>
-      <div class="prob-d">Post-its, Excel sin cifrar, contraseñas compartidas por WhatsApp. Una brecha esperando a ocurrir.</div>
-    </div>
-    <div class="prob">
-      <div class="prob-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-      <div class="prob-t">Tiempo perdido cada día</div>
-      <div class="prob-d">Software desactualizado, procesos repetitivos, herramientas que no se hablan entre sí.</div>
-    </div>
-  </div>
-</section>
 
 <!-- SERVICIOS -->
-<section class="services r" id="servicios">
-  <div class="section-tag">Servicios</div>
-  <h2 class="section-h">Tres packs.<br><em>Una sola decisión.</em></h2>
+<section class="services r" id="servicios" style="padding: 120px 5%; max-width: 1200px; margin: 0 auto;">
+  <div class="section-tag">Nuestros Planes</div>
+  <h2 class="section-h">Tranquilidad absoluta.<br><em>Tarifas planas mensuales.</em></h2>
   <div class="svc-grid">
     <div class="svc">
-      <div class="svc-icon-wrap"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-      <div class="svc-pack">Pack Esencial</div>
-      <div class="svc-name">Tranquilidad Base</div>
-      <div class="svc-desc">Para la empresa que necesita un respaldo técnico fiable sin complicaciones. Alguien que coge el teléfono cuando algo falla.</div>
+      <span class="svc-pack">Pack Esencial</span>
+      <h3 class="svc-name">Tranquilidad Base</h3>
+      <p class="svc-desc">Para empresas que necesitan un respaldo técnico fiable. Alguien que coge el teléfono siempre.</p>
       <div class="svc-list">
         <div class="svc-item">Soporte remoto prioritario</div>
-        <div class="svc-item">Mantenimiento preventivo mensual</div>
+        <div class="svc-item">Mantenimiento mensual</div>
         <div class="svc-item">Gestión de incidencias</div>
-        <div class="svc-item">Informe técnico mensual</div>
       </div>
-      <div class="svc-footer">
-        <span class="svc-price">Desde 149€/mes</span>
-        <span class="svc-link">Saber más <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-      </div>
+      <span class="svc-price">Desde 149€/mes</span>
     </div>
-    <div class="svc mid">
-      <div class="svc-icon-wrap"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-      <div class="svc-pack">Pack Gestión · Más elegido</div>
-      <div class="svc-name">Control Total</div>
-      <div class="svc-desc">Tu empresa funciona. Tú no tienes que pensar en la tecnología. Gestión completa, monitorización continua y backups reales.</div>
+    <div class="svc" style="border-color: var(--bro); background: var(--s3);">
+      <span class="svc-pack">Pack Gestión · Recomendado</span>
+      <h3 class="svc-name">Control Total</h3>
+      <p class="svc-desc">Tú te centras en tu negocio, yo en tu tecnología. Gestión 24/7 y backups reales.</p>
       <div class="svc-list">
-        <div class="svc-item">Todo del pack Esencial</div>
-        <div class="svc-item">Monitorización 24/7</div>
+        <div class="svc-item">Todo del Pack Esencial</div>
+        <div class="svc-item">Monitorización proactiva 24/7</div>
         <div class="svc-item">Backups automáticos verificados</div>
-        <div class="svc-item">Acceso remoto seguro</div>
-        <div class="svc-item">Gestión de credenciales</div>
-        <div class="svc-item">Documentación técnica completa</div>
+        <div class="svc-item">Gestión de seguridad y claves</div>
       </div>
-      <div class="svc-footer">
-        <span class="svc-price">Desde 299€/mes</span>
-        <span class="svc-link">Saber más <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-      </div>
+      <span class="svc-price">Desde 299€/mes</span>
     </div>
     <div class="svc">
-      <div class="svc-icon-wrap"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-      <div class="svc-pack">Pack Premium</div>
-      <div class="svc-name">Evolución Continua</div>
-      <div class="svc-desc">Para empresas que quieren adelantarse. Seguridad avanzada, automatización de procesos y modernización progresiva con IA.</div>
+      <span class="svc-pack">Pack Premium</span>
+      <h3 class="svc-name">Evolución IA</h3>
+      <p class="svc-desc">Para empresas que quieren liderar. Automatización de procesos e implementación de IA.</p>
       <div class="svc-list">
-        <div class="svc-item">Todo del pack Control Total</div>
-        <div class="svc-item">Auditoría de seguridad periódica</div>
-        <div class="svc-item">Automatización de procesos</div>
-        <div class="svc-item">IA aplicada al negocio</div>
-        <div class="svc-item">Formación al equipo</div>
+        <div class="svc-item">Todo del Pack Gestión</div>
+        <div class="svc-item">Auditoría de seguridad trimestral</div>
+        <div class="svc-item">Automatización de flujos con n8n</div>
+        <div class="svc-item">Consultoría en IA aplicada</div>
       </div>
-      <div class="svc-footer">
-        <span class="svc-price">Desde 499€/mes</span>
-        <span class="svc-link">Saber más <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-      </div>
+      <span class="svc-price">Desde 499€/mes</span>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- SOBRE MÍ (EL FACTOR HUMANO) -->
 <section class="about r" id="sobre-mi">
-  <div class="section-tag">Quién hay detrás</div>
-  <h2 class="section-h">No una empresa.<br><em>Una persona.</em></h2>
-  <div class="about-grid">
-    <div class="about-photo" style="background-image: url('images/xavi-alonso.jpg'); background-size: cover; background-position: center;">
-      <div class="about-photo-caption">
-        <div class="about-name">Xavi Alonso</div>
-        <div class="about-role">FUNDADOR · SOLUTECH · ALMERÍA</div>
-      </div>
-    </div>
-    <div class="about-content">
-      <p class="about-p">12 años en telecomunicaciones e informática me han enseñado una cosa: <strong>las pequeñas empresas merecen el mismo nivel de gestión IT que las grandes, sin los costes ni la burocracia.</strong></p>
-      <p class="about-p">Cuando trabajas con Solutech, hablas directamente conmigo. Sin técnicos de turno, sin tickets que se pierden, sin respuestas automáticas.</p>
-      <div class="vals">
-        <div class="val">
-          <div class="val-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div><div class="val-t">Honestidad técnica</div><div class="val-d">Si algo no lo necesitas, te lo digo antes de cobrarte.</div></div>
-        </div>
-        <div class="val">
-          <div class="val-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div><div class="val-t">Prevención, no reacción</div><div class="val-d">Mi trabajo es que no haya crisis. No resolverlas.</div></div>
-        </div>
-        <div class="val">
-          <div class="val-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-          <div><div class="val-t">Trato directo siempre</div><div class="val-d">Sin intermediarios. Sin call centers.</div></div>
-        </div>
-      </div>
-    </div>
+  <div class="about-photo">
+    <img src="/images/xavi-alonso.jpg" alt="Xavi Alonso - Fundador de Solutech">
+  </div>
+  <div class="about-content">
+    <div class="section-tag">Quién hay detrás</div>
+    <h2 class="section-h">Solutech nació porque mis clientes <em>me lo pidieron</em>.</h2>
+    <p>Tras 12 años en el sector, me di cuenta de algo: las pequeñas empresas se están quedando atrás. La digitalización y la IA avanzan, pero el soporte técnico tradicional sigue siendo lento, frío y basado en tickets.</p>
+    <p>En mi día a día, los clientes valoraban mi orden, mi honestidad y mi capacidad resolutiva. Me pedían mi contacto personal para no tener que lidiar con call centers. Ahí nació Solutech.</p>
+    <p>Soy una persona curiosa, en constante aprendizaje y, sobre todo, comprometida con los valores. No soy solo tu informático; soy tu socio tecnológico.</p>
   </div>
 </section>
 
 <!-- BLOG -->
 <section class="blog r" id="blog">
-  <div class="section-tag">Blog y recursos</div>
-  <h2 class="section-h">IT explicada<br><em>sin tecnicismos.</em></h2>
-  <div class="blog-grid">
-    <div class="bcard big">
-      <div class="bcard-img"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <div class="bcard-body">
-        <div class="bcard-cat">Ciberseguridad</div>
-        <div class="bcard-title">Phishing en pymes de Almería: cómo identificarlo antes de que sea tarde</div>
-        <div class="bcard-exc">El 80% de los ataques empiezan con un correo. Señales concretas para proteger a tu equipo.</div>
-        <div class="bcard-meta">15 ENE 2025 · 4 MIN LECTURA</div>
-      </div>
-    </div>
-    <div class="blog-col-right">
-      <div class="bcard small">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="section-tag">Blog</div>
+    <h2 class="section-h">IT explicada para dueños de negocios.</h2>
+    <div class="blog-grid">
+      {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+      <div class="bcard">
+        <div class="bcard-img" style="background-image: url('{{ .Params.image }}')"></div>
         <div class="bcard-body">
-          <div class="bcard-cat">Gestión IT</div>
-          <div class="bcard-title">Por qué las copias de seguridad en local ya no son suficientes</div>
-          <div class="bcard-exc">La regla 3-2-1 explicada de forma práctica.</div>
-          <div class="bcard-meta">8 ENE 2025 · 5 MIN</div>
+          <div class="bcard-cat">{{ range first 1 .Params.categories }}{{ . }}{{ end }}</div>
+          <h3 class="bcard-title">{{ .Title }}</h3>
+          <a href="{{ .Permalink }}" style="color: var(--o); text-decoration: none; font-size: 13px; font-weight: 500;">Leer más →</a>
         </div>
       </div>
-      <div class="bcard small">
-        <div class="bcard-body">
-          <div class="bcard-cat">IA Aplicada</div>
-          <div class="bcard-title">Automatización real para pequeñas empresas: lo que ya funciona hoy</div>
-          <div class="bcard-exc">Sin grandes presupuestos. Esta semana.</div>
-          <div class="bcard-meta">2 ENE 2025 · 6 MIN</div>
-        </div>
-      </div>
-      <div class="bcard small">
-        <div class="bcard-body">
-          <div class="bcard-cat">Seguridad</div>
-          <div class="bcard-title">Contraseñas seguras sin volverte loco: guía práctica para pymes</div>
-          <div class="bcard-exc">Sin memorizar, sin complicaciones.</div>
-          <div class="bcard-meta">28 DIC 2024 · 3 MIN</div>
-        </div>
-      </div>
+      {{ end }}
     </div>
   </div>
 </section>
 
-<!-- CTA / CONTACTO -->
-<section class="cta r" id="contacto">
-  <h2>¿Tu empresa está<br><em>realmente protegida?</em></h2>
-  <p>Diagnóstico técnico gratuito. Sin presión. Si no puedo ayudarte, te lo digo — y te explico por qué.</p>
+<!-- CONTACTO -->
+<section class="cta r" id="contacto" style="padding: 120px 5%; text-align: center;">
+  <h2 class="section-h">¿Hablamos de tu empresa?</h2>
+  <p style="color: var(--tm); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">Cuéntame qué te preocupa y te daré un diagnóstico honesto. Si no puedo ayudarte, te lo diré.</p>
   
-  <!-- Contenedores de Estado -->
-  <div data-fs-success style="display: none; background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.2); color: #4ade80; padding: 20px; border-radius: 8px; margin-bottom: 24px; font-size: 14px;">
-    ¡Mensaje enviado con éxito! Me pondré en contacto contigo en menos de 24h.
-  </div>
-  <div data-fs-error style="display: none; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.2); color: #f87171; padding: 20px; border-radius: 8px; margin-bottom: 24px; font-size: 14px;">
-    Ups, ha habido un error. Por favor, inténtalo de nuevo o escríbeme a hola@solutech.shop
+  <div data-fs-success style="display: none; background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.2); color: #4ade80; padding: 20px; border-radius: 8px; margin-bottom: 24px; font-size: 14px; max-width: 500px; margin-left: auto; margin-right: auto;">
+    ¡Mensaje enviado! Te contactaré en menos de 24h.
   </div>
   
-  <form id="contact-form" action="https://formspree.io/f/mjgldvja" method="POST" style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; text-align: left; position: relative; z-index: 10;">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-      <div style="display: flex; flex-direction: column; gap: 4px;">
-        <input type="text" name="nombre" placeholder="Tu nombre" required data-fs-field style="background: var(--s2); border: 1px solid var(--br); border-radius: 6px; padding: 12px; color: var(--t); font-family: inherit; width: 100%;">
-        <span data-fs-error="nombre" style="font-size: 10px; color: #f87171;"></span>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 4px;">
-        <input type="email" name="email" placeholder="Tu email" required data-fs-field style="background: var(--s2); border: 1px solid var(--br); border-radius: 6px; padding: 12px; color: var(--t); font-family: inherit; width: 100%;">
-        <span data-fs-error="email" style="font-size: 10px; color: #f87171;"></span>
-      </div>
-    </div>
-    <div style="display: flex; flex-direction: column; gap: 4px;">
-      <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?" required data-fs-field style="background: var(--s2); border: 1px solid var(--br); border-radius: 6px; padding: 12px; color: var(--t); font-family: inherit; min-height: 100px; width: 100%;"></textarea>
-      <span data-fs-error="mensaje" style="font-size: 10px; color: #f87171;"></span>
-    </div>
-    <button type="submit" data-fs-submit-btn class="btn-p" style="font-size:14px; padding:14px 32px; justify-content: center; width: 100%;">Enviar solicitud de diagnóstico <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+  <form id="contact-form" action="https://formspree.io/f/mjgldvja" method="POST" style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; text-align: left;">
+    <input type="text" name="nombre" placeholder="Tu nombre" required data-fs-field style="background: var(--s2); border: 1px solid var(--br); border-radius: 8px; padding: 14px; color: var(--t); font-family: inherit;">
+    <input type="email" name="email" placeholder="Tu email" required data-fs-field style="background: var(--s2); border: 1px solid var(--br); border-radius: 8px; padding: 14px; color: var(--t); font-family: inherit;">
+    <textarea name="mensaje" placeholder="¿Cómo puedo ayudarte?" required data-fs-field style="background: var(--s2); border: 1px solid var(--br); border-radius: 8px; padding: 14px; color: var(--t); font-family: inherit; min-height: 120px;"></textarea>
+    <button type="submit" data-fs-submit-btn class="btn-p" style="justify-content: center;">Enviar solicitud de diagnóstico</button>
   </form>
 
   <script>
@@ -268,7 +134,6 @@
     formspree('initForm', { formElement: '#contact-form', formId: 'mjgldvja' });
   </script>
   <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
-
-  <div class="cta-note">xavi@solutech.shop · Respuesta en menos de 24h</div>
 </section>
+
 {{ end }}
