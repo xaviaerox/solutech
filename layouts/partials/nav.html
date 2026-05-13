@@ -1,13 +1,47 @@
-<nav>
+<nav id="main-nav">
   <a href="{{ "/" | relURL }}" class="logo">
     <span class="logo-pip"></span>
     SOLUTECH
   </a>
   <div class="nav-links">
-    <a href="{{ "/#servicios" | relURL }}">Servicios</a>
-    <a href="{{ "/#sobre-mi" | relURL }}">Estrategia</a>
-    <a href="{{ "/#blog" | relURL }}">Blog</a>
-    <a href="{{ "/#contacto" | relURL }}" style="color: var(--o); font-weight: 500;">Contacto</a>
+    <a href="{{ "/#servicios" | relURL }}" data-section="servicios">Servicios</a>
+    <a href="{{ "/#stack" | relURL }}" data-section="stack">Stack</a>
+    <a href="{{ "/#blog" | relURL }}" data-section="blog">Blog</a>
+    <a href="https://status.solutech.shop" target="_blank" rel="noopener" class="nav-status">
+      <span class="status-pip"></span>Estado del sistema
+    </a>
   </div>
   <a href="{{ "/#contacto" | relURL }}" class="nav-cta">Diagnóstico gratuito</a>
 </nav>
+
+<style>
+.nav-status { display: flex; align-items: center; gap: 6px; color: #10b981 !important; font-size: 12px !important; }
+.status-pip { width: 6px; height: 6px; background: #10b981; border-radius: 50%; animation: ping-status 2s cubic-bezier(0, 0, 0.2, 1) infinite; display: inline-block; flex-shrink: 0; }
+@keyframes ping-status { 0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(16,185,129,0.4); } 50% { opacity: 0.8; box-shadow: 0 0 0 4px rgba(16,185,129,0); } }
+nav a.nav-active { color: var(--o) !important; }
+</style>
+
+<script>
+(function() {
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('nav .nav-links a[data-section]');
+  const nav = document.getElementById('main-nav');
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(a => {
+          a.classList.toggle('nav-active', a.dataset.section === e.target.id);
+        });
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+
+  sections.forEach(s => obs.observe(s));
+
+  // Scroll shadow on nav
+  window.addEventListener('scroll', () => {
+    nav.style.borderBottomColor = window.scrollY > 10 ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.07)';
+  }, { passive: true });
+})();
+</script>

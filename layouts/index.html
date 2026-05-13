@@ -9,8 +9,8 @@
       <h1 class="hero-h1">Tu infraestructura IT.<br><em>Bajo control.</em></h1>
       <p class="hero-p">Operativa tecnológica blindada para pequeñas empresas. Monitorización silenciosa, prevención activa y gestión proactiva para que tu negocio nunca se detenga.</p>
       <div class="hero-actions">
-        <button class="btn-p">Diagnóstico gratuito <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-        <button class="btn-o">Ver servicios</button>
+        <a href="#contacto" class="btn-p">Diagnóstico gratuito <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#servicios" class="btn-o">Ver servicios</a>
       </div>
     </div>
     <div class="hero-right">
@@ -43,15 +43,18 @@
   <div class="ticker-track">
     <div class="tick-item"><span class="tick-dot"></span>CISCO NETWORKING ACADEMY</div>
     <div class="tick-item"><span class="tick-dot"></span>GOOGLE CYBERSECURITY PROFESSIONAL</div>
-    <div class="tick-item"><span class="tick-dot"></span>UNIVERSITY OF HELSINKI ELEMENTS OF AI</div>
-    <div class="tick-item"><span class="tick-dot"></span>CEOE DIGITAL TECHNOLOGIES</div>
-    <div class="tick-item"><span class="tick-dot"></span>GOOGLE AI ESSENTIALS</div>
-    <!-- Duplicar para loop -->
-    <div class="tick-item"><span class="tick-dot"></span>CISCO NETWORKING ACADEMY</div>
+    <div class="tick-item"><span class="tick-dot"></span>TAILSCALE MESH NETWORK</div>
+    <div class="tick-item"><span class="tick-dot"></span>UPTIME KUMA MONITORING</div>
+    <div class="tick-item"><span class="tick-dot"></span>VAULTWARDEN ZERO-KNOWLEDGE</div>
+    <div class="tick-item"><span class="tick-dot"></span>N8N AUTOMATION</div>
+    <div class="tick-item"><span class="tick-dot"></span>RESTIC IMMUTABLE BACKUP</div>
+    <div class="tick-item"><span class="tick-dot"></span>UNIVERSITY OF HELSINKI · AI</div>
     <div class="tick-item"><span class="tick-dot"></span>GOOGLE CYBERSECURITY PROFESSIONAL</div>
-    <div class="tick-item"><span class="tick-dot"></span>UNIVERSITY OF HELSINKI ELEMENTS OF AI</div>
-    <div class="tick-item"><span class="tick-dot"></span>CEOE DIGITAL TECHNOLOGIES</div>
-    <div class="tick-item"><span class="tick-dot"></span>GOOGLE AI ESSENTIALS</div>
+    <div class="tick-item"><span class="tick-dot"></span>TAILSCALE MESH NETWORK</div>
+    <div class="tick-item"><span class="tick-dot"></span>UPTIME KUMA MONITORING</div>
+    <div class="tick-item"><span class="tick-dot"></span>VAULTWARDEN ZERO-KNOWLEDGE</div>
+    <div class="tick-item"><span class="tick-dot"></span>N8N AUTOMATION</div>
+    <div class="tick-item"><span class="tick-dot"></span>RESTIC IMMUTABLE BACKUP</div>
   </div>
 </div>
 
@@ -158,6 +161,8 @@
 </section>
 
 {{ partial "stack.html" . }}
+
+{{ partial "onboarding.html" . }}
 
 <!-- RISK SIMULATOR -->
 <section class="risk r" id="simulador">

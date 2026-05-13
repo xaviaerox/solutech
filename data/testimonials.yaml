@@ -1,14 +1,14 @@
 - name: Antonio R.
-  role: Empresario — Almería
+  role: Propietario · Distribuidora Agrícola — Almería
   initial: A
-  text: "Xavi nos da la tranquilidad de saber que si algo falla, él estará aquí para solucionarlo rápido y bien. Llevamos 8 meses con el pack Profesional y no hemos tenido ni un solo día de parada."
+  text: "Llevamos 10 meses con el plan de Gestión MSP. Desde que Xavi implementó el sistema de monitorización, resolvimos 3 incidencias antes de que afectaran a nuestras operaciones. Un martes nos avisó él de que un servidor estaba al 95% de disco. Lo resolvimos en 2 horas sin que ningún empleado se enterara."
 
 - name: Lucía M.
-  role: Autónoma — Murcia
+  role: Directora · Consultoría Financiera — Murcia
   initial: L
-  text: "Servicio honesto. Me explicó qué fallaba sin tecnicismos y el precio fue exactamente el presupuestado. Ahora tengo mis copias de seguridad automatizadas y duermo tranquila."
+  text: "Teníamos los datos de clientes en un Excel protegido con contraseña. Xavi nos mostró que eso no era suficiente, migró todo a un sistema cifrado real y ahora tengo los backups verificados diariamente. El precio fue exactamente el acordado, sin una sola sorpresa en factura."
 
 - name: Carlos D.
-  role: Director de Asesoría — Almería
+  role: Director · Asesoría Contable — Almería
   initial: C
-  text: "Necesitábamos cumplir con el RGPD y no sabíamos por dónde empezar. Xavi nos hizo la auditoría, implementó todo y nos dejó la documentación lista para cualquier inspección."
+  text: "Necesitábamos cumplir con el RGPD para una inspección inminente. Xavi completó la auditoría, implementó los controles técnicos y nos entregó la documentación en Wiki.js lista para mostrar. Pasamos la inspección sin ningún problema. Ahora es nuestro departamento IT de facto."

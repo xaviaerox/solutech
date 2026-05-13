@@ -5,36 +5,48 @@
         <span class="logo-pip"></span>
         SOLUTECH
       </a>
-      <p style="color: var(--ts); font-size: 13px; line-height: 1.6;">Consultoría IT y Servicios MSP de Élite. Especializados en pymes de Almería y Murcia.</p>
+      <p style="color: var(--ts); font-size: 13px; line-height: 1.6; margin-bottom: 24px;">Departamento IT externo moderno para pequeñas empresas de Almería y Murcia. Continuidad operativa sin improvisación.</p>
+      <a href="https://status.solutech.shop" target="_blank" rel="noopener" class="status-badge">
+        <span class="status-badge-pip"></span>
+        Sistema Operacional · Ver Estado en Tiempo Real
+      </a>
     </div>
     <div>
-      <h4 class="mono" style="color: var(--o); margin-bottom: 24px;">Servicios</h4>
+      <h4 class="mono" style="color: var(--o); margin-bottom: 24px;">Soluciones</h4>
       <ul class="f-links">
-        <li><a href="{{ "/#servicios" | relURL }}">Soporte IT</a></li>
-        <li><a href="{{ "/#servicios" | relURL }}">Ciberseguridad</a></li>
-        <li><a href="{{ "/#servicios" | relURL }}">Automatización IA</a></li>
-        <li><a href="https://status.solutech.shop">Monitorización</a></li>
+        <li><a href="{{ "/servicios" | relURL }}">Planes MSP</a></li>
+        <li><a href="{{ "/#stack" | relURL }}">Stack Operativo</a></li>
+        <li><a href="{{ "/#primer-mes" | relURL }}">Cómo funciona</a></li>
+        <li><a href="{{ "/#blog" | relURL }}">Blog IT</a></li>
       </ul>
     </div>
     <div>
-      <h4 class="mono" style="color: var(--o); margin-bottom: 24px;">Legal</h4>
+      <h4 class="mono" style="color: var(--o); margin-bottom: 24px;">Legal & Contacto</h4>
       <ul class="f-links">
-        <li><a href="#">Privacidad</a></li>
-        <li><a href="#">Cookies</a></li>
+        <li><a href="#">Política de Privacidad</a></li>
+        <li><a href="#">Política de Cookies</a></li>
         <li><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></li>
+        <li><a href="https://status.solutech.shop" target="_blank" rel="noopener">status.solutech.shop</a></li>
       </ul>
     </div>
   </div>
   
   <div style="max-width: 1200px; margin: 60px auto 0; padding-top: 40px; border-top: 1px solid var(--br); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-    <p style="color: var(--ts); font-size: 11px;">&copy; {{ now.Format "2006" }} SOLUTECH · ALL SYSTEMS OPERATIONAL</p>
+    <p style="color: var(--ts); font-size: 11px;">&copy; {{ now.Format "2006" }} SOLUTECH · Almería & Murcia · CIF pendiente</p>
     <div class="f-social">
-      {{ with .Site.Params.social.linkedin }}<a href="{{ . }}" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>{{ end }}
-      {{ with .Site.Params.social.github }}<a href="{{ . }}" title="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>{{ end }}
+      {{ with .Site.Params.social.linkedin }}<a href="{{ . }}" title="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>{{ end }}
+      {{ with .Site.Params.social.github }}<a href="{{ . }}" title="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>{{ end }}
       <a href="mailto:{{ .Site.Params.email }}" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
     </div>
   </div>
 </footer>
+
+<style>
+.status-badge { display: inline-flex; align-items: center; gap: 8px; font-family: var(--f-m); font-size: 10px; color: #10b981; text-decoration: none; padding: 6px 12px; border: 1px solid rgba(16,185,129,0.2); border-radius: 100px; transition: all .2s; }
+.status-badge:hover { background: rgba(16,185,129,0.05); border-color: rgba(16,185,129,0.4); }
+.status-badge-pip { width: 6px; height: 6px; background: #10b981; border-radius: 50%; animation: ping-status 2s cubic-bezier(0, 0, 0.2, 1) infinite; flex-shrink: 0; }
+@keyframes ping-status { 0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(16,185,129,0.4); } 50% { opacity: 0.8; box-shadow: 0 0 0 5px rgba(16,185,129,0); } }
+</style>
 
 <script>
 const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('in');obs.unobserve(el.target)}})},{threshold:0.08});

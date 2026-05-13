@@ -1,0 +1,69 @@
+{{ define "main" }}
+<section class="hero r" style="min-height: auto; padding: 140px 5% 80px;">
+  <div style="max-width: 1200px; width: 100%; margin: 0 auto;">
+    <div class="section-tag">Servicios de Gestión IT</div>
+    <h1 class="section-h" style="font-size: clamp(36px, 5vw, 64px); margin-bottom: 24px;">Planes de Gestión MSP.<br><em>Sin letra pequeña.</em></h1>
+    <p style="color: var(--tm); font-size: 16px; max-width: 560px; margin-bottom: 60px;">Todo lo que incluye cada plan, sin ambigüedad. Precio cerrado mensual, sin sorpresas en factura.</p>
+    
+    <div class="svc-grid">
+      {{ range hugo.Data.pricing }}
+      <div class="svc {{ if .highlight }}mid{{ end }}">
+        {{ if .badge }}<div class="svc-badge">{{ .badge }}</div>{{ end }}
+        <div class="svc-icon-wrap">
+          {{ if eq .id "pack-esencial" }}<svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          {{ else if eq .id "pack-profesional" }}<svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          {{ else }}<svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>{{ end }}
+        </div>
+        <div class="svc-pack">{{ .name }}</div>
+        <div class="svc-name">{{ .target }}</div>
+        <div class="svc-list">
+          {{ range .features }}
+          <div class="svc-item">{{ . }}</div>
+          {{ end }}
+        </div>
+        <div class="svc-footer">
+          <span class="svc-price">{{ .price }}{{ .period }}</span>
+          <a href="{{ .link }}" class="svc-link">{{ .cta }} <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
+    <!-- FAQ -->
+    <div style="margin-top: 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+      <div>
+        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 12px;">¿Hay permanencia?</h3>
+        <p style="color: var(--tm); font-size: 14px; line-height: 1.7;">No exigimos permanencia. Nuestro modelo se basa en resultados continuos, no en contratos. Si no percibes valor, puedes cancelar con 30 días de preaviso.</p>
+      </div>
+      <div>
+        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 12px;">¿Qué pasa si tengo una urgencia fuera de horario?</h3>
+        <p style="color: var(--tm); font-size: 14px; line-height: 1.7;">Los planes Profesional y Blindaje incluyen canal de WhatsApp Business para urgencias críticas. Tiempo de respuesta garantizado inferior a 2 horas.</p>
+      </div>
+      <div>
+        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 12px;">¿El precio incluye el hardware?</h3>
+        <p style="color: var(--tm); font-size: 14px; line-height: 1.7;">Los precios son de gestión y servicio, no incluyen hardware. Si necesitas equipos, te los presupuestamos aparte sin margen oculto.</p>
+      </div>
+      <div>
+        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 12px;">¿Funciona en remoto o necesitas venir en persona?</h3>
+        <p style="color: var(--tm); font-size: 14px; line-height: 1.7;">El 90% de la gestión es remota mediante RustDesk + Tailscale. Para instalaciones físicas o urgencias presenciales, cubrimos Almería y Murcia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta r" id="contacto" style="padding-top: 80px;">
+  <h2>¿Tu empresa está<br><em>realmente protegida?</em></h2>
+  <p>Diagnóstico técnico gratuito. Sin presión. Si no puedo ayudarte, te lo digo.</p>
+  
+  <form action="https://formspree.io/f/{{ .Site.Params.integrations.formspree_id }}" method="POST" style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; text-align: left; position: relative; z-index: 10;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+      <input type="text" name="nombre" placeholder="Tu nombre" required style="background: var(--s2); border: 1px solid var(--br); border-radius: 6px; padding: 12px; color: var(--t); font-family: inherit;">
+      <input type="email" name="email" placeholder="Tu email" required style="background: var(--s2); border: 1px solid var(--br); border-radius: 6px; padding: 12px; color: var(--t); font-family: inherit;">
+    </div>
+    <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?" required style="background: var(--s2); border: 1px solid var(--br); border-radius: 6px; padding: 12px; color: var(--t); font-family: inherit; min-height: 100px;"></textarea>
+    <button type="submit" class="btn-p" style="font-size:14px; padding:14px 32px; justify-content: center; width: 100%;">Enviar solicitud de diagnóstico <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+  </form>
+
+  <div class="cta-note">{{ .Site.Params.email }} · Respuesta en menos de 24h</div>
+</section>
+{{ end }}
