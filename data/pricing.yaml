@@ -1,40 +1,40 @@
 - id: pack-esencial
-  name: Esencial
+  name: Operativa Base
   price: "149"
   period: "/mes"
-  target: Para autónomos y pequeños negocios
+  target: Para autónomos y micro-pymes
   features:
-    - Soporte remoto ilimitado
-    - Antivirus gestionado
-    - Backup automático nube (50GB)
-    - Respuesta < 24h
-  cta: Empezar con Esencial
+    - Gestión de Seguridad (Endpoint)
+    - Backup Inmutable Nube (50GB)
+    - Soporte Remoto Proactivo
+    - Auditoría de Identidad Digital
+  cta: Iniciar Operativa
   link: "#contacto"
 
 - id: pack-profesional
-  name: Profesional
+  name: Gestión MSP
   price: "299"
   period: "/mes"
-  target: Para empresas de 5 a 20 empleados
+  target: El estándar para empresas en crecimiento
   highlight: true
-  badge: Más elegido
+  badge: Recomendado
   features:
-    - Todo lo de Esencial
-    - Soporte presencial prioritario
-    - Monitorización 24/7 activa
-    - Auditoría IT trimestral
-  cta: Elegir Profesional
+    - Todo lo de Operativa Base
+    - Monitorización 24/7 (Uptime)
+    - Gestión de Redes & Tailscale
+    - Inventario y Documentación IT
+  cta: Escalar mi IT
   link: "#contacto"
 
 - id: pack-blindaje
-  name: Blindaje Total
+  name: Blindaje & IA
   price: "499"
   period: "/mes"
-  target: Para empresas con datos sensibles
+  target: Para infraestructuras críticas
   features:
-    - Todo lo de Profesional
-    - Firewall & Cifrado avanzado
-    - Cumplimiento RGPD total
-    - Recuperación ante desastres
+    - Todo lo de Gestión MSP
+    - Firewall Perimetral Avanzado
+    - Automatización de Procesos (n8n)
+    - Recuperación Ante Desastres (DRP)
   cta: Blindar Empresa
   link: "#contacto"

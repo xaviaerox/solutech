@@ -3,7 +3,7 @@ title: "Automatización real para pequeñas empresas: lo que ya funciona hoy"
 date: 2025-01-02T09:00:00+01:00
 description: "Sin grandes presupuestos ni complicaciones. Herramientas que ahorran horas de trabajo manual cada semana."
 categories: ["IA Aplicada"]
-image: "images/blog/ia-pymes.webp"
+image: "images/blog-automatizacion.jpg"
 draft: false
 ---
 

@@ -3,7 +3,7 @@ title: "Por qué las copias de seguridad en local ya no son suficientes"
 date: 2025-01-08T12:00:00+01:00
 description: "La regla 3-2-1 explicada de forma práctica para asegurar la continuidad de tu negocio."
 categories: ["Gestión IT"]
-image: "images/blog/backups.webp"
+image: "images/blog-backup.jpg"
 draft: false
 ---
 

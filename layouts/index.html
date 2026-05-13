@@ -6,8 +6,8 @@
   <div class="hero-inner">
     <div class="hero-left">
       <div class="hero-badge"><span class="badge-dot"></span><span class="badge-text">Almería · Murcia · Remoto</span></div>
-      <h1 class="hero-h1">Tu IT resuelta.<br><em>Cada mes.</em></h1>
-      <p class="hero-p">Gestión tecnológica continua para pequeñas empresas. Soporte, seguridad y modernización sin tener que pensar en ello.</p>
+      <h1 class="hero-h1">Tu infraestructura IT.<br><em>Bajo control.</em></h1>
+      <p class="hero-p">Operativa tecnológica blindada para pequeñas empresas. Monitorización silenciosa, prevención activa y gestión proactiva para que tu negocio nunca se detenga.</p>
       <div class="hero-actions">
         <button class="btn-p">Diagnóstico gratuito <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
         <button class="btn-o">Ver servicios</button>
@@ -57,10 +57,10 @@
 
 <!-- IMPACT -->
 <div class="impact">
-  <div class="impact-item"><div class="impact-num">12</div><div class="impact-label">Años de experiencia</div></div>
-  <div class="impact-item"><div class="impact-num">0</div><div class="impact-label">Incidentes sin resolver</div></div>
-  <div class="impact-item"><div class="impact-num">&lt;24h</div><div class="impact-label">Respuesta máxima</div></div>
-  <div class="impact-item"><div class="impact-num">100%</div><div class="impact-label">Clientes satisfechos</div></div>
+  <div class="impact-item"><div class="impact-num">12</div><div class="impact-label">Años de trayectoria</div></div>
+  <div class="impact-item"><div class="impact-num">99.9%</div><div class="impact-label">Uptime infraestructura</div></div>
+  <div class="impact-item"><div class="impact-num">&lt;2h</div><div class="impact-label">Respuesta crítica</div></div>
+  <div class="impact-item"><div class="impact-num">100%</div><div class="impact-label">Continuidad garantizada</div></div>
 </div>
 
 <!-- PROBLEMA -->
@@ -70,23 +70,23 @@
   <div class="svc-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
     <div class="svc">
       <div class="svc-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-      <div class="svc-name" style="font-size: 20px;">Todo roto, nadie avisa</div>
-      <div class="svc-desc">Te enteras de los fallos cuando ya afectan al negocio. Sin monitorización, la reacción siempre llega tarde.</div>
+      <div class="svc-name" style="font-size: 20px;">Falta de Visibilidad</div>
+      <div class="svc-desc">Te enteras de los fallos cuando ya afectan al negocio. Sin monitorización activa, la reacción siempre llega tarde.</div>
     </div>
     <div class="svc">
       <div class="svc-icon-wrap"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
-      <div class="svc-name" style="font-size: 20px;">Copias de seguridad de mentira</div>
-      <div class="svc-desc">El pendrive en el cajón no cuenta. El ransomware no distingue entre empresas grandes y pequeñas.</div>
+      <div class="svc-name" style="font-size: 20px;">Riesgo de Continuidad</div>
+      <div class="svc-desc">Las copias de seguridad no verificadas son copias de mentira. Un ataque de ransomware no distingue tamaños.</div>
     </div>
     <div class="svc">
       <div class="svc-icon-wrap"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-      <div class="svc-name" style="font-size: 20px;">Contraseñas sin control</div>
-      <div class="svc-desc">Post-its, Excel sin cifrar, contraseñas compartidas por WhatsApp. Una brecha esperando a ocurrir.</div>
+      <div class="svc-name" style="font-size: 20px;">Identidad Comprometida</div>
+      <div class="svc-desc">Contraseñas en Post-its o Excels sin cifrar. Una sola brecha de seguridad puede detener tu empresa semanas.</div>
     </div>
     <div class="svc">
       <div class="svc-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-      <div class="svc-name" style="font-size: 20px;">Tiempo perdido cada día</div>
-      <div class="svc-desc">Software desactualizado, procesos repetitivos, herramientas que no se hablan entre sí.</div>
+      <div class="svc-name" style="font-size: 20px;">Deuda Tecnológica</div>
+      <div class="svc-desc">Software desactualizado y procesos manuales repetitivos que drenan la productividad de tu equipo cada día.</div>
     </div>
   </div>
 </section>
@@ -156,6 +156,8 @@
     </div>
   </div>
 </section>
+
+{{ partial "stack.html" . }}
 
 <!-- RISK SIMULATOR -->
 <section class="risk r" id="simulador">
@@ -258,7 +260,7 @@ function renderStep() {
         <div class="bcard-cat">{{ range .Params.categories }}{{ . }}{{ end }}</div>
         <div class="bcard-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
         <div class="bcard-exc">{{ .Description }}</div>
-        <div class="bcard-meta">{{ .Date.Format "02 GEN 2006" }} · {{ .ReadingTime }} MIN LECTURA</div>
+        <div class="bcard-meta">{{ .Date.Format "02 Jan 2006" }} · {{ .ReadingTime }} MIN LECTURA</div>
       </div>
     </div>
     {{ end }}
@@ -269,7 +271,7 @@ function renderStep() {
           <div class="bcard-cat">{{ range .Params.categories }}{{ . }}{{ end }}</div>
           <div class="bcard-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
           <div class="bcard-exc">{{ .Description }}</div>
-          <div class="bcard-meta">{{ .Date.Format "02 GEN 2006" }}</div>
+          <div class="bcard-meta">{{ .Date.Format "02 Jan 2006" }}</div>
         </div>
       </div>
       {{ end }}
