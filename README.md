@@ -47,7 +47,7 @@ No vendemos cajas ni licencias; vendemos **continuidad de negocio**. Mi objetivo
 - 🌐 **Web**: [solutech.shop](https://solutech.shop)
 - 💬 **WhatsApp**: [+34 684 248 465](https://wa.me/34684248465)
 - 👔 **LinkedIn**: [Xavi Alonso](https://www.linkedin.com/in/xaviaerox)
-- 📧 **Email**: [hola@solutech.shop](mailto:hola@solutech.shop)
+- 📧 **Email**: [xavi@solutech.shop](mailto:xavi@solutech.shop)
 
 ---
 *© 2026 Solutech · Almería & Murcia, España.*

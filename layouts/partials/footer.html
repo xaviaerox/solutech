@@ -1,54 +1,230 @@
-<footer>
+<!-- FOOTER PRINCIPAL (ESTÁTICO AL FINAL) -->
+<footer class="main-footer">
   <div class="f-grid">
-    <div>
-      <a href="{{ "/" | relURL }}" class="logo" style="margin-bottom: 24px;">
-        <span class="logo-pip"></span>
-        SOLUTECH
-      </a>
-      <p style="color: var(--ts); font-size: 13px; line-height: 1.6; margin-bottom: 24px;">Departamento IT externo moderno para pequeñas empresas de Almería y Murcia. Continuidad operativa sin improvisación.</p>
-      <a href="https://status.solutech.shop" target="_blank" rel="noopener" class="status-badge">
-        <span class="status-badge-pip"></span>
-        Sistema Operacional · Ver Estado en Tiempo Real
-      </a>
+    <div class="f-col about">
+      <h4 class="f-title">Arquitectura IT</h4>
+      <p class="f-text">Consultoría técnica de élite para empresas que buscan blindaje, eficiencia y continuidad operativa.</p>
+      <p class="f-copy-static">&copy; {{ now.Format "2006" }} SOLUTECH · xaviaerox</p>
     </div>
-    <div>
-      <h4 class="mono" style="color: var(--o); margin-bottom: 24px;">Soluciones</h4>
-      <ul class="f-links">
+    
+    <div class="f-col">
+      <h4 class="f-title">Explorar</h4>
+      <ul class="f-list">
         <li><a href="{{ "/servicios" | relURL }}">Planes MSP</a></li>
-        <li><a href="{{ "/#stack" | relURL }}">Stack Operativo</a></li>
-        <li><a href="{{ "/#primer-mes" | relURL }}">Cómo funciona</a></li>
-        <li><a href="{{ "/#blog" | relURL }}">Blog IT</a></li>
+        <li><a href="{{ "/#stack" | relURL }}">Tecnología</a></li>
+        <li><a href="{{ "/#blog" | relURL }}">Blog Técnico</a></li>
       </ul>
     </div>
-    <div>
-      <h4 class="mono" style="color: var(--o); margin-bottom: 24px;">Legal & Contacto</h4>
-      <ul class="f-links">
-        <li><a href="#">Política de Privacidad</a></li>
-        <li><a href="#">Política de Cookies</a></li>
-        <li><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></li>
-        <li><a href="https://status.solutech.shop" target="_blank" rel="noopener">status.solutech.shop</a></li>
+
+    <div class="f-col">
+      <h4 class="f-title">Reciente</h4>
+      <ul class="f-list">
+        {{ range first 2 (where .Site.RegularPages "Section" "blog") }}
+        <li class="f-post-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="f-col">
+      <h4 class="f-title">Privacidad</h4>
+      <ul class="f-list">
+        <li><a href="#">Legal</a></li>
+        <li><a href="#">Cookies</a></li>
+        <li><a href="mailto:{{ .Site.Params.email }}">Email</a></li>
       </ul>
     </div>
   </div>
-  
-  <div style="max-width: 1200px; margin: 60px auto 0; padding-top: 40px; border-top: 1px solid var(--br); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-    <p style="color: var(--ts); font-size: 11px;">&copy; {{ now.Format "2006" }} SOLUTECH · Almería & Murcia · CIF pendiente</p>
-    <div class="f-social">
+</footer>
+
+<!-- SCROLL INDICATOR / BACK TO TOP -->
+<div id="scroll-ui" class="scroll-ui">
+  <div class="scroll-glow"></div>
+  <div class="scroll-box" id="scroll-box">
+    <!-- MOUSE ICON -->
+    <svg class="si mouse" viewBox="0 0 24 24">
+      <rect x="7" y="4" width="10" height="16" rx="5" ry="5"></rect>
+      <line x1="12" y1="7" x2="12" y2="11" class="si-dot"></line>
+    </svg>
+    <!-- TRIANGLE ICON -->
+    <svg class="si triangle" viewBox="0 0 24 24">
+      <path d="M12 5l-8 10h16l-8-10z"></path>
+    </svg>
+  </div>
+</div>
+
+<footer class="fixed-footer">
+  <div class="f-slim-inner">
+    <div class="f-social-tray">
       {{ with .Site.Params.social.linkedin }}<a href="{{ . }}" title="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>{{ end }}
+      {{ with .Site.Params.social.instagram }}<a href="{{ . }}" title="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>{{ end }}
+      {{ with .Site.Params.social.youtube }}<a href="{{ . }}" title="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon></svg></a>{{ end }}
       {{ with .Site.Params.social.github }}<a href="{{ . }}" title="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>{{ end }}
+      {{ with .Site.Params.social.whatsapp }}<a href="{{ . }}" title="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3.5Z"></path></svg></a>{{ end }}
       <a href="mailto:{{ .Site.Params.email }}" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
     </div>
   </div>
 </footer>
 
 <style>
-.status-badge { display: inline-flex; align-items: center; gap: 8px; font-family: var(--f-m); font-size: 10px; color: #10b981; text-decoration: none; padding: 6px 12px; border: 1px solid rgba(16,185,129,0.2); border-radius: 100px; transition: all .2s; }
-.status-badge:hover { background: rgba(16,185,129,0.05); border-color: rgba(16,185,129,0.4); }
-.status-badge-pip { width: 6px; height: 6px; background: #10b981; border-radius: 50%; animation: ping-status 2s cubic-bezier(0, 0, 0.2, 1) infinite; flex-shrink: 0; }
-@keyframes ping-status { 0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(16,185,129,0.4); } 50% { opacity: 0.8; box-shadow: 0 0 0 5px rgba(16,185,129,0); } }
+/* MAIN FOOTER (STATIC) */
+.main-footer { background: var(--bg); padding: 60px 5% 100px; border-top: 1px solid var(--br); }
+.main-footer .f-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 0.8fr 1fr 0.8fr; gap: 40px; }
+.f-title { font-family: var(--f-m); font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--o); margin-bottom: 20px; opacity: 0.8; }
+.f-text { font-size: 13px; color: var(--tm); line-height: 1.6; margin-bottom: 20px; }
+.f-copy-static { font-family: var(--f-m); font-size: 9px; color: var(--ts); text-transform: uppercase; letter-spacing: 0.05em; }
+.f-list { list-style: none; }
+.f-list li { margin-bottom: 12px; }
+.f-list a { font-size: 12px; color: var(--tm); text-decoration: none; transition: color .2s; }
+.f-list a:hover { color: var(--o); }
+.f-post-item { line-height: 1.3; }
+
+/* FIXED FOOTER (MINIMAL) */
+.fixed-footer {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000;
+    height: 54px; background: rgba(7, 7, 11, 0.7); backdrop-filter: blur(20px);
+    border-top: 1px solid var(--br); display: flex; align-items: center; justify-content: center;
+}
+.f-social-tray { display: flex; gap: 16px; align-items: center; }
+.f-social-tray a { 
+    width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; 
+    color: var(--ts); transition: all .3s cubic-bezier(0.16, 1, 0.3, 1); 
+    border-radius: 8px; border: 1px solid transparent;
+}
+.f-social-tray a:hover { color: var(--o); background: var(--o-a); border-color: var(--o-a); transform: translateY(-3px); }
+.f-social-tray svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+
+/* SCROLL UI */
+.scroll-ui {
+    position: fixed; bottom: 70px; left: 50%; transform: translateX(-50%);
+    z-index: 1001; cursor: pointer; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: auto;
+}
+.scroll-box {
+    width: 32px; height: 32px; background: rgba(7, 7, 11, 0.8); backdrop-filter: blur(10px);
+    border: 1px solid var(--br); border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden; transition: all 0.3s;
+}
+.si { width: 14px; height: 14px; fill: none; stroke: var(--ts); stroke-width: 1.5; position: absolute; transition: all 0.3s; }
+.si.triangle { opacity: 0; transform: translateY(10px); fill: var(--o); stroke: none; }
+.si-dot { animation: scroll-dot 2s infinite; }
+
+@keyframes scroll-dot {
+    0% { transform: translateY(0); opacity: 0; }
+    20% { opacity: 1; }
+    60% { transform: translateY(6px); opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* END STATE (TRIANGLE) */
+.scroll-ui.si-end .scroll-box { border-color: var(--o); background: var(--o-a); box-shadow: 0 0 15px var(--o-a); }
+.scroll-ui.si-end .si.mouse { opacity: 0; transform: translateY(-10px); }
+.scroll-ui.si-end .si.triangle { opacity: 1; transform: translateY(0); }
+
+.scroll-glow {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 50px; height: 50px; background: radial-gradient(circle, var(--o-a) 0%, transparent 70%);
+    z-index: -1; opacity: 0.5;
+}
+
+body { padding-bottom: 54px; }
+
+@media (max-width: 1024px) {
+    .main-footer .f-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+@media (max-width: 768px) {
+    .main-footer .f-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+    .f-list li { margin-bottom: 8px; }
+}
 </style>
 
 <script>
-const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('in');obs.unobserve(el.target)}})},{threshold:0.08});
-document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+(function() {
+    // 1. Fluid Inertial Scroll & Snap Logic
+    let target = window.scrollY;
+    let current = window.scrollY;
+    const ease = 0.12; // Faster ease for fluidity
+    let isMoving = false;
+    let snapTimeout;
+
+    const sections = Array.from(document.querySelectorAll('.hero, .ticker-wrap, .impact, .r, .blog-s, .cta-s'));
+
+    function smooth() {
+        current += (target - current) * ease;
+        if (Math.abs(target - current) > 0.1) {
+            window.scrollTo(0, current);
+            isMoving = true;
+        } else {
+            if (isMoving) {
+                // Stopped moving, trigger snap check
+                clearTimeout(snapTimeout);
+                snapTimeout = setTimeout(snapToNearest, 100); // Much faster snap (100ms)
+            }
+            isMoving = false;
+        }
+        requestAnimationFrame(smooth);
+    }
+
+    function snapToNearest() {
+        if (Math.abs(window.scrollY - target) > 50) return; // User manually scrolled
+        
+        let nearest = sections[0];
+        let minDist = Math.abs(window.scrollY - sections[0].offsetTop + 80);
+        
+        sections.forEach(s => {
+            const dist = Math.abs(window.scrollY - s.offsetTop + 80);
+            if (dist < minDist) {
+                minDist = dist;
+                nearest = s;
+            }
+        });
+
+        if (minDist < window.innerHeight / 2) {
+            target = nearest.offsetTop - 80;
+        }
+    }
+
+    window.addEventListener('wheel', (e) => {
+        if (e.ctrlKey) return; 
+        e.preventDefault();
+        clearTimeout(snapTimeout);
+        target = Math.max(0, Math.min(document.body.offsetHeight - window.innerHeight, target + e.deltaY));
+    }, { passive: false });
+
+    window.addEventListener('scroll', () => {
+        if (Math.abs(window.scrollY - current) > 200) {
+            target = window.scrollY;
+            current = window.scrollY;
+        }
+    }, { passive: true });
+
+    requestAnimationFrame(smooth);
+
+    // 2. Intersection Observer for 'in' class
+    const obs = new IntersectionObserver(e => {
+        e.forEach(el => {
+            if (el.isIntersecting) {
+                el.target.classList.add('in');
+                obs.unobserve(el.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.r').forEach(el => obs.observe(el));
+
+    // 3. Scroll UI
+    const scrollUi = document.getElementById('scroll-ui');
+    window.addEventListener('scroll', () => {
+        const atBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100;
+        const atTop = window.scrollY < 200;
+        scrollUi.classList.toggle('si-end', atBottom);
+        scrollUi.style.opacity = atTop ? '0' : '1';
+        scrollUi.style.pointerEvents = atTop ? 'none' : 'auto';
+    }, { passive: true });
+
+    scrollUi.addEventListener('click', () => {
+        if (scrollUi.classList.contains('si-end')) {
+            target = 0;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
+})();
 </script>

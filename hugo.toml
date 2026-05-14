@@ -5,7 +5,7 @@ theme = []
 
 [params]
   description = 'Gestión tecnológica continua para pequeñas empresas. Soporte, seguridad y modernización.'
-  email = 'hola@solutech.shop'
+  email = 'xavi@solutech.shop'
   
 [params.social]
   linkedin = 'https://www.linkedin.com/in/xaviaerox'
