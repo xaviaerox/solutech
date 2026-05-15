@@ -1,0 +1,35 @@
+---
+title: "C1b3rWall: Donde la Seguridad Nacional se une al Talento"
+date: 2026-05-15T23:50:00+02:00
+description: "Descubre cómo la Policía Nacional y la sociedad civil están construyendo el muro digital que protege nuestro futuro."
+categories: ["Ciberseguridad", "Eventos"]
+image: "images/blog-ciberwall.jpg"
+draft: false
+---
+
+### El Compromiso Institucional
+En el blog de **Solutech**, creemos que la ciberseguridad ya no es una opción "técnica", es un pilar de nuestra libertad. Proyectos como **C1b3rWall** demuestran que la Policía Nacional no solo está para perseguir el delito, sino para **liderar la prevención**.
+
+Acercarse a estas instituciones nos permite aprender de quienes están en la primera línea de defensa contra el cibercrimen organizado, el fraude y la desinformación.
+
+> "La ciberseguridad es una responsabilidad compartida. Tu talento es el ladrillo más importante de este muro."
+> — Lema C1b3rWall
+
+### Eventos Imprescindibles en España
+Si quieres crecer en ciberseguridad, marca estas fechas en tu calendario.
+
+*   **C1b3rWall (Ávila)**: Organizado por la Policía Nacional. El congreso de ciberseguridad y ciberinteligencia más grande de España. Un espacio donde la Escuela Nacional de Policía se abre a expertos, empresas y ciudadanos.
+*   **ENISE (León)**: Organizado por INCIBE. Encuentro Internacional de Seguridad de la Información. Referente para la industria y el sector público para debatir sobre soberanía digital.
+*   **RootedCON (Madrid)**: Organizado por la Comunidad Hacker. Uno de los eventos más técnicos y queridos por la comunidad. Se centra en el hacking puro, la investigación y la neutralidad.
+*   **Jornadas STIC (Madrid)**: Organizado por el CCN-CERT. Foco en la seguridad de las administraciones públicas y sectores estratégicos. Vital para entender la defensa nacional en el ciberespacio.
+
+### ¿Qué recogemos de este esfuerzo?
+*   **Resiliencia Digital**: Aprendes a proteger no solo tus datos, sino tu identidad y la de tu entorno en un mundo hiperconectado.
+*   **Networking de Élite**: Acceso directo a la Unidad Central de Ciberdelincuencia y a los mejores profesionales del sector privado.
+*   **Empleabilidad Real**: La ciberseguridad es el sector con desempleo cero. Formarse aquí es asegurar un futuro profesional sólido.
+*   **Reconocimiento Social**: Contribuir a una Red más segura es un acto de servicio público que las instituciones valoran y premian.
+
+### ¿Preparado para dar el salto?
+No importa si eres estudiante, profesional de IT o simplemente alguien que navega por internet. Las puertas de **C1b3rWall Academy** están abiertas para ti con formación gratuita y de calidad.
+
+> Únete a la Comunidad Solutech. Protegiendo nuestro mundo, bit a bit.

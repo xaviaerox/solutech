@@ -13,6 +13,7 @@
         <li><a href="{{ "/servicios" | relURL }}">Planes MSP</a></li>
         <li><a href="{{ "/#stack" | relURL }}">Tecnología</a></li>
         <li><a href="{{ "/#blog" | relURL }}">Blog Técnico</a></li>
+        <li><a href="https://xaviaerox.github.io/portfolio/" target="_blank" rel="noopener">Portfolio</a></li>
       </ul>
     </div>
 
@@ -166,6 +167,10 @@ body { padding-bottom: 54px; }
 
     function snapToNearest() {
         if (Math.abs(window.scrollY - target) > 50) return; // User manually scrolled
+        
+        // No hacer snap si estamos al final de la página
+        const atBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100;
+        if (atBottom) return;
         
         let nearest = sections[0];
         let minDist = Math.abs(window.scrollY - sections[0].offsetTop + 80);
