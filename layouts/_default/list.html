@@ -1,19 +1,28 @@
 {{ define "main" }}
-<section class="blog" style="padding-top: 140px;">
-  <div class="section-tag">Archivo</div>
+<section class="blog-container r in">
+  <div class="section-bg bg-blog"></div>
+  <div class="section-glow"></div>
+  
+  <div class="section-tag">Blog y Recursos</div>
   <h2 class="section-h">{{ .Title }}</h2>
-  <div class="blog-grid" style="display: flex; flex-direction: column; gap: 24px;">
+  
+  <div class="blog-grid">
     {{ range .Pages }}
-    <a href="{{ .RelPermalink }}" style="text-decoration: none; color: inherit;">
-      <div class="bcard small">
+    <article>
+      <a href="{{ .RelPermalink }}" class="bcard" style="text-decoration: none; color: inherit;">
+        {{ if .Params.image }}
+        <div class="bcard-img" style="background-image: url('{{ .Params.image | relURL }}'); height: 160px; min-height: auto; border-right: none; border-bottom: 1px solid var(--br);"></div>
+        {{ end }}
         <div class="bcard-body">
-          <div class="bcard-cat">{{ range .Params.categories }}{{ . }}{{ end }}</div>
+          <div class="bcard-cat">
+            {{ range $i, $cat := .Params.categories }}{{ if $i }} · {{ end }}{{ $cat }}{{ end }}
+          </div>
           <h3 class="bcard-title">{{ .Title }}</h3>
           <p class="bcard-exc">{{ .Description }}</p>
           <div class="bcard-meta">{{ .Date.Format "02 Jan 2006" }}</div>
         </div>
-      </div>
-    </a>
+      </a>
+    </article>
     {{ end }}
   </div>
 </section>
