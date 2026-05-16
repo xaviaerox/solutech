@@ -259,9 +259,9 @@
   <div class="section-tag">Blog y recursos</div>
   <h2 class="section-h">IT explicada<br><em>sin tecnicismos.</em></h2>
   <div class="blog-grid">
-    {{ range first 1 (where .Site.RegularPages "Section" "blog").ByDate.Reverse }}
-    <div class="bcard big">
-      <div class="bcard-img" style="background-image: url('{{ .Params.image | relURL }}'); background-size: cover;"></div>
+    {{ range first 4 (where .Site.RegularPages "Section" "blog").ByDate.Reverse }}
+    <div class="bcard">
+      <div class="bcard-img" style="background-image: url('{{ .Params.image | relURL }}'); height: 160px; min-height: auto; border-right: none; border-bottom: 1px solid var(--br);"></div>
       <div class="bcard-body">
         <div class="bcard-cat">
           {{ range $i, $cat := .Params.categories }}{{ if $i }} · {{ end }}{{ $cat }}{{ end }}
@@ -272,21 +272,6 @@
       </div>
     </div>
     {{ end }}
-    <div class="blog-col-right">
-      {{ range first 3 (after 1 (where .Site.RegularPages "Section" "blog").ByDate.Reverse) }}
-      <div class="bcard small">
-        <div class="bcard-img" style="background-image: url('{{ .Params.image | relURL }}'); background-size: cover; height: 100px; min-height: auto; border-bottom: 1px solid var(--br);"></div>
-        <div class="bcard-body">
-          <div class="bcard-cat">
-            {{ range $i, $cat := .Params.categories }}{{ if $i }} · {{ end }}{{ $cat }}{{ end }}
-          </div>
-          <div class="bcard-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
-          <div class="bcard-exc">{{ .Description }}</div>
-          <div class="bcard-meta">{{ .Date.Format "02 Jan 2006" }}</div>
-        </div>
-      </div>
-      {{ end }}
-    </div>
   </div>
 </section>
 
