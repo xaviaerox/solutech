@@ -236,7 +236,7 @@
       </div>
     </div>
     <div class="about-content">
-      <p class="about-p">{{ hugo.Data.founder.bio }}</p>
+      <div class="about-p">{{ hugo.Data.founder.bio | markdownify }}</div>
       <div class="vals">
         {{ range hugo.Data.founder.values }}
         <div class="val">

@@ -1,6 +1,7 @@
 baseURL = 'https://solutech.shop/'
 locale = 'es'
 title = 'Solutech — Especialistas IT'
+enableRobotsTXT = true
 theme = []
 
 [params]
