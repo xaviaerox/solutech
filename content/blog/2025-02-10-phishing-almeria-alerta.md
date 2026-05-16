@@ -1,6 +1,7 @@
 ---
 title: "Campaña de Phishing detectada en Almería: Suplantación de empresas locales"
 date: 2025-02-10T11:00:00+01:00
+slug: "phishing-almeria-alerta"
 description: "Alerta de seguridad crítica para pymes del sector agrícola y servicios en Almería. Se han detectado correos fraudulentos suplantando identidades corporativas."
 categories: ["Ciberseguridad", "Alertas"]
 image: "images/blog-phishing.jpg"

@@ -188,21 +188,23 @@ body { padding-bottom: 54px; }
         }
     }
 
-    window.addEventListener('wheel', (e) => {
-        if (e.ctrlKey) return; 
-        e.preventDefault();
-        clearTimeout(snapTimeout);
-        target = Math.max(0, Math.min(document.body.offsetHeight - window.innerHeight, target + e.deltaY));
-    }, { passive: false });
+    if (document.body.classList.contains('home')) {
+        window.addEventListener('wheel', (e) => {
+            if (e.ctrlKey) return; 
+            e.preventDefault();
+            clearTimeout(snapTimeout);
+            target = Math.max(0, Math.min(document.body.offsetHeight - window.innerHeight, target + e.deltaY));
+        }, { passive: false });
 
-    window.addEventListener('scroll', () => {
-        if (Math.abs(window.scrollY - current) > 200) {
-            target = window.scrollY;
-            current = window.scrollY;
-        }
-    }, { passive: true });
+        window.addEventListener('scroll', () => {
+            if (Math.abs(window.scrollY - current) > 200) {
+                target = window.scrollY;
+                current = window.scrollY;
+            }
+        }, { passive: true });
 
-    requestAnimationFrame(smooth);
+        requestAnimationFrame(smooth);
+    }
 
     // 2. Intersection Observer for 'in' class
     const obs = new IntersectionObserver(e => {
