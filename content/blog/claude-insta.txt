@@ -1,0 +1,33 @@
+# PACK PARA INSTAGRAM (Post & Stories) - Claude 120 Códigos
+
+## 🎨 ESTRUCTURA DEL CARRUSEL
+* Slide 1: Portada elegida (portada_curiosity.png o la que prefieras).
+* Slides 2 a 11: Tus imágenes recortadas (las 10 categorías de la carpeta fuentes externas).
+* Slide 12 (Despedida): Imagen simple con texto: "¿Quieres más recursos? En el blog te cuento cómo certificarte con Claude y te dejo el análisis completo. Link en Bio."
+
+---
+
+## ✍️ COPY PARA EL POST (Pie de foto)
+
+Claude se ha convertido en una pieza clave de nuestra operativa en Solutech. Para que no tengas que pasar por la curva de aprendizaje de meses, te dejo las 10 categorías de comandos que usamos a diario. 
+
+Son disparadores de comportamiento que fuerzan a la IA a responder con precisión técnica, no con cháchara. 
+
+Desliza para guardarlos. 
+
+Si quieres profundizar en cómo estructurar esto a nivel corporativo y ver las opciones de certificación oficial de Anthropic, lo tienes detallado en el artículo del blog. 
+
+🔗 Link en la Bio.
+
+---
+
+## 🤳 COPY PARA LA HISTORIA (Story)
+
+* Fondo: Una captura de pantalla borrosa del nuevo post del blog o de la Academia de Claude.
+* Texto: "¿Sabías que Claude tiene formaciones oficiales para certificarte? Te cuento cómo acceder y te dejo la lista completa de los 120 códigos en el blog."
+* Sticker: Añade el sticker de enlace directo al post de tu blog.
+
+---
+
+## #️⃣ HASHTAGS
+#Claude #Anthropic #InteligenciaArtificial #Productividad #PromptEngineering #EstrategiaTech #Solutech #MarcaPersonal #IAparaPymes
