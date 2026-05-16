@@ -258,7 +258,7 @@ nav {
 .sim-btn:hover { border-color: var(--o); background: var(--s2); }
 
 /* ABOUT */
-.about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: start; }
+.about-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 32px; align-items: start; max-width: 900px; margin: 0 auto; }
 .about-photo { border-radius: 20px; overflow: hidden; border: 1px solid var(--br); aspect-ratio: 4/5; position: relative; }
 .about-photo-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 24px; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); }
 .about-name { font-size: 18px; font-weight: 700; }
@@ -283,10 +283,10 @@ nav {
 
 /* BLOG */
 /* BLOG */
-.blog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.blog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 900px; margin: 0 auto; }
 .bcard { background: var(--s1); border: 1px solid var(--br); border-radius: 12px; overflow: hidden; transition: all .3s; text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%; }
 .bcard:hover { border-color: var(--ts); background: var(--s2); transform: translateY(-4px); }
-.bcard.big { display: grid; grid-template-columns: 0.8fr 1.2fr; }
+.bcard.big { display: grid; grid-template-columns: 0.6fr 1.4fr; }
 .bcard-img { height: 100%; background-position: center; background-size: cover; border-right: 1px solid var(--br); min-height: 200px; }
 .bcard-body { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; gap: 6px; }
 .bcard-cat { font-family: var(--f-m); font-size: 8px; color: var(--o); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; }

@@ -1,12 +1,8 @@
 name: Xavi Alonso
 role: Operador IT & Arquitecto de Infraestructura
 location: Almería · Murcia · Remoto
-bio: |
-  Especialista en infraestructuras críticas, ciberseguridad y arquitectura cloud con más de 12 años de trayectoria en el sector IT. A lo largo de mi carrera, he diseñado e implementado soluciones tecnológicas para empresas de diversos sectores, desde pequeñas startups hasta entornos corporativos complejos.
-
-  Fundé Solutech con una misión clara: democratizar la informática de alto nivel y transformarla en una ventaja operativa invisible para las pequeñas empresas. Mi enfoque se aleja del modelo tradicional de 'paga y repara'; me centro en la prevención, el diseño de sistemas resilientes y la monitorización proactiva 24/7.
-
-  Cuento con certificaciones de la industria como Cisco CCNA, Google Cybersecurity y CompTIA A+, lo que me permite abordar los retos tecnológicos con un enfoque holístico. No solo soluciono problemas; construyo infraestructuras que garantizan la continuidad real del negocio, la seguridad de los datos y el cumplimiento normativo (RGPD), operando con el rigor y la documentación de un departamento IT de gran empresa.
+bio: >-
+  Especialista en infraestructuras críticas y seguridad operativa con más de 12 años de trayectoria. Fundé Solutech para transformar la informática tradicional en una ventaja operativa invisible. Mi enfoque no es reparar cuando algo se rompe, sino diseñar sistemas que no fallen. Gestiono la tecnología de pequeñas empresas con el rigor de una gran infraestructura SaaS, priorizando la documentación, la automatización y la continuidad real del negocio.
 values:
   - title: Tecnología Silenciosa
     desc: El éxito de mi trabajo es que te olvides de que existo. Monitorización activa y prevención para que tu operativa nunca se detenga.
