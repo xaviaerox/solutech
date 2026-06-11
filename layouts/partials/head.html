@@ -48,7 +48,7 @@
     </script>
     {{ end }}
     <!-- Google Analytics & Consent Mode v2 -->
-    {{ if .Site.GoogleAnalytics }}
+    {{ if .Site.Params.integrations.google_analytics }}
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -73,8 +73,8 @@
       }
 
       gtag('js', new Date());
-      gtag('config', '{{ .Site.GoogleAnalytics }}');
+      gtag('config', '{{ .Site.Params.integrations.google_analytics }}');
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.integrations.google_analytics }}"></script>
     {{ end }}
 </head>

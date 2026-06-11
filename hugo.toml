@@ -1,7 +1,6 @@
 baseURL = 'https://solutech.blog/'
 locale = 'es'
 title = 'Solutech — Especialistas IT'
-googleAnalytics = 'G-1XP3Q7JQWG'
 enableRobotsTXT = true
 theme = []
 
@@ -17,4 +16,9 @@ theme = []
   whatsapp = 'https://wa.me/34684248465'
 
 [params.integrations]
-  google_analytics = 'G-Q14TRWX9LY'
+  google_analytics = 'G-1XP3Q7JQWG'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
