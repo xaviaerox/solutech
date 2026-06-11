@@ -1,53 +1,44 @@
-# SOLUTECH — Gestión IT de Élite para Pymes Almerienses
+# Solutech: Frontend Architecture & Source Code
 
-> **"Hacemos que la tecnología de tu negocio funcione siempre, para que tú solo tengas que preocuparte de hacerlo crecer."**
+Este repositorio contiene el código fuente del portal público de **Solutech** (disponible en [solutech.blog](https://solutech.blog)). Funciona como la capa de presentación y captación de nuestro ecosistema Micro-MSP, orquestando la recolección de leads de manera segura antes de inyectarlos en nuestra red privada.
 
----
+## 🏗️ Arquitectura Tecnológica
 
-## 👨‍💻 Quién es Solutech
-Soy **Xavi Alonso**, Técnico Superior de Sistemas y Ciberseguridad. Fundé **Solutech** bajo una premisa clara: las pequeñas empresas de Almería y Murcia merecen el mismo nivel de blindaje y atención técnica que una gran corporación, pero con el trato directo y la honestidad de alguien que se juega su nombre en cada intervención.
+- **Generador de Sitios Estáticos (SSG):** [Hugo](https://gohugo.io/) (Extended Edition).
+- **Estilos:** CSS Nativo (Vanilla CSS) bajo una arquitectura de variables modulares (Design Tokens). No se emplean frameworks externos para garantizar latencia cero y máxima eficiencia.
+- **Hosting y CI/CD:** Desplegado mediante GitHub Actions (`.github/workflows/hugo.yaml`) hacia GitHub Pages con dominio personalizado.
+- **Analítica:** Google Analytics con implementación estricta de *Consent Mode v2* (RGPD).
+- **Agendamiento:** Integración nativa del widget de [Cal.com](https://cal.com) para videollamadas.
 
-### Lo que nos hace diferentes:
-- **Trato Directo**: Sin call centers. Hablas directamente conmigo, el técnico que conoce tu red.
-- **Precio Cerrado**: Te digo cuánto cuesta antes de tocar nada. Sin sorpresas en la factura.
-- **Compromiso Local**: Estoy aquí, en tu zona, listo para intervenir presencialmente cuando la urgencia lo requiere.
+## 🔌 Integración Backend (Captación RLS)
 
----
+Este frontend **no almacena estados ni tiene base de datos local**. El flujo de captación está completamente desacoplado:
 
-## 🛡️ Nuestros Servicios de Blindaje
+1. Los formularios web (`/soporte`) envían peticiones `POST` directamente a un Webhook orquestado en nuestro **n8n** self-hosted.
+2. N8n valida la petición y la inyecta mediante Service Key en nuestro **Supabase PostgreSQL**.
+3. El frontend ignora el procesamiento de negocio; todo el CRM y lógica de notificaciones (Telegram/SMTP) ocurre a puerta cerrada en el backend.
 
-### 📦 Pack Esencial
-*Tranquilidad base para autónomos y pequeños negocios.*
-- Soporte remoto ilimitado.
-- Antivirus gestionado y protección activa.
-- Backup automático en la nube.
+## 🚀 Desarrollo Local
 
-### 📦 Pack Profesional (Más elegido)
-*Gestión integral para empresas en crecimiento (5-20 empleados).*
-- Todo lo de Esencial + Soporte presencial prioritario.
-- Monitorización 24/7 de sistemas críticos.
-- Auditoría IT y de seguridad trimestral.
+Para levantar el entorno de desarrollo en tu máquina local, necesitas [Hugo Extended](https://gohugo.io/installation/):
 
-### 📦 Pack Blindaje Total
-*Seguridad máxima para empresas con datos sensibles.*
-- Todo lo de Profesional + Firewall y cifrado avanzado.
-- Cumplimiento íntegro de RGPD.
-- Plan de recuperación ante desastres y continuidad de negocio.
+```bash
+# Clonar el repositorio
+git clone https://github.com/xaviaerox/solutech.git
+cd solutech
 
----
+# Arrancar el servidor de desarrollo en caliente
+hugo server -D
+```
+El servidor estará disponible en `http://localhost:1313`.
 
-## 💡 Filosofía de Trabajo
-No vendemos cajas ni licencias; vendemos **continuidad de negocio**. Mi objetivo es que nunca tengas una crisis informática, pero si ocurre, que estemos listos para recuperarnos en minutos, no en días.
+## 📜 Normas de Contribución y Estilo
 
----
-
-## 📞 Conectemos
-¿Tu infraestructura necesita un blindaje real? Hablemos:
-
-- 🌐 **Web**: [xaviaerox.github.io/solutech](https://xaviaerox.github.io/solutech)
-- 💬 **WhatsApp**: [+34 684 248 465](https://wa.me/34684248465)
-- 👔 **LinkedIn**: [Xavi Alonso](https://www.linkedin.com/in/xaviaerox)
-- 📧 **Email**: [xavi.solutech@gmail.com](mailto:xavi.solutech@gmail.com)
+Todo cambio en el código debe adherirse a las directrices corporativas de Solutech:
+- **Tono B2B:** Prohibido el uso de lenguaje publicitario vacío o generado por IA. El mensaje debe ser técnico, conciso y orientado a la mitigación de riesgos.
+- **Rendimiento:** Cualquier script de terceros (analítica, calendarios) debe cargarse de forma asíncrona (`async` / `defer`) o activarse exclusivamente mediante interacción del usuario (Banner de Cookies).
+- **Privacidad:** No introducir bajo ningún concepto credenciales en texto plano, rutas de la intranet, o referencias a la base de conocimiento (`/kb`) en este repositorio público.
 
 ---
-*© 2026 Solutech · Almería & Murcia, España.*
+*© 2026 Solutech · Gestión IT Continua.*
+*Contacto oficial: xavi@solutech.blog*
