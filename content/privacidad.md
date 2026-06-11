@@ -13,9 +13,9 @@ En Solutech tratamos los datos que nos facilitan los interesados con la máxima 
 ### 1. Responsable del Tratamiento
 - **Identidad:** Xavi Alonso — Solutech
 - **Actividad:** Soporte informático, ciberseguridad y mantenimiento IT para empresas y autónomos.
-- **Correo electrónico:** xavi@solutech.shop
+- **Correo electrónico:** xavi.solutech@gmail.com
 - **Teléfono:** 684 248 465
-- **Sitio web:** https://solutech.shop
+- **Sitio web:** https://xaviaerox.github.io/solutech
 - **Zona de actuación:** Almería y Murcia, España.
 
 ### 2. Finalidad del Tratamiento
@@ -57,7 +57,7 @@ De acuerdo con el RGPD y la LOPDGDD, puedes ejercer los siguientes derechos en c
 - **Portabilidad:** Recibir tus datos en un formato estándar.
 
 **¿Cómo ejercer tus derechos?**
-Envía un correo a **xavi@solutech.shop** indicando tu nombre, el derecho que deseas ejercer y una copia de tu DNI para verificar tu identidad. Responderemos en un plazo máximo de 30 días.
+Envía un correo a **xavi.solutech@gmail.com** indicando tu nombre, el derecho que deseas ejercer y una copia de tu DNI para verificar tu identidad. Responderemos en un plazo máximo de 30 días.
 
 Si consideras que tus derechos no han sido atendidos correctamente, puedes presentar una reclamación ante la **Agencia Española de Protección de Datos (AEPD)**.
 

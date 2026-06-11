@@ -44,10 +44,10 @@ No vendemos cajas ni licencias; vendemos **continuidad de negocio**. Mi objetivo
 ## 📞 Conectemos
 ¿Tu infraestructura necesita un blindaje real? Hablemos:
 
-- 🌐 **Web**: [solutech.shop](https://solutech.shop)
+- 🌐 **Web**: [xaviaerox.github.io/solutech](https://xaviaerox.github.io/solutech)
 - 💬 **WhatsApp**: [+34 684 248 465](https://wa.me/34684248465)
 - 👔 **LinkedIn**: [Xavi Alonso](https://www.linkedin.com/in/xaviaerox)
-- 📧 **Email**: [xavi@solutech.shop](mailto:xavi@solutech.shop)
+- 📧 **Email**: [xavi.solutech@gmail.com](mailto:xavi.solutech@gmail.com)
 
 ---
 *© 2026 Solutech · Almería & Murcia, España.*
