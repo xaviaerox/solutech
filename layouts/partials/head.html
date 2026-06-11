@@ -47,6 +47,34 @@
     }
     </script>
     {{ end }}
-    <!-- Google Analytics (Requiere googleAnalytics en hugo.toml) -->
-    {{ template "_internal/google_analytics.html" . }}
+    <!-- Google Analytics & Consent Mode v2 -->
+    {{ if .Site.GoogleAnalytics }}
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      // Bloqueamos la recolección de datos por defecto (RGPD)
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+      });
+
+      // Si el usuario ya aceptó antes, actualizamos el estado
+      if (localStorage.getItem('solutech_cookie_consent') === 'granted') {
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted',
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+
+      gtag('js', new Date());
+      gtag('config', '{{ .Site.GoogleAnalytics }}');
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+    {{ end }}
 </head>

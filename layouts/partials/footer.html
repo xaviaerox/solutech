@@ -235,3 +235,57 @@ body { padding-bottom: 54px; }
     });
 })();
 </script>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" class="cookie-banner" style="display: none;">
+  <div class="cookie-content">
+    <p>Utilizamos cookies técnicas y analíticas (Google Analytics) para mejorar nuestros servicios. Puedes aceptar todas las cookies o configurar tus preferencias. <a href="{{ "/cookies" | relURL }}">Saber más</a></p>
+    <div class="cookie-actions">
+      <button id="btn-accept-cookies" class="btn-p btn-sm">Aceptar Todo</button>
+      <button id="btn-reject-cookies" class="btn-o btn-sm">Rechazar</button>
+    </div>
+  </div>
+</div>
+
+<style>
+.cookie-banner {
+  position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 500px;
+  background: rgba(15, 15, 20, 0.95); backdrop-filter: blur(15px); border: 1px solid var(--br);
+  border-radius: 12px; padding: 20px; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  font-family: var(--f-m);
+}
+.cookie-content p { font-size: 13px; color: var(--ts); margin: 0 0 15px 0; line-height: 1.5; }
+.cookie-content a { color: var(--o); text-decoration: none; }
+.cookie-actions { display: flex; gap: 10px; }
+.btn-sm { padding: 8px 16px; font-size: 12px; }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const banner = document.getElementById('cookie-banner');
+  const btnAccept = document.getElementById('btn-accept-cookies');
+  const btnReject = document.getElementById('btn-reject-cookies');
+
+  if (!localStorage.getItem('solutech_cookie_consent')) {
+    banner.style.display = 'block';
+  }
+
+  btnAccept.addEventListener('click', function() {
+    localStorage.setItem('solutech_cookie_consent', 'granted');
+    banner.style.display = 'none';
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
+      });
+    }
+  });
+
+  btnReject.addEventListener('click', function() {
+    localStorage.setItem('solutech_cookie_consent', 'denied');
+    banner.style.display = 'none';
+  });
+});
+</script>
