@@ -1,6 +1,7 @@
 baseURL = 'https://solutech.blog/'
 locale = 'es'
 title = 'Solutech — Especialistas IT'
+googleAnalytics = 'G-1XP3Q7JQWG'
 enableRobotsTXT = true
 theme = []
 

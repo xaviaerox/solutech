@@ -38,6 +38,28 @@ También puedes abrir una incidencia directamente rellenando este formulario:
 
 ---
 
+<h2 id="reservas">Agenda una Llamada</h2>
+
+Selecciona el día y la hora que mejor se adapte a tu disponibilidad para que podamos analizar tu infraestructura o resolver tus dudas en directo.
+
+<!-- Cal inline embed code begins -->
+<div style="width:100%;height:600px;overflow:scroll; margin-top: 30px; border-radius: 8px;" id="my-cal-inline"></div>
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.cal = C.cal || function () { let cal = C.cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = cal.ns[namespace] || api) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", {origin:"https://cal.com"});
+
+  Cal("inline", {
+    elementOrSelector:"#my-cal-inline",
+    calLink: "francisco-javier-alonso-fondon-gjztl4", // Muestra todos los eventos (15min y 30min)
+    layout: "month_view"
+  });
+
+  Cal("ui", {"styles":{"branding":{"brandColor":"#f87116"}},"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
+<!-- Cal inline embed code ends -->
+
+---
+
 ## Preguntas Frecuentes (FAQ)
 
 **¿Cuál es el horario de soporte?**
