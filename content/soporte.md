@@ -24,7 +24,7 @@ Automáticamente se generará un ticket en nuestro sistema y Xavi lo recibirá d
 ### 2. Formulario Web
 También puedes abrir una incidencia directamente rellenando este formulario:
 
-<form action="https://n8n.solutech.blog/webhook-test/leads" method="POST">
+<form action="https://n8n.solutech.blog/webhook/leads" method="POST">
   <label for="nombre">Nombre / Empresa:</label><br>
   <input type="text" id="nombre" name="nombre" required><br><br>
   <label for="email">Tu Email:</label><br>
