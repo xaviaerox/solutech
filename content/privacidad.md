@@ -15,37 +15,35 @@ En Solutech tratamos los datos que nos facilitan los interesados con la máxima 
 - **Actividad:** Soporte informático, ciberseguridad y mantenimiento IT para empresas y autónomos.
 - **Correo electrónico:** xavi.solutech@gmail.com
 - **Teléfono:** 684 248 465
-- **Sitio web:** https://xaviaerox.github.io/solutech
+- **Sitio web:** https://solutech.blog
 - **Zona de actuación:** Almería y Murcia, España.
 
 ### 2. Finalidad del Tratamiento
 En Solutech tratamos los datos que nos facilitan los interesados con las siguientes finalidades:
-- **Gestión de consultas y contacto:** Atender y responder a las solicitudes recibidas a través del formulario de contacto, email, WhatsApp o teléfono.
-- **Generación de informes técnicos:** Elaborar el Informe de Salud IT (IT Health Check) solicitado, incluyendo el análisis y el envío del PDF por correo electrónico.
-- **Envío de recursos gratuitos:** Facilitar la descarga de la Checklist de Cumplimiento RGPD u otros materiales informativos solicitados.
-- **Alertas de Ciberseguridad (opcional):** Únicamente si el usuario lo solicita expresamente, enviar notificaciones sobre amenazas de ciberseguridad relevantes para su zona geográfica (Almería/Murcia).
-- **Relación comercial:** Gestionar la prestación de servicios contratados y la facturación correspondiente.
+- **Gestión de consultas y contacto:** Atender y responder a las solicitudes recibidas a través del formulario de contacto, calendario interactivo (Cal.com), email o WhatsApp.
+- **Generación de diagnósticos IT:** Elaborar análisis técnicos y respuestas a problemas de infraestructura.
+- **Relación comercial:** Gestionar la prestación de servicios MSP y soporte contratados.
 
 ### 3. Base Legal del Tratamiento
-- **Consentimiento del interesado** (Art. 6.1.a RGPD): Para el envío de alertas de ciberseguridad y comunicaciones informativas. Este consentimiento puede retirarse en cualquier momento.
-- **Ejecución de un contrato o medidas precontractuales** (Art. 6.1.b RGPD): Para la gestión de consultas, la elaboración de informes técnicos solicitados y la prestación de servicios.
-- **Interés legítimo del responsable** (Art. 6.1.f RGPD): Para el mantenimiento y mejora de la seguridad de nuestros sistemas y servicios.
+- **Ejecución de un contrato o medidas precontractuales** (Art. 6.1.b RGPD): Para la gestión de consultas, agendamiento de reuniones (Cal.com) y prestación de servicios.
+- **Interés legítimo del responsable** (Art. 6.1.f RGPD): Para el mantenimiento, analítica anonimizada y mejora de la seguridad de la infraestructura.
 
 ### 4. Datos que Recogemos
-- **Datos identificativos:** Nombre de la empresa o persona de contacto, correo electrónico, teléfono (opcional).
-- **Datos técnicos de la auditoría:** Respuestas al cuestionario de salud IT (estado de equipos, copias de seguridad, seguridad perimetral, etc.). Estos datos no contienen información personal sensible.
-- **Datos de navegación:** Dirección IP, tipo de navegador y página de origen (recogidos automáticamente con fines analíticos a través de Google Analytics).
+- **Datos identificativos:** Nombre, correo electrónico, teléfono y empresa.
+- **Datos técnicos:** Número de empleados, sector, preocupaciones de infraestructura IT descritas por el cliente.
+- **Datos de navegación:** Dirección IP anonimizada y analíticas genéricas de sesión (Google Analytics).
 
 ### 5. Período de Conservación
-- **Consultas:** Los datos se conservarán durante el tiempo necesario para atender la solicitud y, posteriormente, durante los plazos legales aplicables.
-- **Alertas de seguridad:** Hasta que el usuario retire su consentimiento.
-- **Clientes:** Durante la vigencia de la relación contractual y los plazos legales de conservación exigidos por la normativa fiscal y mercantil (mínimo 5 años).
+- **Consultas y leads:** Hasta 2 años tras el último contacto o hasta que se solicite la supresión.
+- **Clientes:** Durante la vigencia de la relación contractual y mínimo 5 años tras su finalización por obligaciones legales.
 
-### 6. Destinatarios de los Datos
-Los datos personales no se cederán a terceros, salvo obligación legal. Los siguientes proveedores pueden tener acceso a datos como encargados del tratamiento:
-- **Brevo (Sendinblue):** Para el envío de correos electrónicos transaccionales y alertas. Servidores en la UE.
-- **IONOS (Servidor VPS):** Alojamiento de la web y la base de datos. Servidores en la UE.
-- **Google Analytics:** Análisis de tráfico web. Datos anonimizados.
+### 6. Destinatarios de los Datos (Encargados del Tratamiento)
+Los datos personales no se cederán a terceros, salvo obligación legal. Para poder prestar el servicio y operar nuestra infraestructura automatizada, contamos con los siguientes proveedores:
+- **Supabase (AWS):** Base de datos cloud (CRM propio). Servidores en la Unión Europea (eu-north-1).
+- **n8n:** Orquestador de flujos de trabajo interno (Self-hosted).
+- **IONOS / Cloudflare:** Alojamiento de la infraestructura web e email transaccional.
+- **Cal.com:** Gestión de agendamiento de calendarios.
+- **Google Analytics:** Análisis de tráfico web. Datos procesados bajo el Data Privacy Framework.
 
 ### 7. Tus Derechos
 De acuerdo con el RGPD y la LOPDGDD, puedes ejercer los siguientes derechos en cualquier momento:
