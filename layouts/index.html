@@ -284,18 +284,7 @@
     <h2>¿Tu empresa está<br><em>realmente protegida?</em></h2>
     <p>Diagnóstico técnico gratuito. Sin presión. Si no puedo ayudarte, te lo digo directamente.</p>
     
-    <form action="https://formspree.io/f/{{ .Site.Params.integrations.formspree_id }}" method="POST" class="cta-form">
-      <div class="form-row">
-        <input type="text" name="nombre" placeholder="Tu nombre" required class="cta-input">
-        <input type="email" name="email" placeholder="Tu email" required class="cta-input">
-      </div>
-      <input type="text" name="empresa" placeholder="Tu empresa (opcional)" class="cta-input">
-      <textarea name="mensaje" placeholder="¿Cuál es tu mayor preocupación tecnológica ahora mismo?" required class="cta-input cta-textarea"></textarea>
-      <button type="submit" class="cta-btn">
-        Solicitar Diagnóstico Gratuito 
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
-    </form>
+    {{ partial "contact-form.html" . }}
 
     <div class="cta-note">{{ .Site.Params.email }} · Respuesta en menos de 24h · Sin compromiso</div>
   </div>

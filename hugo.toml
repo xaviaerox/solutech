@@ -17,4 +17,3 @@ theme = []
 
 [params.integrations]
   google_analytics = 'G-Q14TRWX9LY'
-  formspree_id = 'mjgldvja'
