@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="static/images/github-banner.png" alt="Solutech Banner" width="100%">
+</div>
+
 # Solutech
 
 **Gestión IT Continua y Ciberseguridad para Pymes en Almería y Murcia.**
