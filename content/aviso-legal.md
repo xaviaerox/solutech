@@ -13,7 +13,7 @@ En cumplimiento con el deber de información recogido en el artículo 10 de la L
 ### 1. Datos Identificativos
 - **Titular:** Francisco Javier Alonso Fondón (en adelante, "Solutech")
 - **Actividad profesional:** Servicios de Gestión IT, Ciberseguridad y Soporte Tecnológico para Pymes.
-- **Correo electrónico de contacto:** xavi.solutech@gmail.com
+- **Correo electrónico de contacto:** xavi@solutech.blog
 - **Sitio web:** https://solutech.blog
 - **Área de operación principal:** Almería y Murcia, España.
 
