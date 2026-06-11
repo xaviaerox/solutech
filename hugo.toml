@@ -1,4 +1,4 @@
-baseURL = 'https://xaviaerox.github.io/solutech/'
+baseURL = 'https://solutech.blog/'
 locale = 'es'
 title = 'Solutech — Especialistas IT'
 enableRobotsTXT = true
