@@ -53,6 +53,26 @@
   </div>
 </div>
 
+{{ if .IsHome }}
+<!-- SIDE NAVIGATION ARROWS -->
+<div id="scroll-left" class="side-scroll-ui left">
+  <div class="scroll-glow"></div>
+  <div class="scroll-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+  </div>
+</div>
+<div id="scroll-right" class="side-scroll-ui right">
+  <div class="scroll-glow"></div>
+  <div class="scroll-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </div>
+</div>
+{{ end }}
+
 <footer class="fixed-footer">
   <div class="f-slim-inner">
     <div class="f-social-tray">
@@ -136,77 +156,219 @@ body { padding-bottom: 54px; }
     .main-footer .f-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
     .f-list li { margin-bottom: 8px; }
 }
+
+/* SIDE SCROLL UI */
+.side-scroll-ui {
+    position: fixed; top: 50%; transform: translateY(-50%);
+    z-index: 1001; cursor: pointer; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0; pointer-events: none;
+}
+.side-scroll-ui.left { left: 24px; }
+.side-scroll-ui.right { right: 24px; }
+
+.side-scroll-ui .scroll-box {
+    width: 38px; height: 38px; background: rgba(7, 7, 11, 0.8); backdrop-filter: blur(10px);
+    border: 1px solid var(--br); border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden; transition: all 0.3s;
+}
+.side-scroll-ui svg {
+    width: 18px; height: 18px; fill: none; stroke: var(--tm); stroke-width: 2.5; transition: all 0.3s;
+}
+.side-scroll-ui:hover .scroll-box {
+    border-color: var(--o); background: var(--o-a); box-shadow: 0 0 15px var(--o-a);
+    transform: scale(1.1);
+}
+.side-scroll-ui:hover svg {
+    stroke: var(--o);
+}
+
+@media (max-width: 768px) {
+    .side-scroll-ui { display: none !important; }
+}
 </style>
+
+<!-- Lenis and Three.js CDNs -->
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
 <script>
 (function() {
-    // 1. Fluid Inertial Scroll & Snap Logic
-    let target = window.scrollY;
-    let current = window.scrollY;
-    const ease = 0.12; // Faster ease for fluidity
-    let isMoving = false;
-    let snapTimeout;
+    // 1. Initialize Lenis Smooth Scroll
+    const lenis = new Lenis({
+        lerp: 0.12, // Faster, snappier responsiveness
+        gestureDirection: 'vertical',
+        smoothWheel: true,
+        smoothTouch: false, // Maintain native touch scrolling on mobile
+        wheelMultiplier: 1.0
+    });
 
-    const sections = Array.from(document.querySelectorAll('.hero, .ticker-wrap, .impact, .r, .blog-s, .cta-s'));
-
-    function smooth() {
-        current += (target - current) * ease;
-        if (Math.abs(target - current) > 0.1) {
-            window.scrollTo(0, current);
-            isMoving = true;
-        } else {
-            if (isMoving) {
-                // Stopped moving, trigger snap check
-                clearTimeout(snapTimeout);
-                snapTimeout = setTimeout(snapToNearest, 100); // Much faster snap (100ms)
-            }
-            isMoving = false;
-        }
-        requestAnimationFrame(smooth);
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
     }
+    requestAnimationFrame(raf);
 
-    function snapToNearest() {
-        if (Math.abs(window.scrollY - target) > 50) return; // User manually scrolled
-        
-        // No hacer snap si estamos al final de la página
-        const atBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100;
-        if (atBottom) return;
-        
-        let nearest = sections[0];
-        let minDist = Math.abs(window.scrollY - sections[0].offsetTop + 80);
-        
-        sections.forEach(s => {
-            const dist = Math.abs(window.scrollY - s.offsetTop + 80);
-            if (dist < minDist) {
-                minDist = dist;
-                nearest = s;
+    // Track scroll progress globally
+    let scrollProgress = 0;
+    lenis.on('scroll', (e) => {
+        const totalScrollable = document.documentElement.scrollHeight - window.innerHeight;
+        scrollProgress = totalScrollable > 0 ? e.scroll / totalScrollable : 0;
+    });
+
+    // Smooth scroll for hash links using Lenis
+    document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            const hashIndex = href.indexOf('#');
+            if (hashIndex !== -1) {
+                const targetId = href.substring(hashIndex);
+                // Only intercept if target is on the current page
+                if (href.substring(0, hashIndex) === "" || href.substring(0, hashIndex) === window.location.pathname || href.substring(0, hashIndex) === "/") {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        lenis.scrollTo(targetElement, { offset: -80, duration: 1.2 });
+                    }
+                }
             }
         });
+    });
 
-        if (minDist < window.innerHeight / 2) {
-            target = nearest.offsetTop - 80;
+    // 2. Three.js Background Particles (Home page only, desktop screens > 768px)
+    if (document.body.classList.contains('home') && window.innerWidth > 768) {
+        // Create canvas dynamically and prepend to body
+        const canvas = document.createElement('canvas');
+        canvas.id = 'three-canvas';
+        canvas.style.position = 'fixed';
+        canvas.style.top = '0';
+        canvas.style.left = '0';
+        canvas.style.width = '100vw';
+        canvas.style.height = '100vh';
+        canvas.style.zIndex = '-2';
+        canvas.style.pointerEvents = 'none';
+        canvas.style.opacity = '0.45';
+        canvas.style.mixBlendMode = 'screen';
+        canvas.style.transform = 'translate3d(0,0,0)'; // GPU acceleration layer promotion
+        canvas.style.willChange = 'transform';
+        document.body.prepend(canvas);
+
+        let scene, camera, renderer, points;
+        const count = 75; // Soft floating particles
+        const positions = new Float32Array(count * 3);
+        const velocities = [];
+
+        // Helper to generate a soft glowing circle texture
+        function createCircleTexture() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 16;
+            canvas.height = 16;
+            const ctx = canvas.getContext('2d');
+            const gradient = ctx.createRadialGradient(8, 8, 0, 8, 8, 8);
+            gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
+            gradient.addColorStop(0.3, 'rgba(232, 98, 26, 0.8)'); // Brand color
+            gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 16, 16);
+            return new THREE.CanvasTexture(canvas);
         }
-    }
 
-    if (document.body.classList.contains('home')) {
-        window.addEventListener('wheel', (e) => {
-            if (e.ctrlKey) return; 
-            e.preventDefault();
-            clearTimeout(snapTimeout);
-            target = Math.max(0, Math.min(document.body.offsetHeight - window.innerHeight, target + e.deltaY));
-        }, { passive: false });
+        function initThree() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
+            camera.position.z = 8;
 
-        window.addEventListener('scroll', () => {
-            if (Math.abs(window.scrollY - current) > 200) {
-                target = window.scrollY;
-                current = window.scrollY;
+            renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: false }); // Disable antialias for performance (particles are soft)
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(1);
+
+            // Generate particles random positions and velocities
+            for (let i = 0; i < count; i++) {
+                const i3 = i * 3;
+                positions[i3] = (Math.random() - 0.5) * 16;     // X
+                positions[i3 + 1] = (Math.random() - 0.5) * 10; // Y
+                positions[i3 + 2] = (Math.random() - 0.5) * 10; // Z
+
+                velocities.push({
+                    x: (Math.random() - 0.5) * 0.003,
+                    y: (Math.random() - 0.5) * 0.003,
+                    z: (Math.random() - 0.5) * 0.003
+                });
             }
-        }, { passive: true });
 
-        requestAnimationFrame(smooth);
+            const geometry = new THREE.BufferGeometry();
+            geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+            const material = new THREE.PointsMaterial({
+                color: 0xe8621a, // Brand Orange
+                size: 0.18, // soft glowing circle
+                map: createCircleTexture(),
+                transparent: true,
+                opacity: 0.6,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false // Performance optimization for transparent materials
+            });
+
+            points = new THREE.Points(geometry, material);
+            scene.add(points);
+
+            // Mouse interaction setup
+            let mouseX = 0, mouseY = 0;
+            let targetMouseX = 0, targetMouseY = 0;
+
+            window.addEventListener('mousemove', (e) => {
+                targetMouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+                targetMouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+            });
+
+            // Animation Loop
+            function animate() {
+                requestAnimationFrame(animate);
+
+                // Update particle positions
+                const posAttr = points.geometry.attributes.position;
+                const pos = posAttr.array;
+
+                for (let i = 0; i < count; i++) {
+                    const i3 = i * 3;
+                    pos[i3] += velocities[i].x;
+                    pos[i3 + 1] += velocities[i].y;
+                    pos[i3 + 2] += velocities[i].z;
+
+                    // Bound checks
+                    if (Math.abs(pos[i3]) > 10) velocities[i].x *= -1;
+                    if (Math.abs(pos[i3 + 1]) > 6) velocities[i].y *= -1;
+                    if (Math.abs(pos[i3 + 2]) > 6) velocities[i].z *= -1;
+                }
+                posAttr.needsUpdate = true;
+
+                // Smooth mouse parallax
+                mouseX += (targetMouseX - mouseX) * 0.05;
+                mouseY += (targetMouseY - mouseY) * 0.05;
+
+                points.rotation.y = mouseX * 0.15;
+                points.rotation.x = -mouseY * 0.15;
+
+                // Move and rotate camera with scroll progress
+                camera.position.y = -scrollProgress * 6;
+                camera.position.z = 8 - scrollProgress * 3;
+                camera.rotation.y = scrollProgress * 0.25;
+
+                renderer.render(scene, camera);
+            }
+
+            animate();
+        }
+
+        initThree();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
     }
 
-    // 2. Intersection Observer for 'in' class
+    // 3. Intersection Observer for 'in' class (element animations)
     const obs = new IntersectionObserver(e => {
         e.forEach(el => {
             if (el.isIntersecting) {
@@ -217,7 +379,7 @@ body { padding-bottom: 54px; }
     }, { threshold: 0.08 });
     document.querySelectorAll('.r').forEach(el => obs.observe(el));
 
-    // 3. Scroll UI
+    // 4. Scroll UI
     const scrollUi = document.getElementById('scroll-ui');
     window.addEventListener('scroll', () => {
         const atBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100;
@@ -229,10 +391,62 @@ body { padding-bottom: 54px; }
 
     scrollUi.addEventListener('click', () => {
         if (scrollUi.classList.contains('si-end')) {
-            target = 0;
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            lenis.scrollTo(0, { duration: 1.5 });
         }
     });
+
+    // 5. Side Scroll UI Navigation Logic (Section-by-Section scrolling)
+    if (document.body.classList.contains('home')) {
+        const leftArrow = document.getElementById('scroll-left');
+        const rightArrow = document.getElementById('scroll-right');
+        
+        // Define our home page sections to scroll between
+        const homeSections = Array.from(document.querySelectorAll('.hero, #stack, .impact, #problema, #servicios, #clientes, #sobre-mi, #blog, #contacto'));
+        const navOffset = 80;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+            const atTop = currentScroll < 200;
+            const atBottom = (window.innerHeight + currentScroll) >= document.body.offsetHeight - 100;
+            
+            // Show left arrow if not at the top
+            leftArrow.style.opacity = atTop ? '0' : '1';
+            leftArrow.style.pointerEvents = atTop ? 'none' : 'auto';
+            
+            // Show right arrow if not at the bottom
+            rightArrow.style.opacity = atBottom ? '0' : '1';
+            rightArrow.style.pointerEvents = atBottom ? 'none' : 'auto';
+        }, { passive: true });
+
+        function navigateToSection(direction) {
+            const currentScroll = window.scrollY;
+            
+            if (direction === 'prev') {
+                // Find the last section that is above the current scroll (with buffer)
+                const prevSections = homeSections.filter(s => s.offsetTop - navOffset < currentScroll - 100);
+                if (prevSections.length > 0) {
+                    const target = prevSections[prevSections.length - 1];
+                    lenis.scrollTo(target, { offset: -navOffset, duration: 1.2 });
+                } else {
+                    lenis.scrollTo(0, { duration: 1.2 });
+                }
+            } else if (direction === 'next') {
+                // Find the first section that is below the current scroll (with buffer)
+                const nextSection = homeSections.find(s => s.offsetTop - navOffset > currentScroll + 100);
+                if (nextSection) {
+                    lenis.scrollTo(nextSection, { offset: -navOffset, duration: 1.2 });
+                } else {
+                    lenis.scrollTo(document.body.offsetHeight, { duration: 1.2 });
+                }
+            }
+        }
+
+        leftArrow.addEventListener('click', () => navigateToSection('prev'));
+        rightArrow.addEventListener('click', () => navigateToSection('next'));
+    }
+
+    // Make lenis globally accessible for programmatic scrolling
+    window.lenis = lenis;
 })();
 </script>
 
