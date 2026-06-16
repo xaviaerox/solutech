@@ -5,7 +5,7 @@ slug: "implementar-mfa-obligatorio-servidor-ssh"
 description: "Guía práctica para configurar la autenticación multifactor (MFA) obligatoria en servidores SSH, reforzando la seguridad de acceso para tu Pyme."
 categories: ["Ciberseguridad", "Servidores Linux"]
 image: "images/blog-implementar-mfa-obligatorio-servidor-ssh.png"
-draft: true
+draft: false
 ---
 ## Guía: Cómo Implementar MFA Obligatorio en Servidores SSH para Pymes
 

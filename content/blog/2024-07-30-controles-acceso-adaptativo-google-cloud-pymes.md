@@ -5,7 +5,7 @@ slug: "controles-acceso-adaptativo-google-cloud-pymes"
 description: "Análisis de los nuevos controles de acceso adaptativo en Google Cloud y su impacto en la ciberseguridad de Pymes."
 categories: ["Ciberseguridad", "Google Cloud", "Gestión de Identidades"]
 image: "images/blog-default.png"
-draft: true
+draft: false
 ---
 
 **Google Cloud ha reforzado su suite de ciberseguridad con la introducción de nuevos controles de acceso adaptativo y contextual. Estas mejoras permiten a las Pymes implementar políticas de seguridad más granulares, reduciendo drásticamente el riesgo de accesos no autorizados y protegiendo datos críticos.**
