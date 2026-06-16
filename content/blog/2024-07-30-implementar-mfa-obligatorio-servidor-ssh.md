@@ -8,20 +8,18 @@ keywords: ["MFA obligatorio en servidor SSH", "seguridad SSH Pymes", "autenticac
 image: "images/blog-implementar-mfa-obligatorio-servidor-ssh.png"
 draft: false
 ---
-## Guía: Cómo Implementar MFA Obligatorio en Servidores SSH para Pymes
-
-### Introducción
+## Introducción
 La seguridad de los servidores es una prioridad innegociable para cualquier Pyme. El acceso SSH, siendo la puerta de entrada principal para la administración remota, es un objetivo constante para ataques de fuerza bruta y robo de credenciales.
 
 Esta guía detalla cómo configurar la autenticación multifactor (MFA) de forma obligatoria en tus servidores SSH. Al finalizar, habrás añadido una capa de seguridad importante, protegiendo tus sistemas contra accesos no autorizados y alineándote con las mejores prácticas de ciberseguridad preventiva.
 
-### Requisitos previos
+## Requisitos previos
 Para seguir este tutorial necesitarás:
 - [ ] Un servidor Linux (Ubuntu/Debian o CentOS/RHEL) con acceso SSH (preferiblemente con un usuario con privilegios `sudo`).
 - [ ] Un dispositivo móvil (smartphone o tablet) con una aplicación de autenticación TOTP (Time-based One-Time Password) instalada, como Google Authenticator o Authy.
 - [ ] Conocimientos básicos de administración de sistemas Linux y edición de archivos de configuración.
 
-### Paso 1: Instalar el módulo PAM de Google Authenticator
+## Paso 1: Instalar el módulo PAM de Google Authenticator
 El primer paso es instalar el módulo Pluggable Authentication Module (PAM) que permite integrar Google Authenticator con el sistema de autenticación de Linux.
 
 Para sistemas basados en Debian/Ubuntu:
@@ -36,7 +34,7 @@ sudo yum install google-authenticator
 ```
 Este módulo será el puente entre tu servidor SSH y la aplicación de MFA en tu dispositivo móvil.
 
-### Paso 2: Configurar Google Authenticator para un usuario
+## Paso 2: Configurar Google Authenticator para un usuario
 Ahora, cada usuario que necesite MFA deberá ejecutar el comando `google-authenticator` en su sesión SSH.
 
 Conéctate al servidor con el usuario que deseas proteger y ejecuta:
@@ -52,7 +50,7 @@ El sistema te hará varias preguntas:
 
 Repite este proceso para cada usuario que deba acceder al servidor vía SSH con MFA.
 
-### Paso 3: Integrar PAM con SSH
+## Paso 3: Integrar PAM con SSH
 Para que SSH utilice el módulo de Google Authenticator, debemos modificar dos archivos de configuración.
 
 Primero, edita el archivo de configuración de PAM para SSH:
@@ -81,7 +79,7 @@ Reinicia el servicio SSH para aplicar los cambios:
 sudo systemctl restart sshd
 ```
 
-### Paso 4: Probar la configuración
+## Paso 4: Probar la configuración
 Desconéctate de tu sesión SSH actual y vuelve a intentar conectarte al servidor con el usuario configurado.
 
 ```bash
@@ -91,7 +89,7 @@ Después de introducir tu contraseña (si usas autenticación por contraseña) o
 
 Si la conexión es exitosa, ¡has configurado MFA correctamente!
 
-### Errores comunes y cómo solucionarlos
+## Errores comunes y cómo solucionarlos
 ### 1. `Permission denied (keyboard-interactive)` o no se solicita el código
 *   **Causa:** El servidor SSH no está configurado para solicitar la interacción del teclado o el orden de los métodos de autenticación es incorrecto.
 *   **Solución:** Revisa el archivo `/etc/ssh/sshd_config`. Asegúrate de que `ChallengeResponseAuthentication yes` esté activo y que `AuthenticationMethods` incluya `keyboard-interactive` en el orden correcto (ej. `publickey,keyboard-interactive` o `password,keyboard-interactive`).
@@ -104,18 +102,18 @@ Si la conexión es exitosa, ¡has configurado MFA correctamente!
 *   **Causa:** La hora del servidor no está sincronizada con la hora de tu dispositivo móvil. Los códigos TOTP son sensibles al tiempo.
 *   **Solución:** Asegúrate de que el servidor tenga la hora correcta configurada (ej. usando `ntpdate` o `timedatectl set-ntp true`). También verifica que la hora de tu dispositivo móvil sea precisa.
 
-### Buenas prácticas de mantenimiento
+## Buenas prácticas de mantenimiento
 -   **Códigos de recuperación:** Guarda los códigos de emergencia generados por `google-authenticator` en un lugar muy seguro, preferiblemente en una bóveda corporativa de credenciales. Son tu única forma de acceso si pierdes tu dispositivo MFA.
 -   **Sincronización de tiempo:** Mantén la hora de tu servidor sincronizada con un servidor NTP (Network Time Protocol) para evitar problemas con los códigos TOTP.
 -   **Acceso de emergencia:** Considera mantener un usuario de respaldo con acceso solo por clave SSH (sin MFA) para situaciones de emergencia. Este usuario debe tener permisos muy restringidos y su acceso debe estar limitado por IP a una red de administración segura.
 -   **Auditoría de logs:** Revisa regularmente los logs de autenticación de SSH (`/var/log/auth.log` en Debian/Ubuntu o `/var/log/secure` en CentOS/RHEL) para detectar intentos de acceso no autorizados.
 
-### Conclusión
+## Conclusión
 Implementar la autenticación multifactor obligatoria en tus servidores SSH es una medida de seguridad fundamental que eleva significativamente la protección de tu infraestructura. Al seguir esta guía, habrás reforzado tus accesos remotos, disminuyendo considerablemente el riesgo de intrusiones por credenciales comprometidas.
 
 Esta es una inversión mínima con un retorno sustancial en tranquilidad y seguridad para tu Pyme.
 
-### FAQ
+## FAQ
 ### ¿Qué es MFA y por qué es crucial para SSH?
 MFA (Autenticación Multifactor) requiere dos o más métodos de verificación para acceder a un sistema. Es crucial para SSH porque añade una capa de seguridad más allá de la contraseña o clave, protegiendo contra el robo de credenciales y ataques de fuerza bruta.
 
