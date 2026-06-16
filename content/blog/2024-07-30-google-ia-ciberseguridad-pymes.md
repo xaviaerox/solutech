@@ -5,7 +5,7 @@ slug: "google-ia-ciberseguridad-pymes"
 description: "Analizamos cómo la IA de Google refuerza la ciberseguridad para Pymes, desde la detección de amenazas hasta la respuesta a incidentes. Claves y recomendaciones."
 categories: ["Ciberseguridad", "Inteligencia Artificial"]
 image: "images/blog-default.png"
-draft: true
+draft: false
 ---
 
 ## El Desafío de la Ciberseguridad para Pymes
