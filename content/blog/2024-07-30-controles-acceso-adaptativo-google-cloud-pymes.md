@@ -4,7 +4,8 @@ date: 2024-07-30T00:00:00+02:00
 slug: "controles-acceso-adaptativo-google-cloud-pymes"
 description: "Análisis de los nuevos controles de acceso adaptativo en Google Cloud y su impacto en la ciberseguridad de Pymes."
 categories: ["Ciberseguridad", "Google Cloud", "Gestión de Identidades"]
-image: "images/blog-default.png"
+keywords: ["Controles de seguridad Google Cloud", "Acceso Adaptativo Google Cloud", "Ciberseguridad Pymes", "IAM Google Cloud", "Zero Trust", "Protección de datos en la nube"]
+image: "images/blog-controles-acceso-adaptativo-google-cloud-pymes.png"
 draft: false
 ---
 
@@ -67,7 +68,3 @@ La configuración inicial puede ser compleja, ya que requiere definir políticas
 
 ### ¿Estos controles sustituyen la autenticación multifactor (MFA)?
 No, complementan la MFA. El Acceso Adaptativo puede requerir MFA adicional si el contexto de acceso no cumple con los requisitos de seguridad establecidos, fortaleciendo aún más la protección.
-
-## Palabras clave SEO
--   **Keyword Principal:** Controles de seguridad Google Cloud
--   **Keywords Secundarias:** Acceso Adaptativo Google Cloud, Ciberseguridad Pymes, IAM Google Cloud, Zero Trust, Protección de datos en la nube

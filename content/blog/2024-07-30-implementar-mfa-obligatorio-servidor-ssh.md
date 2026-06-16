@@ -4,6 +4,7 @@ date: 2024-07-30T00:00:00+02:00
 slug: "implementar-mfa-obligatorio-servidor-ssh"
 description: "Guía práctica para configurar la autenticación multifactor (MFA) obligatoria en servidores SSH, reforzando la seguridad de acceso para tu Pyme."
 categories: ["Ciberseguridad", "Servidores Linux"]
+keywords: ["MFA obligatorio en servidor SSH", "seguridad SSH Pymes", "autenticación multifactor Linux", "proteger acceso remoto", "ciberseguridad servidores", "PAM Google Authenticator"]
 image: "images/blog-implementar-mfa-obligatorio-servidor-ssh.png"
 draft: false
 ---
@@ -123,7 +124,3 @@ Si pierdes tu dispositivo MFA, puedes usar uno de los códigos de recuperación 
 
 ### ¿Afecta esto a la automatización con claves SSH?
 Sí, si tus scripts de automatización utilizan claves SSH para acceder al servidor, la configuración de MFA obligatoria requerirá una intervención manual para introducir el código TOTP. Para automatizaciones, se recomienda usar claves SSH sin contraseña y restringir el acceso por IP, o utilizar soluciones de automatización que gestionen credenciales de forma segura.
-
-## Palabras clave SEO
-- **Keyword Principal:** MFA obligatorio en servidor SSH
-- **Keywords Secundarias:** seguridad SSH Pymes, autenticación multifactor Linux, proteger acceso remoto, ciberseguridad servidores, PAM Google Authenticator
