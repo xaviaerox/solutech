@@ -4,10 +4,29 @@
   <div class="section-glow"></div>
   
   <div class="section-tag">Blog y Recursos</div>
+  {{ if eq .Data.Singular "category" }}
+  <h1 class="section-h">Categoría: <em>{{ .Title }}</em></h1>
+  {{ else }}
   <h1 class="section-h">{{ .Title }}</h1>
+  {{ end }}
   
+  <!-- Barra de Categorías -->
+  <div class="blog-categories">
+    <a href="{{ "/blog/" | relURL }}" class="cat-filter-btn {{ if eq .Section "blog" }}{{ if .IsSection }}active{{ end }}{{ end }}">
+      Todos
+    </a>
+    {{ $currentTitle := .Title }}
+    {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+      {{ $humanized := $name | humanize }}
+      <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}/" class="cat-filter-btn {{ if eq (lower $currentTitle) (lower $humanized) }}active{{ end }}">
+        {{ $humanized }} ({{ $taxonomy.Count }})
+      </a>
+    {{ end }}
+  </div>
+  
+  {{ $paginator := .Paginate .Pages 6 }}
   <div class="blog-grid">
-    {{ range .Pages }}
+    {{ range $paginator.Pages }}
     <article>
       <a href="{{ .RelPermalink }}" class="bcard" style="text-decoration: none; color: inherit;">
         {{ if .Params.image }}
@@ -25,5 +44,22 @@
     </article>
     {{ end }}
   </div>
+
+  <!-- Paginación -->
+  {{ if gt $paginator.TotalPages 1 }}
+  <nav class="pagination-nav" aria-label="Paginación">
+    {{ if $paginator.HasPrev }}
+      <a href="{{ $paginator.Prev.URL }}" class="pag-btn" aria-label="Página anterior">&lt; Anterior</a>
+    {{ end }}
+    
+    {{ range $paginator.Pagers }}
+      <a href="{{ .URL }}" class="pag-btn {{ if eq . $paginator }}active{{ end }}">{{ .PageNumber }}</a>
+    {{ end }}
+    
+    {{ if $paginator.HasNext }}
+      <a href="{{ $paginator.Next.URL }}" class="pag-btn" aria-label="Página siguiente">Siguiente &gt;</a>
+    {{ end }}
+  </nav>
+  {{ end }}
 </section>
 {{ end }}
