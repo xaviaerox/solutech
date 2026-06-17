@@ -1,5 +1,6 @@
 ---
 title: "Portal de Soporte y Cliente"
+description: "Portal de cliente y soporte técnico de Solutech. Acceso a asistencia remota con RustDesk, herramientas Quick Support y contacto para resolución de incidencias IT."
 date: 2026-05-29
 draft: false
 ---
