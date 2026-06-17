@@ -40,7 +40,7 @@
 </section>
 
 <!-- TICKER -->
-<div class="ticker-wrap" id="stack">
+<div class="ticker-wrap">
   <div class="section-glow"></div>
   <div class="ticker-track">
     <!-- ITEM SET -->
@@ -229,7 +229,7 @@
   <div class="section-tag">Quién hay detrás</div>
   <h2 class="section-h">No una empresa.<br><em>Una persona.</em></h2>
   <div class="about-grid">
-    <div class="about-photo" style="background-image: url('{{ "images/xavi-alonso.jpg" | relURL }}'); background-size: cover; background-position: center;">
+    <div class="about-photo" role="img" aria-label="Xavi Alonso, Especialista IT y Fundador de Solutech" style="background-image: url('{{ "images/xavi-alonso.jpg" | relURL }}'); background-size: cover; background-position: center;">
       <div class="about-photo-caption">
         <div class="about-name">{{ hugo.Data.founder.name }}</div>
         <div class="about-role">{{ hugo.Data.founder.role }} · {{ hugo.Data.founder.location }}</div>
@@ -261,7 +261,7 @@
   <div class="blog-grid">
     {{ range first 4 (where .Site.RegularPages "Section" "blog").ByDate.Reverse }}
     <div class="bcard">
-      <div class="bcard-img" style="background-image: url('{{ .Params.image | relURL }}'); height: 160px; min-height: auto; border-right: none; border-bottom: 1px solid var(--br);"></div>
+      <div class="bcard-img" role="img" aria-label="Imagen descriptiva del artículo: {{ .Title }}" style="background-image: url('{{ .Params.image | relURL }}'); height: 160px; min-height: auto; border-right: none; border-bottom: 1px solid var(--br);"></div>
       <div class="bcard-body">
         <div class="bcard-cat">
           {{ range $i, $cat := .Params.categories }}{{ if $i }} · {{ end }}{{ $cat }}{{ end }}
