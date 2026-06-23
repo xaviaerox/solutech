@@ -1,0 +1,25 @@
+{
+  "slug": "ransomware-blackbyte-clinica-murcia",
+  "title": "Ransomware BlackByte en Murcia: Cómo proteger tu clínica de la pérdida de datos",
+  "category": "INCIDENT",
+  "tags": [
+    "ransomware",
+    "ciberseguridad",
+    "Murcia",
+    "clínicas",
+    "copias de seguridad"
+  ],
+  "published_date": "2026-06-23",
+  "summary": "Una clínica médica en Murcia sufre un ataque del ransomware BlackByte que cifra sus expedientes de pacientes y exige un rescate de 3 BTC, evidenciando la vulnerabilidad del sector sanitario local.",
+  "business_impact": "El secuestro de expedientes médicos paraliza por completo la actividad de una clínica, impidiendo la atención a pacientes y exponiendo al negocio a sanciones graves por pérdida de datos confidenciales.",
+  "instagram_caption": "🚨 Un ataque de ransomware paraliza una clínica en Murcia y exige un rescate de 180.000 €.\n\nEl grupo BlackByte ha cifrado los expedientes médicos de un centro local explotando vulnerabilidades en su seguridad perimetral y accesos remotos.\n\n**Impacto en el negocio:** El secuestro de datos paraliza por completo tu actividad, impide atender a clientes y expone a tu empresa a graves sanciones por pérdida de información confidencial.\n\n**3 Medidas clave de protección:**\n1. 🔒 **Copias inmutables:** Backups en la nube que no se pueden borrar ni cifrar.\n2. 🛡️ **Doble factor (MFA):** Obligatorio para cualquier acceso externo.\n3. ⚙️ **Cierre de puertos:** Bloquea conexiones RDP expuestas a internet.\n\n¿Está tu empresa realmente protegida? Escríbenos y analizamos tus puntos vulnerables.\n\n#Ciberseguridad #Murcia #Ransomware #Pymes #Solutech",
+  "linkedin_excerpt": "Una clínica médica en Murcia se ha visto paralizada tras un ataque de ransomware BlackByte, que ha cifrado sus expedientes de pacientes y exigido un rescate de 3 BTC.\n\nEste incidente subraya la creciente amenaza que enfrentan las Pymes sanitarias en nuestra región, donde los datos sensibles son un objetivo de alto valor para los ciberdelincuentes. La rápida propagación de este tipo de malware y su capacidad para paralizar operaciones críticas exigen una respuesta de seguridad robusta y proactiva.",
+  "image_prompt": "A premium, minimalist illustration in dark mode with neon orange accents, showing a stylized medical shield protecting a digital database from abstract binary chains, cybersecurity theme, high-tech, no text",
+  "reading_time": "3 min",
+  "seo_keywords": [
+    "ransomware BlackByte",
+    "ciberseguridad Murcia",
+    "seguridad informática clínicas",
+    "copias de seguridad inmutables"
+  ]
+}
