@@ -7,7 +7,7 @@ categories: ["Ciberseguridad", "Redes"]
 keywords: ["túnel VPN en malla seguro", "red privada cifrada punto a punto", "interconexión de sedes", "seguridad informática Almería"]
 image: "images/blog-configurar-tunel-vpn-malla-seguro-oficinas.png"
 business_impact: "La falta de una interconexión segura entre sedes expone los datos corporativos a interceptaciones y ataques de ransomware, paralizando la facturación y el acceso a servidores locales de la empresa."
-draft: true
+draft: false
 ---
 
 ## 💼 Impacto en el Negocio

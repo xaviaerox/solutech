@@ -7,7 +7,7 @@ categories: ["Ciberseguridad", "Análisis de Amenazas"]
 keywords: ["ciberseguridad", "respuesta ante incidentes", "intrusión paralela", "seguridad pymes", "detección de amenazas"]
 image: "images/news-analisis-intrusiones-paralelas-ciberseguridad.png"
 business_impact: "La presencia de múltiples atacantes simultáneos puede enmascarar el alcance real de una brecha, provocando que las medidas de contención tradicionales sean insuficientes y prolongando el tiempo de inactividad operativa."
-draft: true
+draft: false
 source_url: "https://www.microsoft.com/en-us/security/blog/2026/06/22/one-intrusion-two-cyberattackers-uncovering-parallel-threat-activity/"
 ---
 ## 🔍 Resumen Ejecutivo

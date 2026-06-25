@@ -6,7 +6,7 @@ description: "El ransomware BlackByte ataca a una clínica en Murcia exigiendo 3
 categories: ["Ciberseguridad", "Casos Reales"]
 keywords: ["ransomware BlackByte", "ciberseguridad Murcia", "seguridad informática clínicas", "copias de seguridad inmutables"]
 image: "images/news-ransomware-blackbyte-clinica-murcia.png"
-draft: true
+draft: false
 business_impact: "El secuestro de expedientes médicos paraliza por completo la actividad de una clínica, impidiendo la atención a pacientes y exponiendo al negocio a sanciones graves por pérdida de datos confidenciales."
 ---
 

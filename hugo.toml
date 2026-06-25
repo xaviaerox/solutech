@@ -1,6 +1,6 @@
 baseURL = 'https://solutech.blog/'
 locale = 'es'
-title = 'Solutech — Especialistas IT'
+title = 'Solutech — Mantenimiento Informático Almería y Murcia'
 enableRobotsTXT = true
 theme = []
 

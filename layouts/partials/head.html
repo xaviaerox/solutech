@@ -48,11 +48,43 @@
       "description": "{{ .Site.Params.description }}",
       "url": "{{ .Site.BaseURL }}",
       "email": "{{ .Site.Params.email }}",
-      "areaServed": ["Almería", "Murcia"],
-      "serviceType": "Managed IT Services",
+      "telephone": "+34684248465",
+      "image": "{{ "favicon.png" | absURL }}",
       "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Tamarchete 9",
+        "addressLocality": "Lorca",
+        "addressRegion": "Murcia",
+        "postalCode": "30800",
+        "addressCountry": "ES"
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Murcia"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Almería"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
       "sameAs": [
         "{{ .Site.Params.social.linkedin }}",
+        "{{ .Site.Params.social.instagram }}",
+        "{{ .Site.Params.social.youtube }}",
         "{{ .Site.Params.social.github }}"
       ]
     }

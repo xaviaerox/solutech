@@ -6,7 +6,7 @@ description: "Análisis técnico sobre la desarticulación del administrador del
 categories: ["Ciberseguridad", "Ransomware"]
 keywords: ["Ransomware The Gentlemen", "ciberseguridad Pymes", "ataques cibernéticos", "seguridad perimetral", "Alexander Yapaev"]
 image: "images/blog-desvelando-administrador-the-gentlemen-ransomware.png"
-draft: true
+draft: false
 ---
 
 ## Resumen Ejecutivo
