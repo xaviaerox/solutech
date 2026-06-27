@@ -1,0 +1,27 @@
+{
+  "slug": "campana-phishing-fotos-hoteles-node-js",
+  "title": "Ciberseguridad en hoteles: la campaña de falsas imágenes que amenaza al sector turístico en Almería y Murcia",
+  "category": "INCIDENT",
+  "tags": [
+    "ciberseguridad",
+    "phishing",
+    "sector hotelero",
+    "pymes",
+    "almeria",
+    "murcia"
+  ],
+  "published_date": "2026-06-27",
+  "summary": "Analizamos una campaña de phishing activa que suplanta quejas de clientes para infectar ordenadores de recepción de hoteles con malware persistente.",
+  "business_impact": "Paralización del sistema de reservas (PMS), exposición de datos de tarjetas de crédito (PCI-DSS), multas por incumplimiento de RGPD y daño reputacional severo en portales de viajes.",
+  "instagram_caption": "🏨⚠️ ¿Trabajas en el sector hotelero en Almería o Murcia? Ojo a las \"quejas\" de tus clientes. Detectada una campaña de phishing que suplanta reclamaciones de huéspedes para infectar los ordenadores de recepción. 💼 Impacto: secuestro de sistemas, robo de datos y multas. ¡Protege tu negocio! #CiberseguridadHoteles #SoporteIT #Almeria #Murcia #PymesSeguras",
+  "linkedin_excerpt": "El sector hotelero en Almería y Murcia se enfrenta a una sofisticada campaña de phishing que utiliza la urgencia del servicio al cliente como caballo de Troya. Los atacantes usan plataformas legítimas como Calendly para esquivar filtros y desplegar implantes de control remoto. Analizamos el vector de ataque y las medidas preventivas críticas para proteger la continuidad operativa de su hotel.",
+  "image_prompt": "An abstract, premium cybersecurity illustration in dark mode with neon orange accents. The image should depict a stylized hotel reception desk fading into a digital network grid, with a glowing, semi-transparent shield protecting a database icon, minimalist style, no text",
+  "reading_time": "5 min",
+  "seo_keywords": [
+    "ciberseguridad hoteles",
+    "phishing sector turístico",
+    "seguridad informática Almería",
+    "soporte informático Murcia",
+    "protección datos hoteles"
+  ]
+}
