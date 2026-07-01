@@ -1,0 +1,11 @@
+## LinkedIn Post
+
+**Situación:** La computación cuántica ha dejado de ser una hipótesis teórica para convertirse en un factor determinante en la hoja de ruta de la ciberseguridad global. Los avances recientes han acortado los plazos de implementación, obligando a las organizaciones a replantear cómo protegen su información más crítica hoy para evitar riesgos mañana.
+
+**Análisis:** El problema técnico central es la técnica conocida como "cosechar ahora, descifrar después". Los atacantes están interceptando y almacenando datos cifrados con estándares actuales (como RSA o ECC), esperando a que la potencia de cómputo cuántico sea suficiente para romperlos en el futuro. La solución no es esperar a que la tecnología madure, sino adoptar la "agilidad criptográfica": la capacidad de actualizar los algoritmos de cifrado de nuestra infraestructura sin necesidad de rediseñar toda la arquitectura de software o hardware.
+
+**Impacto empresarial:** La falta de preparación ante la computación cuántica pone en riesgo la confidencialidad de datos históricos, permitiendo que atacantes descifren información sensible capturada hoy en el futuro. Para una PYME, esto implica una exposición latente de propiedad intelectual, datos financieros y registros de clientes que, aunque hoy parecen seguros, podrían ser vulnerados en el medio plazo, comprometiendo la continuidad operativa y la reputación de la empresa.
+
+**Recomendación:** No es necesario ser un experto en física cuántica para gestionar este riesgo. El primer paso es realizar un inventario de activos para identificar qué datos requieren una protección a largo plazo. Posteriormente, es fundamental auditar la infraestructura actual para asegurar que los nuevos despliegues tecnológicos permitan la actualización sencilla de protocolos y certificados. La transición a la criptografía post-cuántica es un esfuerzo de ingeniería progresivo; la clave es la planificación gradual para evitar costes de emergencia.
+
+**Pregunta final:** ¿Está su estrategia de ciberseguridad diseñada para proteger la información de su empresa durante la próxima década, o está confiando únicamente en los estándares de cifrado que hoy ya empiezan a mostrar signos de obsolescencia?
