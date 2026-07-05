@@ -7,6 +7,25 @@
   <title>Panel de Administración — Solutech</title>
 </head>
 <body>
+  <!-- Script de depuración para rastrear postMessage de origen cruzado -->
+  <script>
+    window.addEventListener("message", (e) => {
+      console.log("DEBUG MESSAGE RECEIVED:", e.origin, e.data);
+      const debugEl = document.createElement("div");
+      debugEl.style.position = "fixed";
+      debugEl.style.bottom = "10px";
+      debugEl.style.left = "10px";
+      debugEl.style.background = "rgba(0,0,0,0.85)";
+      debugEl.style.color = "#00ff00";
+      debugEl.style.padding = "15px";
+      debugEl.style.borderRadius = "5px";
+      debugEl.style.fontFamily = "monospace";
+      debugEl.style.fontSize = "12px";
+      debugEl.style.zIndex = "99999";
+      debugEl.innerHTML = "<strong>DEBUG MESSAGE:</strong><br>Origen: " + e.origin + "<br>Datos: " + (typeof e.data === 'object' ? JSON.stringify(e.data) : e.data);
+      document.body.appendChild(debugEl);
+    }, false);
+  </script>
   <!-- Incluir el script de Decap CMS desde CDN -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
