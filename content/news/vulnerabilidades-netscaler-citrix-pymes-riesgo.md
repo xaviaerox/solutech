@@ -6,7 +6,7 @@ description: "Descubra las últimas vulnerabilidades en Citrix NetScaler y cómo
 categories: ["Ciberseguridad", "Vulnerabilidades", "Noticias"]
 keywords: ["vulnerabilidades NetScaler Citrix", "ciberseguridad Pymes Almería", "protección datos Murcia", "ataques ransomware", "parches seguridad", "MSP Almería"]
 image: "images/news-vulnerabilidades-netscaler-citrix-pymes-riesgo.png"
-draft: true
+draft: false
 business_impact: "Una vulnerabilidad en NetScaler puede paralizar sus operaciones, exponer datos sensibles y generar costes de recuperación significativos para su Pyme."
 source_url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-netscaler-de-citrix"
 ---
