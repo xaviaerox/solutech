@@ -2,8 +2,8 @@ backend:
   name: github
   repo: xaviaerox/solutech
   branch: main
-  # Reemplaza esta URL con la dirección de tu Cloudflare Worker desplegado
-  base_url: https://solutech-oauth.xaviaerox.workers.dev
+  # URL de tu OAuth provider alojado en el VPS de Solutech
+  base_url: https://oauth.solutech.blog
   auth_endpoint: auth
 
 media_folder: "static/images"
