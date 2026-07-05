@@ -3,6 +3,14 @@ locale = 'es'
 title = 'Solutech — Mantenimiento Informático Almería y Murcia'
 enableRobotsTXT = true
 theme = []
+ignoreFiles = [
+  '\.instagram\.md$',
+  '\.linkedin\.md$',
+  '\.carousel\.md$',
+  '\.meta\.json$',
+  '\.image-prompt\.txt$'
+]
+
 
 [params]
   description = 'Gestión tecnológica continua para pequeñas empresas. Soporte, seguridad y modernización.'

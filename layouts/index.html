@@ -259,7 +259,7 @@
   <div class="section-tag">Blog y recursos</div>
   <h2 class="section-h">IT explicada<br><em>sin tecnicismos.</em></h2>
   <div class="blog-grid">
-    {{ range first 4 (where .Site.RegularPages "Section" "blog").ByDate.Reverse }}
+    {{ range first 4 (where .Site.RegularPages "Section" "in" (slice "blog" "news")).ByDate.Reverse }}
     <div class="bcard">
       <div class="bcard-img" role="img" aria-label="Imagen descriptiva del artículo: {{ .Title }}" style="background-image: url('{{ .Params.image | relURL }}'); height: 160px; min-height: auto; border-right: none; border-bottom: 1px solid var(--br);"></div>
       <div class="bcard-body">

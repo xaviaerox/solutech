@@ -24,7 +24,12 @@
     {{ end }}
   </div>
   
-  {{ $paginator := .Paginate .Pages 6 }}
+  {{ $pages := .Pages }}
+  {{ if or (eq .Section "blog") (eq .Section "news") }}
+    {{ $pages = (where .Site.RegularPages "Section" "in" (slice "blog" "news")).ByDate.Reverse }}
+  {{ end }}
+  
+  {{ $paginator := .Paginate $pages 6 }}
   <div class="blog-grid">
     {{ range $paginator.Pages }}
     <article>
