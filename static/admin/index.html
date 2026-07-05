@@ -11,19 +11,58 @@
   <script>
     window.addEventListener("message", (e) => {
       console.log("DEBUG MESSAGE RECEIVED:", e.origin, e.data);
-      const debugEl = document.createElement("div");
-      debugEl.style.position = "fixed";
-      debugEl.style.bottom = "10px";
-      debugEl.style.left = "10px";
-      debugEl.style.background = "rgba(0,0,0,0.85)";
-      debugEl.style.color = "#00ff00";
-      debugEl.style.padding = "15px";
-      debugEl.style.borderRadius = "5px";
-      debugEl.style.fontFamily = "monospace";
-      debugEl.style.fontSize = "12px";
-      debugEl.style.zIndex = "99999";
-      debugEl.innerHTML = "<strong>DEBUG MESSAGE:</strong><br>Origen: " + e.origin + "<br>Datos: " + (typeof e.data === 'object' ? JSON.stringify(e.data) : e.data);
-      document.body.appendChild(debugEl);
+      
+      let token = null;
+      
+      // Intentar extraer el token si es string
+      if (typeof e.data === 'string' && e.data.startsWith('authorization:github:success:')) {
+        try {
+          const rawJson = e.data.replace('authorization:github:success:', '');
+          const parsed = JSON.parse(rawJson);
+          token = parsed.token;
+        } catch (err) {
+          console.error("Error al parsear token string:", err);
+        }
+      }
+      // Intentar extraer el token si es objeto
+      else if (e.data && typeof e.data === 'object' && e.data.token && e.data.provider === 'github') {
+        token = e.data.token;
+      }
+      
+      if (token) {
+        console.log("TOKEN CAPTURADO CON ÉXITO:", token);
+        
+        // Formato esperado de sesión por Decap CMS / Netlify CMS
+        const sessionObj = {
+          backendName: "github",
+          token: token,
+          use_local_git: false
+        };
+        
+        // Guardar en ambas claves posibles por compatibilidad
+        localStorage.setItem("decap-cms-user", JSON.stringify(sessionObj));
+        localStorage.setItem("netlify-cms-user", JSON.stringify(sessionObj));
+        
+        // Crear aviso en pantalla
+        const debugEl = document.createElement("div");
+        debugEl.style.position = "fixed";
+        debugEl.style.bottom = "10px";
+        debugEl.style.left = "10px";
+        debugEl.style.background = "#222";
+        debugEl.style.color = "#00ff00";
+        debugEl.style.padding = "20px";
+        debugEl.style.borderRadius = "8px";
+        debugEl.style.boxShadow = "0 4px 15px rgba(0,0,0,0.3)";
+        debugEl.style.fontFamily = "sans-serif";
+        debugEl.style.zIndex = "99999";
+        debugEl.innerHTML = "<strong>🔑 Autenticación Exitosa</strong><br>Iniciando sesión en el panel de administración...";
+        document.body.appendChild(debugEl);
+        
+        // Recargar el panel tras 500ms
+        setTimeout(() => {
+          window.location.reload();
+        }, 500);
+      }
     }, false);
   </script>
   <!-- Incluir el script de Decap CMS desde CDN -->
