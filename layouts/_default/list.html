@@ -11,20 +11,49 @@
   {{ end }}
   
   <!-- Barra de Categorías -->
-  <div class="blog-categories">
-    <a href="{{ "/blog/" | relURL }}" class="cat-filter-btn {{ if eq .Section "blog" }}{{ if .IsSection }}active{{ end }}{{ end }}">
-      Todos
-    </a>
-    {{ $currentTitle := .Title }}
-    {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-      {{ $humanized := $name | humanize }}
-      <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}/" class="cat-filter-btn {{ if eq (lower $currentTitle) (lower $humanized) }}active{{ end }}">
-        {{ $humanized }} ({{ $taxonomy.Count }})
+  <div class="category-filter-container">
+    <div class="quick-categories">
+      <a href="{{ "/blog/" | relURL }}" class="cat-filter-btn {{ if eq .Section "blog" }}{{ if .IsSection }}active{{ end }}{{ end }}">
+        Todos
       </a>
-    {{ end }}
+      {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+        {{ $humanized := $name | humanize }}
+        {{ if eq (lower $humanized) "ciberseguridad" }}
+          <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}/" class="cat-filter-btn {{ if eq (lower $.Title) (lower $humanized) }}active{{ end }}">
+            {{ $humanized }}
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+
+    <!-- Filtro Desplegable para el resto de categorías -->
+    <div class="dropdown-filter">
+      {{ $currentTitle := .Title }}
+      {{ $isMainOrCiber := or (eq .Section "blog") (eq (lower $currentTitle) "ciberseguridad") }}
+      <button id="category-trigger" class="dropdown-trigger {{ if not $isMainOrCiber }}active{{ end }}">
+        <span>
+          {{ if not $isMainOrCiber }}
+            {{ $currentTitle }}
+          {{ else }}
+            Más categorías
+          {{ end }}
+        </span>
+        <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <div id="category-dropdown" class="dropdown-menu">
+        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+          {{ $humanized := $name | humanize }}
+          {{ if ne (lower $humanized) "ciberseguridad" }}
+            <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}/" class="dropdown-option {{ if eq (lower $currentTitle) (lower $humanized) }}selected{{ end }}">
+              {{ $humanized }} ({{ $taxonomy.Count }})
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
   </div>
   
-  {{ $pages := .Pages }}
+  {{ $pages := .Pages.ByDate.Reverse }}
   {{ if or (eq .Section "blog") (eq .Section "news") }}
     {{ $pages = (where .Site.RegularPages "Section" "in" (slice "blog" "news")).ByDate.Reverse }}
   {{ end }}
@@ -66,5 +95,26 @@
     {{ end }}
   </nav>
   {{ end }}
+
+  <script>
+  (function() {
+    const trigger = document.getElementById('category-trigger');
+    const dropdown = document.getElementById('category-dropdown');
+    if (trigger && dropdown) {
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isOpen = dropdown.classList.contains('open');
+        dropdown.classList.toggle('open', !isOpen);
+        trigger.classList.toggle('open', !isOpen);
+      });
+      document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target) && e.target !== trigger) {
+          dropdown.classList.remove('open');
+          trigger.classList.remove('open');
+        }
+      });
+    }
+  })();
+  </script>
 </section>
 {{ end }}
