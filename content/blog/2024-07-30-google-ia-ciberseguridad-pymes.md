@@ -1,10 +1,14 @@
 ---
 title: "Google y la IA en Ciberseguridad: Herramientas Clave para Pymes"
 date: 2024-07-30T00:00:00+02:00
-slug: "google-ia-ciberseguridad-pymes"
-description: "Analizamos cómo la IA de Google refuerza la ciberseguridad para Pymes, desde la detección de amenazas hasta la respuesta a incidentes. Claves y recomendaciones."
-categories: ["Ciberseguridad", "Inteligencia Artificial"]
-image: "images/blog-default.png"
+slug: google-ia-ciberseguridad-pymes
+description: Analizamos cómo la IA de Google refuerza la ciberseguridad para
+  Pymes, desde la detección de amenazas hasta la respuesta a incidentes. Claves
+  y recomendaciones.
+categories:
+  - Ciberseguridad
+  - Inteligencia Artificial
+image: https://fotografias-2.larazon.es/assets/2026/02/el-nuevo-informe-de-google-analiza-el-panorama-de-las-ciberamenazas.jpg?width=1900&height=1069
 draft: false
 ---
 
