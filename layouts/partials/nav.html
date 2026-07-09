@@ -3,7 +3,7 @@
     <span class="logo-pip"></span>
     SOLUTECH
   </a>
-  <div class="nav-links">
+  <div class="nav-links" id="nav-links">
     <a href="{{ "/#stack" | relURL }}" data-section="stack">Tecnología</a>
     <a href="{{ "/#servicios" | relURL }}" data-section="servicios">Servicios</a>
     <a href="{{ "/#primer-mes" | relURL }}" data-section="primer-mes">Proceso</a>
@@ -11,10 +11,84 @@
     <a href="{{ "/blog" | relURL }}" data-section="blog">Blog</a>
   </div>
   <a href="{{ "/#contacto" | relURL }}" class="nav-cta">Diagnóstico gratuito</a>
+  
+  <!-- Botón Hamburguesa Móvil -->
+  <button class="burger-menu" id="burger-menu" aria-label="Abrir menú de navegación" aria-expanded="false">
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+  </button>
 </nav>
 
 <style>
 nav a.nav-active { color: var(--o) !important; }
+
+/* Estilos del Menú Hamburguesa */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  height: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1010;
+  padding: 0;
+}
+.burger-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--t);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: left center;
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+  }
+  .nav-cta {
+    display: none;
+  }
+  
+  /* Comportamiento de Nav Links como desplegable móvil */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: rgba(14, 14, 20, 0.98);
+    backdrop-filter: blur(20px);
+    border-left: 1px solid var(--br);
+    padding: 100px 40px;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1005;
+  }
+  
+  .nav-links.open {
+    right: 0;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+  }
+  
+  /* Animación del botón hamburguesa */
+  .burger-menu.open .burger-line:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  .burger-menu.open .burger-line:nth-child(2) {
+    opacity: 0;
+    transform: scale(0);
+  }
+  .burger-menu.open .burger-line:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}
 </style>
 
 <script>
@@ -22,6 +96,37 @@ nav a.nav-active { color: var(--o) !important; }
   const sections = document.querySelectorAll('section[id], div[id]');
   const navLinks = document.querySelectorAll('nav .nav-links a[data-section]');
   const nav = document.getElementById('main-nav');
+  const burger = document.getElementById('burger-menu');
+  const linksContainer = document.getElementById('nav-links');
+  
+  // Toggle menú móvil
+  if (burger && linksContainer) {
+    burger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = linksContainer.classList.contains('open');
+      linksContainer.classList.toggle('open', !isOpen);
+      burger.classList.toggle('open', !isOpen);
+      burger.setAttribute('aria-expanded', !isOpen);
+    });
+
+    // Cerrar menú al hacer click fuera
+    document.addEventListener('click', (e) => {
+      if (linksContainer.classList.contains('open') && !linksContainer.contains(e.target) && e.target !== burger) {
+        linksContainer.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      }
+    });
+    
+    // Cerrar menú al hacer click en un enlace
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        linksContainer.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => {

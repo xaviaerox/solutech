@@ -1,0 +1,13 @@
+{{- $img := .Page.Resources.GetMatch .Destination -}}
+{{- if not $img -}}
+  {{- $img = resources.Get .Destination -}}
+{{- end -}}
+{{- if $img -}}
+  {{- $webp := $img.Resize "1200x webp" -}}
+  <picture>
+    <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+    <img src="{{ $img.RelPermalink }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} loading="lazy">
+  </picture>
+{{- else -}}
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} loading="lazy">
+{{- end -}}
