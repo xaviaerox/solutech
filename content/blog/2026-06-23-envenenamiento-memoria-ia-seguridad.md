@@ -85,7 +85,7 @@ La memoria en la IA aporta una productividad sin precedentes, pero exige un enfo
 
 Proteger estos sistemas no es opcional si queremos evitar que nuestros asistentes corporativos se conviertan en el caballo de Troya de la infraestructura digital de nuestra empresa.
 
-> 💡 **Accede aquí:** [Guía para implementar MFA obligatorio en tu servidor SSH](/blog/implementar-mfa-obligatorio-servidor-ssh) (*Protege tus accesos críticos hoy mismo*).
+> 💡 **Accede aquí:** [Guía para implementar MFA obligatorio en tu servidor SSH](/guias/implementar-mfa-obligatorio-servidor-ssh) (*Protege tus accesos críticos hoy mismo*).
 
 ---
 

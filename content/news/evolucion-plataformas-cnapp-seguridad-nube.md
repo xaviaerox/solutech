@@ -56,7 +56,7 @@ Si su empresa opera en la nube, es momento de auditar su estrategia de seguridad
 2. **Priorice por explotabilidad:** Identifique qué activos son críticos y están expuestos en lugar de intentar parchear todo simultáneamente.
 3. **Integre flujos:** Asegúrese de que la seguridad esté conectada con sus operaciones diarias.
 
-> 💡 **Accede aquí:** [Implementar MFA: Guía obligatoria para proteger tu servidor](/blog/implementar-mfa-obligatorio-servidor-ssh) (*Asegura tus accesos antes de que sea tarde*).
+> 💡 **Accede aquí:** [Implementar MFA: Guía obligatoria para proteger tu servidor](/guias/implementar-mfa-obligatorio-servidor-ssh) (*Asegura tus accesos antes de que sea tarde*).
 
 ## 🏁 Conclusión
 

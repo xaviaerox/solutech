@@ -64,7 +64,7 @@ Para mitigar el riesgo de intrusiones paralelas, es vital adoptar un enfoque de 
 
 > 💡 **Advertencia:** La ausencia de alertas en una parte de la red no garantiza la seguridad total. Los atacantes aprovechan los puntos ciegos entre la infraestructura local y la nube para ocultar sus movimientos.
 
-> 💡 **Accede aquí:** [Implementar MFA obligatorio en servidores SSH](/blog/implementar-mfa-obligatorio-servidor-ssh)
+> 💡 **Accede aquí:** [Implementar MFA obligatorio en servidores SSH](/guias/implementar-mfa-obligatorio-servidor-ssh)
 
 ## 🏁 Conclusión
 La ciberseguridad moderna requiere gestionar la visibilidad total del entorno. En Solutech, ayudamos a las Pymes a implementar arquitecturas de seguridad que detectan comportamientos anómalos antes de que escalen a incidentes críticos.

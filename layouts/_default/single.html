@@ -4,7 +4,11 @@
     <nav class="breadcrumbs" aria-label="Breadcrumbs" style="font-family: var(--f-m); font-size: 10px; margin-bottom: 24px; color: var(--ts); text-transform: uppercase; letter-spacing: 0.05em; display: flex; gap: 8px; align-items: center;">
       <a href="{{ "/" | relURL }}" style="color: var(--ts); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--o)'" onmouseout="this.style.color='var(--ts)'">Inicio</a>
       <span style="opacity: 0.5;">&gt;</span>
+      {{ if eq .Section "guias" }}
+      <a href="{{ "/guias/" | relURL }}" style="color: var(--ts); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--o)'" onmouseout="this.style.color='var(--ts)'">Guías</a>
+      {{ else }}
       <a href="{{ "/blog/" | relURL }}" style="color: var(--ts); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--o)'" onmouseout="this.style.color='var(--ts)'">Blog</a>
+      {{ end }}
       <span style="opacity: 0.5;">&gt;</span>
       <span style="color: var(--tm); font-weight: 500;">{{ .Title }}</span>
     </nav>

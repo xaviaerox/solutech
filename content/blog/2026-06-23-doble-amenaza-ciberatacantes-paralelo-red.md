@@ -106,7 +106,7 @@ La capacidad de dos actores de amenazas para operar en paralelo en una misma red
 
 La visibilidad, la prevención proactiva y una respuesta rápida y coordinada son la clave para proteger su negocio en este entorno complejo.
 
-> 💡 **Accede aquí:** [Implementar MFA Obligatorio en tu Servidor SSH](/blog/implementar-mfa-obligatorio-servidor-ssh) (*Un paso crucial para blindar tus accesos remotos*).
+> 💡 **Accede aquí:** [Implementar MFA Obligatorio en tu Servidor SSH](/guias/implementar-mfa-obligatorio-servidor-ssh) (*Un paso crucial para blindar tus accesos remotos*).
 
 ## ❓ FAQ
 ### ¿Qué significa que dos ciberatacantes operen en paralelo?

@@ -3,7 +3,7 @@
   <div class="section-bg bg-blog"></div>
   <div class="section-glow"></div>
   
-  <div class="section-tag">Blog y Recursos</div>
+  <div class="section-tag">{{ if eq .Section "guias" }}Guías Técnicas{{ else }}Blog y Recursos{{ end }}</div>
   {{ if eq .Data.Singular "category" }}
   <h1 class="section-h">Categoría: <em>{{ .Title }}</em></h1>
   {{ else }}
@@ -13,9 +13,15 @@
   <!-- Barra de Categorías -->
   <div class="category-filter-container">
     <div class="quick-categories">
+      {{ if eq .Section "guias" }}
+      <a href="{{ "/guias/" | relURL }}" class="cat-filter-btn {{ if eq .Section "guias" }}{{ if .IsSection }}active{{ end }}{{ end }}">
+        Todos
+      </a>
+      {{ else }}
       <a href="{{ "/blog/" | relURL }}" class="cat-filter-btn {{ if eq .Section "blog" }}{{ if .IsSection }}active{{ end }}{{ end }}">
         Todos
       </a>
+      {{ end }}
       {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
         {{ $humanized := $name | humanize }}
         {{ if eq (lower $humanized) "ciberseguridad" }}

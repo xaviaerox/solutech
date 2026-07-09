@@ -99,7 +99,7 @@ La seguridad de tu hotel no puede depender de la suerte o de la intuición de un
 
 En Solutech ayudamos a los negocios turísticos de Almería y Murcia a proteger sus sistemas de reservas y salvaguardar la información de sus clientes con soluciones de ciberseguridad preventiva adaptadas a su presupuesto.
 
-> 💡 **Accede aquí:** [Cómo implementar MFA obligatorio en tus servidores](/blog/implementar-mfa-obligatorio-servidor-ssh) (*Protege tus accesos críticos frente a intrusiones*).
+> 💡 **Accede aquí:** [Cómo implementar MFA obligatorio en tus servidores](/guias/implementar-mfa-obligatorio-servidor-ssh) (*Protege tus accesos críticos frente a intrusiones*).
 
 ---
 

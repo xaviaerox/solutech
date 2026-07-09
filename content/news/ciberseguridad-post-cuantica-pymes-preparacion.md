@@ -53,7 +53,7 @@ No necesita ser un experto en física cuántica para actuar. Siga estos pasos:
 * **Diseño ágil:** Asegúrese de que sus nuevas implementaciones de software permitan actualizaciones de cifrado sin cambios estructurales profundos.
 * **Auditoría de seguridad:** Revise con su partner tecnológico el estado de sus certificados y protocolos de red actuales.
 
-> 💡 **Accede aquí:** [Implementar MFA obligatorio en servidores](/blog/implementar-mfa-obligatorio-servidor-ssh) (*Guía esencial para elevar la seguridad de acceso hoy mismo*).
+> 💡 **Accede aquí:** [Implementar MFA obligatorio en servidores](/guias/implementar-mfa-obligatorio-servidor-ssh) (*Guía esencial para elevar la seguridad de acceso hoy mismo*).
 
 ## 🏁 Conclusión
 La seguridad cuántica es una carrera de fondo. En Solutech, ayudamos a las Pymes a auditar su infraestructura actual para garantizar que su negocio esté preparado ante los nuevos estándares. La planificación es la mejor garantía de continuidad operativa.

@@ -6,6 +6,8 @@ description: "Guía práctica para configurar la autenticación multifactor (MFA
 categories: ["Ciberseguridad", "Servidores Linux"]
 keywords: ["MFA obligatorio en servidor SSH", "seguridad SSH Pymes", "autenticación multifactor Linux", "proteger acceso remoto", "ciberseguridad servidores", "PAM Google Authenticator"]
 image: "images/blog-implementar-mfa-obligatorio-servidor-ssh.png"
+aliases:
+  - /blog/implementar-mfa-obligatorio-servidor-ssh
 draft: false
 ---
 ## Introducción

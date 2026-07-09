@@ -92,7 +92,7 @@ La ciberseguridad preventiva y la monitorización constante son herramientas cla
 
 En Solutech ayudamos a las Pymes de nuestra región a blindar sus sistemas de forma proactiva.
 
-> 💡 **Accede aquí:** [Cómo implementar MFA obligatorio en tus servidores](/blog/implementar-mfa-obligatorio-servidor-ssh) (*Guía paso a paso para bloquear accesos no autorizados*).
+> 💡 **Accede aquí:** [Cómo implementar MFA obligatorio en tus servidores](/guias/implementar-mfa-obligatorio-servidor-ssh) (*Guía paso a paso para bloquear accesos no autorizados*).
 
 ---
 

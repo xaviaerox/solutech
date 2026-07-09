@@ -7,6 +7,8 @@ categories: ["Ciberseguridad", "Redes"]
 keywords: ["túnel VPN en malla seguro", "red privada cifrada punto a punto", "interconexión de sedes", "seguridad informática Almería"]
 image: "images/blog-configurar-tunel-vpn-malla-seguro-oficinas.png"
 business_impact: "La falta de una interconexión segura entre sedes expone los datos corporativos a interceptaciones y ataques de ransomware, paralizando la facturación y el acceso a servidores locales de la empresa."
+aliases:
+  - /blog/configurar-tunel-vpn-malla-seguro-oficinas
 draft: false
 ---
 
@@ -180,7 +182,7 @@ sudo wg show
 
 Implementar un túnel VPN en malla seguro permite a las pymes de Almería y Murcia unificar sus recursos tecnológicos bajo una misma infraestructura virtual cifrada. Este método elimina la complejidad de las VPN tradicionales, garantizando un rendimiento óptimo y una protección robusta frente a accesos no autorizados.
 
-> 💡 **Accede aquí:** [Cómo implementar MFA obligatorio en tu servidor SSH](/blog/implementar-mfa-obligatorio-servidor-ssh) (*Protege el acceso administrativo a tus nodos de red y evita intrusiones*).
+> 💡 **Accede aquí:** [Cómo implementar MFA obligatorio en tu servidor SSH](/guias/implementar-mfa-obligatorio-servidor-ssh) (*Protege el acceso administrativo a tus nodos de red y evita intrusiones*).
 
 ---
 

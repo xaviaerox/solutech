@@ -90,7 +90,7 @@ La ciberseguridad moderna ya no consiste solo en proteger tus propios ordenadore
 
 En Solutech aplicamos políticas estrictas de mínimo privilegio y monitorización continua para garantizar que el soporte técnico que ofrecemos a las pymes de Almería y Murcia nunca se convierta en una puerta trasera para los atacantes.
 
-> 💡 **Accede aquí:** [Cómo implementar MFA obligatorio en tus servidores](/blog/implementar-mfa-obligatorio-servidor-ssh) (*Protege tus accesos críticos frente a accesos no autorizados*).
+> 💡 **Accede aquí:** [Cómo implementar MFA obligatorio en tus servidores](/guias/implementar-mfa-obligatorio-servidor-ssh) (*Protege tus accesos críticos frente a accesos no autorizados*).
 
 ---
 

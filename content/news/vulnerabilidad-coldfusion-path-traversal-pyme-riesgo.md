@@ -91,7 +91,7 @@ La ciberseguridad no es un gasto, sino una inversión esencial para la continuid
 Ignorar vulnerabilidades como el Path Traversal en ColdFusion puede tener un coste mucho mayor a largo plazo.
 En Solutech, somos tu partner tecnológico de confianza en Almería y Murcia, listos para ayudarte a proteger tu negocio.
 
-> 💡 **Accede aquí:** [Implementar MFA Obligatorio en Servidor SSH](/blog/implementar-mfa-obligatorio-servidor-ssh) (*Protege tus accesos con autenticación multifactor*).
+> 💡 **Accede aquí:** [Implementar MFA Obligatorio en Servidor SSH](/guias/implementar-mfa-obligatorio-servidor-ssh) (*Protege tus accesos con autenticación multifactor*).
 
 ## ❓ FAQ
 ### ¿Qué es una vulnerabilidad de Path Traversal?

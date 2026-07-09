@@ -89,7 +89,7 @@ La vulnerabilidad en FortiSandbox es un recordatorio de que la ciberseguridad es
 Las Pymes de Almería y Murcia necesitan un partner tecnológico que no solo implemente soluciones, sino que también las mantenga actualizadas y monitorice proactivamente las amenazas.
 En Solutech, somos su aliado para garantizar la continuidad y seguridad de su negocio.
 
-> 💡 **Accede aquí:** [Implementar MFA Obligatorio en Servidor SSH](/blog/implementar-mfa-obligatorio-servidor-ssh) (*Refuerza la seguridad de tus accesos remotos*).
+> 💡 **Accede aquí:** [Implementar MFA Obligatorio en Servidor SSH](/guias/implementar-mfa-obligatorio-servidor-ssh) (*Refuerza la seguridad de tus accesos remotos*).
 
 ## ❓ FAQ
 ### ¿Qué es FortiSandbox y por qué es importante para mi Pyme?

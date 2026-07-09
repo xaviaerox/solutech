@@ -94,7 +94,7 @@ Las vulnerabilidades en sistemas esenciales como NetScaler son una preocupación
 
 Invertir en ciberseguridad preventiva y contar con un partner tecnológico local de confianza es la mejor estrategia para proteger su negocio en Almería y Murcia.
 
-> 💡 **Accede aquí:** [Implementar MFA Obligatorio en Servidor SSH](/blog/implementar-mfa-obligatorio-servidor-ssh) (*Un paso clave para proteger su acceso remoto*).
+> 💡 **Accede aquí:** [Implementar MFA Obligatorio en Servidor SSH](/guias/implementar-mfa-obligatorio-servidor-ssh) (*Un paso clave para proteger su acceso remoto*).
 
 ## FAQ
 
