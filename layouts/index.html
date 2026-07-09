@@ -176,7 +176,7 @@
   <div class="section-tag">Planes de Gestión</div>
   <h2 class="section-h">Precio fijo mensual.<br><em>Sin sorpresas.</em></h2>
   <div class="svc-grid">
-    {{ range hugo.Data.pricing }}
+    {{ range site.Data.pricing }}
     <div class="svc {{ if .highlight }}mid{{ end }}">
       {{ if .badge }}<div class="svc-badge">{{ .badge }}</div>{{ end }}
       <div class="svc-icon-wrap">
@@ -207,7 +207,7 @@
   <div class="section-tag">Clientes reales</div>
   <h2 class="section-h">Lo que dicen<br><em>los que confían en Solutech.</em></h2>
   <div class="test-grid">
-    {{ range hugo.Data.testimonials }}
+    {{ range site.Data.testimonials }}
     <div class="test-card">
       <p class="test-text">"{{ .text }}"</p>
       <div class="test-author">
@@ -231,14 +231,14 @@
   <div class="about-grid">
     <div class="about-photo" role="img" aria-label="Xavi Alonso, Especialista IT y Fundador de Solutech" style="background-image: url('{{ "images/xavi-alonso.jpg" | relURL }}'); background-size: cover; background-position: center;">
       <div class="about-photo-caption">
-        <div class="about-name">{{ hugo.Data.founder.name }}</div>
-        <div class="about-role">{{ hugo.Data.founder.role }} · {{ hugo.Data.founder.location }}</div>
+        <div class="about-name">{{ site.Data.founder.name }}</div>
+        <div class="about-role">{{ site.Data.founder.role }} · {{ site.Data.founder.location }}</div>
       </div>
     </div>
     <div class="about-content">
-      <div class="about-p">{{ hugo.Data.founder.bio | markdownify }}</div>
+      <div class="about-p">{{ site.Data.founder.bio | markdownify }}</div>
       <div class="vals">
-        {{ range hugo.Data.founder.values }}
+        {{ range site.Data.founder.values }}
         <div class="val">
           <div class="val-icon">{{ .icon | safeHTML }}</div>
           <div><div class="val-t">{{ .title }}</div><div class="val-d">{{ .desc }}</div></div>
