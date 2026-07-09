@@ -26,8 +26,9 @@
     <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta name="twitter:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "favicon.png" | absURL }}{{ end }}">
 
-    <!-- CSS Maestro -->
-    {{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
+    <!-- CSS Maestro Bundled -->
+    {{ $cssFiles := slice (resources.Get "css/main.css") (resources.Get "css/components/nav.css") (resources.Get "css/components/onboarding.css") (resources.Get "css/components/footer.css") (resources.Get "css/components/emergency.css") }}
+    {{ $styles := $cssFiles | resources.Concat "css/bundle.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
     
     <!-- Favicon & Icons -->

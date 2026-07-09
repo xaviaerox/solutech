@@ -1,22 +1,12 @@
-<div id="emergency-widget" style="position: fixed; bottom: 84px; right: 24px; z-index: 100; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; pointer-events: none;">
-  <div id="emergency-label" style="background: var(--s1); color: var(--t); padding: 8px 16px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--o-a); opacity: 0; transform: translateX(20px); transition: all 0.5s ease; pointer-events: auto;">
-    ¿Urgencia Técnica? <span style="color: var(--o);">Respuesta < 2h</span>
+<div id="emergency-widget">
+  <div id="emergency-label">
+    ¿Urgencia Técnica? <span>Respuesta &lt; 2h</span>
   </div>
-  <a href="https://wa.me/34684248465" target="_blank" style="width: 56px; height: 56px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); transition: all 0.3s; pointer-events: auto; position: relative;">
+  <a href="https://wa.me/34684248465" target="_blank" class="emergency-link" aria-label="Contactar por urgencia de soporte en WhatsApp">
     <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-4.752 3.408h-.01c-1.491 0-2.954-.401-4.226-1.159l-.304-.18-3.146.825.842-3.068-.198-.314a8.137 8.137 0 0 1-1.248-4.302c0-4.492 3.655-8.147 8.151-8.147 2.176 0 4.222.846 5.761 2.387a8.115 8.115 0 0 1 2.387 5.76c0 4.493-3.655 8.147-8.15 8.147m10.194-14.54a11.44 11.44 0 0 0-8.083-3.348c-6.315 0-11.455 5.14-11.455 11.456 0 2.016.526 3.984 1.524 5.734L0 24l4.215-1.107c1.696.924 3.612 1.412 5.56 1.413h.005c6.315 0 11.454-5.141 11.455-11.457a11.432 11.432 0 0 0-3.348-8.083z" /></svg>
-    <span style="position: absolute; top: -2px; right: -2px; display: flex; height: 12px; width: 12px;">
-      <span style="animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite; position: absolute; display: inline-flex; height: 100%; width: 100%; border-radius: 9999px; background-color: #ef4444; opacity: 0.75;"></span>
-      <span style="position: relative; display: inline-flex; border-radius: 9999px; height: 12px; width: 12px; background-color: #ef4444; border: 2px solid white;"></span>
+    <span class="emergency-badge">
+      <span class="emergency-ping"></span>
+      <span class="emergency-dot"></span>
     </span>
   </a>
 </div>
-
-<script>
-setTimeout(() => {
-  const label = document.getElementById('emergency-label');
-  if (label) {
-    label.style.opacity = '1';
-    label.style.transform = 'translateX(0)';
-  }
-}, 3000);
-</script>

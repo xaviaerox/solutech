@@ -1,0 +1,68 @@
+nav a.nav-active { color: var(--o) !important; }
+
+/* Estilos del Menú Hamburguesa */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  height: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1010;
+  padding: 0;
+}
+.burger-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--t);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: left center;
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+  }
+  .nav-cta {
+    display: none;
+  }
+  
+  /* Comportamiento de Nav Links como desplegable móvil */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: rgba(14, 14, 20, 0.98);
+    backdrop-filter: blur(20px);
+    border-left: 1px solid var(--br);
+    padding: 100px 40px;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1005;
+  }
+  
+  .nav-links.open {
+    right: 0;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+  }
+  
+  /* Animación del botón hamburguesa */
+  .burger-menu.open .burger-line:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  .burger-menu.open .burger-line:nth-child(2) {
+    opacity: 0;
+    transform: scale(0);
+  }
+  .burger-menu.open .burger-line:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}

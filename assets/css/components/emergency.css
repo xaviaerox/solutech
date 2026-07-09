@@ -1,0 +1,78 @@
+#emergency-widget {
+  position: fixed;
+  bottom: 84px;
+  right: 24px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  pointer-events: none;
+}
+#emergency-label {
+  background: var(--s1);
+  color: var(--t);
+  padding: 8px 16px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid var(--o-a);
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.5s ease;
+  pointer-events: auto;
+}
+#emergency-label span {
+  color: var(--o);
+}
+.emergency-link {
+  width: 56px;
+  height: 56px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+  transition: all 0.3s;
+  pointer-events: auto;
+  position: relative;
+}
+.emergency-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  display: flex;
+  height: 12px;
+  width: 12px;
+}
+.emergency-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  position: absolute;
+  display: inline-flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 9999px;
+  background-color: #ef4444;
+  opacity: 0.75;
+}
+.emergency-dot {
+  position: relative;
+  display: inline-flex;
+  border-radius: 9999px;
+  height: 12px;
+  width: 12px;
+  background-color: #ef4444;
+  border: 2px solid white;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

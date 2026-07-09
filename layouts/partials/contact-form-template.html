@@ -1,0 +1,37 @@
+{{ $type := .type | default "lead" }}
+<form id="solutech-{{ $type }}-form" action="https://n8n.solutech.blog/webhook/leads" method="POST" class="cta-form" data-type="{{ $type }}">
+  <div class="form-row">
+    <div class="form-group">
+      <label for="nombre-{{ $type }}" class="sr-only">Nombre / Empresa</label>
+      <input type="text" id="nombre-{{ $type }}" name="nombre" placeholder="{{ if eq $type "support" }}Tu nombre o empresa{{ else }}Tu nombre{{ end }}" aria-label="Tu nombre completo" required class="cta-input">
+    </div>
+    <div class="form-group">
+      <label for="email-{{ $type }}" class="sr-only">Tu Email</label>
+      <input type="email" id="email-{{ $type }}" name="email" placeholder="Tu email" aria-label="Tu correo electrónico" required class="cta-input">
+    </div>
+  </div>
+  
+  {{ if eq $type "lead" }}
+  <div class="form-row">
+    <div class="form-group">
+      <label for="telefono-{{ $type }}" class="sr-only">Teléfono</label>
+      <input type="tel" id="telefono-{{ $type }}" name="telefono" placeholder="Teléfono" aria-label="Teléfono de contacto" required class="cta-input">
+    </div>
+    <div class="form-group">
+      <label for="empresa-{{ $type }}" class="sr-only">Tu Empresa (opcional)</label>
+      <input type="text" id="empresa-{{ $type }}" name="empresa" placeholder="Tu empresa (opcional)" aria-label="Nombre de tu empresa (opcional)" class="cta-input">
+    </div>
+  </div>
+  {{ end }}
+
+  <div class="form-group">
+    <label for="mensaje-{{ $type }}" class="sr-only">{{ if eq $type "support" }}Descripción del Problema{{ else }}Mensaje / Consulta{{ end }}</label>
+    <textarea id="mensaje-{{ $type }}" name="{{ if eq $type "support" }}descripcion{{ else }}mensaje{{ end }}" placeholder="{{ if eq $type "support" }}Explica detalladamente la incidencia técnica...{{ else }}¿En qué podemos ayudarte? o ¿cuál es tu consulta?{{ end }}" aria-label="{{ if eq $type "support" }}Detalla la incidencia técnica{{ else }}Detalla en qué podemos ayudarte{{ end }}" required class="cta-input cta-textarea"></textarea>
+  </div>
+
+  <button type="submit" class="cta-btn" id="{{ $type }}-submit-btn">
+    {{ if eq $type "support" }}Abrir Ticket{{ else }}Solicitar Diagnóstico Gratuito{{ end }}
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </button>
+  <div id="{{ $type }}-status" class="form-status" style="margin-top: 16px; font-size: 14px; text-align: center; display: none;"></div>
+</form>

@@ -32,25 +32,3 @@
     </div>
   </div>
 </section>
-
-<style>
-.onboarding { position: relative; }
-.meth-grid { 
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 16px; 
-    align-items: stretch; 
-}
-@media (max-width: 900px) {
-    .meth-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 600px) {
-    .meth-grid { grid-template-columns: 1fr; }
-}
-.meth-step { background: var(--s2); border: 1px solid var(--br); padding: 24px; border-radius: 16px; display: flex; flex-direction: column; transition: all 0.3s; height: 100%; }
-.meth-step:hover { border-color: var(--o); background: var(--s3); transform: translateY(-4px); }
-.meth-num { font-family: var(--f-m); font-size: 10px; color: var(--o); font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.1em; }
-.meth-t { font-size: 16px; font-weight: 700; margin-bottom: 10px; color: #fff; }
-.meth-d { font-size: 12px; color: var(--ts); line-height: 1.5; flex-grow: 1; margin-bottom: 20px; }
-.meth-tag { display: inline-block; font-family: var(--f-m); font-size: 8px; color: var(--o); text-transform: uppercase; letter-spacing: 0.12em; padding: 4px 10px; border: 1px solid var(--o-a); border-radius: 100px; width: fit-content; margin-top: auto; }
-</style>
