@@ -12,6 +12,12 @@
     window.addEventListener("message", (e) => {
       console.log("DEBUG MESSAGE RECEIVED:", e.origin, e.data);
       
+      // Validar origen seguro
+      if (e.origin !== "https://oauth.solutech.blog") {
+        console.warn("MESSAGE BLOCKED from untrusted origin:", e.origin);
+        return;
+      }
+      
       let token = null;
       
       // Intentar extraer el token si es string

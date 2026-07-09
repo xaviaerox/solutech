@@ -22,6 +22,52 @@
       <input type="text" id="empresa-{{ $type }}" name="empresa" placeholder="Tu empresa (opcional)" aria-label="Nombre de tu empresa (opcional)" class="cta-input">
     </div>
   </div>
+  <div class="form-row">
+    <div class="form-group">
+      <label for="empleados-{{ $type }}" class="sr-only">Número de empleados</label>
+      <select id="empleados-{{ $type }}" name="empleados" class="cta-input" aria-label="Número de empleados">
+        <option value="" disabled selected>Nº de empleados</option>
+        <option value="1">Solo yo (autónomo)</option>
+        <option value="2-5">2 – 5 empleados</option>
+        <option value="6-20">6 – 20 empleados</option>
+        <option value="21-50">21 – 50 empleados</option>
+        <option value="50+">Más de 50</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="sector-{{ $type }}" class="sr-only">Sector</label>
+      <select id="sector-{{ $type }}" name="sector" class="cta-input" aria-label="Sector de la empresa">
+        <option value="" disabled selected>Sector</option>
+        <option value="comercio">Comercio / Retail</option>
+        <option value="hosteleria">Hostelería / Restauración</option>
+        <option value="salud">Salud / Clínica</option>
+        <option value="despacho">Despacho / Asesoría</option>
+        <option value="industria">Industria / Logística</option>
+        <option value="educacion">Educación</option>
+        <option value="otro">Otro</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group" style="flex: 1;">
+      <label for="preocupacion-{{ $type }}" class="sr-only">Principal preocupación</label>
+      <select id="preocupacion-{{ $type }}" name="preocupacion" class="cta-input" aria-label="Principal preocupación tecnológica">
+        <option value="" disabled selected>¿Cuál es tu mayor problema tecnológico?</option>
+        <option value="seguridad">Seguridad y ciberataques</option>
+        <option value="soporte">Falta de soporte técnico</option>
+        <option value="modernizacion">Sistemas obsoletos</option>
+        <option value="coste">Costes de TI elevados</option>
+        <option value="perdida-datos">Pérdida de datos / backups</option>
+        <option value="conectividad">Problemas de red / conectividad</option>
+        <option value="otro">Otro</option>
+      </select>
+    </div>
+  </div>
+  {{/* Honeypot anti-spam — invisible para humanos, visible para bots */}}
+  <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;overflow:hidden;" tabindex="-1">
+    <label for="website_url_{{ $type }}">No rellenar</label>
+    <input type="text" id="website_url_{{ $type }}" name="website_url" autocomplete="off" tabindex="-1">
+  </div>
   {{ end }}
 
   <div class="form-group">

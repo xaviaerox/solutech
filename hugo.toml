@@ -26,6 +26,21 @@ ignoreFiles = [
 [params.integrations]
   google_analytics = 'G-1XP3Q7JQWG'
 
+[params.business]
+  name            = "Solutech"
+  telephone       = "+34684248465"
+  price_range     = "€€"
+  street_address  = "Calle Tamarchete 9"
+  locality        = "Lorca"
+  region          = "Murcia"
+  postal_code     = "30800"
+  country         = "ES"
+  area_served     = ["Murcia", "Almería"]
+  hours_days      = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+  hours_opens     = "09:00"
+  hours_closes    = "18:00"
+
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

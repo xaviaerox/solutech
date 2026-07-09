@@ -41,46 +41,39 @@
 
     <!-- Schema.org LocalBusiness -->
     {{ if .IsHome }}
+    {{ $b := .Site.Params.business }}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
-      "name": "Solutech",
+      "name": "{{ $b.name }}",
       "description": "{{ .Site.Params.description }}",
       "url": "{{ .Site.BaseURL }}",
       "email": "{{ .Site.Params.email }}",
-      "telephone": "+34684248465",
+      "telephone": "{{ $b.telephone }}",
       "image": "{{ "favicon.png" | absURL }}",
-      "priceRange": "€€",
+      "priceRange": "{{ $b.price_range }}",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Calle Tamarchete 9",
-        "addressLocality": "Lorca",
-        "addressRegion": "Murcia",
-        "postalCode": "30800",
-        "addressCountry": "ES"
+        "streetAddress": "{{ $b.street_address }}",
+        "addressLocality": "{{ $b.locality }}",
+        "addressRegion": "{{ $b.region }}",
+        "postalCode": "{{ $b.postal_code }}",
+        "addressCountry": "{{ $b.country }}"
       },
       "areaServed": [
+        {{ range $i, $area := $b.area_served }}{{ if $i }},{{ end }}
         {
           "@type": "AdministrativeArea",
-          "name": "Murcia"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Almería"
+          "name": "{{ $area }}"
         }
+        {{ end }}
       ],
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "09:00",
-        "closes": "18:00"
+        "dayOfWeek": {{ $b.hours_days | jsonify }},
+        "opens": "{{ $b.hours_opens }}",
+        "closes": "{{ $b.hours_closes }}"
       },
       "sameAs": [
         "{{ .Site.Params.social.linkedin }}",
@@ -91,6 +84,7 @@
     }
     </script>
     {{ end }}
+
     
     <!-- Schema.org BlogPosting -->
     {{ if eq .Section "blog" }}

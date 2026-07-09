@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     lenis.on('scroll', (e) => {
         const totalScrollable = document.documentElement.scrollHeight - window.innerHeight;
         scrollProgress = totalScrollable > 0 ? e.scroll / totalScrollable : 0;
-        window.scrollProgress = scrollProgress; // Expose for three-particles.js
+        window.scrollProgress = scrollProgress; // Expose for particles-2d.js
     });
 
     // Make lenis globally accessible for programmatic scrolling

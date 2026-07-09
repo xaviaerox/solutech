@@ -20,6 +20,22 @@ document.addEventListener("DOMContentLoaded", function() {
       status.style.display = "none";
 
       const data = new FormData(form);
+
+      // Honeypot anti-spam: si el campo oculto tiene valor, es un bot
+      if (data.get("website_url") && data.get("website_url").trim() !== "") {
+        // Simulamos éxito sin hacer la llamada real
+        setTimeout(() => {
+          status.innerHTML = "<strong style='color: #4ade80;'>✓ Solicitud enviada correctamente.</strong><br>He recibido tu información. En menos de 24h me pondré en contacto contigo.";
+          status.style.display = "block";
+          form.reset();
+          btn.innerHTML = originalBtnText;
+          btn.style.opacity = "1";
+          btn.disabled = false;
+          btn.style.display = "none";
+        }, 800);
+        return;
+      }
+
       fetch(action, {
         method: method,
         body: data,

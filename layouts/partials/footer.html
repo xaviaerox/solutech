@@ -102,10 +102,7 @@
 <script src="{{ $lenis.RelPermalink }}" integrity="{{ $lenis.Data.Integrity }}" defer></script>
 
 {{ if .IsHome }}
-  {{ $three := resources.Get "js/vendor/three.min.js" | fingerprint }}
-  <script src="{{ $three.RelPermalink }}" integrity="{{ $three.Data.Integrity }}" defer></script>
-  
-  {{ $particles := resources.Get "js/three-particles.js" | minify | fingerprint }}
+  {{ $particles := resources.Get "js/particles-2d.js" | minify | fingerprint }}
   <script src="{{ $particles.RelPermalink }}" integrity="{{ $particles.Data.Integrity }}" defer></script>
 {{ end }}
 
