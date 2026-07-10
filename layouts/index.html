@@ -259,7 +259,7 @@
   <div class="section-tag">Blog y recursos</div>
   <h2 class="section-h">IT explicada<br><em>sin tecnicismos.</em></h2>
   <div class="blog-grid">
-    {{ range first 4 (where .Site.RegularPages "Section" "in" (slice "blog" "news")).ByDate.Reverse }}
+    {{ range first 4 (where .Site.RegularPages "Section" "in" (slice "blog" "news" "guias")).ByDate.Reverse }}
     <div class="bcard">
       {{ $img := "" }}
       {{ $isLocal := not (urls.Parse .Params.image).Scheme }}

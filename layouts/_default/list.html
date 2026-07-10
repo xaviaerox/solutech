@@ -61,7 +61,7 @@
   
   {{ $pages := .Pages.ByDate.Reverse }}
   {{ if or (eq .Section "blog") (eq .Section "news") }}
-    {{ $pages = (where .Site.RegularPages "Section" "in" (slice "blog" "news")).ByDate.Reverse }}
+    {{ $pages = (where .Site.RegularPages "Section" "in" (slice "blog" "news" "guias")).ByDate.Reverse }}
   {{ end }}
   
   {{ $paginator := .Paginate $pages 6 }}
