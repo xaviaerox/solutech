@@ -1,6 +1,6 @@
 ---
 title: "Guía de Estudio Completa de Azure Fundamentals (AZ-900) - Edición 2026"
-date: 2026-07-10T12:00:00+02:00
+date: 2026-07-10T08:00:00+02:00
 slug: "guia-estudio-az900-azure-fundamentals"
 description: "Prepárate para la certificación oficial AZ-900 con este resumen intensivo actualizado a 2026. Conceptos cloud, servicios clave, seguridad y simulacro."
 categories: ["Ciberseguridad", "Cloud"]
