@@ -45,3 +45,20 @@ collections:
       - { label: "Impacto del Negocio", name: "business_impact", widget: "text" }
       - { label: "URL de la Fuente Original", name: "source_url", widget: "string", required: false }
       - { label: "Cuerpo de la Noticia", name: "body", widget: "markdown" }
+
+  # Colección para las Guías Técnicas
+  - name: "guias"
+    label: "Guías"
+    folder: "content/guias"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha de Publicación", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZZ" }
+      - { label: "Slug URL", name: "slug", widget: "string" }
+      - { label: "Descripción Corta (SEO)", name: "description", widget: "text" }
+      - { label: "Categorías", name: "categories", widget: "list", default: ["Ciberseguridad"] }
+      - { label: "Palabras Clave (Keywords)", name: "keywords", widget: "list" }
+      - { label: "Imagen Destacada", name: "image", widget: "image" }
+      - { label: "Borrador (Draft)", name: "draft", widget: "boolean", default: true }
+      - { label: "Cuerpo de la Guía", name: "body", widget: "markdown" }
