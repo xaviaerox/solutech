@@ -152,21 +152,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const navigateToSection = (direction) => {
             const currentScroll = window.scrollY;
+            const easeOutExpo = (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));
             
             if (direction === 'prev') {
                 const prevSections = homeSections.filter(s => s.offsetTop - navOffset < currentScroll - 100);
                 if (prevSections.length > 0 && lenis) {
                     const target = prevSections[prevSections.length - 1];
-                    lenis.scrollTo(target, { offset: -navOffset, duration: 1.2 });
+                    lenis.scrollTo(target, { offset: -navOffset, duration: 1.4, easing: easeOutExpo });
                 } else if (lenis) {
-                    lenis.scrollTo(0, { duration: 1.2 });
+                    lenis.scrollTo(0, { duration: 1.4, easing: easeOutExpo });
                 }
             } else if (direction === 'next') {
                 const nextSection = homeSections.find(s => s.offsetTop - navOffset > currentScroll + 100);
                 if (nextSection && lenis) {
-                    lenis.scrollTo(nextSection, { offset: -navOffset, duration: 1.2 });
+                    lenis.scrollTo(nextSection, { offset: -navOffset, duration: 1.4, easing: easeOutExpo });
                 } else if (lenis) {
-                    lenis.scrollTo(document.body.offsetHeight, { duration: 1.2 });
+                    lenis.scrollTo(document.body.offsetHeight, { duration: 1.4, easing: easeOutExpo });
                 }
             }
         };

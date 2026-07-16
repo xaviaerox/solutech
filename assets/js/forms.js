@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function() {
       if (data.get("website_url") && data.get("website_url").trim() !== "") {
         // Simulamos éxito sin hacer la llamada real
         setTimeout(() => {
-          status.innerHTML = "<strong style='color: #4ade80;'>✓ Solicitud enviada correctamente.</strong><br>He recibido tu información. En menos de 24h me pondré en contacto contigo.";
+          status.className = "form-status form-status-success";
+          status.innerHTML = "✓ Solicitud enviada correctamente.<br>He recibido tu información. En menos de 24h me pondré en contacto contigo.";
           status.style.display = "block";
           form.reset();
           btn.innerHTML = originalBtnText;
@@ -44,10 +45,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       }).then(response => {
         if (response.ok) {
+          status.className = "form-status form-status-success";
           if (type === "support") {
-            status.innerHTML = "<strong style='color: #4ade80;'>✓ Incidencia registrada correctamente.</strong><br>He recibido los detalles del problema. Nos pondremos en contacto contigo de inmediato.";
+            status.innerHTML = "✓ Incidencia registrada correctamente.<br>He recibido los detalles del problema. Nos pondremos en contacto contigo de inmediato.";
           } else {
-            status.innerHTML = "<strong style='color: #4ade80;'>✓ Solicitud enviada correctamente.</strong><br>He recibido tu información. En menos de 24h me pondré en contacto contigo.";
+            status.innerHTML = "✓ Solicitud enviada correctamente.<br>He recibido tu información. En menos de 24h me pondré en contacto contigo.";
           }
           status.style.display = "block";
           form.reset();
@@ -56,18 +58,20 @@ document.addEventListener("DOMContentLoaded", function() {
           btn.disabled = false;
           btn.style.display = "none"; // Hide button after success
         } else {
+          status.className = "form-status form-status-error";
           response.json().then(data => {
             if (data && Object.hasOwn(data, 'errors')) {
-              status.innerHTML = "<span style='color: #f87116;'>Error al enviar: Revisa los campos requeridos.</span>";
+              status.innerHTML = "Error al enviar: Revisa los campos requeridos.";
             } else {
-              status.innerHTML = "<span style='color: #f87116;'>Hubo un problema al enviar el formulario.</span>";
+              status.innerHTML = "Hubo un problema al enviar el formulario.";
             }
             status.style.display = "block";
             btn.innerHTML = originalBtnText;
             btn.style.opacity = "1";
             btn.disabled = false;
           }).catch(() => {
-            status.innerHTML = "<span style='color: #f87116;'>Hubo un problema al enviar el formulario.</span>";
+            status.className = "form-status form-status-error";
+            status.innerHTML = "Hubo un problema al enviar el formulario.";
             status.style.display = "block";
             btn.innerHTML = originalBtnText;
             btn.style.opacity = "1";
@@ -75,7 +79,8 @@ document.addEventListener("DOMContentLoaded", function() {
           });
         }
       }).catch(error => {
-        status.innerHTML = "<span style='color: #f87116;'>Hubo un error de conexión. Inténtalo de nuevo.</span>";
+        status.className = "form-status form-status-error";
+        status.innerHTML = "Hubo un error de conexión. Inténtalo de nuevo.";
         status.style.display = "block";
         btn.innerHTML = originalBtnText;
         btn.style.opacity = "1";

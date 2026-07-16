@@ -26,10 +26,14 @@ if (document.body.classList.contains("home") && window.innerWidth > 768) {
   let mouseX = 0, mouseY = 0;
   let targetMouseX = 0, targetMouseY = 0;
 
+  let lastMove = 0;
   window.addEventListener("mousemove", (e) => {
+    const now = Date.now();
+    if (now - lastMove < 33) return;
+    lastMove = now;
     targetMouseX = (e.clientX / window.innerWidth - 0.5) * 40; // max parallax offset
     targetMouseY = (e.clientY / window.innerHeight - 0.5) * 40;
-  });
+  }, { passive: true });
 
   // Particle Class
   class Particle {
