@@ -313,7 +313,7 @@ nav {
 /* CTA */
 .cta { 
     text-align: center; 
-    padding: 80px 5% 100px; 
+    padding: 100px 5% 120px; 
     position: relative; 
     min-height: 100vh;
     display: flex;
@@ -323,41 +323,41 @@ nav {
     box-sizing: border-box;
 }
 .cta-form-card { 
-    max-width: 580px; 
+    max-width: 540px; 
     width: 100%;
     margin: 0 auto; 
     background: var(--s1); 
     border: 1px solid var(--br); 
-    border-radius: 24px; 
-    padding: 40px; 
+    border-radius: 20px; 
+    padding: 28px 32px; 
     position: relative; 
     z-index: 10; 
     backdrop-filter: blur(20px);
     box-shadow: 0 40px 100px rgba(0,0,0,0.5);
     box-sizing: border-box;
 }
-.cta h2 { font-family: var(--f-h); font-size: clamp(32px, 5vw, 48px); line-height: 1.1; margin-bottom: 16px; font-weight: 700; color: #fff; }
-.cta p { font-size: 14px; color: var(--tm); margin-bottom: 40px; max-width: 400px; margin-left: auto; margin-right: auto; }
+.cta h2 { font-family: var(--f-h); font-size: clamp(26px, 4vw, 36px); line-height: 1.1; margin-bottom: 8px; font-weight: 700; color: #fff; }
+.cta p { font-size: 13px; color: var(--tm); margin-bottom: 24px; max-width: 400px; margin-left: auto; margin-right: auto; }
 
-.cta-form { display: grid; gap: 16px; text-align: left; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.cta-form { display: grid; gap: 12px; text-align: left; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .cta-input { 
-    background: var(--s2); border: 1px solid var(--br); border-radius: 12px; 
-    padding: 14px 18px; color: var(--t); font-family: inherit; font-size: 14px;
+    background: var(--s2); border: 1px solid var(--br); border-radius: 10px; 
+    padding: 11px 15px; color: var(--t); font-family: inherit; font-size: 13px;
     transition: all .3s ease; width: 100%;
 }
 .cta-input:focus { border-color: var(--o); background: var(--s3); outline: none; box-shadow: 0 0 15px var(--o-a); }
-.cta-textarea { min-height: 120px; resize: none; }
+.cta-textarea { min-height: 85px; resize: none; }
 
 .cta-btn { 
-    background: var(--o); color: #fff; border: none; border-radius: 12px; 
-    padding: 16px; font-size: 15px; font-weight: 700; cursor: pointer;
+    background: var(--o); color: #fff; border: none; border-radius: 10px; 
+    padding: 14px; font-size: 14px; font-weight: 700; cursor: pointer;
     transition: all .3s cubic-bezier(0.16, 1, 0.3, 1);
     display: flex; align-items: center; justify-content: center; gap: 10px;
 }
 .cta-btn:hover { background: var(--od); transform: translateY(-2px); box-shadow: 0 10px 25px var(--o-a); }
 
-.cta-note { margin-top: 32px; font-family: var(--f-m); font-size: 9px; color: var(--ts); text-transform: uppercase; letter-spacing: 0.1em; }
+.cta-note { margin-top: 20px; font-family: var(--f-m); font-size: 9px; color: var(--ts); text-transform: uppercase; letter-spacing: 0.1em; }
 
 /* FOOTER */
 /* Styles moved to footer.html for modularity and fixed positioning */
