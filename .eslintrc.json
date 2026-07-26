@@ -6,8 +6,9 @@
   "extends": "eslint:recommended",
   "parserOptions": {
     "ecmaVersion": 12,
-    "sourceType": "script"
+    "sourceType": "module"
   },
+  "ignorePatterns": ["assets/js/vendor/*.js"],
   "rules": {
     "no-unused-vars": "warn",
     "no-console": "off",

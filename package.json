@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "format": "prettier --write \"assets/css/**/*.css\" \"assets/js/**/*.js\" \"layouts/**/*.html\"",
-    "lint": "eslint \"assets/js/**/*.js\" && stylelint \"assets/css/**/*.css\""
+    "lint": "eslint \"assets/js/**/*.js\" && stylelint \"assets/css/**/*.css\"",
+    "test:e2e": "playwright test"
   },
   "devDependencies": {
     "eslint": "^8.57.0",

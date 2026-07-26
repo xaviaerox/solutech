@@ -10,9 +10,9 @@ media_folder: "static/images"
 public_folder: "/images"
 
 collections:
-  # Colección para el Blog Tradicional
+  # Colección Unificada: Artículos y Noticias
   - name: "blog"
-    label: "Artículos del Blog"
+    label: "Artículos y Noticias"
     folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -22,33 +22,16 @@ collections:
       - { label: "Slug URL", name: "slug", widget: "string" }
       - { label: "Descripción Corta (SEO)", name: "description", widget: "text" }
       - { label: "Categorías", name: "categories", widget: "list", default: ["Ciberseguridad"] }
-      - { label: "Palabras Clave (Keywords)", name: "keywords", widget: "list" }
-      - { label: "Imagen Destacada", name: "image", widget: "image" }
-      - { label: "Borrador (Draft)", name: "draft", widget: "boolean", default: true }
-      - { label: "Cuerpo del Artículo", name: "body", widget: "markdown" }
+      - { label: "Palabras Clave (Keywords)", name: "keywords", widget: "list", required: false }
+      - { label: "Imagen Destacada", name: "image", widget: "image", required: false }
+      - { label: "Borrador (Draft)", name: "draft", widget: "boolean", default: false }
+      - { label: "Impacto en el Negocio (Noticias/Alertas)", name: "business_impact", widget: "text", required: false }
+      - { label: "URL Fuente Original (Opcional)", name: "source_url", widget: "string", required: false }
+      - { label: "Cuerpo de la Publicación", name: "body", widget: "markdown" }
 
-  # Colección para las Noticias del Bot (o manuales)
-  - name: "news"
-    label: "Noticias de Actualidad"
-    folder: "content/news"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Fecha de Publicación", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZZ" }
-      - { label: "Slug URL", name: "slug", widget: "string" }
-      - { label: "Descripción Corta (SEO)", name: "description", widget: "text" }
-      - { label: "Categorías", name: "categories", widget: "list", default: ["Ciberseguridad", "Noticias"] }
-      - { label: "Palabras Clave (Keywords)", name: "keywords", widget: "list" }
-      - { label: "Imagen Destacada", name: "image", widget: "image" }
-      - { label: "Borrador (Draft)", name: "draft", widget: "boolean", default: true }
-      - { label: "Impacto del Negocio", name: "business_impact", widget: "text" }
-      - { label: "URL de la Fuente Original", name: "source_url", widget: "string", required: false }
-      - { label: "Cuerpo de la Noticia", name: "body", widget: "markdown" }
-
-  # Colección para las Guías Técnicas
+  # Colección: Guías Técnicas
   - name: "guias"
-    label: "Guías"
+    label: "Guías Técnicas"
     folder: "content/guias"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -57,8 +40,8 @@ collections:
       - { label: "Fecha de Publicación", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZZ" }
       - { label: "Slug URL", name: "slug", widget: "string" }
       - { label: "Descripción Corta (SEO)", name: "description", widget: "text" }
-      - { label: "Categorías", name: "categories", widget: "list", default: ["Ciberseguridad"] }
-      - { label: "Palabras Clave (Keywords)", name: "keywords", widget: "list" }
-      - { label: "Imagen Destacada", name: "image", widget: "image" }
-      - { label: "Borrador (Draft)", name: "draft", widget: "boolean", default: true }
+      - { label: "Categorías", name: "categories", widget: "list", default: ["Ciberseguridad", "Guías"] }
+      - { label: "Palabras Clave (Keywords)", name: "keywords", widget: "list", required: false }
+      - { label: "Imagen Destacada", name: "image", widget: "image", required: false }
+      - { label: "Borrador (Draft)", name: "draft", widget: "boolean", default: false }
       - { label: "Cuerpo de la Guía", name: "body", widget: "markdown" }

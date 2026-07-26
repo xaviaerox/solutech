@@ -97,7 +97,7 @@ if (document.body.classList.contains("home") && window.innerWidth > 768) {
   }
 
   // Animation loop
-  function animate() {
+  const animate = () => {
     requestAnimationFrame(animate);
 
     ctx.clearRect(0, 0, width, height);
@@ -114,7 +114,7 @@ if (document.body.classList.contains("home") && window.innerWidth > 768) {
       p.update();
       p.draw(currentScroll, mouseX, mouseY);
     }
-  }
+  };
 
   animate();
 

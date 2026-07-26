@@ -5,7 +5,7 @@ slug: "alerta-vulnerabilidades-sonicwall-sma1000-pymes"
 description: "Descubra las múltiples vulnerabilidades de alta gravedad en SonicWall SMA1000, cómo afectan a su Pyme y las acciones necesarias para proteger su acceso remoto y datos."
 categories: ["Ciberseguridad", "Alertas de Seguridad"]
 keywords: ["SonicWall SMA1000", "vulnerabilidades Pymes", "ciberseguridad Almería", "ciberseguridad Murcia", "acceso remoto seguro", "parches de seguridad"]
-image: "images/blog-default.png"
+image: "images/news-sonicwall-sma1000.jpg"
 draft: false
 business_impact: "La explotación de estas vulnerabilidades en SonicWall SMA1000 puede llevar al compromiso del acceso remoto, la exfiltración de datos sensibles y la interrupción de las operaciones de su Pyme."
 source_url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-sma1000-de-sonicwall"

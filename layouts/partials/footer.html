@@ -21,7 +21,7 @@
     <div class="f-col">
       <h4 class="f-title">Reciente</h4>
       <ul class="f-list">
-        {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+        {{ range first 3 (where .Site.RegularPages "Section" "in" (slice "blog" "news" "guias")).ByDate.Reverse }}
         <li class="f-post-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
         {{ end }}
       </ul>
@@ -107,7 +107,7 @@
   <script src="{{ $particles.RelPermalink }}" integrity="{{ $particles.Data.Integrity }}" defer></script>
 {{ end }}
 
-{{ $mainJs := resources.Get "js/main.js" | minify | fingerprint }}
+{{ $mainJs := resources.Get "js/main.js" | js.Build | minify | fingerprint }}
 <script src="{{ $mainJs.RelPermalink }}" integrity="{{ $mainJs.Data.Integrity }}" defer></script>
 
 {{ $formsJs := resources.Get "js/forms.js" | minify | fingerprint }}

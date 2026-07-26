@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
         method: method,
         body: data,
         headers: {
-          'Accept': 'application/json'
+          "Accept": "application/json"
         }
       }).then(response => {
         if (response.ok) {
@@ -59,8 +59,8 @@ document.addEventListener("DOMContentLoaded", function() {
           btn.style.display = "none"; // Hide button after success
         } else {
           status.className = "form-status form-status-error";
-          response.json().then(data => {
-            if (data && Object.hasOwn(data, 'errors')) {
+          response.json().then(resData => {
+            if (resData && Object.hasOwn(resData, "errors")) {
               status.innerHTML = "Error al enviar: Revisa los campos requeridos.";
             } else {
               status.innerHTML = "Hubo un problema al enviar el formulario.";
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
             btn.disabled = false;
           });
         }
-      }).catch(error => {
+      }).catch(() => {
         status.className = "form-status form-status-error";
         status.innerHTML = "Hubo un error de conexión. Inténtalo de nuevo.";
         status.style.display = "block";

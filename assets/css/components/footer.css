@@ -23,7 +23,7 @@
     border-radius: 8px; border: 1px solid transparent;
 }
 .f-social-tray a:hover { color: var(--o); background: var(--o-a); border-color: var(--o-a); transform: translateY(-3px); }
-.f-social-tray svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+.f-social-tray svg { width: 16px; height: 16px; stroke: currentcolor; fill: none; stroke-width: 1.5; }
 
 /* SCROLL UI */
 .scroll-ui {
@@ -104,7 +104,7 @@ body { padding-bottom: 54px; }
   border-radius: 12px; padding: 20px; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   font-family: var(--f-m);
 }
-.cookie-content p { font-size: 13px; color: var(--ts); margin: 0 0 15px 0; line-height: 1.5; }
+.cookie-content p { font-size: 13px; color: var(--ts); margin: 0 0 15px; line-height: 1.5; }
 .cookie-content a { color: var(--o); text-decoration: none; }
 .cookie-actions { display: flex; gap: 10px; }
 .btn-sm { padding: 8px 16px; font-size: 12px; }
