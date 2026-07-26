@@ -32,7 +32,7 @@
     <meta name="twitter:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "favicon.png" | absURL }}{{ end }}">
 
     <!-- CSS Maestro Bundled -->
-    {{ $cssFiles := slice (resources.Get "css/main.css") (resources.Get "css/components/nav.css") (resources.Get "css/components/onboarding.css") (resources.Get "css/components/footer.css") (resources.Get "css/components/emergency.css") (resources.Get "css/components/calculator.css") }}
+    {{ $cssFiles := slice (resources.Get "css/main.css") (resources.Get "css/components/nav.css") (resources.Get "css/components/onboarding.css") (resources.Get "css/components/footer.css") (resources.Get "css/components/emergency.css") (resources.Get "css/components/calculator.css") (resources.Get "css/components/cybercheck.css") }}
     {{ $styles := $cssFiles | resources.Concat "css/bundle.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
     

@@ -1,0 +1,164 @@
+<!-- HERRAMIENTA INTERACTIVA CYBER-CHECK (AUTODIAGNÓSTICO) -->
+<div class="cybercheck-shell">
+  
+  <!-- SIDEBAR NAVEGACIÓN Y PROGRESO -->
+  <aside class="cybercheck-sidebar">
+    <div class="cc-brand">SOLUTECH // CYBER-CHECK</div>
+    <div class="cc-brand-sub">AUDITORÍA DE MADUREZ PYME v2.0</div>
+
+    <div class="cc-nav-group">BLOQUES DE SEGURIDAD</div>
+    <div class="cc-nav-link active" data-target="cc-sec-vpn">
+      <span>1. Acceso Remoto & VPN</span>
+      <span class="cc-nav-count">2 Qs</span>
+    </div>
+    <div class="cc-nav-link" data-target="cc-sec-backup">
+      <span>2. Copias de Seguridad</span>
+      <span class="cc-nav-count">2 Qs</span>
+    </div>
+    <div class="cc-nav-link" data-target="cc-sec-edr">
+      <span>3. Puestos & EDR</span>
+      <span class="cc-nav-count">2 Qs</span>
+    </div>
+    <div class="cc-nav-link" data-target="cc-sec-identity">
+      <span>4. Identidades & Passwords</span>
+      <span class="cc-nav-count">2 Qs</span>
+    </div>
+
+    <!-- PROGRESO -->
+    <div class="cc-progress-box">
+      <div class="cc-progress-label">PROGRESO DE AUDITORÍA</div>
+      <div class="cc-progress-track">
+        <div id="cc-progress-fill" class="cc-progress-fill"></div>
+      </div>
+      <div id="cc-progress-text" class="cc-progress-text">0 / 8 evaluadas (0%)</div>
+    </div>
+  </aside>
+
+  <!-- PANEL PRINCIPAL -->
+  <main class="cybercheck-main">
+    <div class="cc-hero-eyebrow">DIAGNÓSTICO TÉCNICO EN TIEMPO REAL</div>
+    <h2 class="cc-title">Evaluación de Postura de Ciberseguridad</h2>
+    <p class="cc-desc">Responde a estas breves preguntas operativas para determinar el nivel de riesgo de tu pyme y detectar brechas críticas antes que los ciberdelincuentes.</p>
+
+    <!-- BLOQUE 1: ACCESO REMOTO & VPN -->
+    <div id="cc-sec-vpn" class="cc-section-block active">
+      <div class="cc-question-card" data-question-id="q1">
+        <div class="cc-q-header">
+          <span class="cc-q-title">Q1: ¿Tenéis habilitado el Doble Factor de Autenticación (MFA) en los accesos remotos y VPN?</span>
+          <span class="cc-q-weight crit">CRÍTICO</span>
+        </div>
+        <div class="cc-options-grid">
+          <button type="button" class="cc-option-btn" data-score="0">Sí, obligatorio en todas las cuentas y VPN</button>
+          <button type="button" class="cc-option-btn" data-score="2">Solo en algunas cuentas administrativas</button>
+          <button type="button" class="cc-option-btn" data-score="3">No, solo usamos contraseña tradicional</button>
+        </div>
+      </div>
+
+      <div class="cc-question-card" data-question-id="q2">
+        <div class="cc-q-header">
+          <span class="cc-q-title">Q2: ¿Cuándo fue la última vez que actualizasteis el firmware de vuestro firewall/router corporativo?</span>
+          <span class="cc-q-weight crit">CRÍTICO</span>
+        </div>
+        <div class="cc-options-grid">
+          <button type="button" class="cc-option-btn" data-score="0">En los últimos 30 días o actualización automática</button>
+          <button type="button" class="cc-option-btn" data-score="2">Hace más de 6 meses</button>
+          <button type="button" class="cc-option-btn" data-score="3">No lo sé / Nunca se ha actualizado</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOQUE 2: COPIAS DE SEGURIDAD -->
+    <div id="cc-sec-backup" class="cc-section-block">
+      <div class="cc-question-card" data-question-id="q3">
+        <div class="cc-q-header">
+          <span class="cc-q-title">Q3: ¿Disponéis de una copia de seguridad inmutable fuera de la red local (Regla 3-2-1)?</span>
+          <span class="cc-q-weight crit">CRÍTICO</span>
+        </div>
+        <div class="cc-options-grid">
+          <button type="button" class="cc-option-btn" data-score="0">Sí, copia en nube cifrada e inmutable</button>
+          <button type="button" class="cc-option-btn" data-score="2">Solo disco duro externo conectado al servidor</button>
+          <button type="button" class="cc-option-btn" data-score="3">No tenemos copias automáticas</button>
+        </div>
+      </div>
+
+      <div class="cc-question-card" data-question-id="q4">
+        <div class="cc-q-header">
+          <span class="cc-q-title">Q4: ¿Realizáis simulación periódica de recuperación de datos (Disaster Recovery)?</span>
+          <span class="cc-q-weight med">MEDIO</span>
+        </div>
+        <div class="cc-options-grid">
+          <button type="button" class="cc-option-btn" data-score="0">Sí, al menos una vez al año probamos restaurar</button>
+          <button type="button" class="cc-option-btn" data-score="1">Rara vez o solo cuando algo falla</button>
+          <button type="button" class="cc-option-btn" data-score="2">Nunca se ha probado</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOQUE 3: PUESTOS & EDR -->
+    <div id="cc-sec-edr" class="cc-section-block">
+      <div class="cc-question-card" data-question-id="q5">
+        <div class="cc-q-header">
+          <span class="cc-q-title">Q5: ¿Cuentan los ordenadores de la empresa con protección EDR/Antivirus gestionado centralizadamente?</span>
+          <span class="cc-q-weight med">MEDIO</span>
+        </div>
+        <div class="cc-options-grid">
+          <button type="button" class="cc-option-btn" data-score="0">Sí, consola centralizada con alertas activas</button>
+          <button type="button" class="cc-option-btn" data-score="1">Antivirus gratuito o Defender sin gestión central</button>
+          <button type="button" class="cc-option-btn" data-score="3">Varios equipos están sin antivirus</button>
+        </div>
+      </div>
+
+      <div class="cc-question-card" data-question-id="q6">
+        <div class="cc-q-header">
+          <span class="cc-q-title">Q6: ¿Los parches de seguridad del sistema operativo (Windows/Mac) se aplican de forma automática?</span>
+          <span class="cc-q-weight med">MEDIO</span>
+        </div>
+        <div class="cc-options-grid">
+          <button type="button" class="cc-option-btn" data-score="0">Sí, política automática semanal</button>
+          <button type="button" class="cc-option-btn" data-score="1">Cada empleado actualiza cuando quiere</button>
+          <button type="button" class="cc-option-btn" data-score="2">Las actualizaciones están pospuestas/bloqueadas</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOQUE 4: IDENTIDADES & PASSWORDS -->
+    <div id="cc-sec-identity" class="cc-section-block">
+      <div class="cc-question-card" data-question-id="q7">
+        <div class="cc-q-header">
+          <span class="cc-q-title">Q7: ¿Utilizan los empleados un Gestor de Contraseñas corporativo?</span>
+          <span class="cc-q-weight med">MEDIO</span>
+        </div>
+        <div class="cc-options-grid">
+          <button type="button" class="cc-option-btn" data-score="0">Sí, gestor de contraseñas seguro con clave maestra</button>
+          <button type="button" class="cc-option-btn" data-score="1">Guardan claves en el navegador</button>
+          <button type="button" class="cc-option-btn" data-score="2">Post-its, Excel o contraseñas repetidas</button>
+        </div>
+      </div>
+
+      <div class="cc-question-card" data-question-id="q8">
+        <div class="cc-q-header">
+          <span class="cc-q-title">Q8: ¿Existe un protocolo inmediato para dar de baja accesos cuando un empleado o colaborador finaliza su contrato?</span>
+          <span class="cc-q-weight crit">CRÍTICO</span>
+        </div>
+        <div class="cc-options-grid">
+          <button type="button" class="cc-option-btn" data-score="0">Sí, desaprovicionamiento automático en minutos</button>
+          <button type="button" class="cc-option-btn" data-score="1">Se revisa manualmente a los días</button>
+          <button type="button" class="cc-option-btn" data-score="2">A veces quedan cuentas antiguas activas</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESUMEN FINAL Y RESULTADOS -->
+    <div id="cc-summary-card" class="cc-summary-card">
+      <h3 style="font-family: var(--cc-mono); color: #fff; font-size: 20px;">RESULTADO DE LA AUDITORÍA</h3>
+      <div id="cc-score-badge" class="cc-score-badge">EVALUANDO...</div>
+      <h4 id="cc-risk-title" style="font-family: var(--cc-mono); color: #fff; margin-bottom: 8px;">-</h4>
+      <p id="cc-risk-desc" style="color: var(--cc-text-dim); font-size: 14px; max-width: 500px; margin: 0 auto 20px;">-</p>
+
+      <a href="#contacto" class="cc-cta-btn">
+        <span>SOLICITAR PLAN DE MITIGACIÓN GRATUITO &rarr;</span>
+      </a>
+    </div>
+
+  </main>
+</div>
