@@ -1,6 +1,6 @@
 ---
 title: "El Lado Oscuro de la IA: Cómo te Atacan con Inteligencia Artificial en 2026 (y Qué Exige Ahora la Ley)"
-date: 2026-08-04T08:00:00+02:00
+date: 2026-08-03T12:00:00+02:00
 slug: "lado-oscuro-de-la-ia-red-team"
 description: "Guía Red Team para Pymes: deepfakes, fraude del CEO, IA maliciosa (WormGPT, FraudGPT), ransomware potenciado y las nuevas obligaciones del Reglamento Europeo de IA (AI Act) desde agosto de 2026."
 categories: ["Ciberseguridad", "Inteligencia Artificial", "Guías"]

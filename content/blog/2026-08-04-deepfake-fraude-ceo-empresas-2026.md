@@ -1,6 +1,6 @@
 ---
 title: "Un CFO Autorizó una Transferencia de 580.000€ tras una Videollamada... que No Era Real: Alerta por Deepfakes en Pymes"
-date: 2026-08-04T08:00:00+02:00
+date: 2026-08-03T12:00:00+02:00
 slug: "deepfake-fraude-ceo-empresas-2026"
 description: "Los fraudes con deepfake y clonación de voz ya cuestan a las empresas españolas 600.000€ de media por incidente. Descubre cómo operan los atacantes y cómo proteger tu Pyme."
 categories: ["Ciberseguridad", "Noticias", "Inteligencia Artificial"]
