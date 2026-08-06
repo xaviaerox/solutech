@@ -1,14 +1,14 @@
-- name: Antonio R.
-  role: Propietario · Distribuidora Agrícola — Almería
-  initial: A
-  text: "Llevamos 10 meses con el plan de Gestión MSP. Desde que Xavi implementó el sistema de monitorización, resolvimos 3 incidencias antes de que afectaran a nuestras operaciones. Un martes nos avisó él de que un servidor estaba al 95% de disco. Lo resolvimos en 2 horas sin que ningún empleado se enterara."
-
-- name: Lucía M.
-  role: Directora · Consultoría Financiera — Murcia
-  initial: L
-  text: "Teníamos los datos de clientes en un Excel protegido con contraseña. Xavi nos mostró que eso no era suficiente, migró todo a un sistema cifrado real y ahora tengo los backups verificados diariamente. El precio fue exactamente el acordado, sin una sola sorpresa en factura."
-
-- name: Carlos D.
-  role: Director · Asesoría Contable — Almería
+- name: Conchi M.
+  role: Propietaria · Residencia Unifamiliar (4 Plantas) — Almería
   initial: C
-  text: "Necesitábamos cumplir con el RGPD para una inspección inminente. Xavi completó la auditoría, implementó los controles técnicos y nos entregó la documentación en Wiki.js lista para mostrar. Pasamos la inspección sin ningún problema. Ahora es nuestro departamento IT de facto."
+  text: "Contratamos a Xavi para realizar la instalación completa de las tomas y cableado RJ45 en nuestra vivienda unifamiliar de 4 plantas. Dejó cada punto verificado y ordenado, dando servicio de red impecable a toda la casa. Da gusto trabajar con alguien tan profesional."
+
+- name: Miguel A.
+  role: Director de Operaciones · Climatización y Soluciones Técnicas — Murcia
+  initial: M
+  text: "Le encargamos el desarrollo de un software de gestión de stock interno y logística adaptado a nuestra operativa y a la nueva normativa Veri*Factu. Entendió nuestras necesidades a la perfección y nos entregó una herramienta privada que nos ahorra horas cada semana."
+
+- name: Rafael G.
+  role: Gerente · Instalaciones y Servicios — Almería
+  initial: R
+  text: "Se nota de inmediato su larga experiencia en telecomunicaciones e infraestructura de red. Reorganizó todo nuestro rack de comunicaciones, corrigió fallos de conectividad que arrastrábamos de tiempo atrás y nos dejó la red 100% estable y bien documentada."

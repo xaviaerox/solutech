@@ -2,14 +2,14 @@ name: Xavi Alonso
 role: Operador IT & Arquitecto de Infraestructura
 location: Almería · Murcia · Remoto
 bio: >-
-  Especialista en infraestructuras críticas y seguridad operativa con más de 12 años de trayectoria. Fundé Solutech para transformar la informática tradicional en una ventaja operativa invisible. Mi enfoque no es reparar cuando algo se rompe, sino diseñar sistemas que no fallen. Gestiono la tecnología de pequeñas empresas con el rigor de una gran infraestructura SaaS, priorizando la documentación, la automatización y la continuidad real del negocio.
+  Especialista en sistemas y seguridad operativa con más de 12 años de trayectoria. Fundé Solutech para transformar la informática de las pequeñas empresas en una ventaja tranquila e invisible. Mi enfoque no es solo reparar cuando algo se rompe, sino diseñar infraestructuras estables que no fallen. Gestiono tu tecnología con rigor profesional, priorizando la documentación clara, la automatización y la continuidad del negocio.
 values:
   - title: Tecnología Silenciosa
-    desc: El éxito de mi trabajo es que te olvides de que existo. Monitorización activa y prevención para que tu operativa nunca se detenga.
+    desc: El éxito de mi trabajo es que te olvides de los problemas informáticos. Monitorización activa y prevención para que tu operativa diaria nunca se detenga.
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
   - title: Arquitectura de Continuidad
-    desc: No parcheamos. Construimos infraestructuras estables basadas en backups verificados, seguridad perimetral y procesos automatizados.
+    desc: Sin soluciones improvisadas. Construimos entornos estables basados en copias de seguridad verificadas, seguridad de red y procesos automatizados.
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
   - title: Partner IT Externo
-    desc: Funcionamos como tu propio departamento técnico. Documentación clara (Wiki.js), soporte directo y visión estratégica para tu crecimiento.
+    desc: Actúo como tu propio departamento técnico. Documentación clara y centralizada, soporte directo y visión estratégica para el crecimiento de tu empresa.
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
