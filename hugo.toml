@@ -45,3 +45,12 @@ ignoreFiles = [
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = false
+
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static/images"
+    target = "assets/images"
+

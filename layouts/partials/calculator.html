@@ -1,48 +1,38 @@
-<!-- CALCULADORA INTERACTIVA MICRO-MSP -->
+<!-- CALCULADORA INTERACTIVA MICRO-MSP (MATRIZ V1) -->
 <section id="calculadora" class="r">
   <div class="calculator-card">
     <div class="calc-header text-center">
-      <span class="section-tag">PRESUPUESTO EN TIEMPO REAL</span>
+      <span class="section-tag">MATRIZ OFICIAL V1</span>
       <h2 class="section-h">Calcula la Cuota de Soporte IT para tu Pyme</h2>
-      <p class="calc-desc">Obtén un presupuesto transparente al instante sin sorpresas ni costes ocultos.</p>
+      <p class="calc-desc">Selecciona el número de equipos de tu oficina y el nivel de cobertura deseado para obtener la tarifa plana oficial.</p>
     </div>
 
     <div class="calc-grid">
-      <!-- SLIDERS CONTROL -->
+      <!-- CONTROLES DE LA CALCULADORA -->
       <div class="calc-controls">
-        <!-- Control 1: Puestos de Trabajo -->
+        <!-- Control 1: Puestos de Trabajo / PCs -->
         <div class="control-group">
           <div class="control-label">
-            <label for="input-endpoints">Puestos de Trabajo / PCs</label>
+            <label for="input-endpoints">Equipos / PCs de la empresa</label>
             <span class="control-value" id="val-endpoints">5</span>
           </div>
-          <input type="range" id="input-endpoints" min="1" max="50" value="5" class="calc-slider">
-          <div class="slider-ticks"><span>1</span><span>25</span><span>50</span></div>
+          <input type="range" id="input-endpoints" min="1" max="15" value="5" class="calc-slider">
+          <div class="slider-ticks"><span>1 equipo</span><span>5 equipos</span><span>10 equipos</span><span>15+</span></div>
         </div>
 
-        <!-- Control 2: Servidores -->
+        <!-- Control 2: Nivel de Cobertura -->
         <div class="control-group">
-          <div class="control-label">
-            <label for="input-servers">Servidores (Físicos / VPS)</label>
-            <span class="control-value" id="val-servers">1</span>
-          </div>
-          <input type="range" id="input-servers" min="0" max="10" value="1" class="calc-slider">
-          <div class="slider-ticks"><span>0</span><span>5</span><span>10</span></div>
-        </div>
-
-        <!-- Control 3: Nivel de SLA -->
-        <div class="control-group">
-          <label class="group-title">Nivel de Cobertura SLA</label>
+          <label class="group-title">Nivel de Cobertura & Soporte</label>
           <div class="sla-options">
-            <label class="sla-card active" data-sla="standard">
-              <input type="radio" name="sla-level" value="standard" checked hidden>
-              <div class="sla-name">Estándar 8x5</div>
-              <div class="sla-desc">Respuesta L2/L3 < 2h</div>
+            <label class="sla-card active" data-tier="essential">
+              <input type="radio" name="sla-level" value="essential" checked hidden>
+              <div class="sla-name">Esencial</div>
+              <div class="sla-desc">Soporte reactivo & parches (SLA 48h)</div>
             </label>
-            <label class="sla-card" data-sla="critical">
-              <input type="radio" name="sla-level" value="critical" hidden>
-              <div class="sla-name">Crítico 24/7</div>
-              <div class="sla-desc">Monitorización & Soporte 24/7</div>
+            <label class="sla-card" data-tier="pro">
+              <input type="radio" name="sla-level" value="pro" hidden>
+              <div class="sla-name">Proactivo (Recomendado)</div>
+              <div class="sla-desc">Monitorización 24/7 & Visita mensual</div>
             </label>
           </div>
         </div>
@@ -50,19 +40,19 @@
 
       <!-- PRICE RESULT DISPLAY -->
       <div class="calc-summary-box">
-        <div class="summary-header">Cuota Mensual Estimada</div>
+        <div class="summary-header">Plan Recomendado: <strong id="calc-plan-name" style="color: var(--color-primary, #e8621a);">S Essential</strong></div>
         <div class="price-display">
           <span class="currency">€</span>
-          <span id="calc-total-price" class="amount">185</span>
+          <span id="calc-total-price" class="amount">99</span>
           <span class="period">/ mes</span>
         </div>
-        <div class="price-subtext">+ IVA · Cancelación flexible sin permanencia</div>
+        <div class="price-subtext">+ IVA · Tarifa plana sin sorpresas · Sin permanencia</div>
 
-        <ul class="calc-benefits">
-          <li>✓ Monitorización preventiva 24/7</li>
-          <li>✓ Antivirus EDR & Ciberseguridad Perimetral</li>
-          <li>✓ Copias de Seguridad Verificadas Diarias</li>
-          <li>✓ Soporte Técnico Directo (Remoto y Presencial)</li>
+        <ul class="calc-benefits" id="calc-benefits-list">
+          <li>✓ 1 a 5 equipos informáticos cubiertos</li>
+          <li>✓ Soporte remoto & atención de incidencias</li>
+          <li>✓ Parches y mantenimiento preventivo</li>
+          <li>✓ 1 Visita preventiva programada / trimestre</li>
         </ul>
 
         <a id="btn-calc-cta" href="#contacto" class="btn-p btn-calc-action">Solicitar Propuesta Formal →</a>

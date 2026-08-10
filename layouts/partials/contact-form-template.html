@@ -3,11 +3,11 @@
   <div class="form-row">
     <div class="form-group">
       <label for="nombre-{{ $type }}" class="sr-only">Nombre / Empresa</label>
-      <input type="text" id="nombre-{{ $type }}" name="nombre" placeholder="{{ if eq $type "support" }}Tu nombre o empresa{{ else }}Tu nombre{{ end }}" aria-label="Tu nombre completo" required class="cta-input">
+      <input type="text" id="nombre-{{ $type }}" name="nombre" placeholder="{{ if eq $type "support" }}Tu nombre o empresa{{ else }}Tu nombre completo{{ end }}" aria-label="Tu nombre completo" required class="cta-input">
     </div>
     <div class="form-group">
       <label for="email-{{ $type }}" class="sr-only">Tu Email</label>
-      <input type="email" id="email-{{ $type }}" name="email" placeholder="Tu email" aria-label="Tu correo electrónico" required class="cta-input">
+      <input type="email" id="email-{{ $type }}" name="email" placeholder="Tu email corporativo" aria-label="Tu correo electrónico" required class="cta-input">
     </div>
   </div>
   
@@ -15,29 +15,34 @@
   <div class="form-row">
     <div class="form-group">
       <label for="telefono-{{ $type }}" class="sr-only">Teléfono</label>
-      <input type="tel" id="telefono-{{ $type }}" name="telefono" placeholder="Teléfono" aria-label="Teléfono de contacto" required class="cta-input">
+      <input type="tel" id="telefono-{{ $type }}" name="telefono" placeholder="Teléfono de contacto" aria-label="Teléfono de contacto" required class="cta-input">
     </div>
     <div class="form-group">
-      <label for="empresa-{{ $type }}" class="sr-only">Tu Empresa (opcional)</label>
-      <input type="text" id="empresa-{{ $type }}" name="empresa" placeholder="Tu empresa (opcional)" aria-label="Nombre de tu empresa (opcional)" class="cta-input">
+      <label for="empresa-{{ $type }}" class="sr-only">Nombre de la Empresa</label>
+      <input type="text" id="empresa-{{ $type }}" name="empresa" placeholder="Nombre de tu empresa" aria-label="Nombre de tu empresa" required class="cta-input">
     </div>
   </div>
   <div class="form-row">
     <div class="form-group">
-      <label for="empleados-{{ $type }}" class="sr-only">Número de empleados</label>
-      <select id="empleados-{{ $type }}" name="empleados" class="cta-input" aria-label="Número de empleados">
-        <option value="" disabled selected>Nº de empleados</option>
-        <option value="1">Solo yo (autónomo)</option>
-        <option value="2-5">2 – 5 empleados</option>
-        <option value="6-20">6 – 20 empleados</option>
-        <option value="21-50">21 – 50 empleados</option>
-        <option value="50+">Más de 50</option>
+      <label for="poblacion-{{ $type }}" class="sr-only">Población / Municipio</label>
+      <input type="text" id="poblacion-{{ $type }}" name="poblacion" placeholder="Población / Municipio (ej. Lorca)" aria-label="Población o municipio" required class="cta-input">
+    </div>
+    <div class="form-group">
+      <label for="empleados-{{ $type }}" class="sr-only">Número de equipos / PCs</label>
+      <select id="empleados-{{ $type }}" name="empleados" class="cta-input" aria-label="Número de equipos o puestos" required>
+        <option value="" disabled selected>Nº de equipos / PCs</option>
+        <option value="1-5">1 – 5 equipos (Gama S)</option>
+        <option value="6-10">6 – 10 equipos (Gama M Basic)</option>
+        <option value="11-15">11 – 15 equipos (Gama M Pro)</option>
+        <option value="15+">Más de 15 equipos</option>
       </select>
     </div>
+  </div>
+  <div class="form-row">
     <div class="form-group">
       <label for="sector-{{ $type }}" class="sr-only">Sector</label>
       <select id="sector-{{ $type }}" name="sector" class="cta-input" aria-label="Sector de la empresa">
-        <option value="" disabled selected>Sector</option>
+        <option value="" disabled selected>Sector de actividad</option>
         <option value="comercio">Comercio / Retail</option>
         <option value="hosteleria">Hostelería / Restauración</option>
         <option value="salud">Salud / Clínica</option>
@@ -47,18 +52,16 @@
         <option value="otro">Otro</option>
       </select>
     </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group" style="flex: 1;">
+    <div class="form-group">
       <label for="preocupacion-{{ $type }}" class="sr-only">Principal preocupación</label>
       <select id="preocupacion-{{ $type }}" name="preocupacion" class="cta-input" aria-label="Principal preocupación tecnológica">
-        <option value="" disabled selected>¿Cuál es tu mayor problema tecnológico?</option>
+        <option value="" disabled selected>Mayor problema tecnológico</option>
         <option value="seguridad">Seguridad y ciberataques</option>
-        <option value="soporte">Falta de soporte técnico</option>
-        <option value="modernizacion">Sistemas obsoletos</option>
-        <option value="coste">Costes de TI elevados</option>
+        <option value="soporte">Falta de soporte técnico rápido</option>
+        <option value="modernizacion">Sistemas u ordenadores lentos</option>
+        <option value="coste">Costes de TI impredecibles</option>
         <option value="perdida-datos">Pérdida de datos / backups</option>
-        <option value="conectividad">Problemas de red / conectividad</option>
+        <option value="conectividad">Problemas de red / WiFi</option>
         <option value="otro">Otro</option>
       </select>
     </div>
@@ -72,7 +75,7 @@
 
   <div class="form-group">
     <label for="mensaje-{{ $type }}" class="sr-only">{{ if eq $type "support" }}Descripción del Problema{{ else }}Mensaje / Consulta{{ end }}</label>
-    <textarea id="mensaje-{{ $type }}" name="{{ if eq $type "support" }}descripcion{{ else }}mensaje{{ end }}" placeholder="{{ if eq $type "support" }}Explica detalladamente la incidencia técnica...{{ else }}¿En qué podemos ayudarte? o ¿cuál es tu consulta?{{ end }}" aria-label="{{ if eq $type "support" }}Detalla la incidencia técnica{{ else }}Detalla en qué podemos ayudarte{{ end }}" required class="cta-input cta-textarea"></textarea>
+    <textarea id="mensaje-{{ $type }}" name="{{ if eq $type "support" }}descripcion{{ else }}mensaje{{ end }}" placeholder="{{ if eq $type "support" }}Explica detalladamente la incidencia técnica...{{ else }}¿En qué podemos ayudarte o cuál es tu consulta principal?{{ end }}" aria-label="{{ if eq $type "support" }}Detalla la incidencia técnica{{ else }}Detalla en qué podemos ayudarte{{ end }}" required class="cta-input cta-textarea"></textarea>
   </div>
 
   <button type="submit" class="cta-btn" id="{{ $type }}-submit-btn">

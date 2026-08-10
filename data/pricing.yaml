@@ -1,40 +1,57 @@
-- id: pack-esencial
-  name: Operativa Base
-  price: "Consultar"
-  period: ""
-  target: Para autónomos y micro-pymes
+- id: pack-s-essential
+  name: S Essential
+  price: "99 €"
+  period: " / mes"
+  target: Para 1 a 5 equipos / puestos
   features:
-    - Gestión de Seguridad (Endpoint)
-    - Backup Inmutable Cifrado
-    - Soporte Remoto Proactivo
-    - Auditoría de Identidad Digital
-  cta: Iniciar Operativa
+    - Soporte Remoto & Incidencias (SLA 48h)
+    - Mantenimiento Preventivo & Parches
+    - Monitorización & Ciberseguridad Básica
+    - Backup Gestionado Básico
+    - 1 Visita Preventiva / Trimestre
+  cta: Elegir S Essential
   link: "#contacto"
 
-- id: pack-profesional
-  name: Gestión MSP
-  price: "Consultar"
-  period: ""
-  target: El estándar para empresas en crecimiento
+- id: pack-s-pro
+  name: S Pro
+  price: "149 €"
+  period: " / mes"
+  target: Para 1 a 5 equipos / puestos
   highlight: true
-  badge: Recomendado
+  badge: Recomendado (1–5 PCs)
   features:
-    - Todo lo de Operativa Base
-    - Monitorización Continua 24/7
-    - Gestión de Redes Privadas Mesh
-    - Inventario y Documentación IT
-  cta: Escalar mi IT
+    - Todo lo de S Essential (SLA 24h)
+    - Monitorización Avanzada 24/7
+    - Ciberseguridad & Backup Ampliado
+    - Gestión de Red & WiFi Básica
+    - 1 Visita Preventiva / Mes
+  cta: Elegir S Pro
   link: "#contacto"
 
-- id: pack-blindaje
-  name: Blindaje & IA
-  price: "Consultar"
-  period: ""
-  target: Para infraestructuras críticas
+- id: pack-m-basic
+  name: M Basic
+  price: "199 €"
+  period: " / mes"
+  target: Para 6 a 10 equipos / puestos
   features:
-    - Todo lo de Gestión MSP
-    - Firewall Perimetral Avanzado
-    - Automatización de Procesos
-    - Recuperación Ante Desastres (DRP)
-  cta: Blindar Empresa
+    - Todo lo de S Pro (SLA 24h)
+    - Ciberseguridad & Backup Gestionados
+    - Inventario & Documentación Completa
+    - Automatizaciones IT Simples
+    - 2 Visitas Preventivas / Mes
+  cta: Elegir M Basic
+  link: "#contacto"
+
+- id: pack-m-pro
+  name: M Pro
+  price: "299 €"
+  period: " / mes"
+  target: Para 11 a 15 equipos / puestos
+  features:
+    - Todo lo de M Basic (SLA Prioritario 8h)
+    - Ciberseguridad & Backup Avanzado
+    - Informe Mensual + Trimestral
+    - Reunión & Roadmap Tecnológico
+    - 2 Visitas Preventivas / Mes
+  cta: Elegir M Pro
   link: "#contacto"

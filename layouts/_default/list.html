@@ -76,9 +76,10 @@
       <a href="{{ .RelPermalink }}" class="bcard" style="text-decoration: none; color: inherit;">
         {{ if .Params.image }}
         {{ $img := "" }}
-        {{ $isLocal := not (urls.Parse .Params.image).Scheme }}
-        {{ if $isLocal }}
-          {{ $img = resources.Get .Params.image }}
+        {{ $imgPath := strings.TrimPrefix "/" .Params.image }}
+        {{ $isRemote := or (hasPrefix $imgPath "http://") (hasPrefix $imgPath "https://") }}
+        {{ if not $isRemote }}
+          {{ $img = resources.Get $imgPath }}
         {{ end }}
         {{ if $img }}
           {{ $webp := $img.Resize "600x webp" }}

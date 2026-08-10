@@ -1,13 +1,19 @@
-{{- $img := .Page.Resources.GetMatch .Destination -}}
-{{- if not $img -}}
-  {{- $img = resources.Get .Destination -}}
+{{- $dest := strings.TrimPrefix "/" .Destination -}}
+{{- $isRemote := or (hasPrefix $dest "http://") (hasPrefix $dest "https://") -}}
+{{- $img := "" -}}
+{{- if not $isRemote -}}
+  {{- $img = .Page.Resources.GetMatch $dest -}}
+  {{- if not $img -}}
+    {{- $img = resources.Get $dest -}}
+  {{- end -}}
 {{- end -}}
 {{- if $img -}}
   {{- $webp := $img.Resize "1200x webp" -}}
   <picture>
     <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
-    <img src="{{ $img.RelPermalink }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} loading="lazy">
+    <img src="{{ $img.RelPermalink }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} loading="lazy" decoding="async">
   </picture>
 {{- else -}}
-  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} loading="lazy">
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} loading="lazy" decoding="async">
 {{- end -}}
+

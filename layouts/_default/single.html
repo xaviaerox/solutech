@@ -22,6 +22,29 @@
       </div>
     </header>
 
+    {{ if .Params.image }}
+      {{ $imgDest := strings.TrimPrefix "/" .Params.image }}
+      {{ $isRemote := or (hasPrefix $imgDest "http://") (hasPrefix $imgDest "https://") }}
+      {{ $img := "" }}
+      {{ if not $isRemote }}
+        {{ $img = .Page.Resources.GetMatch $imgDest }}
+        {{ if not $img }}
+          {{ $img = resources.Get $imgDest }}
+        {{ end }}
+      {{ end }}
+      <div class="blog-cover-container" style="margin-bottom: 2rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--br);">
+        {{ if $img }}
+          {{ $webp := $img.Resize "1200x webp" }}
+          <picture>
+            <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+            <img src="{{ $img.RelPermalink }}" alt="{{ .Title }}" style="width: 100%; height: auto; max-height: 480px; object-fit: cover; display: block;" loading="eager" decoding="async">
+          </picture>
+        {{ else }}
+          <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" style="width: 100%; height: auto; max-height: 480px; object-fit: cover; display: block;" loading="eager" decoding="async">
+        {{ end }}
+      </div>
+    {{ end }}
+
     <div class="blog-content">
       {{ .Content }}
     </div>
