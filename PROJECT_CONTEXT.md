@@ -34,7 +34,7 @@ El repositorio `solutech` gestiona el frontend comercial público de Solutech. U
 **Qué hace:**
 - Presenta los servicios de soporte Micro-MSP y la filosofía de continuidad de negocio de Solutech.
 - Proporciona la herramienta *Cyber-Check* (autodiagnóstico interactivo de 8 preguntas críticas con interfaz Dark Terminal).
-- Proporciona la *Calculadora Micro-MSP* para estimar presupuestos de soporte mensual en tiempo real.
+- Proporciona la *Calculadora Micro-MSP* para estimar presupuestos de soporte mensual en tiempo real según la Matriz Oficial de Servicios V1 (S Essential 99€/mes, S Pro 149€/mes, M Basic 199€/mes, M Pro 299€/mes).
 - Permite la búsqueda en tiempo real client-side de artículos del blog.
 - Integra Decap CMS para publicar contenidos sin tocar código.
 
