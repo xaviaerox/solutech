@@ -170,7 +170,7 @@
 </section>
 
 <!-- SERVICIOS -->
-<section class="services r" id="servicios">
+<section class="services r" id="servicios" style="max-width: 1400px;">
   <div class="section-bg bg-services"></div>
   <div class="section-glow"></div>
   <div class="section-tag">Planes de Gestión</div>
@@ -180,8 +180,9 @@
     <div class="svc {{ if .highlight }}mid{{ end }}">
       {{ if .badge }}<div class="svc-badge">{{ .badge }}</div>{{ end }}
       <div class="svc-icon-wrap">
-        {{ if eq .id "pack-esencial" }}<svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-        {{ else if eq .id "pack-profesional" }}<svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        {{ if eq .id "pack-s-essential" }}<svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        {{ else if eq .id "pack-s-pro" }}<svg viewBox="0 0 24 24"><path d="M1 6l11-4 11 4M1 6v12l11 4 11-4V6M12 2v20M1 12h22"/></svg>
+        {{ else if eq .id "pack-m-basic" }}<svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         {{ else }}<svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>{{ end }}
       </div>
       <div class="svc-pack">{{ .name }}</div>
@@ -192,7 +193,7 @@
         {{ end }}
       </div>
       <div class="svc-footer">
-        <span class="svc-price">{{ .price }}{{ .period }}</span>
+        <span class="svc-price">{{ .price }}{{ .period | safeHTML }}</span>
         <a href="{{ .link }}" class="svc-link">{{ .cta }} <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>

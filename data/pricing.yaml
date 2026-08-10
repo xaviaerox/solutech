@@ -1,57 +1,57 @@
 - id: pack-s-essential
   name: S Essential
   price: "99 €"
-  period: " / mes"
-  target: Para 1 a 5 equipos / puestos
+  period: "<small> / mes</small>"
+  target: Tu informática, simplemente funcionando
   features:
-    - Soporte Remoto & Incidencias (SLA 48h)
-    - Mantenimiento Preventivo & Parches
-    - Monitorización & Ciberseguridad Básica
-    - Backup Gestionado Básico
-    - 1 Visita Preventiva / Trimestre
-  cta: Elegir S Essential
+    - Soporte remoto ilimitado (SLA 48h)
+    - Parches y actualizaciones gestionadas
+    - Seguridad básica de endpoints
+    - Backup gestionado verificado
+    - 1 visita preventiva al trimestre
+  cta: Empezar
   link: "#contacto"
 
 - id: pack-s-pro
   name: S Pro
   price: "149 €"
-  period: " / mes"
-  target: Para 1 a 5 equipos / puestos
+  period: "<small> / mes</small>"
+  target: Prevención antes de que surja el problema
   highlight: true
-  badge: Recomendado (1–5 PCs)
+  badge: Más popular
   features:
-    - Todo lo de S Essential (SLA 24h)
-    - Monitorización Avanzada 24/7
-    - Ciberseguridad & Backup Ampliado
-    - Gestión de Red & WiFi Básica
-    - 1 Visita Preventiva / Mes
-  cta: Elegir S Pro
+    - Todo de S Essential (SLA 24h)
+    - Monitorización activa 24/7
+    - Ciberseguridad y backup ampliados
+    - Gestión de red y WiFi corporativa
+    - 1 visita preventiva al mes
+  cta: Empezar
   link: "#contacto"
 
 - id: pack-m-basic
   name: M Basic
   price: "199 €"
-  period: " / mes"
-  target: Para 6 a 10 equipos / puestos
+  period: "<small> / mes</small>"
+  target: Tu empresa gestionada como si tuvieras IT interno
   features:
-    - Todo lo de S Pro (SLA 24h)
-    - Ciberseguridad & Backup Gestionados
-    - Inventario & Documentación Completa
-    - Automatizaciones IT Simples
-    - 2 Visitas Preventivas / Mes
-  cta: Elegir M Basic
+    - Todo de S Pro (SLA 24h)
+    - Seguridad y backup totalmente gestionados
+    - Documentación e inventario completos
+    - Automatizaciones IT básicas
+    - 2 visitas preventivas al mes
+  cta: Empezar
   link: "#contacto"
 
 - id: pack-m-pro
   name: M Pro
   price: "299 €"
-  period: " / mes"
-  target: Para 11 a 15 equipos / puestos
+  period: "<small> / mes</small>"
+  target: Tu Director IT externo, sin interrupciones
   features:
-    - Todo lo de M Basic (SLA Prioritario 8h)
-    - Ciberseguridad & Backup Avanzado
-    - Informe Mensual + Trimestral
-    - Reunión & Roadmap Tecnológico
-    - 2 Visitas Preventivas / Mes
-  cta: Elegir M Pro
+    - Todo de M Basic (SLA prioritario 8h)
+    - Seguridad y backup nivel avanzado
+    - Informe ejecutivo mensual
+    - Roadmap y reunión tecnológica
+    - 2 visitas preventivas al mes
+  cta: Empezar
   link: "#contacto"

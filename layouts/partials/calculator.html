@@ -1,61 +1,63 @@
-<!-- CALCULADORA INTERACTIVA MICRO-MSP (MATRIZ V1) -->
+<!-- CALCULADORA INTERACTIVA MICRO-MSP -->
 <section id="calculadora" class="r">
   <div class="calculator-card">
     <div class="calc-header text-center">
-      <span class="section-tag">MATRIZ OFICIAL V1</span>
-      <h2 class="section-h">Calcula la Cuota de Soporte IT para tu Pyme</h2>
-      <p class="calc-desc">Selecciona el número de equipos de tu oficina y el nivel de cobertura deseado para obtener la tarifa plana oficial.</p>
+      <span class="section-tag">Presupuesto en tiempo real</span>
+      <h2 class="section-h">¿Cuántos ordenadores<br><em>tiene tu empresa?</em></h2>
+      <p class="calc-desc">Mueve el selector y te mostramos el plan que más encaja. Sin compromisos ni letra pequeña.</p>
     </div>
 
     <div class="calc-grid">
-      <!-- CONTROLES DE LA CALCULADORA -->
+      <!-- CONTROLES -->
       <div class="calc-controls">
-        <!-- Control 1: Puestos de Trabajo / PCs -->
+        <!-- Slider de equipos -->
         <div class="control-group">
           <div class="control-label">
-            <label for="input-endpoints">Equipos / PCs de la empresa</label>
+            <label for="input-endpoints">Equipos / PCs en tu oficina</label>
             <span class="control-value" id="val-endpoints">5</span>
           </div>
           <input type="range" id="input-endpoints" min="1" max="15" value="5" class="calc-slider">
-          <div class="slider-ticks"><span>1 equipo</span><span>5 equipos</span><span>10 equipos</span><span>15+</span></div>
+          <div class="slider-ticks">
+            <span>1</span><span>5</span><span>10</span><span>15</span>
+          </div>
         </div>
 
-        <!-- Control 2: Nivel de Cobertura -->
-        <div class="control-group">
-          <label class="group-title">Nivel de Cobertura & Soporte</label>
+        <!-- Nivel de cobertura — sólo visible para gama S (1-5 equipos) -->
+        <div class="control-group" id="calc-level-group">
+          <label class="group-title">Nivel de cobertura</label>
           <div class="sla-options">
             <label class="sla-card active" data-tier="essential">
               <input type="radio" name="sla-level" value="essential" checked hidden>
-              <div class="sla-name">Esencial</div>
-              <div class="sla-desc">Soporte reactivo & parches (SLA 48h)</div>
+              <div class="sla-name">Essential</div>
+              <div class="sla-desc">Soporte reactivo · SLA 48h</div>
             </label>
             <label class="sla-card" data-tier="pro">
               <input type="radio" name="sla-level" value="pro" hidden>
-              <div class="sla-name">Proactivo (Recomendado)</div>
-              <div class="sla-desc">Monitorización 24/7 & Visita mensual</div>
+              <div class="sla-name">Proactivo</div>
+              <div class="sla-desc">Monitorización 24/7 · SLA 24h</div>
             </label>
           </div>
         </div>
       </div>
 
-      <!-- PRICE RESULT DISPLAY -->
+      <!-- RESULTADO -->
       <div class="calc-summary-box">
-        <div class="summary-header">Plan Recomendado: <strong id="calc-plan-name" style="color: var(--color-primary, #e8621a);">S Essential</strong></div>
+        <div class="summary-header">Plan recomendado: <strong id="calc-plan-name" style="color: var(--o, #e8621a);">S Essential</strong></div>
         <div class="price-display">
           <span class="currency">€</span>
           <span id="calc-total-price" class="amount">99</span>
           <span class="period">/ mes</span>
         </div>
-        <div class="price-subtext">+ IVA · Tarifa plana sin sorpresas · Sin permanencia</div>
+        <div class="price-subtext">+ IVA · Tarifa plana · Sin permanencia</div>
 
         <ul class="calc-benefits" id="calc-benefits-list">
-          <li>✓ 1 a 5 equipos informáticos cubiertos</li>
-          <li>✓ Soporte remoto & atención de incidencias</li>
-          <li>✓ Parches y mantenimiento preventivo</li>
-          <li>✓ 1 Visita preventiva programada / trimestre</li>
+          <li>✓ Soporte remoto ilimitado (SLA 48h)</li>
+          <li>✓ Parches y actualizaciones gestionadas</li>
+          <li>✓ Seguridad básica de endpoints</li>
+          <li>✓ 1 visita preventiva al trimestre</li>
         </ul>
 
-        <a id="btn-calc-cta" href="#contacto" class="btn-p btn-calc-action">Solicitar Propuesta Formal →</a>
+        <a id="btn-calc-cta" href="#contacto" class="btn-p btn-calc-action">Solicitar propuesta formal →</a>
       </div>
     </div>
   </div>

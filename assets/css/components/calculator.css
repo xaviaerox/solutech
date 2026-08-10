@@ -182,3 +182,28 @@
   width: 100%;
   justify-content: center;
 }
+
+#calc-level-group {
+  transition: opacity 0.3s ease;
+}
+
+.sla-card.active {
+  border-color: var(--o, #e8621a);
+  background: rgba(232, 98, 26, 0.08);
+  box-shadow: 0 0 15px rgba(232, 98, 26, 0.12);
+}
+
+.sla-card:hover {
+  border-color: rgba(232, 98, 26, 0.4);
+}
+
+.control-value {
+  color: var(--o, #e8621a);
+  background: rgba(232, 98, 26, 0.1);
+  border: 1px solid rgba(232, 98, 26, 0.2);
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-family: var(--f-m, monospace);
+  font-size: 18px;
+  font-weight: 700;
+}

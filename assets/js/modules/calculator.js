@@ -1,6 +1,6 @@
 /**
- * Calculator Module — Solutech Official MSP Matrix V1
- * Calculates official flat-rate plans: S Essential (99€), S Pro (149€), M Basic (199€), M Pro (299€).
+ * Calculator Module — Solutech MSP Plans
+ * Selects the exact official plan based on number of endpoints and coverage tier.
  */
 export function initCalculator() {
   const endpointsInput = document.getElementById("input-endpoints");
@@ -9,6 +9,7 @@ export function initCalculator() {
   const planNameDisplay = document.getElementById("calc-plan-name");
   const benefitsList = document.getElementById("calc-benefits-list");
   const slaCards = document.querySelectorAll(".sla-card");
+  const levelGroup = document.getElementById("calc-level-group");
 
   if (!endpointsInput || !priceDisplay || !planNameDisplay) return;
 
@@ -19,40 +20,44 @@ export function initCalculator() {
       name: "S Essential",
       price: 99,
       benefits: [
-        "✓ 1 a 5 equipos informáticos cubiertos",
-        "✓ Soporte remoto & atención de incidencias (SLA 48h)",
-        "✓ Parches de seguridad y mantenimiento básico",
-        "✓ 1 Visita preventiva programada / trimestre"
+        "Soporte remoto ilimitado (SLA 48h)",
+        "Parches y actualizaciones gestionadas",
+        "Seguridad básica de endpoints",
+        "Backup verificado incluido",
+        "1 visita preventiva al trimestre"
       ]
     },
     s_pro: {
       name: "S Pro",
       price: 149,
       benefits: [
-        "✓ 1 a 5 equipos informáticos cubiertos",
-        "✓ Monitorización activa 24/7 & Ciberseguridad ampliada",
-        "✓ SLA de primera respuesta < 24h laborables",
-        "✓ 1 Visita preventiva programada / mes"
+        "Monitorización activa 24/7 (SLA 24h)",
+        "Ciberseguridad y backup ampliados",
+        "Gestión de red y WiFi corporativa",
+        "Inventario y documentación IT",
+        "1 visita preventiva al mes"
       ]
     },
     m_basic: {
       name: "M Basic",
       price: 199,
       benefits: [
-        "✓ 6 a 10 equipos informáticos cubiertos",
-        "✓ Ciberseguridad & Backup Gestionados",
-        "✓ Documentación IT & Inventario completo",
-        "✓ 2 Visitas preventivas programadas / mes"
+        "Seguridad y backup totalmente gestionados",
+        "SLA de respuesta < 24h laborables",
+        "Documentación e inventario completos",
+        "Automatizaciones IT básicas",
+        "2 visitas preventivas al mes"
       ]
     },
     m_pro: {
       name: "M Pro",
       price: 299,
       benefits: [
-        "✓ 11 a 15 equipos informáticos cubiertos",
-        "✓ SLA prioritario < 8h laborables",
-        "✓ Ciberseguridad & Backup nivel avanzado",
-        "✓ Informe mensual + 2 Visitas preventivas / mes"
+        "SLA prioritario < 8h laborables",
+        "Seguridad y backup nivel avanzado",
+        "Informe ejecutivo mensual",
+        "Roadmap y reunión tecnológica",
+        "2 visitas preventivas al mes"
       ]
     }
   };
@@ -61,7 +66,13 @@ export function initCalculator() {
     const endpoints = parseInt(endpointsInput.value, 10) || 1;
     valEndpoints.textContent = String(endpoints);
 
-    let selectedPlan = PLANS.s_essential;
+    let selectedPlan;
+    const isGamaS = endpoints <= 5;
+
+    // Show/hide the level selector — only relevant for Gama S
+    if (levelGroup) {
+      levelGroup.style.display = isGamaS ? "" : "none";
+    }
 
     if (endpoints <= 5) {
       selectedPlan = currentTier === "pro" ? PLANS.s_pro : PLANS.s_essential;
@@ -76,7 +87,7 @@ export function initCalculator() {
 
     if (benefitsList) {
       benefitsList.innerHTML = selectedPlan.benefits
-        .map(b => `<li>${b}</li>`)
+        .map(b => `<li>✓ ${b}</li>`)
         .join("");
     }
   }
