@@ -45,19 +45,19 @@
 }
 
 .control-value {
-  color: var(--o, #0f8);
+  color: var(--o, #e8621a);
   font-family: var(--f-m, monospace);
   font-size: 18px;
   font-weight: 700;
-  background: rgba(0, 255, 136, 0.1);
+  background: rgba(232, 98, 26, 0.1);
   padding: 4px 12px;
   border-radius: 6px;
-  border: 1px solid rgba(0, 255, 136, 0.2);
+  border: 1px solid rgba(232, 98, 26, 0.2);
 }
 
 .calc-slider {
   width: 100%;
-  accent-color: var(--o, #0f8);
+  accent-color: var(--o, #e8621a);
   background: rgba(255, 255, 255, 0.1);
   height: 6px;
   border-radius: 3px;
@@ -96,13 +96,13 @@
 }
 
 .sla-card:hover {
-  border-color: rgba(0, 255, 136, 0.4);
+  border-color: rgba(232, 98, 26, 0.4);
 }
 
 .sla-card.active {
-  border-color: var(--o, #0f8);
-  background: rgba(0, 255, 136, 0.08);
-  box-shadow: 0 0 15px rgba(0, 255, 136, 0.15);
+  border-color: var(--o, #e8621a);
+  background: rgba(232, 98, 26, 0.08);
+  box-shadow: 0 0 15px rgba(232, 98, 26, 0.12);
 }
 
 .sla-name {
@@ -118,7 +118,7 @@
 
 .calc-summary-box {
   background: linear-gradient(135deg, rgba(20, 24, 36, 0.9), rgba(10, 12, 18, 0.95));
-  border: 1px solid rgba(0, 255, 136, 0.3);
+  border: 1px solid rgba(232, 98, 26, 0.25);
   border-radius: 16px;
   padding: 32px;
   text-align: center;
@@ -144,7 +144,7 @@
 
 .price-display .currency {
   font-size: 24px;
-  color: var(--o, #0f8);
+  color: var(--o, #e8621a);
   font-weight: 700;
 }
 
@@ -185,25 +185,4 @@
 
 #calc-level-group {
   transition: opacity 0.3s ease;
-}
-
-.sla-card.active {
-  border-color: var(--o, #e8621a);
-  background: rgba(232, 98, 26, 0.08);
-  box-shadow: 0 0 15px rgba(232, 98, 26, 0.12);
-}
-
-.sla-card:hover {
-  border-color: rgba(232, 98, 26, 0.4);
-}
-
-.control-value {
-  color: var(--o, #e8621a);
-  background: rgba(232, 98, 26, 0.1);
-  border: 1px solid rgba(232, 98, 26, 0.2);
-  border-radius: 6px;
-  padding: 4px 12px;
-  font-family: var(--f-m, monospace);
-  font-size: 18px;
-  font-weight: 700;
 }
