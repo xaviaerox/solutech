@@ -5,7 +5,7 @@ slug: "fallo-ia-suplantacion-biometrica-deepfake-murcia"
 description: "Un ciberdelincuente utilizó Inteligencia Artificial en tiempo real para modificar su rostro en videollamadas y obtener certificados digitales a nombre de terceros. Analizamos el ataque y cómo protegerse."
 categories: ["Ciberseguridad", "Inteligencia Artificial", "Casos Reales", "Protección de Datos"]
 keywords: ["deepfake Murcia", "suplantación identidad IA", "videoverificación firma digital", "ciberseguridad pymes", "fraude biológico", "DNIe", "eIDAS"]
-image: "images/news-ia-ofensiva-confianza-digital-pymes-protegerse.jpg"
+image: "images/news-fallo-ia-suplantacion-biometrica-deepfake-murcia.jpg"
 draft: false
 business_impact: "La suplantación de identidad biométrica mediante deepfakes en tiempo real amenaza la validez de los trámites remotos y la emisión de certificados de firma digital, exponiendo a ciudadanos y empresas a contrataciones fraudulentas, préstamos ilegítimos y aperturas de cuentas bancarias sin su conocimiento."
 source_url: "https://elpais.com/espana/2026-08-11/un-fallo-de-la-ia-que-usaba-para-estafar-delata-a-un-ciberdelincuente.html"

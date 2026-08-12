@@ -5,7 +5,7 @@ slug: "detenido-murcia-suplantacion-ia-firma-electronica"
 description: "Un ciberdelincuente alteraba su rostro en tiempo real para engañar a empresas certificadoras. Un fallo de un segundo en la IA reveló su rostro real."
 categories: ["Ciberseguridad", "Casos Reales"]
 keywords: ["detenido Murcia IA", "suplantación firma electrónica", "ciberseguridad pymes", "deepfake fraude"]
-image: "images/news-ia-ofensiva-confianza-digital-pymes-protegerse.jpg"
+image: "images/news-detenido-murcia-suplantacion-ia-firma-electronica.jpg"
 draft: false
 business_impact: "Las empresas de servicios digitales y entidades financieras afrontan un nuevo riesgo con los deepfakes en tiempo real durante videoverificaciones para contratación y firma electrónica."
 ---
