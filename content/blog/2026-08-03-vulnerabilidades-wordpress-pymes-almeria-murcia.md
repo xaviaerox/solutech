@@ -5,7 +5,7 @@ slug: "vulnerabilidades-wordpress-pymes-almeria-murcia"
 description: "Descubra cómo las recientes vulnerabilidades en WordPress Core afectan a su Pyme y qué medidas urgentes debe tomar para proteger su web."
 categories: ["Ciberseguridad", "WordPress", "Actualidad"]
 keywords: ["vulnerabilidades WordPress", "seguridad WordPress Pymes", "actualizar WordPress", "ciberseguridad web", "protección web Pymes", "mantenimiento WordPress Almería", "mantenimiento WordPress Murcia"]
-image: "images/news-vulnerabilidades-wordpress-pymes-almeria-murcia.png"
+image: "images/news-vulnerabilidades-wordpress-pymes-almeria-murcia.jpg"
 draft: false
 business_impact: "Una interrupción de este tipo puede impedir que una PYME acceda a su sitio web, afectando la captación de clientes, ventas y reputación online durante horas o días."
 source_url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-wordpress-core"

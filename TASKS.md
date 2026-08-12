@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 10
+- **Total de tareas registradas:** 11
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 10
+- **Tareas completadas:** 11
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-08-10
+- **Última actualización:** 2026-08-12
 
 ---
 
@@ -54,6 +54,17 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-011 — Publicar Noticia y Artículo del Caso de Suplantación Biométrica con IA en Murcia
+
+- **Estado:** COMPLETADA
+- **Tipo:** PUBLICACIÓN / BLOG & NOTICIAS
+- **Prioridad:** MEDIA
+- **Creada:** 2026-08-12
+- **Iniciada:** 2026-08-12
+- **Completada:** 2026-08-12
+- **Descripción:** Publicar artículo periodístico y análisis técnico en `content/blog/` y `content/news/` sobre la suplantación biométrica mediante live deepfakes en Murcia (2026), compilando el sitio estático Hugo con `hugo`.
+- **Resultado:** Archivos `.md` creados y sitio regenerado en `public/blog/fallo-ia-suplantacion-biometrica-deepfake-murcia/` y `public/news/detenido-murcia-suplantacion-ia-firma-electronica/`.
 
 ## TASK-008 — Publicar Guía sobre Protección Frente a Ransomware y Continuidad de Negocio
 

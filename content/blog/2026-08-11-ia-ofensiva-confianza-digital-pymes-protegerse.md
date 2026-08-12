@@ -5,7 +5,7 @@ slug: "ia-ofensiva-confianza-digital-pymes-protegerse"
 description: "Descubra cómo la IA ofensiva transforma los ciberataques, erosionando la confianza digital. Conozca los riesgos para su Pyme y las estrategias de protección."
 categories: ["Ciberseguridad", "Inteligencia Artificial", "Protección de Datos"]
 keywords: ["IA ofensiva", "ciberseguridad pymes", "confianza digital", "ataques IA", "protección de datos", "phishing IA", "deepfake"]
-image: "images/news-ia-ofensiva-confianza-digital-pymes-protegerse.png"
+image: "images/news-ia-ofensiva-confianza-digital-pymes-protegerse.jpg"
 draft: false
 business_impact: "La IA ofensiva acelera y sofistica los ciberataques, desde phishing avanzado hasta suplantación de identidad con deepfakes, poniendo en riesgo la continuidad operativa, la reputación y los datos sensibles de su Pyme. La verificación de identidad tradicional ya no es suficiente, exigiendo nuevas estrategias de defensa."
 source_url: "https://cybersecuritynews.es/la-ia-ofensiva-convierte-la-confianza-digital-en-el-nuevo-campo-de-batalla-de-la-ciberseguridad/"

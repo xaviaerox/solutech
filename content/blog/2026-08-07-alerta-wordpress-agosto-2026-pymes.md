@@ -5,7 +5,7 @@ slug: "alerta-wordpress-agosto-2026-pymes"
 description: "INCIBE alerta sobre nuevas vulnerabilidades en WordPress. Proteja su web y datos empresariales en Almería y Murcia con Solutech."
 categories: ["Ciberseguridad", "Soporte Informático", "Productividad"]
 keywords: ["vulnerabilidades WordPress", "seguridad web Pymes", "ciberseguridad Almería", "ciberseguridad Murcia", "actualización WordPress", "protección web"]
-image: "images/news-alerta-wordpress-agosto-2026-pymes.png"
+image: "images/news-alerta-wordpress-agosto-2026-pymes.jpg"
 draft: false
 business_impact: "Una vulnerabilidad en WordPress puede paralizar su web, exponer datos de clientes y generar pérdidas económicas y de reputación para su Pyme."
 source_url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-wordpress-0"

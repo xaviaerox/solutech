@@ -5,7 +5,7 @@ slug: "estafas-tiendas-online-pymes-almeria-murcia"
 description: "España ve un 81% de aumento en estafas por falsas tiendas online. Descubre cómo proteger tu Pyme de fraudes que amenazan tu facturación y reputación."
 categories: ["Ciberseguridad", "Fraude Online"]
 keywords: ["estafas tiendas online", "ciberseguridad pymes", "fraude online", "protección pymes", "almería", "murcia", "seguridad online"]
-image: "images/news-estafas-tiendas-online-pymes-almeria-murcia.png"
+image: "images/news-estafas-tiendas-online-pymes-almeria-murcia.jpg"
 draft: false
 business_impact: "Las estafas en tiendas online no solo suponen pérdidas económicas directas por compras fraudulentas, sino que también dañan la reputación de las Pymes, exponen datos de clientes y pueden paralizar operaciones comerciales, afectando la continuidad del negocio y la confianza del consumidor."
 source_url: "https://cybersecuritynews.es/espana-registra-un-aumento-del-81-en-las-estafas-por-falsas-tiendas-online/"
