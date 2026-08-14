@@ -5,7 +5,7 @@ slug: "fraudes-paginas-grises-pymes-almeria-murcia"
 description: "Descubre cómo las 'páginas grises' manipulan a usuarios de Pymes en Europa, y qué medidas de ciberseguridad implementar para proteger tu negocio en Almería y Murcia."
 categories: ["Ciberseguridad", "Fraude Online"]
 keywords: ["páginas grises", "estafas online pymes", "ciberseguridad pymes", "fraude digital", "protección empresarial", "seguridad web"]
-image: "images/news-fraudes-paginas-grises-pymes-almeria-murcia.png"
+image: "images/news-fraudes-paginas-grises-pymes-almeria-murcia.jpg"
 draft: false
 business_impact: "Las estafas de 'páginas grises' pueden generar pérdidas económicas directas, robo de datos sensibles de la empresa y sus clientes, y comprometer la continuidad operativa a través de la instalación de software malicioso o secuestro de navegadores. El riesgo se extiende a la reputación y al cumplimiento normativo (RGPD)."
 source_url: "https://cybersecuritynews.es/advierten-sobre-el-uso-de-paginas-grises-en-europa-para-estafar-a-usuarios/"
