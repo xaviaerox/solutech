@@ -6,11 +6,11 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 13
+- **Total de tareas registradas:** 14
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 13
+- **Tareas completadas:** 14
 - **Tareas canceladas / descartadas:** 0
 - **Última actualización:** 2026-08-17
 
@@ -54,6 +54,17 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-014 — Actualización de Versión de Node.js en CI/CD (GitHub Actions)
+
+- **Estado:** COMPLETADA
+- **Tipo:** CI/CD / INFRAESTRUCTURA
+- **Prioridad:** MEDIA
+- **Creada:** 2026-08-17
+- **Iniciada:** 2026-08-17
+- **Completada:** 2026-08-17
+- **Descripción:** Actualización del paso `Setup Node.js` en `.github/workflows/hugo.yaml` a `node-version: '22'` para resolver advertencias de deprecación de Node.js 20 en GitHub Actions runner.
+- **Resultado:** Modificado `.github/workflows/hugo.yaml`. Pruebas estáticas y linter sin errores.
 
 ## TASK-013 — Rediseño Simétrico de Tarjetas de Reseñas / Testimonios
 
