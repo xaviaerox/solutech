@@ -51,6 +51,41 @@ export function initCyberCheck() {
       userAnswers[qId] = score;
 
       updateProgressAndScore();
+
+      // Check if all questions in the currently active section block are answered
+      const activeSection = document.querySelector(".cc-section-block.active");
+      if (activeSection) {
+        const questionsInActiveSection = activeSection.querySelectorAll(".cc-question-card");
+        const allAnswered = Array.from(questionsInActiveSection).every((q) => {
+          const id = q.getAttribute("data-question-id");
+          return userAnswers[id] !== undefined;
+        });
+
+        if (allAnswered) {
+          const sectionBlocksArray = Array.from(sectionBlocks);
+          const currentIndex = sectionBlocksArray.indexOf(activeSection);
+          const nextSection = sectionBlocksArray[currentIndex + 1];
+
+          if (nextSection) {
+            setTimeout(() => {
+              // Deactivate current section and links
+              sectionBlocks.forEach((block) => block.classList.remove("active"));
+              sidebarLinks.forEach((link) => link.classList.remove("active"));
+
+              // Activate next section and corresponding link
+              nextSection.classList.add("active");
+              const nextLink = document.querySelector(`.cc-nav-link[data-target="${nextSection.id}"]`);
+              if (nextLink) nextLink.classList.add("active");
+
+              // Smoothly scroll to top of cybercheck main area
+              const mainShell = document.querySelector(".cybercheck-main");
+              if (mainShell) {
+                mainShell.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+            }, 350);
+          }
+        }
+      }
     });
   });
 
@@ -97,13 +132,16 @@ export function initCyberCheck() {
         if (riskDesc) riskDesc.textContent = "Su pyme cuenta con una postura sólida de ciberseguridad. Recomendamos auditorías periódicas para mantener el nivel.";
       }
 
-      summaryCard.scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+        summaryCard.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 350);
     }
   }
 
   // Pre-fill contact form when clicking on the mitigation report CTA
   if (ctaBtn) {
-    ctaBtn.addEventListener("click", () => {
+    ctaBtn.addEventListener("click", (e) => {
+      e.preventDefault();
       const msgInput = document.getElementById("mensaje-lead");
       const preocupacionInput = document.getElementById("preocupacion-lead");
 
@@ -114,7 +152,16 @@ export function initCyberCheck() {
       if (msgInput && currentRiskLevel) {
         const diagPrefix = `[Autodiagnóstico Cyber-Check: ${currentRiskLevel} (${currentTotalPoints} pts)] `;
         if (!msgInput.value.includes(diagPrefix)) {
-          msgInput.value = `${diagPrefix}${msgInput.value}`;
+          msgInput.value = msgInput.value ? `${diagPrefix}\n${msgInput.value}` : diagPrefix;
+        }
+      }
+
+      const contactSection = document.getElementById("contacto");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        const firstInput = contactSection.querySelector("input:not([type='hidden']), textarea");
+        if (firstInput) {
+          setTimeout(() => firstInput.focus(), 600);
         }
       }
     });

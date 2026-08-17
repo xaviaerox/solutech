@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 11
+- **Total de tareas registradas:** 13
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 11
+- **Tareas completadas:** 13
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-08-12
+- **Última actualización:** 2026-08-17
 
 ---
 
@@ -54,6 +54,28 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-013 — Rediseño Simétrico de Tarjetas de Reseñas / Testimonios
+
+- **Estado:** COMPLETADA
+- **Tipo:** UI / STYLING
+- **Prioridad:** ALTA
+- **Creada:** 2026-08-17
+- **Iniciada:** 2026-08-17
+- **Completada:** 2026-08-17
+- **Descripción:** Rediseño del grid de testimonios (`.test-grid`) y tarjetas (`.test-card`) para lograr simetría perfecta alineada con las tarjetas de precios (estrellas superiores, cabecera alineada, flexbox con separadores perfectamente horizontales y bordes/radios uniformes).
+- **Resultado:** Modificados `data/testimonials.yaml`, `layouts/index.html` y `assets/css/main.css`. Compilación estática Hugo limpia en 1.4s.
+
+## TASK-012 — Navegación Automática y Formulario en Diagnóstico IT (Cyber-Check)
+
+- **Estado:** COMPLETADA
+- **Tipo:** UX / FEATURE
+- **Prioridad:** ALTA
+- **Creada:** 2026-08-17
+- **Iniciada:** 2026-08-17
+- **Completada:** 2026-08-17
+- **Descripción:** Implementación del avance automático entre los 4 bloques del autodiagnóstico al completar las preguntas de cada sección, e integración del formulario de captación (`#contacto`) en la página `/autodiagnostico/`.
+- **Resultado:** Modificados `assets/js/modules/cybercheck.js` y `layouts/partials/cybercheck.html`. Compilación del sitio con Hugo limpia en 2.8s.
 
 ## TASK-011 — Publicar Noticia y Artículo del Caso de Suplantación Biométrica con IA en Murcia
 
