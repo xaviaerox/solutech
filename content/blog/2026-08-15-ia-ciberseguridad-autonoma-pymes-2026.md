@@ -5,7 +5,7 @@ slug: "ia-ciberseguridad-autonoma-pymes-2026"
 description: "La IA ha pasado de asistir a los ciberatacantes a ejecutar ataques autónomos. Descubra cómo proteger su Pyme de esta nueva amenaza y asegurar su negocio."
 categories: ["Ciberseguridad", "Inteligencia Artificial"]
 keywords: ["ciberseguridad IA", "ataques IA autónomos", "protección Pymes IA", "seguridad con IA", "prompt injection"]
-image: "images/news-ia-ciberseguridad-autonoma-pymes-2026.jpg"
+image: "images/news-ia-ya-no-asiste-ataca-ciberseguridad-autonoma.jpg"
 draft: false
 business_impact: "La IA ofensiva ejecuta ataques autónomos, reduciendo el tiempo de respuesta a horas y exponiendo a las Pymes a riesgos operativos y financieros sin precedentes. La continuidad del negocio y la protección de datos están en juego."
 source_url: "https://cybersecuritynews.es/la-ia-ya-actua-y-no-solo-asiste-cambia-las-reglas-del-juego-en-ciberseguridad/"

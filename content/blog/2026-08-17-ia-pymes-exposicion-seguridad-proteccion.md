@@ -5,7 +5,7 @@ slug: "ia-pymes-exposicion-seguridad-proteccion"
 description: "Descubra por qué el 100% de las Pymes está expuesto a riesgos de IA y las claves para proteger sus herramientas. Solutech le guía en la seguridad de IA."
 categories: ["Ciberseguridad", "Inteligencia Artificial"]
 keywords: ["seguridad IA Pymes", "riesgos IA", "protección inteligencia artificial", "gobernanza IA", "ciberseguridad empresarial", "Zscaler Mythos 2026"]
-image: "images/news-ia-pymes-exposicion-seguridad-proteccion.jpg"
+image: "images/news-ia-pyme-empresas-expuestas-proteccion.jpg"
 draft: false
 business_impact: "La adopción acelerada de herramientas de IA sin controles de seguridad adecuados expone a las Pymes a fugas de datos, interrupciones operativas y robo de propiedad intelectual, con un riesgo del 100% según estudios recientes. Esto puede resultar en pérdidas financieras significativas y daño reputacional."
 source_url: "https://cybersecuritynews.es/la-ia-abre-una-nueva-brecha-de-seguridad-el-100-de-las-empresas-analizadas-esta-expuesto/"
