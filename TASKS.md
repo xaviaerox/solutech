@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 14
+- **Total de tareas registradas:** 15
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 14
+- **Tareas completadas:** 15
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-08-17
+- **Última actualización:** 2026-08-20
 
 ---
 
@@ -54,6 +54,16 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-015 — Publicación de Noticia JabaROOT y Lecciones de Ciberseguridad para Pymes
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-08-20
+- **Descripción:** Redacción, maquetación visual enriquecida (resumen ejecutivo, tablas cronológicas, callouts de atención) y generación de cabecera gráfica libre de texto para la noticia sobre JabaROOT. Cierre reorientado a divulgación responsable e higiene de seguridad sin CTA comercial invasivo.
+- **Archivos Modificados:**
+  - `content/blog/2026-08-20-jabaroot-filtraciones-lecciones-pymes.md`
+  - `static/images/news-jabaroot-filtraciones-lecciones-pymes.jpg`
+  - `static/images/blog/jabaroot-filtracion-datos.jpg`
 
 ## TASK-014 — Actualización de Versión de Node.js en CI/CD (GitHub Actions)
 
