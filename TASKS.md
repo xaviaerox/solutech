@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 15
+- **Total de tareas registradas:** 16
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 15
+- **Tareas completadas:** 16
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-08-20
+- **Última actualización:** 2026-08-23
 
 ---
 
@@ -54,6 +54,15 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-016 — Publicación y Optimización Noticia Cyberleek & GTA VI
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-08-23
+- **Descripción:** Redacción, maquetación visual enriquecida y optimización para captación de tráfico/leads B2B del artículo sobre la filtración de Cyberleek a Rockstar Games. Incluye resumen ejecutivo, análisis de las 3 exigencias del manifiesto, amenaza de Dead Man's Switch, diagrama de flujo de phishing (Rockstar India), traslación de riesgos para Pymes de Almería y Murcia, llamada a la acción hacia CyberCheck y FAQs para rich snippets de SEO.
+- **Archivos Modificados:**
+  - `content/blog/2026-08-23-cyberleek-gta-vi-filtracion-lecciones-ciberseguridad-pymes.md`
+  - `static/images/news-cyberleek-gta-vi-filtracion-lecciones-ciberseguridad-pymes.jpg`
 
 ## TASK-015 — Publicación de Noticia JabaROOT y Lecciones de Ciberseguridad para Pymes
 
