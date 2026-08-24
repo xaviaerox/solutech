@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 16
+- **Total de tareas registradas:** 17
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 16
+- **Tareas completadas:** 17
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-08-23
+- **Última actualización:** 2026-08-24
 
 ---
 
@@ -54,6 +54,15 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-017 — Publicación Noticia Estafa WhatsApp Reserva Hotel (Caso Real)
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-08-24
+- **Descripción:** Adaptación de la noticia sobre la estafa de WhatsApp en reservas de hotel como un caso real personal vivido por el equipo (corrigiendo el matiz de llegada del mensaje a última hora en momento de cansancio extremo). Generación de cabecera visual de alto impacto tipo clickbait (16:9), inclusión de diagrama de flujo ASCII, datos oficiales de la campaña INCIBE-2026-526 y traslación del riesgo de ingeniería social a Pymes para servicios Solutech.
+- **Archivos Modificados:**
+  - `content/blog/2026-08-24-estafa-whatsapp-reserva-hotel-experiencia-real.md`
+  - `static/images/news-estafa-whatsapp-reserva-hotel.jpg`
 
 ## TASK-016 — Publicación y Optimización Noticia Cyberleek & GTA VI
 
