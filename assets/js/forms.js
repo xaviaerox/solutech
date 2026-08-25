@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
       const data = new FormData(form);
 
       // Honeypot anti-spam: si el campo oculto tiene valor, es un bot
-      if (data.get("website_url") && data.get("website_url").trim() !== "") {
+      const honeypotVal = data.get("website") || data.get("website_url");
+      if (honeypotVal && honeypotVal.trim() !== "") {
         // Simulamos éxito sin hacer la llamada real
         setTimeout(() => {
           status.className = "form-status form-status-success";

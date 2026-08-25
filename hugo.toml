@@ -25,6 +25,7 @@ ignoreFiles = [
 
 [params.integrations]
   google_analytics = 'G-1XP3Q7JQWG'
+  turnstileSiteKey = '0x4AAAAAAAx_placeholder'
 
 [params.business]
   name            = "Solutech"

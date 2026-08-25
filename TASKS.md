@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 17
+- **Total de tareas registradas:** 20
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 17
+- **Tareas completadas:** 20
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-08-24
+- **Última actualización:** 2026-08-25
 
 ---
 
@@ -54,6 +54,36 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-020 — Hardening Anti-Spam FASE 5: Propuesta & Documentación WAF Rate Limiting en Cloudflare
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-08-25
+- **Descripción:** Definición de la regla de Rate Limiting en Cloudflare WAF (`Protect-N8N-Leads-Webhook-RateLimit`) para mitigar peticiones excesivas por IP al endpoint `/webhook/leads`, incluyendo estrategia de pruebas progresivas sin falsos positivos para leads legítimos.
+- **Archivos Modificados:**
+  - `TASKS.md` (solutech)
+  - `05_TECHNOLOGY/CONFIG_DNS_SEO.md` (solutech-knowledge-base)
+
+## TASK-019 — Hardening Anti-Spam FASE 4: Integración Frontend & Server-Side Cloudflare Turnstile
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-08-25
+- **Descripción:** Integración de Cloudflare Turnstile CAPTCHA (0€ / privacy-first) en el formulario de captación (`contact-form-template.html`), actualización de cabeceras CSP en `head.html`, configuración de siteKey en `hugo.toml` y especificación del flujo de verificación server-side en n8n mediante la API `/siteverify`.
+- **Archivos Modificados:**
+  - `layouts/partials/head.html`
+  - `layouts/partials/contact-form-template.html`
+  - `hugo.toml`
+  - `TASKS.md`
+
+## TASK-018 — Hardening Anti-Spam FASE 2: Implementación de Honeypot Neutro
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-08-25
+- **Descripción:** Implementación de campo honeypot neutro (`website`) en el plantilla HTML central de formularios (`layouts/partials/contact-form-template.html`) y actualización de lógica de verificación client-side y server-side (n8n IF node) para descarte silencioso de bots.
+- **Archivos Modificados:**
+  - `layouts/partials/contact-form-template.html`
+  - `assets/js/forms.js`
+  - `TASKS.md`
 
 ## TASK-017 — Publicación Noticia Estafa WhatsApp Reserva Hotel (Caso Real)
 
