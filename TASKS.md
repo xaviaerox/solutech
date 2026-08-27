@@ -6,11 +6,11 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 22
+- **Total de tareas registradas:** 23
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 22
+- **Tareas completadas:** 23
 - **Tareas canceladas / descartadas:** 0
 - **Última actualización:** 2026-08-27
 
@@ -54,6 +54,15 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-023 — Actualización de Workflow CI/CD (.github/workflows/hugo.yaml)
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-08-27
+- **Descripción:** Actualización del workflow de GitHub Actions: sincronizada versión de Hugo a `0.163.1` (Extended), activado `cancel-in-progress: true` en concurrencia para evitar bloqueos por reintentos en cola y añadido `timeout-minutes: 10` en el job de despliegue a GitHub Pages (`actions/deploy-pages@v4`).
+- **Archivos Modificados:**
+  - `.github/workflows/hugo.yaml`
+  - `TASKS.md`
 
 ## TASK-022 — Depuración de Base de Datos Supabase & Autenticación de Webhook Anti-Spam
 
