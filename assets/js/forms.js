@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+  const pageLoadTime = Date.now();
   const forms = document.querySelectorAll(".cta-form");
   
   forms.forEach(form => {
@@ -20,11 +21,21 @@ document.addEventListener("DOMContentLoaded", function() {
       status.style.display = "none";
 
       const data = new FormData(form);
+      const timeSpent = Date.now() - pageLoadTime;
 
-      // Honeypot anti-spam: si el campo oculto tiene valor, es un bot
-      const honeypotVal = data.get("website") || data.get("website_url");
-      if (honeypotVal && honeypotVal.trim() !== "") {
-        // Simulamos éxito sin hacer la llamada real
+      // 1. Honeypots anti-spam (website / fax_number / website_url)
+      const honeypotVal = (data.get("website") || data.get("website_url") || data.get("fax_number") || "").toString().trim();
+      
+      // 2. Patrón de bot "RobertBlesk": nombre igual a empresa
+      const nombre = (data.get("nombre") || "").toString().trim().toLowerCase();
+      const empresa = (data.get("empresa") || "").toString().trim().toLowerCase();
+      const isDuplicatePattern = nombre.length > 0 && empresa.length > 0 && nombre === empresa;
+
+      // 3. Control de velocidad: rellenar en menos de 2.5 segundos es comportamiento de bot
+      const isTooFast = timeSpent < 2500;
+
+      if (honeypotVal !== "" || isDuplicatePattern || isTooFast) {
+        // Simulamos respuesta exitosa para el bot sin realizar llamada a n8n
         setTimeout(() => {
           status.className = "form-status form-status-success";
           status.innerHTML = "✓ Solicitud enviada correctamente.<br>He recibido tu información. En menos de 24h me pondré en contacto contigo.";
@@ -34,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
           btn.style.opacity = "1";
           btn.disabled = false;
           btn.style.display = "none";
-        }, 800);
+        }, 600);
         return;
       }
 
@@ -42,7 +53,8 @@ document.addEventListener("DOMContentLoaded", function() {
         method: method,
         body: data,
         headers: {
-          "Accept": "application/json"
+          "Accept": "application/json",
+          "X-Solutech-Source": "website-form"
         }
       }).then(response => {
         if (response.ok) {

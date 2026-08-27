@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 20
+- **Total de tareas registradas:** 21
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 20
+- **Tareas completadas:** 21
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-08-25
+- **Última actualización:** 2026-08-27
 
 ---
 
@@ -54,6 +54,18 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-021 — Hardening Anti-Spam: Sistema Invisible Cero-Captcha & Limpieza Estética
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-08-27
+- **Descripción:** Eliminación de Cloudflare Turnstile para restaurar el diseño visual prístino del formulario (eliminado texto "Troubleshoot" y widget iframe). Implementación del Sistema de Protección Invisible Híbrida en `assets/js/forms.js` (control de velocidad de rellenado <2.5s, doble honeypot `website` + `fax_number`, patrón `nombre == empresa` y cabecera de firma `X-Solutech-Source`).
+- **Archivos Modificados:**
+  - `layouts/partials/head.html`
+  - `layouts/partials/contact-form-template.html`
+  - `assets/js/forms.js`
+  - `hugo.toml`
+  - `TASKS.md`
 
 ## TASK-020 — Hardening Anti-Spam FASE 5: Propuesta & Documentación WAF Rate Limiting en Cloudflare
 

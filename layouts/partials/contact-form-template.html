@@ -66,20 +66,16 @@
       </select>
     </div>
   </div>
-  {{/* Honeypot anti-spam — invisible para humanos, visible para bots */}}
-  <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;overflow:hidden;" tabindex="-1">
-    <label for="website-{{ $type }}">Website</label>
-    <input type="text" id="website-{{ $type }}" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px">
+  {{/* Honeypots anti-spam totalmente invisibles */}}
+  <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;opacity:0;height:0;width:0;overflow:hidden;" tabindex="-1">
+    <input type="text" id="website-{{ $type }}" name="website" tabindex="-1" autocomplete="off">
+    <input type="text" id="fax_number-{{ $type }}" name="fax_number" tabindex="-1" autocomplete="off">
   </div>
   {{ end }}
 
   <div class="form-group">
     <label for="mensaje-{{ $type }}" class="sr-only">{{ if eq $type "support" }}Descripción del Problema{{ else }}Mensaje / Consulta{{ end }}</label>
     <textarea id="mensaje-{{ $type }}" name="{{ if eq $type "support" }}descripcion{{ else }}mensaje{{ end }}" placeholder="{{ if eq $type "support" }}Explica detalladamente la incidencia técnica...{{ else }}¿En qué podemos ayudarte o cuál es tu consulta principal?{{ end }}" aria-label="{{ if eq $type "support" }}Detalla la incidencia técnica{{ else }}Detalla en qué podemos ayudarte{{ end }}" required class="cta-input cta-textarea"></textarea>
-  </div>
-
-  <div class="form-group turnstile-container" style="margin: 16px 0; display: flex; justify-content: center;">
-    <div class="cf-turnstile" data-sitekey="{{ .Site.Params.turnstileSiteKey | default "0x4AAAAAAAx_placeholder" }}" data-theme="dark"></div>
   </div>
 
   <button type="submit" class="cta-btn" id="{{ $type }}-submit-btn">
