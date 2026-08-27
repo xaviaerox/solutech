@@ -6,11 +6,11 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 27
+- **Total de tareas registradas:** 28
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 27
+- **Tareas completadas:** 28
 - **Tareas canceladas / descartadas:** 0
 - **Última actualización:** 2026-08-27
 
@@ -54,6 +54,15 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-028 — Corrección de Cabecera CSP (`connect-src`) para `n8n.solutech.blog`
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-08-27
+- **Descripción:** Corrección de la directiva `connect-src` en la meta-etiqueta Content-Security-Policy en `layouts/partials/head.html` añadiendo explícitamente `https://n8n.solutech.blog` y `https://*.google-analytics.com` para autorizar las conexiones `fetch` del formulario web hacia el webhook de n8n.
+- **Archivos Modificados:**
+  - `layouts/partials/head.html`
+  - `TASKS.md`
 
 ## TASK-027 — Remediación Server-Side H-03, H-04, H-05 (n8n Security Pipeline & Build-Time Timestamp)
 
