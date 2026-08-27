@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       const data = new FormData(form);
       data.append("form_source", "website-form");
+      data.append("security_token", "solutech-leads-v1-secure-token");
 
       const timeSpent = Date.now() - pageLoadTime;
 
@@ -30,18 +31,13 @@ document.addEventListener("DOMContentLoaded", function() {
       
       const nombre = (data.get("nombre") || "").toString().trim().toLowerCase();
       const empresa = (data.get("empresa") || "").toString().trim().toLowerCase();
-      const email = (data.get("email") || "").toString().trim().toLowerCase();
       const telefonoRaw = (data.get("telefono") || "").toString().trim();
       const telefonoDigits = telefonoRaw.replace(/\D/g, "");
 
-      // 2. Ban por nombre "robertblesk" / "blesk" / "bobby"
-      const isBleskSpam = nombre.includes("blesk") || empresa.includes("blesk") || email.includes("blesk") || 
-                          nombre.includes("robert") || empresa.includes("robert") || nombre.includes("bobby");
-
-      // 3. Patrón de bot: nombre exactamente igual a empresa
+      // 2. Patrón de bot: coincidencia exacta nombre igual a empresa
       const isDuplicatePattern = nombre.length > 0 && empresa.length > 0 && nombre === empresa;
 
-      // 4. Ban por teléfonos raros: números de menos de 8 dígitos, más de 15, letras en el teléfono, o repeticiones falsas (ej. 11111111, 00000000)
+      // 3. Ban por teléfonos raros: números de menos de 8 dígitos, más de 15, letras en el teléfono, o repeticiones falsas (ej. 11111111, 00000000)
       const isWeirdPhone = telefonoRaw.length > 0 && (
         telefonoDigits.length < 8 || 
         telefonoDigits.length > 15 || 
@@ -49,10 +45,10 @@ document.addEventListener("DOMContentLoaded", function() {
         /[a-zA-Z]/.test(telefonoRaw)
       );
 
-      // 5. Control de velocidad: rellenar en menos de 2.5 segundos es comportamiento de bot
+      // 4. Control de velocidad: rellenar en menos de 2.5 segundos es comportamiento de bot
       const isTooFast = timeSpent < 2500;
 
-      if (honeypotVal !== "" || isBleskSpam || isDuplicatePattern || isWeirdPhone || isTooFast) {
+      if (honeypotVal !== "" || isDuplicatePattern || isWeirdPhone || isTooFast) {
         // Simulamos respuesta exitosa para el bot sin realizar llamada a n8n
         setTimeout(() => {
           status.className = "form-status form-status-success";

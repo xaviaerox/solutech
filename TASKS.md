@@ -6,11 +6,11 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 28
+- **Total de tareas registradas:** 29
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 28
+- **Tareas completadas:** 29
 - **Tareas canceladas / descartadas:** 0
 - **Última actualización:** 2026-08-27
 
@@ -54,6 +54,15 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-029 — Verificación con Evidencia Real y Corrección Final de Filtro Anti-Spam
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-08-27
+- **Descripción:** Actualización exacta del nodo `Filter Anti-Spam` en n8n incluyendo la validación de `$env.WEBHOOK_SECRET`, ajuste del filtro de patrones a coincidencia exacta de `nombre == empresa` (eliminando falsos positivos en nombres propios como Robert/Bobby), comprobación del diff real en `assets/js/forms.js` para adjuntar `form_source` y `security_token`, y explicitado el modo `operation: insert` en el nodo de PostgreSQL.
+- **Archivos Modificados:**
+  - `assets/js/forms.js`
+  - `TASKS.md`
 
 ## TASK-028 — Corrección de Cabecera CSP (`connect-src`) para `n8n.solutech.blog`
 
