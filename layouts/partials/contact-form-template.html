@@ -66,10 +66,11 @@
       </select>
     </div>
   </div>
-  {{/* Honeypots anti-spam totalmente invisibles */}}
+  {{/* Honeypots anti-spam totalmente invisibles & Timestamp de renderizado */}}
   <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;opacity:0;height:0;width:0;overflow:hidden;" tabindex="-1">
     <input type="text" id="website-{{ $type }}" name="website" tabindex="-1" autocomplete="off">
     <input type="text" id="fax_number-{{ $type }}" name="fax_number" tabindex="-1" autocomplete="off">
+    <input type="hidden" name="form_rendered_at" value="{{ now.Unix }}">
   </div>
   {{ end }}
 

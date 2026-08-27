@@ -6,11 +6,11 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 24
+- **Total de tareas registradas:** 27
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 24
+- **Tareas completadas:** 27
 - **Tareas canceladas / descartadas:** 0
 - **Última actualización:** 2026-08-27
 
@@ -54,6 +54,34 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-027 — Remediación Server-Side H-03, H-04, H-05 (n8n Security Pipeline & Build-Time Timestamp)
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-08-27
+- **Descripción:** Implementación del campo `form_rendered_at` con timestamp `now.Unix` generado en build-time por Hugo en `layouts/partials/contact-form-template.html`. Eliminado token hardcodeado de `assets/js/forms.js` para cumplir STRICT-ZERO DISCLOSURE. Definido el nodo de código/filtro combinado de 4 capas server-side en n8n para descarte silencioso directo.
+- **Archivos Modificados:**
+  - `layouts/partials/contact-form-template.html`
+  - `assets/js/forms.js`
+  - `TASKS.md`
+
+## TASK-026 — Filtro Directo Anti-Spam: Baneo de "RobertBlesk" & Teléfonos Raros/Inválidos
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-08-27
+- **Descripción:** Implementación en `assets/js/forms.js` del baneo directo e incondicional de cualquier intento de envío que contenga las cadenas `blesk`, `robert` o `bobby`, coincidencia exacta de `nombre == empresa`, o teléfonos raros (< 8 dígitos, > 15 dígitos, caracteres alfabéticos o repeticiones falsas tipo 11111111).
+- **Archivos Modificados:**
+  - `assets/js/forms.js`
+  - `TASKS.md`
+
+## TASK-025 — Corrección de Bloqueo CORS Preflight & Formato Payload `FormData`
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-08-27
+- **Descripción:** Corrección en `assets/js/forms.js` pasando `security_token` y `form_source` dentro del payload FormData en lugar de cabeceras HTTP personalizadas para evitar bloqueos por políticas CORS Preflight (solicitudes `OPTIONS`) en navegadores. Documentación del nodo `IF` en n8n para silenciar alertas de Telegram de peticiones directas de bots.
+- **Archivos Modificados:**
+  - `assets/js/forms.js`
+  - `TASKS.md`
 
 ## TASK-024 — Resolución de Deadlock de Concurrencia en Workflow GitHub Actions (.github/workflows/hugo.yaml)
 
