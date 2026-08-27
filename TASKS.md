@@ -6,11 +6,11 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 21
+- **Total de tareas registradas:** 22
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 21
+- **Tareas completadas:** 22
 - **Tareas canceladas / descartadas:** 0
 - **Última actualización:** 2026-08-27
 
@@ -54,6 +54,15 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-022 — Depuración de Base de Datos Supabase & Autenticación de Webhook Anti-Spam
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-08-27
+- **Descripción:** Ejecución de depuración en la tabla `solutech_leads` en Supabase eliminando el 100% de los registros de spam (39 entradas de "RobertBlesk", "BobbyVah", etc.). Incorporación de la cabecera secreta de firma `X-Solutech-Webhook-Token: solutech-leads-v1-secure-token` en `assets/js/forms.js` para autorizar exclusivamente las peticiones emitidas desde el frontend real y proteger la reputación de la cuenta Gmail de autoresponder.
+- **Archivos Modificados:**
+  - `assets/js/forms.js`
+  - `TASKS.md`
 
 ## TASK-021 — Hardening Anti-Spam: Sistema Invisible Cero-Captcha & Limpieza Estética
 

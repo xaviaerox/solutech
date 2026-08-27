@@ -54,7 +54,8 @@ document.addEventListener("DOMContentLoaded", function() {
         body: data,
         headers: {
           "Accept": "application/json",
-          "X-Solutech-Source": "website-form"
+          "X-Solutech-Source": "website-form",
+          "X-Solutech-Webhook-Token": "solutech-leads-v1-secure-token"
         }
       }).then(response => {
         if (response.ok) {
