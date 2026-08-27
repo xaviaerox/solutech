@@ -6,11 +6,11 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 23
+- **Total de tareas registradas:** 24
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 23
+- **Tareas completadas:** 24
 - **Tareas canceladas / descartadas:** 0
 - **Última actualización:** 2026-08-27
 
@@ -54,6 +54,15 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-024 — Resolución de Deadlock de Concurrencia en Workflow GitHub Actions (.github/workflows/hugo.yaml)
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-08-27
+- **Descripción:** Corrección de la estructura de concurrencia en `.github/workflows/hugo.yaml`: eliminado el bloque duplicado `concurrency` dentro del job `deploy` que causaba interbloqueo (*deadlock*) con el bloque de concurrencia de nivel superior del workflow, y fijado `cancel-in-progress: false` estándar de GitHub Pages.
+- **Archivos Modificados:**
+  - `.github/workflows/hugo.yaml`
+  - `TASKS.md`
 
 ## TASK-023 — Actualización de Workflow CI/CD (.github/workflows/hugo.yaml)
 
