@@ -1,11 +1,11 @@
 ---
-title: "Nuevos Controles de Acceso Adaptativo en Google Cloud: Blindando tu Pyme"
+title: "Políticas de Acceso Condicional y Zero Trust en Google Workspace: Protección del Puesto de Trabajo Remoto"
 date: 2024-07-30T00:00:00+02:00
 slug: "controles-acceso-adaptativo-google-cloud-pymes"
-description: "Análisis de los nuevos controles de acceso adaptativo en Google Cloud y su impacto en la ciberseguridad de Pymes."
+description: "Guía de configuración de directivas Context-Aware Access basadas en la salud del dispositivo, red corporativa y autenticación FIDO2."
 categories: ["Ciberseguridad", "Google Cloud", "Gestión de Identidades"]
 keywords: ["Controles de seguridad Google Cloud", "Acceso Adaptativo Google Cloud", "Ciberseguridad Pymes", "IAM Google Cloud", "Zero Trust", "Protección de datos en la nube"]
-image: "images/blog-controles-acceso-adaptativo-google-cloud-pymes.png"
+image: "images/blog-controles-acceso-adaptativo-google-cloud-pymes.jpg"
 draft: false
 ---
 

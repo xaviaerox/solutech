@@ -1,14 +1,14 @@
 ---
-title: "Popa Botnet: El Riesgo Oculto de los Proxies Residenciales en Dispositivos Android TV para Pymes"
+title: "Botnet Popa: Cómo los Reproductores Android TV en Oficinas se Convierten en Nodos Proxy de Ciberataques"
 date: 2026-06-20T10:21:24+02:00
 slug: "popa-botnet-riesgo-proxies-residenciales-android-tv"
-description: "Descubre cómo el botnet Popa convierte dispositivos Android TV en proxies residenciales, exponiendo a Pymes a riesgos de ciberseguridad. Protege tu red."
+description: "Investigación sobre el malware Popa y la explotación de smart boxes desatendidas en salas de reuniones para el tráfico de proxies residenciales."
 categories: ["Ciberseguridad", "Riesgos Tecnológicos", "Seguridad de Red"]
 keywords: ["Popa botnet", "proxies residenciales", "Android TV box", "ciberseguridad Pymes", "seguridad de red", "malware Android"]
-image: "images/blog-popa-botnet-riesgo-proxies-residenciales-android-tv.png"
+image: "images/blog-popa-botnet-riesgo-proxies-residenciales-android-tv.jpg"
 draft: false
 ---
-## Resumen Ejecutivo
+## Panorama General
 **El botnet Popa ha estado utilizando millones de dispositivos Android TV como proxies residenciales, vinculándose a fraudes publicitarios y extracción masiva de datos. Investigaciones recientes lo conectan con NetNut, un proveedor de proxies, lo que subraya la necesidad crítica de que las Pymes evalúen los riesgos de seguridad de estos dispositivos en sus redes.**
 
 ## Introducción

@@ -1,16 +1,16 @@
 ---
-title: "Cross-Site Scripting (XSS) en TastyIgniter: Riesgos para la Ciberseguridad de tu Pyme"
+title: "Cross-Site Scripting (XSS) Almacenado en TastyIgniter: Peligro de Robo de Sesiones en Hostelería"
 date: 2026-07-27T12:16:27+02:00
 slug: "xss-tastyigniter-media-manager-pymes"
-description: "Descubre cómo la vulnerabilidad XSS almacenada en TastyIgniter Media Manager afecta a tu Pyme y qué medidas de ciberseguridad tomar para protegerte."
+description: "Disección técnica de la vulnerabilidad XSS en el gestor de medios de TastyIgniter y cómo evitar la inyección de scripts en pasarelas de pedidos."
 categories: ["Ciberseguridad", "Vulnerabilidades"]
 keywords: ["XSS", "TastyIgniter", "ciberseguridad pymes", "riesgos web", "protección web", "seguridad web"]
-image: "images/news-xss-tastyigniter-media-manager-pymes.png"
+image: "images/news-xss-tastyigniter-media-manager-pymes.jpg"
 draft: false
 business_impact: "Una vulnerabilidad XSS almacenada puede llevar a la pérdida de datos sensibles, suplantación de identidad de usuarios y comprometer la reputación de su negocio, afectando directamente la continuidad operativa y la confianza del cliente."
 source_url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/cross-site-scripting-xss-almacenado-en-media-manager-de-tastyigniter"
 ---
-## Resumen Ejecutivo
+## Panorama General
 Una vulnerabilidad significativa de Cross-Site Scripting (XSS) almacenado ha sido detectada en el Media Manager de TastyIgniter, un sistema de gestión de restaurantes. Este fallo permite a atacantes inyectar código malicioso persistente. Esto pone en riesgo la seguridad de los datos de clientes y la reputación de las Pymes que utilizan esta plataforma.
 
 ## Contexto

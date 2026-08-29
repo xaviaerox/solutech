@@ -5,7 +5,7 @@ slug: "vulnerabilidades-vmware-pymes-almeria-murcia"
 description: "INCIBE alerta sobre múltiples vulnerabilidades en productos VMware. Descubra cómo afectan a su Pyme y qué acciones tomar para proteger su infraestructura en Almería y Murcia."
 categories: ["Ciberseguridad", "Noticias", "Virtualización"]
 keywords: ["VMware", "vulnerabilidades", "ciberseguridad Pymes", "seguridad informática", "Almería", "Murcia", "MSP"]
-image: "images/news-vulnerabilidades-vmware-pymes-almeria-murcia.png"
+image: "images/news-vulnerabilidades-vmware-pymes-almeria-murcia.jpg"
 draft: false
 business_impact: "Una vulnerabilidad en VMware puede paralizar la infraestructura virtual de una Pyme, impidiendo el acceso a sistemas críticos, generando pérdidas económicas y de reputación."
 source_url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-vmware-4"

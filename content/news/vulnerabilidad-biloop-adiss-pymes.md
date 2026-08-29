@@ -1,11 +1,11 @@
 ---
-title: "Autorización Incorrecta en Biloop de Adiss: Riesgos y Protección para Pymes"
+title: "Fallo de Autorización en Biloop de Adiss: Pasos para Blindar la Gestión Contable en Despachos"
 date: 2026-07-09T21:45:11+02:00
 slug: "vulnerabilidad-biloop-adiss-pymes"
-description: "Descubre la vulnerabilidad de autorización en Biloop de Adiss y cómo afecta a tu Pyme. Protege tus datos y operaciones con Solutech."
+description: "Análisis de la vulnerabilidad en plataformas de sincronización bancaria y contable, y directivas de control de acceso para proteger datos fiscales de clientes."
 categories: ["Ciberseguridad", "Vulnerabilidades", "INCIBE"]
 keywords: ["Biloop Adiss", "vulnerabilidad autorización", "ciberseguridad pymes", "protección datos", "INCIBE", "riesgos empresariales"]
-image: "images/news-vulnerabilidad-biloop-adiss-pymes.png"
+image: "images/news-vulnerabilidad-biloop-adiss-pymes.jpg"
 draft: false
 business_impact: "Una autorización incorrecta puede exponer datos sensibles, permitir accesos no autorizados y paralizar operaciones críticas de tu Pyme, resultando en pérdidas económicas y reputacionales."
 source_url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/autorizacion-incorrecta-en-biloop-de-adiss"

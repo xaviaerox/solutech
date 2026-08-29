@@ -1,16 +1,16 @@
 ---
-title: "Inyección SQL en ERPNext: ¿Qué Riesgos Corre su Pyme y Cómo Protegerse?"
+title: "Inyección SQL en ERPNext: Anatomía de la Exfiltración de Bases de Datos Corporativas"
 date: 2026-07-29T11:19:46+02:00
 slug: "inyeccion-sql-erpnext-riesgos-pyme-proteccion"
-description: "Descubra los riesgos de la inyección SQL en sistemas como ERPNext para su Pyme y las medidas clave para proteger sus datos y operaciones. Solutech le asesora."
+description: "Análisis del fallo de sanitización en ERPNext, técnicas de inyección SQL a través de la API REST y directivas de mitigación en entornos productivos."
 categories: ["Ciberseguridad", "Vulnerabilidades"]
 keywords: ["Inyección SQL", "ERPNext", "seguridad Pymes", "riesgos ciberseguridad", "protección datos", "fraude informático"]
-image: "images/news-inyeccion-sql-erpnext-riesgos-pyme-proteccion.png"
+image: "images/news-inyeccion-sql-erpnext-riesgos-pyme-proteccion.jpg"
 draft: false
 business_impact: "La inyección SQL en ERPNext puede paralizar la gestión empresarial, exponiendo datos sensibles y generando pérdidas económicas y reputacionales."
 source_url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/inyeccion-sql-en-erpnext-de-frappe"
 ---
-## Resumen Ejecutivo
+## Panorama General
 Una reciente alerta de INCIBE destaca una vulnerabilidad grave de inyección SQL en ERPNext de Frappe. Este fallo permite a atacantes acceder y manipular la base de datos de su sistema de gestión empresarial.
 
 Esto pone en riesgo datos sensibles, la continuidad operativa y la reputación de su Pyme.

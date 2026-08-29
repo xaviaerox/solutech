@@ -7,7 +7,7 @@ description: "Resumen práctico de la certificación Azure Fundamentals para per
 tags: ["azure", "az-900", "certificaciones", "cloud", "microsoft"]
 categories: ["Certificaciones"]
 keywords: ["azure", "az-900", "certificaciones", "cloud", "microsoft", "sysadmin", "estudiar az-900"]
-image: "images/bg/bg-network.png"
+image: "images/guias-az900.jpg"
 aliases:
   - /guias/guia-estudio-az900-azure-fundamentals
   - /guias/guia-estudio-az900-azure-fundamentals/

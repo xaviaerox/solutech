@@ -1,16 +1,16 @@
 ---
-title: "Vulnerabilidad Crítica en Mura CMS: Riesgos de Ejecución Remota de Código para su Pyme"
+title: "Ejecución Remota de Código (RCE) en Mura CMS: Procedimiento de Parcheo y Aislamiento"
 date: 2026-07-13T11:56:32+02:00
 slug: "vulnerabilidad-rce-mura-cms-pymes"
-description: "Descubra los riesgos de la ejecución remota de código (RCE) en Mura CMS y cómo proteger su pyme de ataques que comprometen su web y datos."
+description: "Detalles técnicos del fallo RCE en portales Mura CMS y protocolo de respuesta para verificar la integridad del servidor web tras la publicación del parche."
 categories: ["Ciberseguridad", "Vulnerabilidades"]
 keywords: ["Mura CMS", "RCE", "ejecución remota de código", "ciberseguridad pymes", "INCIBE", "seguridad web"]
-image: "images/news-vulnerabilidad-rce-mura-cms-pymes.png"
+image: "images/news-vulnerabilidad-rce-mura-cms-pymes.jpg"
 draft: false
 business_impact: "Una vulnerabilidad crítica en su CMS puede paralizar su web, exponer datos de clientes y generar pérdidas económicas y de reputación."
 source_url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/ejecucion-remota-de-codigo-en-el-cms-de-mura-software"
 ---
-## Resumen Ejecutivo
+## Panorama General
 **INCIBE-CERT ha alertado sobre una vulnerabilidad de ejecución remota de código (RCE) en Mura Software CMS. Este fallo permite a atacantes tomar control total de su sitio web, exponiendo datos sensibles y paralizando operaciones. Es crucial actuar de inmediato para proteger la continuidad de su negocio.**
 
 ## Contexto

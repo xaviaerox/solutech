@@ -1,16 +1,16 @@
 ---
-title: "Vulnerabilidades Críticas en NetScaler de Citrix: ¿Está su Pyme en Riesgo?"
+title: "Vulnerabilidades en Citrix NetScaler: Protocolo de Contención para Gateways y VPNs Corporativas"
 date: 2026-07-05T19:15:34+02:00
 slug: "vulnerabilidades-netscaler-citrix-pymes-riesgo"
-description: "Descubra las últimas vulnerabilidades en Citrix NetScaler y cómo afectan a su Pyme. Proteja su negocio en Almería y Murcia con Solutech."
+description: "Guía técnica para verificar y actualizar appliances NetScaler ADC ante ataques dirigidos a pasarelas de acceso remoto en empresas medianas."
 categories: ["Ciberseguridad", "Vulnerabilidades", "Noticias"]
 keywords: ["vulnerabilidades NetScaler Citrix", "ciberseguridad Pymes Almería", "protección datos Murcia", "ataques ransomware", "parches seguridad", "MSP Almería"]
-image: "images/news-vulnerabilidades-netscaler-citrix-pymes-riesgo.png"
+image: "images/news-vulnerabilidades-netscaler-citrix-pymes-riesgo.jpg"
 draft: false
 business_impact: "Una vulnerabilidad en NetScaler puede paralizar sus operaciones, exponer datos sensibles y generar costes de recuperación significativos para su Pyme."
 source_url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-netscaler-de-citrix"
 ---
-## Resumen Ejecutivo
+## Panorama General
 
 Múltiples vulnerabilidades importantes han sido descubiertas en los dispositivos NetScaler (anteriormente Citrix ADC y Gateway). Esto expone a las Pymes a riesgos significativos, como la ejecución remota de código y el acceso no autorizado.
 

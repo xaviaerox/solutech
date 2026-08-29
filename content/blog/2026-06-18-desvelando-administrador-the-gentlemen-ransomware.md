@@ -1,15 +1,15 @@
 ---
-title: "Desvelando al Administrador de 'The Gentlemen': Lecciones de Ciberseguridad para Pymes"
+title: "Operaciones del Ransomware 'The Gentlemen': Vectores de Doble Extorsión y Tácticas de Cifrado"
 date: 2026-06-18T14:58:19+02:00
 slug: "desvelando-administrador-the-gentlemen-ransomware"
-description: "Análisis técnico sobre la desarticulación del administrador del grupo ransomware 'The Gentlemen' y las implicaciones para la ciberseguridad de las Pymes."
+description: "Perfil técnico del actor de amenazas The Gentlemen, sus tácticas de persistencia y cómo blindar repositorios de copia de seguridad inmutables."
 categories: ["Ciberseguridad", "Ransomware"]
 keywords: ["Ransomware The Gentlemen", "ciberseguridad Pymes", "ataques cibernéticos", "seguridad perimetral", "Alexander Yapaev"]
-image: "images/blog-desvelando-administrador-the-gentlemen-ransomware.png"
+image: "images/blog-desvelando-administrador-the-gentlemen-ransomware.jpg"
 draft: false
 ---
 
-## Resumen Ejecutivo
+## Panorama General
 **La identidad del administrador del grupo de ransomware "The Gentlemen", Alexander Andreevich Yapaev, ha sido desvelada. Este análisis técnico detalla sus métodos operativos y ofrece recomendaciones cruciales para que las Pymes fortalezcan su ciberseguridad preventiva frente a amenazas RaaS cada vez más sofisticadas.**
 
 ## Introducción

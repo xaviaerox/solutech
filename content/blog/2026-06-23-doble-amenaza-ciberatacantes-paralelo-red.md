@@ -1,11 +1,11 @@
 ---
-title: "Doble Amenaza: Cuando Dos Ciberatacantes Operan en Paralelo en Tu Red"
+title: "Coexistencia de Múltiples Atacantes en una Misma Red: Protocolo de Respuesta Forense Avanzada"
 date: 2026-06-23T12:33:13+02:00
 slug: "doble-amenaza-ciberatacantes-paralelo-red"
-description: "Descubre cómo dos ciberatacantes pueden operar simultáneamente en una misma red, ofuscando su actividad y complicando la detección. Solutech analiza el informe de Microsoft y ofrece soluciones."
+description: "Qué hacer cuando dos grupos criminales operan en tus servidores al mismo tiempo tras la filtración de credenciales en la Dark Web."
 categories: ["Ciberseguridad", "Análisis de Amenazas"]
 keywords: ["ciberataque paralelo", "detección de amenazas", "respuesta a incidentes", "seguridad Pymes", "vulnerabilidades SharePoint", "MFA"]
-image: "images/blog-doble-amenaza-ciberatacantes-paralelo-red.png"
+image: "images/blog-doble-amenaza-ciberatacantes-paralelo-red.jpg"
 draft: false
 source_url: "https://www.microsoft.com/en-us/security/blog/2026/06/22/one-intrusion-two-cyberattackers-uncovering-parallel-threat-activity/"
 ---

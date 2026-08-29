@@ -8,7 +8,7 @@ description: Analizamos cómo la IA de Google refuerza la ciberseguridad para
 categories:
   - Ciberseguridad
   - Inteligencia Artificial
-image: https://fotografias-2.larazon.es/assets/2026/02/el-nuevo-informe-de-google-analiza-el-panorama-de-las-ciberamenazas.jpg?width=1900&height=1069
+image: "images/news-ia-ofensiva-confianza-digital-pymes-protegerse.jpg"
 draft: false
 ---
 

@@ -1,8 +1,8 @@
 ---
-title: "Detenido en Murcia por suplantar identidades con IA en videollamadas para obtener firmas digitales"
+title: "Fraude de Identidad con IA en Murcia: Cómo un Deepfake Burló la Verificación de Firma Digital"
 date: 2026-08-12T15:10:00+02:00
 slug: "detenido-murcia-suplantacion-ia-firma-electronica"
-description: "Un ciberdelincuente alteraba su rostro en tiempo real para engañar a empresas certificadoras. Un fallo de un segundo en la IA reveló su rostro real."
+description: "Crónica del caso judicial donde un atacante utilizó clonación facial en tiempo real para obtener certificados digitales, y cómo blindar los procesos de validación biométrica."
 categories: ["Ciberseguridad", "Casos Reales"]
 keywords: ["detenido Murcia IA", "suplantación firma electrónica", "ciberseguridad pymes", "deepfake fraude"]
 image: "images/news-detenido-murcia-suplantacion-ia-firma-electronica.jpg"

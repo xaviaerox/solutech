@@ -1,11 +1,11 @@
 ---
-title: "Alerta Crítica: FortiSandbox Vulnerabilidad que Pone en Riesgo la Ciberseguridad de tu Pyme"
+title: "Vulnerabilidad Crítica en FortiSandbox: Análisis del Fallo de Aislamiento y Medidas de Contención"
 date: 2026-07-09T11:52:17+02:00
 slug: "fortisandbox-vulnerabilidad-ciberseguridad-pymes"
-description: "INCIBE-CERT alerta sobre una vulnerabilidad crítica en FortiSandbox. Descubre cómo esta falla afecta a tu Pyme y qué acciones tomar para proteger tus sistemas."
+description: "Evaluación de la vulnerabilidad en appliances FortiSandbox y recomendaciones de configuración para evitar evasión de análisis en perímetros corporativos."
 categories: ["Ciberseguridad", "Vulnerabilidades", "Fortinet"]
 keywords: ["FortiSandbox vulnerabilidad", "ciberseguridad Pymes", "seguridad Fortinet", "protección malware", "INCIBE-CERT", "Almería", "Murcia"]
-image: "images/news-fortisandbox-vulnerabilidad-ciberseguridad-pymes.png"
+image: "images/news-fortisandbox-vulnerabilidad-ciberseguridad-pymes.jpg"
 draft: false
 business_impact: "Una vulnerabilidad en FortiSandbox puede permitir que malware avanzado burle las defensas, resultando en infecciones, pérdida de datos o interrupción operativa para tu Pyme."
 source_url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/neutralizacion-incorrecta-de-elementos-especiales-en-fortisandbox-de-fortinet"

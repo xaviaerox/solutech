@@ -1,11 +1,11 @@
 ---
-title: "Análisis de intrusiones paralelas: Cuando dos atacantes coinciden en tu red"
+title: "Intrusiones Paralelas: Cuando Dos Actores de Amenaza Coinciden en la Misma Red Corporativa"
 date: 2026-06-23T14:08:54+02:00
 slug: "analisis-intrusiones-paralelas-ciberseguridad"
-description: "Analizamos cómo detectar intrusiones paralelas donde dos atacantes operan simultáneamente, complicando la respuesta ante incidentes en Pymes."
+description: "Análisis forense de incidentes donde múltiples atacantes explotan simultáneamente un servidor expuesto, complicando la contención y respuesta en Pymes."
 categories: ["Ciberseguridad", "Análisis de Amenazas"]
 keywords: ["ciberseguridad", "respuesta ante incidentes", "intrusión paralela", "seguridad pymes", "detección de amenazas"]
-image: "images/news-analisis-intrusiones-paralelas-ciberseguridad.png"
+image: "images/news-analisis-intrusiones-paralelas-ciberseguridad.jpg"
 business_impact: "La presencia de múltiples atacantes simultáneos puede enmascarar el alcance real de una brecha, provocando que las medidas de contención tradicionales sean insuficientes y prolongando el tiempo de inactividad operativa."
 draft: false
 source_url: "https://www.microsoft.com/en-us/security/blog/2026/06/22/one-intrusion-two-cyberattackers-uncovering-parallel-threat-activity/"

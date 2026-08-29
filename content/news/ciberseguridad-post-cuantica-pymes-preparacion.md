@@ -5,7 +5,7 @@ slug: "ciberseguridad-post-cuantica-pymes-preparacion"
 description: "La computación cuántica amenaza el cifrado actual. Descubre cómo la criptografía post-cuántica protege la continuidad de tu negocio a largo plazo."
 categories: ["Ciberseguridad", "Estrategia IT"]
 keywords: ["ciberseguridad", "computación cuántica", "criptografía post-cuántica", "protección de datos", "pymes"]
-image: "images/news-ciberseguridad-post-cuantica-pymes-preparacion.png"
+image: "images/news-ciberseguridad-post-cuantica-pymes-preparacion.jpg"
 business_impact: "La falta de preparación ante la computación cuántica pone en riesgo la confidencialidad de datos históricos, permitiendo que atacantes descifren información sensible capturada hoy en el futuro."
 draft: false
 source_url: "https://www.microsoft.com/en-us/security/blog/2026/06/30/microsoft-advances-quantum-safe-security-as-the-risk-timeline-shifts/"

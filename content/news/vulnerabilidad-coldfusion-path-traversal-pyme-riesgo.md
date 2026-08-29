@@ -1,11 +1,11 @@
 ---
-title: "Vulnerabilidad Crítica en ColdFusion: ¿Tu Pyme está en Riesgo de Path Traversal?"
+title: "Vulnerabilidad Path Traversal en Adobe ColdFusion: Diagnóstico y Hardening de Servidores Web"
 date: 2026-07-07T11:43:06+02:00
 slug: "vulnerabilidad-coldfusion-path-traversal-pyme-riesgo"
-description: "Descubre cómo la vulnerabilidad Path Traversal en Adobe ColdFusion puede exponer los datos de tu Pyme y qué medidas tomar para protegerte."
+description: "Examen técnico del fallo de salto de directorio en ColdFusion y procedimientos inmediatos de bloqueo mediante WAF y permisos mínimos en el sistema de archivos."
 categories: ["Ciberseguridad", "Vulnerabilidades", "Protección de Datos"]
 keywords: ["ColdFusion", "Path Traversal", "seguridad Pyme", "ciberseguridad Almería", "ciberseguridad Murcia", "protección de datos"]
-image: "images/news-vulnerabilidad-coldfusion-path-traversal-pyme-riesgo.png"
+image: "images/news-vulnerabilidad-coldfusion-path-traversal-pyme-riesgo.jpg"
 draft: false
 business_impact: "Una explotación de esta vulnerabilidad puede llevar a la pérdida de datos sensibles, interrupción de servicios y graves sanciones por incumplimiento del RGPD."
 source_url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/path-traversal-en-coldfusion-de-adobe"

@@ -5,7 +5,7 @@ slug: "vulnerabilidades-wordpress-pymes-almeria-murcia"
 description: "Descubra las últimas vulnerabilidades en WordPress y cómo afectan a su Pyme. Solutech le guía para proteger su web y evitar riesgos operativos."
 categories: ["Ciberseguridad", "WordPress", "Pymes"]
 keywords: ["vulnerabilidades WordPress", "seguridad web Pymes", "actualizar WordPress", "ciberseguridad Almería", "ciberseguridad Murcia", "protección web"]
-image: "images/news-vulnerabilidades-wordpress-pymes-almeria-murcia.png"
+image: "images/news-vulnerabilidades-wordpress-pymes-almeria-murcia.jpg"
 draft: false
 business_impact: "Una web comprometida por vulnerabilidades en WordPress puede paralizar su negocio, dañar su reputación y generar pérdidas económicas significativas."
 source_url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-wordpress"

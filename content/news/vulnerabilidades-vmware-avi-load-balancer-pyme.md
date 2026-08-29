@@ -1,16 +1,16 @@
 ---
-title: "Vulnerabilidades Críticas en VMware Avi Load Balancer: ¿Cómo Afecta a su Pyme?"
+title: "Fallos Críticos en VMware Avi Load Balancer: Pasos para Evitar la Manipulación de Tráfico Interno"
 date: 2026-07-15T10:44:24+02:00
 slug: "vulnerabilidades-vmware-avi-load-balancer-pyme"
-description: "INCIBE alerta sobre fallos críticos en VMware Avi Load Balancer. Descubra los riesgos para su Pyme y cómo proteger su infraestructura."
+description: "Evaluación de seguridad en balanceadores de carga VMware Avi y directivas de autenticación estricta en el plano de control para evitar accesos indebidos."
 categories: ["Ciberseguridad", "Vulnerabilidades"]
 keywords: ["VMware Avi Load Balancer", "ciberseguridad pymes", "riesgos informáticos", "protección de datos", "INCIBE"]
-image: "images/news-vulnerabilidades-vmware-avi-load-balancer-pyme.png"
+image: "images/news-vulnerabilidades-vmware-avi-load-balancer-pyme.jpg"
 draft: false
 business_impact: "Una interrupción de este tipo puede impedir que una PYME acceda a servicios críticos, afectando la continuidad operativa y la facturación."
 source_url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-vmware-avi-load-balancer-de-broadcom"
 ---
-## Resumen Ejecutivo
+## Panorama General
 **INCIBE-CERT ha emitido una alerta sobre varias vulnerabilidades de seguridad en VMware Avi Load Balancer, una herramienta importante para la gestión de tráfico en muchas infraestructuras.**
 
 **Estos fallos pueden permitir a atacantes tomar el control de sistemas, robar datos o paralizar servicios, con posibles consecuencias para la continuidad operativa y la seguridad de su Pyme.**

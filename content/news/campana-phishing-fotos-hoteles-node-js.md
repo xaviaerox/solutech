@@ -1,11 +1,11 @@
 ---
-title: "Ciberseguridad en hoteles: la campaña de falsas imágenes que amenaza al sector turístico en Almería y Murcia"
+title: "Campaña de Phishing con Node.js en el Sector Turístico: Vector de Persistencia y Detección"
 date: 2026-06-27T10:54:51+02:00
 slug: "campana-phishing-fotos-hoteles-node-js"
-description: "Analizamos la campaña de phishing que suplanta quejas de clientes para infectar hoteles con malware persistente. Protege tu negocio turístico hoy."
+description: "Cómo los atacantes despliegan payloads en Node.js mediante falsos correos de huéspedes y cómo blindar las terminales de recepción en el sector hotelero."
 categories: ["Ciberseguridad", "Soporte IT"]
 keywords: ["ciberseguridad hoteles", "phishing sector turístico", "seguridad informática Almería", "soporte informático Murcia"]
-image: "images/news-campana-phishing-fotos-hoteles-node-js.png"
+image: "images/news-campana-phishing-fotos-hoteles-node-js.jpg"
 draft: false
 business_impact: "Una infección de este tipo puede paralizar el sistema de reservas de un hotel, exponer datos de clientes y provocar pérdidas reputacionales y multas de protección de datos."
 source_url: "https://www.microsoft.com/en-us/security/blog/2026/06/25/photo-zip-campaign-targeting-hospitality-industry-delivers-node-js-implant-persistent-access/"

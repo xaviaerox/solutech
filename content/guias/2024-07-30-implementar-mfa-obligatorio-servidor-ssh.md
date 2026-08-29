@@ -1,11 +1,11 @@
 ---
-title: "Cómo Implementar MFA Obligatorio en Servidores SSH para Pymes"
+title: "Implementación de MFA Obligatorio en Servidores SSH: Guía de Hardening con Google Authenticator y FIDO2"
 date: 2024-07-30T00:00:00+02:00
 slug: "implementar-mfa-obligatorio-servidor-ssh"
-description: "Guía práctica para configurar la autenticación multifactor (MFA) obligatoria en servidores SSH, reforzando la seguridad de acceso para tu Pyme."
+description: "Tutorial técnico paso a paso para configurar autenticación de doble factor obligatoria en OpenSSH mediante PAM, protegiendo accesos root contra ataques de fuerza bruta."
 categories: ["Ciberseguridad", "Servidores Linux"]
 keywords: ["MFA obligatorio en servidor SSH", "seguridad SSH Pymes", "autenticación multifactor Linux", "proteger acceso remoto", "ciberseguridad servidores", "PAM Google Authenticator"]
-image: "images/blog-implementar-mfa-obligatorio-servidor-ssh.png"
+image: "images/blog-implementar-mfa-obligatorio-servidor-ssh.jpg"
 aliases:
   - /blog/implementar-mfa-obligatorio-servidor-ssh
 draft: false

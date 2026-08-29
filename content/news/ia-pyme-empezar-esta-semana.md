@@ -1,13 +1,13 @@
 ---
-title: "IA en la pyme: cómo empezar a ganar horas de trabajo esta semana"
+title: "Adopción Práctica de IA en la Pyme: Automatización de Flujos y Productividad sin Brechas de Seguridad"
 date: 2026-07-21T18:05:00+02:00
 slug: "ia-pyme-empezar-esta-semana"
-description: "Las pymes de Almería y Murcia empiezan a usar IA para automatizar tareas repetitivas. Te contamos por dónde empezar."
+description: "Estrategia paso a paso para implementar herramientas de inteligencia artificial en departamentos de compras, facturación y soporte minimizando fugas de datos."
 categories: ["Inteligencia Artificial"]
 tags: ["IA", "automatización", "pymes"]
 keywords: ["IA en la pyme", "automatización de procesos", "IA Almería Murcia", "productividad pymes", "n8n", "ChatGPT"]
 author: "Xavi Alonso - Solutech"
-image: "images/news-ia-pyme-empezar-esta-semana.png"
+image: "images/news-ia-pyme-empezar-esta-semana.jpg"
 business_impact: "Automatizar flujos de trabajo repetitivos con IA permite a las pequeñas empresas recuperar entre 5 y 8 horas semanales por empleado sin incrementar la plantilla."
 draft: false
 ---

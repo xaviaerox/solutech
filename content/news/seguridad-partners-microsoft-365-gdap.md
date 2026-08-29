@@ -1,11 +1,11 @@
 ---
-title: "Seguridad en la cadena de suministro: Por qué el acceso de tu partner de Microsoft 365 puede ser un riesgo para tu Pyme"
+title: "Riesgos en la Cadena de Suministro: Cómo Auditar y Restringir Permisos de Partners en Microsoft 365 con GDAP"
 date: 2026-07-05T11:01:07+02:00
 slug: "seguridad-partners-microsoft-365-gdap"
-description: "Microsoft endurece la seguridad de sus partners. Descubre cómo proteger el acceso a tu Microsoft 365 y evitar ataques de cadena de suministro."
+description: "Guía técnica para migrar de permisos delegados heredados (DAP) a privilegios de administración pormenorizados (GDAP) y evitar accesos no autorizados a tu tenant."
 categories: ["Ciberseguridad", "Soporte IT"]
 keywords: ["seguridad microsoft 365", "partner microsoft almeria", "gdap microsoft", "ciberseguridad pymes murcia"]
-image: "images/news-seguridad-partners-microsoft-365-gdap.png"
+image: "images/news-seguridad-partners-microsoft-365-gdap.jpg"
 draft: false
 business_impact: "Un fallo de seguridad en tu proveedor de informática puede dar acceso total a los atacantes a tu correo, datos de clientes y facturación sin que te des cuenta, paralizando tu actividad por completo."
 source_url: "https://www.microsoft.com/en-us/security/blog/2026/07/02/improving-security-posture-across-the-microsoft-partner-ecosystem/"

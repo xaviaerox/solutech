@@ -1,16 +1,16 @@
 ---
-title: "Vulnerabilidad en osTicket: Proteja la Recuperación de Contraseñas de su Pyme"
+title: "Fallo en Recuperación de Contraseñas de osTicket: Riesgo de Secuestro de Cuentas de Soporte"
 date: 2026-07-31T11:25:42+02:00
 slug: "vulnerabilidad-osticket-recuperacion-contrasena-pyme"
-description: "Descubra cómo un mecanismo débil de recuperación de contraseña en osTicket puede exponer su Pyme a riesgos de seguridad y qué acciones tomar."
+description: "Cómo una debilidad en el token de restablecimiento de osTicket permite a atacantes tomar el control de tickets confidenciales de clientes."
 categories: ["Ciberseguridad", "Soporte Informático"]
 keywords: ["osTicket", "seguridad pyme", "recuperación contraseña", "vulnerabilidad", "ciberseguridad almería", "soporte informático murcia"]
-image: "images/news-vulnerabilidad-osticket-recuperacion-contrasena-pyme.png"
+image: "images/news-vulnerabilidad-osticket-recuperacion-contrasena-pyme.jpg"
 draft: false
 business_impact: "Una vulnerabilidad en el sistema de recuperación de contraseñas de osTicket puede permitir a atacantes acceder a su sistema de soporte, comprometiendo datos sensibles de clientes y la continuidad operativa."
 source_url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/mecanismo-debil-de-recuperacion-de-contrasena-en-osticket-de-enhancesoft-llc"
 ---
-## Resumen Ejecutivo
+## Panorama General
 Un reciente aviso de INCIBE-CERT alerta sobre un **mecanismo débil de recuperación de contraseña en osTicket**, una herramienta popular de gestión de tickets. Esta vulnerabilidad representa un riesgo considerable para las Pymes, ya que podría permitir a atacantes obtener acceso no autorizado a sistemas de soporte y la información confidencial que estos contienen.
 
 ## Contexto

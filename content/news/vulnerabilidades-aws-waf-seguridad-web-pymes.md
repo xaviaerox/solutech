@@ -1,16 +1,16 @@
 ---
-title: "Vulnerabilidades en AWS WAF: Protege tu Pyme de ataques web en Almería y Murcia"
+title: "Evasión de Reglas en AWS WAF: Hardening de Filtros Web y Protección contra Inyecciones HTTP"
 date: 2026-07-11T10:10:59+02:00
 slug: "vulnerabilidades-aws-waf-seguridad-web-pymes"
-description: "Descubre cómo las vulnerabilidades en AWS WAF pueden afectar a tu Pyme y qué medidas tomar para proteger tus aplicaciones web."
+description: "Cómo auditar y reforzar las reglas gestionadas de AWS WAF para evitar técnicas avanzadas de ofuscación de payloads dirigidas a aplicaciones de comercio electrónico."
 categories: ["Ciberseguridad", "Protección Web"]
 keywords: ["vulnerabilidades AWS WAF", "seguridad web Pymes", "ciberseguridad Almería Murcia", "protección aplicaciones web", "ataques web"]
-image: "images/news-vulnerabilidades-aws-waf-seguridad-web-pymes.png"
+image: "images/news-vulnerabilidades-aws-waf-seguridad-web-pymes.jpg"
 draft: false
 business_impact: "Una interrupción de este tipo puede impedir que una PYME acceda a correo, documentación o facturación durante horas o días."
 source_url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-el-waf-de-aws"
 ---
-## Resumen Ejecutivo
+## Panorama General
 **INCIBE-CERT ha alertado sobre múltiples vulnerabilidades en el Web Application Firewall (WAF) de AWS. Esto significa que, si tu Pyme utiliza servicios web alojados en AWS, tus aplicaciones podrían estar expuestas a ataques si no se gestionan y actualizan correctamente las configuraciones de seguridad.**
 
 ## Contexto

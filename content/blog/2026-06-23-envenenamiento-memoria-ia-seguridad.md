@@ -1,11 +1,11 @@
 ---
-title: "Envenenamiento de Memoria en IA: El Nuevo Vector de Ataque Silencioso que Amenaza a las Pymes"
+title: "Ataques de Envenenamiento de Memoria en Agentes de IA: Riesgos para Bases de Conocimiento Corporativas"
 date: 2026-06-23T00:10:30+02:00
 slug: "envenenamiento-memoria-ia-seguridad"
-description: "Analizamos los ataques de envenenamiento de memoria en asistentes de IA y cómo proteger la infraestructura de tu empresa frente a esta amenaza silenciosa."
+description: "Cómo los atacantes manipulan la memoria contextual y embeddings de modelos de lenguaje empresariales mediante inyecciones indirectas."
 categories: ["Ciberseguridad", "Inteligencia Artificial"]
 keywords: ["envenenamiento de memoria IA", "seguridad en IA", "ataques de inyección de prompts", "ciberseguridad pymes", "copilot seguridad"]
-image: "images/blog-envenenamiento-memoria-ia-seguridad.png"
+image: "images/blog-envenenamiento-memoria-ia-seguridad.jpg"
 draft: false
 source_url: "https://www.microsoft.com/en-us/security/blog/2026/06/22/guarding-ai-memory/"
 ---

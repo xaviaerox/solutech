@@ -1,11 +1,11 @@
 ---
-title: "Ransomware BlackByte en Murcia: Cómo proteger tu clínica de la pérdida de datos"
+title: "Autopsia del Ataque Ransomware BlackByte a una Clínica en Murcia: Vector de Entrada y Recuperación"
 date: 2026-06-23T10:03:13+02:00
 slug: "ransomware-blackbyte-clinica-murcia"
-description: "El ransomware BlackByte ataca a una clínica en Murcia exigiendo 3 BTC. Analizamos el vector de ataque y cómo proteger tu infraestructura médica."
+description: "Análisis cronológico de la infección por BlackByte en un entorno sanitario regional. Cómo la falta de segmentación de red permitió el cifrado de historiales médicos."
 categories: ["Ciberseguridad", "Casos Reales"]
 keywords: ["ransomware BlackByte", "ciberseguridad Murcia", "seguridad informática clínicas", "copias de seguridad inmutables"]
-image: "images/news-ransomware-blackbyte-clinica-murcia.png"
+image: "images/news-ransomware-blackbyte-clinica-murcia.jpg"
 draft: false
 business_impact: "El secuestro de expedientes médicos paraliza por completo la actividad de una clínica, impidiendo la atención a pacientes y exponiendo al negocio a sanciones graves por pérdida de datos confidenciales."
 ---

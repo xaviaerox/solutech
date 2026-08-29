@@ -1,11 +1,11 @@
 ---
-title: "Cómo configurar un túnel VPN en malla seguro para conectar tus oficinas"
+title: "Configuración de Túneles VPN en Malla (Mesh VPN): Conexión Cero-Confianza entre Oficinas Remotas"
 date: 2026-06-23T10:19:44+02:00
 slug: "configurar-tunel-vpn-malla-seguro-oficinas"
-description: "Aprende a configurar un túnel VPN en malla seguro para interconectar las sedes de tu pyme en Almería y Murcia de forma rápida, ligera y cifrada."
+description: "Guía de despliegue de redes privadas virtuales en topología de malla con WireGuard para interconectar sedes y teletrabajadores con latencia mínima y cifrado de grado militar."
 categories: ["Ciberseguridad", "Redes"]
 keywords: ["túnel VPN en malla seguro", "red privada cifrada punto a punto", "interconexión de sedes", "seguridad informática Almería"]
-image: "images/blog-configurar-tunel-vpn-malla-seguro-oficinas.png"
+image: "images/blog-configurar-tunel-vpn-malla-seguro-oficinas.jpg"
 business_impact: "La falta de una interconexión segura entre sedes expone los datos corporativos a interceptaciones y ataques de ransomware, paralizando la facturación y el acceso a servidores locales de la empresa."
 aliases:
   - /blog/configurar-tunel-vpn-malla-seguro-oficinas

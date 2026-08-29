@@ -1,16 +1,16 @@
 ---
-title: "Vulnerabilidad Grave en OCS Inventory: ¿Cómo Afecta a la Ciberseguridad de su Pyme?"
+title: "Exposición de Datos en OCS Inventory: Cómo Neutralizar la Inclusión Local de Archivos (LFI)"
 date: 2026-07-25T10:23:14+02:00
 slug: "vulnerabilidad-ocs-inventory-pyme-ciberseguridad"
-description: "Descubra la vulnerabilidad de inclusión de archivos locales en OCS Inventory y cómo proteger su Pyme de riesgos como la fuga de datos y el acceso no autorizado."
+description: "Análisis de la vulnerabilidad LFI en el gestor de inventario OCS y medidas de mitigación para servidores de monitorización internos en redes Pyme."
 categories: ["Ciberseguridad", "Vulnerabilidades", "Gestión IT"]
 keywords: ["OCS Inventory vulnerabilidad", "inclusión de archivos locales", "ciberseguridad Pyme", "seguridad informática", "Almería", "Murcia"]
-image: "images/news-vulnerabilidad-ocs-inventory-pyme-ciberseguridad.png"
+image: "images/news-vulnerabilidad-ocs-inventory-pyme-ciberseguridad.jpg"
 draft: false
 business_impact: "Una vulnerabilidad en OCS Inventory puede exponer datos sensibles de su infraestructura, permitiendo a atacantes acceder a información crítica o ejecutar código malicioso, comprometiendo la continuidad operativa y la privacidad de su Pyme."
 source_url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/inclusion-de-archivos-locales-en-ocs-inventory"
 ---
-## Resumen Ejecutivo
+## Panorama General
 Una reciente alerta de INCIBE-CERT ha revelado una vulnerabilidad grave de inclusión de archivos locales en OCS Inventory.
 Este fallo permite a un atacante acceder a información sensible del sistema o incluso ejecutar código malicioso.
 Esto pone en riesgo la infraestructura IT y los datos de las Pymes que utilizan esta herramienta de gestión de inventario.
