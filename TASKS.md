@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 29
+- **Total de tareas registradas:** 30
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 29
+- **Tareas completadas:** 30
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-08-27
+- **Última actualización:** 2026-08-29
 
 ---
 
@@ -54,6 +54,18 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-030 — Saneamiento y Sincronización de PROJECT_CONTEXT.md, Versión 1.2.0 y Protocolo Doc-DoD
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-08-29
+- **Descripción:** Sincronización integral del archivo canónico `PROJECT_CONTEXT.md` y `CHANGELOG.md` con la versión 1.2.0 (`package.json`), incorporando la documentación detallada del pipeline anti-spam de 5 capas en `assets/js/forms.js`, timestamp en build-time `form_rendered_at`, baneo de firmas bot/RobertBlesk, cabeceras CSP (`n8n.solutech.blog` y Google Analytics) e integración con el workflow automatizado de noticias `auto-blog.yml`. Adopción permanente del protocolo *Documentation Definition of Done (Doc-DoD)* en `.agents/AGENTS.md`.
+- **Archivos Modificados:**
+  - `package.json`
+  - `CHANGELOG.md`
+  - `PROJECT_CONTEXT.md`
+  - `.agents/AGENTS.md`
+  - `TASKS.md`
 
 ## TASK-029 — Verificación con Evidencia Real y Corrección Final de Filtro Anti-Spam
 

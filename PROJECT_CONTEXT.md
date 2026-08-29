@@ -20,21 +20,23 @@
 
 **Repositorio:** `xaviaerox/solutech` (PÚBLICO en GitHub).
 
-**Versión actual:** `1.1.0`.
+**Versión actual:** `1.2.0`.
 
-**Última actualización:** 2026-07-31.
+**Última actualización:** 2026-08-29.
 
 ---
 
 # Visión General
 
 Explicación de alto nivel del sistema:
-El repositorio `solutech` gestiona el frontend comercial público de Solutech. Utiliza Hugo para generar HTML estático empaquetado a partir de plantillas en `layouts/` y archivos Markdown en `content/`. Incluye un sistema modular de estilos CSS Vanilla y módulos JavaScript ES6 puros. La edición de contenidos se realiza vía Decap CMS (`static/admin/config.yml`), conectándose a un servidor OAuth en VPS para autenticación con GitHub.
+El repositorio `solutech` gestiona el frontend comercial público de Solutech. Utiliza Hugo para generar HTML estático empaquetado a partir de plantillas en `layouts/` y archivos Markdown en `content/`. Incluye un sistema modular de estilos CSS Vanilla y módulos JavaScript ES6 puros. La edición de contenidos se realiza vía Decap CMS (`static/admin/config.yml`) conectándose a un servidor OAuth en VPS, y mediante publicación automatizada desde `content-system` a través de GitHub Actions (`.github/workflows/auto-blog.yml`).
 
 **Qué hace:**
 - Presenta los servicios de soporte Micro-MSP y la filosofía de continuidad de negocio de Solutech.
 - Proporciona la herramienta *Cyber-Check* (autodiagnóstico interactivo de 8 preguntas críticas con interfaz Dark Terminal).
 - Proporciona la *Calculadora Micro-MSP* para estimar presupuestos de soporte mensual en tiempo real según la Matriz Oficial de Servicios V1 (S Essential 99€/mes, S Pro 149€/mes, M Basic 199€/mes, M Pro 299€/mes).
+- Captura leads comerciales a través de un formulario protegido con un pipeline anti-spam de 5 capas en cliente y servidor (`assets/js/forms.js` -> `https://n8n.solutech.blog/webhook/leads`).
+- Publica automáticamente artículos técnicos optimizados para SEO y redes sociales mediante el motor de IA `content-system`.
 - Permite la búsqueda en tiempo real client-side de artículos del blog.
 - Integra Decap CMS para publicar contenidos sin tocar código.
 
@@ -50,23 +52,30 @@ El repositorio `solutech` gestiona el frontend comercial público de Solutech. U
 ### Diagrama ASCII
 
 ```
- +-----------------------------------------------------------------------+
- |                     Sitio Estático Hugo (Jamstack)                   |
- |  HTML5 Semántico + CSS Vanilla Modular + JavaScript ES6 Nativo       |
- +-----------------------------------+-----------------------------------+
-                                     |
-                                     | Publicado vía GitHub Actions
-                                     v
- +-----------------------------------+-----------------------------------+
- |                    GitHub Pages (https://solutech.blog)               |
- |  CDN Global, HTTPS SSL Automático, SRI Integrity, CSP Cabeceras      |
- +-----------------+-----------------+-----------------+-----------------+
-                   |                 |                 |
-                   v                 v                 v
-        +----------+----+   +--------+-------+   +-----+---------+
-        | Cyber-Check   |   | Calculadora    |   | Decap CMS     |
-        | Autotest OSINT|   | Cuotas MSP     |   | OAuth VPS     |
-        +---------------+   +----------------+   +---------------+
+ +-----------------------------------------------------------------------------------+
+ |                         Sitio Estático Hugo (Jamstack)                           |
+ |  HTML5 Semántico + CSS Vanilla Modular + JavaScript ES6 Nativo                    |
+ +-------------------------+-----------------------------------+---------------------+
+                           |                                   ^
+                           | Publicado vía GitHub Actions      | Auto-Blog Workflow
+                           v                                   | (content-system IA)
+ +-------------------------+-----------------------------------+---------------------+
+ |                        GitHub Pages (https://solutech.blog)                       |
+ |  CDN Global, HTTPS SSL Automático, SRI Integrity, CSP Cabeceras Strict            |
+ +-----------------+-----------------+-----------------+-----------------+-----------+
+                   |                 |                 |                 |
+                   v                 v                 v                 v
+        +----------+----+   +--------+-------+   +-----+---------+   +---+-----------+
+        | Cyber-Check   |   | Calculadora    |   | Decap CMS     |   | Formulario    |
+        | Autotest OSINT|   | Cuotas MSP     |   | OAuth VPS     |   | Leads (5-Capas|
+        +---------------+   +----------------+   +---------------+   | Anti-Spam n8n)|
+                                                                     +-------+-------+
+                                                                             |
+                                                                             v
+                                                                     +-------+-------+
+                                                                     | n8n Webhook   |
+                                                                     | + Supabase DB |
+                                                                     +---------------+
 ```
 
 ---
@@ -74,10 +83,12 @@ El repositorio `solutech` gestiona el frontend comercial público de Solutech. U
 # Stack Tecnológico
 
 - **Generador Estático:** Hugo v0.163+ (Extended).
-- **Hosting & Despliegue:** GitHub Pages + GitHub Actions CI/CD.
+- **Hosting & Despliegue:** GitHub Pages + GitHub Actions CI/CD (`hugo.yaml` y `auto-blog.yml`).
 - **Frontend:** HTML5, Vanilla CSS (Variables & CSS Modules), JavaScript ES6 Vanilla.
 - **CMS Admin:** Decap CMS (`/admin`) + Servidor OAuth Node.js en VPS.
-- **Seguridad HTTP:** CSP estricto, HSTS (`max-age=31536000`), SRI Integrity.
+- **Captación de Leads:** Formulario en `assets/js/forms.js` con pipeline anti-spam (Honeypot, Timestamp build-time `form_rendered_at`, baneo de bots/RobertBlesk, validator regex) conectado a `https://n8n.solutech.blog/webhook/leads`.
+- **Seguridad HTTP:** CSP estricto (`connect-src` autorizado para n8n y Google Analytics), HSTS (`max-age=31536000`), SRI Integrity.
+- **Automatización Editorial:** Motor de contenidos IA (`solutech-knowledge-base/content-system`) con Gemini 3.1 Pro, Google Imagen 3 y RAG semántico.
 
 ---
 
