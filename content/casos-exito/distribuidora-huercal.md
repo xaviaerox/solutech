@@ -3,7 +3,7 @@ title: "Plan de Desastre para Distribuidora en Huércal"
 date: 2025-01-10T09:00:00+01:00
 category: "Backup"
 description: "Estrategia 3-2-1 de copias de seguridad con réplica inmutable en la nube para protección contra Ransomware. Tiempo de recuperación garantizado < 2h."
-image: "https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&w=1200"
+image: "images/caso-distribuidora-huercal.jpg"
 ---
 
 ### El Desafío

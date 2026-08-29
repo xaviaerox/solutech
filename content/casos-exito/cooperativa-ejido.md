@@ -3,7 +3,7 @@ title: "Virtualización de Servidores para Cooperativa en El Ejido"
 date: 2024-11-20T12:00:00+01:00
 category: "Infraestructura"
 description: "Reducción de hardware físico tras implementar Proxmox con 5 máquinas virtuales críticas. Mejora en la velocidad de acceso a ERP y backups centralizados."
-image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200"
+image: "images/caso-cooperativa-ejido.jpg"
 ---
 
 ### El Desafío

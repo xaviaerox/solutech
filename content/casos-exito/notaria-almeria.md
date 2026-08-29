@@ -3,7 +3,7 @@ title: "Blindaje de Red para Notaría en Almería Centro"
 date: 2024-12-05T10:00:00+01:00
 category: "Seguridad"
 description: "Implementación de VLANs para separar wifi de invitados de gestión, firewall hardware con filtrado de contenidos y cumplimiento de normativa."
-image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200"
+image: "images/caso-notaria-almeria.jpg"
 ---
 
 ### El Desafío
