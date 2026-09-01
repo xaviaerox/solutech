@@ -1,6 +1,6 @@
 ---
 title: "Los Sistemas de Acceso Físico: Nueva Frontera de la Ciberseguridad en Pymes"
-date: 2024-07-30T00:00:00+02:00
+date: "2026-09-01T13:55:50+02:00"
 slug: "sistemas-acceso-fisico-nueva-superficie-ataque-pymes"
 description: "Descubre cómo los sistemas de acceso físico se han convertido en un vector crítico de ciberataques para Pymes y cómo proteger tu negocio."
 categories: ["Ciberseguridad", "Gestión de Identidades"]

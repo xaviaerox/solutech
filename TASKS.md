@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 30
+- **Total de tareas registradas:** 31
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 30
+- **Tareas completadas:** 31
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-08-29
+- **Última actualización:** 2026-09-01
 
 ---
 
@@ -54,6 +54,15 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-031 — Corrección de Fecha de Publicación y Nombre de Archivo del Post de Acceso Físico (2026-09-01)
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-09-01
+- **Descripción:** Corrección de la fecha en front matter y renombrado del artículo generado por el bot desde RSS (`2024-07-30-sistemas-acceso-fisico-nueva-superficie-ataque-pymes.md` ➔ `2026-09-01-sistemas-acceso-fisico-nueva-superficie-ataque-pymes.md`). Debido a una alucinación del LLM en el campo `date:`, el post había quedado indexado en julio de 2024 (página 11 del archivo). Con esta corrección, el artículo queda visible en la portada y en la posición #1 de los artículos más recientes del blog.
+- **Archivos Modificados:**
+  - `content/blog/2026-09-01-sistemas-acceso-fisico-nueva-superficie-ataque-pymes.md` (renombrado y editado)
+  - `TASKS.md`
 
 ## TASK-030 — Saneamiento y Sincronización de PROJECT_CONTEXT.md, Versión 1.2.0 y Protocolo Doc-DoD
 
