@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Uso de Inteligencia Artificial y Transparencia"
 description: "Conoce que Inteligencia Artificial utiliza Solutech, con que fines, que modelos empleamos y como garantizamos la privacidad y seguridad de tu informacion."
-date: 2026-09-02T10:00:00+02:00
+date: 2026-09-02T00:00:00+02:00
 draft: false
 ---
 
