@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 31
+- **Total de tareas registradas:** 32
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 31
+- **Tareas completadas:** 32
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-09-01
+- **Última actualización:** 2026-09-02
 
 ---
 
@@ -54,6 +54,32 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-032 — Remediación Integral RGPD, Cookies, CSP y Transparencia de IA (2026-09-02)
+
+- **Estado:** COMPLETADA
+- **Fecha de inicio:** 2026-09-02
+- **Fecha de finalización:** 2026-09-02
+- **Prioridad:** CRÍTICA (P0 / P1 / P2)
+- **Descripción:** Implementación integral de las medidas de cumplimiento normativo y privacidad en el frontend estático:
+  1. Adición de 1ª capa informativa RGPD (Art. 13 RGPD / Art. 11 LOPDGDD) y checkbox de consentimiento previo y obligatorio en `contact-form-template.html`.
+  2. Validación bloqueante en `forms.js` para asegurar que el checkbox esté marcado antes del envío.
+  3. Creación y publicación de la página `/uso-de-ia` conforme al Art. 50 del AI Act.
+  4. Inclusión de badge editorial de supervisión humana en artículos de blog (`single.html`).
+  5. Carga condicional de scripts de Google Analytics vinculada al consentimiento en `head.html` y habilitación de gatillo de reapertura/revocación de cookies (`#btn-manage-cookies`) en footer y `cookies.js`.
+  6. Actualización exhaustiva de `privacidad.md`, `cookies.md` y cabeceras CSP en `head.html`.
+- **Archivos modificados:**
+  - `layouts/partials/contact-form-template.html`
+  - `assets/css/main.css`
+  - `assets/js/forms.js`
+  - `assets/js/modules/cookies.js`
+  - `layouts/partials/head.html`
+  - `layouts/partials/footer.html`
+  - `assets/css/components/footer.css`
+  - `content/uso-de-ia.md`
+  - `content/privacidad.md`
+  - `content/cookies.md`
+  - `layouts/_default/single.html`
 
 ## TASK-031 — Corrección de Fecha de Publicación y Nombre de Archivo del Post de Acceso Físico (2026-09-01)
 

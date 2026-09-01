@@ -48,6 +48,14 @@
     <div class="blog-content">
       {{ .Content }}
     </div>
+
+    <div class="blog-ai-disclosure" style="margin-top: 40px; padding: 18px 22px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--br); border-radius: 12px; font-size: 12px; color: var(--ts); display: flex; align-items: flex-start; gap: 14px; line-height: 1.5;">
+      <span style="font-size: 18px;">🛡️</span>
+      <div>
+        <strong style="color: var(--tm); display: block; margin-bottom: 2px;">Transparencia Editorial & Supervisión Técnica:</strong>
+        Este contenido técnico ha sido elaborado con asistencia de Inteligencia Artificial para documentación y estructuración, y ha sido íntegramente verificado, auditado y validado por el equipo técnico de Solutech. Consulta nuestra <a href="{{ "/uso-de-ia" | relURL }}" style="color: var(--o); text-decoration: underline;">Política de Uso de Inteligencia Artificial</a>.
+      </div>
+    </div>
   </article>
 </div>
 {{ end }}

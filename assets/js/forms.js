@@ -14,6 +14,14 @@ document.addEventListener("DOMContentLoaded", function() {
       
       if (!btn || !status) return;
 
+      const privacyCheck = form.querySelector('input[name="acepta_privacidad"]');
+      if (privacyCheck && !privacyCheck.checked) {
+        status.className = "form-status form-status-error";
+        status.innerHTML = "Debes aceptar la Política de Privacidad para enviar tu consulta.";
+        status.style.display = "block";
+        return;
+      }
+
       const originalBtnText = btn.innerHTML;
       btn.innerHTML = "Enviando... <svg class='spin' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' style='animation: spin 1s linear infinite;'><path d='M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83'/></svg>";
       btn.style.opacity = "0.7";
@@ -23,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const data = new FormData(form);
       data.append("form_source", "website-form");
       data.append("security_token", "solutech-leads-v1-secure-token");
+      data.append("privacy_accepted_at", new Date().toISOString());
 
       const timeSpent = Date.now() - pageLoadTime;
 

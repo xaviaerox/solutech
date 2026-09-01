@@ -79,6 +79,25 @@
     <textarea id="mensaje-{{ $type }}" name="{{ if eq $type "support" }}descripcion{{ else }}mensaje{{ end }}" placeholder="{{ if eq $type "support" }}Explica detalladamente la incidencia técnica...{{ else }}¿En qué podemos ayudarte o cuál es tu consulta principal?{{ end }}" aria-label="{{ if eq $type "support" }}Detalla la incidencia técnica{{ else }}Detalla en qué podemos ayudarte{{ end }}" required class="cta-input cta-textarea"></textarea>
   </div>
 
+  <div class="form-checkbox-group">
+    <label class="checkbox-label" for="privacidad-{{ $type }}">
+      <input type="checkbox" id="privacidad-{{ $type }}" name="acepta_privacidad" value="true" required>
+      <span>He leído y acepto la <a href="{{ "/privacidad" | relURL }}" target="_blank" rel="noopener">Política de Privacidad</a> y consiento el tratamiento de mis datos para la gestión de esta consulta.</span>
+    </label>
+  </div>
+
+  <div class="form-gdpr-box">
+    <div class="gdpr-header">🔒 Información Básica sobre Protección de Datos (RGPD / LOPDGDD)</div>
+    <div class="gdpr-grid">
+      <div><strong>Responsable:</strong> Francisco Javier Alonso Fondón (Solutech)</div>
+      <div><strong>Finalidad:</strong> Gestión y respuesta a solicitudes técnicas, diagnósticos IT y contacto comercial.</div>
+      <div><strong>Legitimación:</strong> Medidas precontractuales y consentimiento del interesado (Art. 6.1.a y 6.1.b RGPD).</div>
+      <div><strong>Destinatarios:</strong> Proveedores tecnológicos de infraestructura (Supabase en UE, n8n). No se ceden datos a terceros.</div>
+      <div><strong>Derechos:</strong> Acceso, rectificación, supresión, oposición y limitación enviando un email a <a href="mailto:xavi@solutech.blog">xavi@solutech.blog</a>.</div>
+      <div><strong>Más información:</strong> Consulta nuestra <a href="{{ "/privacidad" | relURL }}" target="_blank" rel="noopener">Política de Privacidad completa</a>.</div>
+    </div>
+  </div>
+
   <button type="submit" class="cta-btn" id="{{ $type }}-submit-btn">
     {{ if eq $type "support" }}Abrir Ticket{{ else }}Solicitar Diagnóstico Gratuito{{ end }}
     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
