@@ -82,21 +82,24 @@
   <div class="form-checkbox-group">
     <label class="checkbox-label" for="privacidad-{{ $type }}">
       <input type="checkbox" id="privacidad-{{ $type }}" name="acepta_privacidad" value="true" required>
-      <span>He leído y acepto la <a href="{{ "/privacidad" | relURL }}" target="_blank" rel="noopener">Política de Privacidad</a> y consiento el tratamiento de mis datos para la gestión de esta consulta.</span>
+      <span>He leído y acepto la <a href="{{ "/privacidad" | relURL }}" target="_blank" rel="noopener">Política de Privacidad</a></span>
     </label>
   </div>
 
-  <div class="form-gdpr-box">
-    <div class="gdpr-header">🔒 Información Básica sobre Protección de Datos (RGPD / LOPDGDD)</div>
+  <details class="form-gdpr-details">
+    <summary class="form-gdpr-summary">
+      <span>🔒 Información básica sobre protección de datos</span>
+      <span class="gdpr-chevron">▾</span>
+    </summary>
     <div class="gdpr-grid">
       <div><strong>Responsable:</strong> Francisco Javier Alonso Fondón (Solutech)</div>
-      <div><strong>Finalidad:</strong> Gestión y respuesta a solicitudes técnicas, diagnósticos IT y contacto comercial.</div>
-      <div><strong>Legitimación:</strong> Medidas precontractuales y consentimiento del interesado (Art. 6.1.a y 6.1.b RGPD).</div>
-      <div><strong>Destinatarios:</strong> Proveedores tecnológicos de infraestructura (Supabase en UE, n8n). No se ceden datos a terceros.</div>
-      <div><strong>Derechos:</strong> Acceso, rectificación, supresión, oposición y limitación enviando un email a <a href="mailto:xavi@solutech.blog">xavi@solutech.blog</a>.</div>
+      <div><strong>Finalidad:</strong> Gestión y respuesta a consultas técnicas y diagnósticos IT.</div>
+      <div><strong>Legitimación:</strong> Consentimiento y medidas precontractuales (Art. 6.1 RGPD).</div>
+      <div><strong>Destinatarios:</strong> Proveedores tecnológicos en la UE (Supabase, n8n). No se ceden datos a terceros.</div>
+      <div><strong>Derechos:</strong> Acceso, rectificación, supresión y oposición en <a href="mailto:xavi@solutech.blog">xavi@solutech.blog</a>.</div>
       <div><strong>Más información:</strong> Consulta nuestra <a href="{{ "/privacidad" | relURL }}" target="_blank" rel="noopener">Política de Privacidad completa</a>.</div>
     </div>
-  </div>
+  </details>
 
   <button type="submit" class="cta-btn" id="{{ $type }}-submit-btn">
     {{ if eq $type "support" }}Abrir Ticket{{ else }}Solicitar Diagnóstico Gratuito{{ end }}
