@@ -6,11 +6,11 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 32
+- **Total de tareas registradas:** 33
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 32
+- **Tareas completadas:** 33
 - **Tareas canceladas / descartadas:** 0
 - **Última actualización:** 2026-09-02
 
@@ -54,6 +54,20 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-033 — Auditoría DNS y Endurecimiento DMARC a Modo Cuarentena (2026-09-02)
+
+- **Estado:** COMPLETADA
+- **Fecha de inicio:** 2026-09-02
+- **Fecha de finalización:** 2026-09-02
+- **Prioridad:** ALTA
+- **Descripción:** Verificación de seguridad de correo y política DMARC para el dominio `solutech.blog`:
+  1. Comprobación del registro DMARC previo (CNAME `_dmarc.solutech.blog` a `dmarc.ionos.es` con `v=DMARC1; p=none;`).
+  2. Verificación de SPF estricto (`v=spf1 include:_spf-eu.ionos.com ~all`) y validación de remitentes reales en IONOS SMTP.
+  3. Definición y preparación del registro TXT DMARC endurecido con `p=quarantine`, 100% de cobertura y reporting agregado `dmarc-reports@solutech.blog`.
+  4. Sincronización y registro en la base de conocimiento global (`solutech-knowledge-base`).
+- **Archivos modificados:**
+  - `TASKS.md`
 
 ## TASK-032 — Remediación Integral RGPD, Cookies, CSP y Transparencia de IA (2026-09-02)
 
