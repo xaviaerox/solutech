@@ -22,7 +22,7 @@
 
 **Versión actual:** `1.2.0`.
 
-**Última actualización:** 2026-08-29.
+**Última actualización:** 2026-09-02.
 
 ---
 

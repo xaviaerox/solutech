@@ -6,11 +6,11 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 33
+- **Total de tareas registradas:** 34
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 33
+- **Tareas completadas:** 34
 - **Tareas canceladas / descartadas:** 0
 - **Última actualización:** 2026-09-02
 
@@ -54,6 +54,22 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-034 — Redacción y Publicación de Noticia Caso Real: Ciberataque al Formulario Web y Sabotaje de Mailing (2026-09-02)
+
+- **Estado:** COMPLETADA
+- **Fecha de inicio:** 2026-09-02
+- **Fecha de finalización:** 2026-09-02
+- **Prioridad:** MEDIA
+- **Descripción:** Redacción y publicación de un artículo divulgativo y técnico sobre el ciberataque al formulario de contacto orientado a SEO y SEO Local (Pymes de Murcia y Almería):
+  1. Análisis profesional del vector de sabotaje de reputación de correo (Spam Poisoning) por abuso de auto-respondedores y riesgo de bloqueo en listas negras internacionales.
+  2. Blindaje de seguridad operacional (OPSEC): eliminación de referencias a arquitecturas, tokens y herramientas internas privadas, exponiendo buenas prácticas preventivas de nivel empresarial.
+  3. Enfoque de concienciación para directivos de Pymes locales (Murcia, Lorca, Cartagena, Almería) frente a ataques indiscriminados de botnets y actores con tiempo libre.
+  4. Inclusión de diagrama conceptual ASCII, tabla de medidas de protección perimetral no invasivas y llamada a la acción hacia el autodiagnóstico (`/autodiagnostico/`).
+- **Archivos modificados:**
+  - `content/blog/2026-09-02-ciberataque-formulario-sabotaje-reputacion-mailing.md`
+  - `static/images/news-sabotaje-formulario-ciberataque.jpg`
+  - `TASKS.md`
 
 ## TASK-033 — Auditoría DNS y Endurecimiento DMARC a Modo Cuarentena (2026-09-02)
 
