@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 34
+- **Total de tareas registradas:** 35
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 34
+- **Tareas completadas:** 35
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-09-02
+- **Última actualización:** 2026-09-05
 
 ---
 
@@ -54,6 +54,41 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-035 — Diseño e Implementación de la Capa Soluciones / Solutech Labs e Integración Bidireccional con Blog (2026-09-05)
+
+- **Estado:** COMPLETADA
+- **Fecha de inicio:** 2026-09-05
+- **Fecha de finalización:** 2026-09-05
+- **Prioridad:** ALTA
+- **Descripción:** Implementación de la nueva capa arquitectónica y de contenidos `/soluciones/` (Solutech Labs):
+  1. Auditoría exhaustiva de los 3 proyectos propios iniciales (`Queryclin`, `MiraTEA` y `AeroGym`) a partir de sus fuentes de verdad verificadas en repositorios locales.
+  2. Creación de la página índice `/soluciones/` (`content/soluciones/_index.md`) y de las fichas técnicas individuales (`queryclin.md`, `miratea.md`, `aerogym.md`) con especificaciones, estado real verídico y diagramas de arquitectura.
+  3. Desarrollo de plantillas Hugo dedicadas: `layouts/soluciones/list.html` y `layouts/soluciones/single.html`.
+  4. Creación del módulo de estilos CSS puro `assets/css/components/soluciones.css` con diseño responsive y badges semánticos de estado (`.sol-badge-prod`, `.sol-badge-demo`, `.sol-badge-val`).
+  5. Conexión bidireccional entre artículos del blog y proyectos mediante frontmatter `projects: ["queryclin"]` en posts y consulta automática en la ficha del proyecto.
+  6. Optimización de navegación: sustitución del ancla huérfana `/#stack` por el enlace directo `Soluciones` en `nav.html` y actualización corporativa en `footer.html`.
+  7. Inyección de datos estructurados Schema.org `SoftwareApplication` en `layouts/partials/head.html`.
+  8. Configuración de Decap CMS (`static/admin/config.yml`) con la nueva colección `soluciones` y campo de enlace cruzado en `blog`.
+  9. Documentación técnica completa en `docs/SOLUTECH_SOLUTIONS_ARCHITECTURE.md` y actualización del SSOT `PROJECT_CONTEXT.md`.
+- **Archivos modificados/creados:**
+  - `content/soluciones/_index.md` (NUEVO)
+  - `content/soluciones/queryclin.md` (NUEVO)
+  - `content/soluciones/miratea.md` (NUEVO)
+  - `content/soluciones/aerogym.md` (NUEVO)
+  - `layouts/soluciones/list.html` (NUEVO)
+  - `layouts/soluciones/single.html` (NUEVO)
+  - `assets/css/components/soluciones.css` (NUEVO)
+  - `docs/SOLUTECH_SOLUTIONS_ARCHITECTURE.md` (NUEVO)
+  - `layouts/_default/single.html` (MODIFICADO)
+  - `layouts/partials/head.html` (MODIFICADO)
+  - `layouts/partials/nav.html` (MODIFICADO)
+  - `layouts/partials/footer.html` (MODIFICADO)
+  - `static/admin/config.yml` (MODIFICADO)
+  - `content/blog/2026-08-10-auditorias-rag-ia-pymes.md` (MODIFICADO)
+  - `content/blog/2026-08-25-ia-privacidad-datos-riesgos-pyme.md` (MODIFICADO)
+  - `PROJECT_CONTEXT.md` (MODIFICADO)
+  - `TASKS.md` (MODIFICADO)
 
 ## TASK-034 — Redacción y Publicación de Noticia Caso Real: Ciberataque al Formulario Web y Sabotaje de Mailing (2026-09-02)
 

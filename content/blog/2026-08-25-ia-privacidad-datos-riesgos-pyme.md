@@ -8,6 +8,7 @@ keywords: ["privacidad de datos IA", "riesgos IA pymes", "ciberseguridad IA", "p
 image: "images/news-ia-privacidad-datos-riesgos-pyme.jpg"
 draft: false
 business_impact: "El uso descontrolado de herramientas de IA en la empresa puede llevar a filtraciones de datos sensibles, incumplimiento del RGPD y daños reputacionales, afectando directamente la continuidad operativa y la confianza del cliente."
+projects: ["queryclin", "miratea"]
 source_url: "https://cybersecuritynews.es/los-nuevos-riesgos-de-chatgpt-para-adolescentes-y-los-retos-de-privacidad-de-la-ia/"
 ---
 ## Resumen Ejecutivo

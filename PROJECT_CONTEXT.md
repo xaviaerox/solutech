@@ -22,7 +22,7 @@
 
 **Versión actual:** `1.2.0`.
 
-**Última actualización:** 2026-09-02.
+**Última actualización:** 2026-09-05.
 
 ---
 
@@ -33,6 +33,8 @@ El repositorio `solutech` gestiona el frontend comercial público de Solutech. U
 
 **Qué hace:**
 - Presenta los servicios de soporte Micro-MSP y la filosofía de continuidad de negocio de Solutech.
+- Presenta la capa **Soluciones / Solutech Labs** (`/soluciones/`), mostrando desarrollos propios, herramientas de software y proyectos experimentales (Queryclin, MiraTEA, AeroGym) como prueba de rigor técnico y capacidad arquitectónica.
+- Conecta bidireccionalmente proyectos y artículos del blog mediante el parámetro `projects` en el frontmatter.
 - Proporciona la herramienta *Cyber-Check* (autodiagnóstico interactivo de 8 preguntas críticas con interfaz Dark Terminal).
 - Proporciona la *Calculadora Micro-MSP* para estimar presupuestos de soporte mensual en tiempo real según la Matriz Oficial de Servicios V1 (S Essential 99€/mes, S Pro 149€/mes, M Basic 199€/mes, M Pro 299€/mes).
 - Captura leads comerciales a través de un formulario protegido con un pipeline anti-spam de 5 capas en cliente y servidor (`assets/js/forms.js` -> `https://n8n.solutech.blog/webhook/leads`).
@@ -97,11 +99,13 @@ El repositorio `solutech` gestiona el frontend comercial público de Solutech. U
 ```
 solutech/
 ├── archetypes/               # Plantillas para nuevos artículos de Hugo
-├── assets/                   # Vanilla CSS (`main.css`, `cybercheck.css`) y JS (`cybercheck.js`)
+├── assets/                   # Vanilla CSS (`main.css`, `soluciones.css`, etc.) y JS
 ├── content/                  # Contenidos Markdown
 │   ├── blog/                 # Artículos de noticias y ciberseguridad
-│   └── guias/                # Guías técnicas y tutoriales
-├── layouts/                  # Plantillas HTML de Hugo (homepage, single, list, partials)
+│   ├── guias/                # Guías técnicas y tutoriales
+│   └── soluciones/           # Fichas técnicas de Soluciones / Solutech Labs
+├── docs/                     # Documentación técnica (`SOLUTECH_SOLUTIONS_ARCHITECTURE.md`)
+├── layouts/                  # Plantillas HTML de Hugo (homepage, single, list, partials, soluciones)
 ├── static/                   # Assets estáticos directos (imágenes, favicons)
 │   └── admin/                # Configuración de Decap CMS (`config.yml`, `index.html`)
 ├── hugo.toml                 # Configuración general de Hugo (URL, idioma, menú)

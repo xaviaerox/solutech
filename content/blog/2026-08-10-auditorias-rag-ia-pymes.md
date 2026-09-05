@@ -8,6 +8,7 @@ keywords: ["auditorias RAG pymes", "ia para empresas almeria murcia", "retrieval
 author: "Xavi Alonso - Solutech"
 image: "images/news-ia-pyme-empezar-esta-semana.jpg"
 business_impact: "Las empresas que implantan sistemas RAG sobre sus documentos internos reducen en un 70% el tiempo de búsqueda de información operativa y eliminan por completo la fuga de secretos comerciales a modelos públicos."
+projects: ["aerogym", "miratea"]
 draft: false
 ---
 

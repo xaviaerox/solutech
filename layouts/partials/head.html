@@ -32,7 +32,7 @@
     <meta name="twitter:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "favicon.png" | absURL }}{{ end }}">
 
     <!-- CSS Maestro Bundled -->
-    {{ $cssFiles := slice (resources.Get "css/main.css") (resources.Get "css/components/nav.css") (resources.Get "css/components/onboarding.css") (resources.Get "css/components/footer.css") (resources.Get "css/components/emergency.css") (resources.Get "css/components/calculator.css") (resources.Get "css/components/cybercheck.css") }}
+    {{ $cssFiles := slice (resources.Get "css/main.css") (resources.Get "css/components/nav.css") (resources.Get "css/components/onboarding.css") (resources.Get "css/components/footer.css") (resources.Get "css/components/emergency.css") (resources.Get "css/components/calculator.css") (resources.Get "css/components/cybercheck.css") (resources.Get "css/components/soluciones.css") }}
     {{ $styles := $cssFiles | resources.Concat "css/bundle.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
     
@@ -121,6 +121,27 @@
         "@type": "WebPage",
         "@id": "{{ .Permalink }}"
       }
+    }
+    </script>
+    {{ end }}
+    {{ end }}
+
+    <!-- Schema.org SoftwareApplication para Soluciones & Labs -->
+    {{ if eq .Section "soluciones" }}
+    {{ if .IsPage }}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "{{ .Title }}",
+      "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Params.tagline }}{{ end }}",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, Modern Browser, PWA",
+      "author": {
+        "@type": "Organization",
+        "name": "Solutech"
+      },
+      "url": "{{ .Permalink }}"
     }
     </script>
     {{ end }}

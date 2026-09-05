@@ -27,6 +27,7 @@ collections:
       - { label: "Borrador (Draft)", name: "draft", widget: "boolean", default: false }
       - { label: "Impacto en el Negocio (Noticias/Alertas)", name: "business_impact", widget: "text", required: false }
       - { label: "URL Fuente Original (Opcional)", name: "source_url", widget: "string", required: false }
+      - { label: "Proyectos Vinculados (Slug de Soluciones)", name: "projects", widget: "list", required: false }
       - { label: "Cuerpo de la Publicación", name: "body", widget: "markdown" }
 
   # Colección: Guías Técnicas
@@ -45,3 +46,26 @@ collections:
       - { label: "Imagen Destacada", name: "image", widget: "image", required: false }
       - { label: "Borrador (Draft)", name: "draft", widget: "boolean", default: false }
       - { label: "Cuerpo de la Guía", name: "body", widget: "markdown" }
+
+  # Colección: Soluciones & Labs
+  - name: "soluciones"
+    label: "Soluciones & Labs"
+    folder: "content/soluciones"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Slug URL", name: "slug", widget: "string" }
+      - { label: "Subtítulo / Tagline", name: "tagline", widget: "string" }
+      - { label: "Descripción Corta (SEO)", name: "description", widget: "text" }
+      - { label: "Estado del Proyecto", name: "status", widget: "select", options: ["Demostración técnica", "Producción activa", "Validación comercial", "I+D / Experimental", "Interno"] }
+      - { label: "Naturaleza de la Solución", name: "nature", widget: "string" }
+      - { label: "Versión Auditada", name: "version", widget: "string" }
+      - { label: "Patrón de Arquitectura", name: "architecture_pattern", widget: "string", required: false }
+      - { label: "Coordinación / Cliente", name: "collaboration", widget: "string", required: false }
+      - { label: "Stack Tecnológico", name: "stack", widget: "list" }
+      - { label: "URL de Demostración", name: "demo_url", widget: "string", required: false }
+      - { label: "Repositorio GitHub", name: "github_url", widget: "string", required: false }
+      - { label: "Imagen Destacada", name: "image", widget: "image", required: false }
+      - { label: "Borrador (Draft)", name: "draft", widget: "boolean", default: false }
+      - { label: "Cuerpo / Caso de Estudio", name: "body", widget: "markdown" }

@@ -1,0 +1,157 @@
+{{ define "main" }}
+<div class="sol-container r in">
+  <nav class="breadcrumbs" aria-label="Breadcrumbs" style="font-family: var(--f-m); font-size: 10px; margin-bottom: 32px; color: var(--ts); text-transform: uppercase; letter-spacing: 0.05em; display: flex; gap: 8px; align-items: center;">
+    <a href="{{ "/" | relURL }}" style="color: var(--ts); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--o)'" onmouseout="this.style.color='var(--ts)'">Inicio</a>
+    <span style="opacity: 0.5;">&gt;</span>
+    <a href="{{ "/soluciones/" | relURL }}" style="color: var(--ts); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--o)'" onmouseout="this.style.color='var(--ts)'">Soluciones</a>
+    <span style="opacity: 0.5;">&gt;</span>
+    <span style="color: var(--tm); font-weight: 500;">{{ .Title }}</span>
+  </nav>
+
+  <div class="sol-single-hero">
+    <div>
+      {{ $badgeClass := "sol-badge-demo" }}
+      {{ if eq .Params.status "Producción activa" }}
+        {{ $badgeClass = "sol-badge-prod" }}
+      {{ else if eq .Params.status "Validación comercial" }}
+        {{ $badgeClass = "sol-badge-val" }}
+      {{ end }}
+
+      <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 16px;">
+        <span class="section-tag" style="margin-bottom: 0;">Solutech Labs</span>
+        <span class="sol-badge {{ $badgeClass }}">{{ .Params.status }}</span>
+      </div>
+
+      <h1 class="blog-title" style="margin-bottom: 12px;">{{ .Title }}</h1>
+      {{ with .Params.tagline }}
+      <p style="font-size: 18px; color: var(--o); font-weight: 500; margin-bottom: 20px; line-height: 1.4;">{{ . }}</p>
+      {{ end }}
+      <p style="font-size: 15px; color: var(--tm); line-height: 1.7; margin-bottom: 28px;">
+        {{ .Description }}
+      </p>
+
+      {{ with .Params.stack }}
+      <div style="margin-bottom: 24px;">
+        <div style="font-family: var(--f-m); font-size: 11px; text-transform: uppercase; color: var(--ts); letter-spacing: 0.08em; margin-bottom: 10px;">Stack Tecnológico:</div>
+        <div class="sol-stack-list">
+          {{ range . }}
+          <span class="sol-stack-pill" style="font-size: 11px; padding: 5px 10px;">{{ . }}</span>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
+    <!-- TECHNICAL SPEC BOX -->
+    <div class="sol-spec-box">
+      <div class="sol-spec-title">Ficha Técnica · Solutech Labs</div>
+      
+      <div class="sol-spec-row">
+        <span class="sol-spec-label">Estado</span>
+        <span class="sol-spec-val" style="color: var(--o);">{{ .Params.status }}</span>
+      </div>
+      
+      <div class="sol-spec-row">
+        <span class="sol-spec-label">Naturaleza</span>
+        <span class="sol-spec-val">{{ .Params.nature }}</span>
+      </div>
+
+      {{ with .Params.version }}
+      <div class="sol-spec-row">
+        <span class="sol-spec-label">Versión</span>
+        <span class="sol-spec-val" style="font-family: var(--f-m);">{{ . }}</span>
+      </div>
+      {{ end }}
+
+      {{ with .Params.architecture_pattern }}
+      <div class="sol-spec-row">
+        <span class="sol-spec-label">Arquitectura</span>
+        <span class="sol-spec-val">{{ . }}</span>
+      </div>
+      {{ end }}
+
+      {{ with .Params.collaboration }}
+      <div class="sol-spec-row">
+        <span class="sol-spec-label">Coordinación</span>
+        <span class="sol-spec-val" style="font-size: 12px;">{{ . }}</span>
+      </div>
+      {{ end }}
+
+      {{ with .Params.demo_url }}
+      <div class="sol-action-btns">
+        <a href="{{ . }}" target="_blank" rel="noopener" class="btn-p" style="padding: 10px 18px; font-size: 12px; width: 100%; justify-content: center;">
+          <span>Acceder a Demostración Oficial</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      {{ end }}
+
+      {{ with .Params.github_url }}
+      <div class="sol-action-btns" style="margin-top: 8px;">
+        <a href="{{ . }}" target="_blank" rel="noopener" class="btn-o" style="padding: 10px 18px; font-size: 12px; width: 100%; justify-content: center;">
+          <span>Ver Repositorio GitHub</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="sol-authority-banner">
+    <div class="icon">🛡️</div>
+    <div>
+      <p>
+        <strong>Marco de Desarrollo & Gobernanza Solutech:</strong>
+        Este proyecto ha sido diseñado bajo los principios de **Clean Architecture**, privacidad estricta por diseño y resiliencia operativa. Representa nuestro estándar de construcción tecnológica para sistemas que no pueden permitirse fallos ni fugas de información.
+      </p>
+    </div>
+  </div>
+
+  <!-- CONTENIDO DE LA FICHA -->
+  <article class="blog-post" style="box-shadow: none; border-color: var(--br);">
+    <div class="blog-content">
+      {{ .Content }}
+    </div>
+  </article>
+
+  <!-- INTEGRACIÓN BIDIRECCIONAL CON EL BLOG -->
+  {{ $currentSlug := .File.TranslationBaseName }}
+  {{ $relatedArticles := where (where site.RegularPages "Section" "in" (slice "blog" "news" "guias")) "Params.projects" "intersect" (slice $currentSlug) }}
+  
+  {{ if gt (len $relatedArticles) 0 }}
+  <div class="sol-related-section">
+    <span class="section-tag">Conocimiento Aplicado</span>
+    <h3 class="section-h" style="font-size: 26px; margin-bottom: 24px;">Artículos y Notas Técnicas Relacionadas</h3>
+    <div class="blog-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+      {{ range $relatedArticles }}
+      <div class="bcard">
+        <div class="bcard-body">
+          <div class="bcard-cat">
+            {{ range $i, $cat := .Params.categories }}{{ if $i }} · {{ end }}{{ $cat }}{{ end }}
+          </div>
+          <div class="bcard-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+          <div class="bcard-exc">{{ .Description }}</div>
+          <div class="bcard-meta">{{ .Date.Format "02 Jan 2006" }}</div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- CTA FINAL -->
+  <div style="background: var(--s1); border: 1px solid var(--br); border-radius: 20px; padding: 48px; text-align: center; margin-top: 56px;">
+    <span class="section-tag">Garantía de Ingeniería</span>
+    <h3 style="font-family: var(--f-h); font-size: clamp(22px, 3vw, 32px); font-weight: 700; margin-bottom: 12px; color: #fff;">
+      ¿Buscas un socio tecnológico con verdadera capacidad de ingeniería?
+    </h3>
+    <p style="font-size: 15px; color: var(--tm); max-width: 580px; margin: 0 auto 28px; line-height: 1.6;">
+      En Solutech no aplicamos soluciones genéricas. Auditamos, protegemos y optimizamos la infraestructura tecnológica de tu empresa con el mismo rigor con el que construimos nuestras soluciones.
+    </p>
+    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+      <a href="{{ "/#contacto" | relURL }}" class="btn-p">Hablar con Xavi Alonso</a>
+      <a href="{{ "/soluciones/" | relURL }}" class="btn-o">Explorar Otras Soluciones</a>
+    </div>
+  </div>
+</div>
+{{ end }}

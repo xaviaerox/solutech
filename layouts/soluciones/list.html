@@ -1,0 +1,81 @@
+{{ define "main" }}
+<section class="sol-container r in">
+  <div class="section-bg bg-blog"></div>
+  <div class="section-glow"></div>
+
+  <div class="sol-header">
+    <span class="section-tag">Solutech Labs · Ingeniería Aplicada</span>
+    <h1 class="section-h">Soluciones Tecnológicas &<br><em>Proyectos Propios.</em></h1>
+    <p>
+      Solutech no se limita a mantener y proteger infraestructuras existentes: también diseñamos, investigamos y construimos tecnología propia. Solutech Labs es nuestro entorno de ingeniería donde desarrollamos plataformas con privacidad estricta (*Local-First*), motores de búsqueda clínica y aplicaciones con inteligencia artificial en el borde.
+    </p>
+  </div>
+
+  <div class="sol-authority-banner">
+    <div class="icon">🔬</div>
+    <div>
+      <p>
+        <strong>Demostración de Capacidad Técnica & Arquitectura Silenciosa:</strong>
+        Cada proyecto propio representa un caso de estudio real sobre escalabilidad, soberanía del dato y seguridad por diseño. Los desarrollos reflejan nuestra metodología de ingeniería, sin desviar nuestro foco comercial principal: la gestión tecnológica y la ciberseguridad para pymes.
+      </p>
+    </div>
+  </div>
+
+  <div class="sol-grid">
+    {{ range .Pages.ByDate.Reverse }}
+    {{ $badgeClass := "sol-badge-demo" }}
+    {{ if eq .Params.status "Producción activa" }}
+      {{ $badgeClass = "sol-badge-prod" }}
+    {{ else if eq .Params.status "Validación comercial" }}
+      {{ $badgeClass = "sol-badge-val" }}
+    {{ end }}
+
+    <a href="{{ .RelPermalink }}" class="sol-card">
+      <div>
+        <div class="sol-card-top">
+          <span class="sol-nature">{{ .Params.nature }}</span>
+          <span class="sol-badge {{ $badgeClass }}">{{ .Params.status }}</span>
+        </div>
+        <h2 class="sol-card-title">{{ .Title }}</h2>
+        {{ with .Params.tagline }}
+        <div class="sol-card-tagline">{{ . }}</div>
+        {{ end }}
+        <p class="sol-card-desc">{{ .Description }}</p>
+        
+        {{ with .Params.stack }}
+        <div class="sol-stack-list">
+          {{ range first 5 . }}
+          <span class="sol-stack-pill">{{ . }}</span>
+          {{ end }}
+          {{ if gt (len .) 5 }}
+          <span class="sol-stack-pill">+{{ sub (len .) 5 }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+
+      <div class="sol-card-link">
+        <span>Ver ficha técnica y arquitectura</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+
+  <!-- CTA DE CONVERSIÓN CONTEXTUAL -->
+  <div style="background: var(--s2); border: 1px solid var(--br); border-radius: 20px; padding: 48px; text-align: center; margin-top: 40px; position: relative; overflow: hidden;">
+    <div class="section-glow"></div>
+    <span class="section-tag">Capacidad Técnica a Tu Servicio</span>
+    <h3 style="font-family: var(--f-h); font-size: clamp(24px, 3.5vw, 36px); font-weight: 700; margin-bottom: 16px; color: #fff;">
+      ¿Tu empresa necesita resolver un reto tecnológico complejo?
+    </h3>
+    <p style="font-size: 15px; color: var(--tm); max-width: 600px; margin: 0 auto 28px; line-height: 1.6;">
+      Aplicamos los mismos estándares de alta disponibilidad, seguridad por diseño y soberanía del dato a la infraestructura de tu negocio.
+    </p>
+    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+      <a href="{{ "/#contacto" | relURL }}" class="btn-p">Diagnóstico Técnico Gratuito</a>
+      <a href="{{ "/servicios" | relURL }}" class="btn-o">Ver Planes MSP</a>
+    </div>
+  </div>
+</section>
+{{ end }}
