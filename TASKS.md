@@ -6,11 +6,11 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 38
+- **Total de tareas registradas:** 40
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 38
+- **Tareas completadas:** 40
 - **Tareas canceladas / descartadas:** 0
 - **Última actualización:** 2026-09-17
 
@@ -54,6 +54,39 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-040 — Alineación de Perfil con la Realidad: Supresión de Certificaciones y Títulos No Acreditados (2026-09-17)
+
+- **Estado:** COMPLETADA
+- **Fecha de inicio:** 2026-09-17
+- **Fecha de finalización:** 2026-09-17
+- **Prioridad:** ALTA
+- **Descripción:** Adecuación estricta del perfil profesional y elementos de marca a la realidad y trayectoria de Xavi Alonso bajo el principio de honestidad radical:
+  1. Eliminación total del bloque de insignias de certificación (`.author-credentials` con `CISCO CCNA`, `COMPTIA A+`) en la caja de autor de artículos de blog (`layouts/_default/single.html`).
+  2. Ajuste del rol profesional a "Sistemas & Seguridad Operativa" y biografía técnica a "Responsable técnico y fundador de Solutech. Especialista en sistemas, soporte micro-MSP y continuidad operativa para pymes en Murcia y Almería." (alineado con `founder.yaml`).
+  3. Sustitución en el ticker infinito de la landing page (`layouts/index.html`) de insignias inventadas (`CISCO CCNA`, `COMPTIA A+`) por áreas de competencia reales de la empresa: `REDES & VPN`, `CIBERSEGURIDAD` y `SISTEMAS IT`.
+  4. Revisión en la base de conocimiento (`solutech-knowledge-base`) para desestimar el uso de "ingenieros" en la descripción del soporte técnico y la propuesta de valor.
+- **Archivos modificados:**
+  - `layouts/_default/single.html`
+  - `layouts/index.html`
+  - `TASKS.md`
+
+## TASK-039 — Sustitución de Avatar por Fotografía Real y Refinamiento de Botón Cybercheck (2026-09-17)
+
+- **Estado:** COMPLETADA
+- **Fecha de inicio:** 2026-09-17
+- **Fecha de finalización:** 2026-09-17
+- **Prioridad:** MEDIA
+- **Descripción:** Refinamiento estético y de identidad en la vista de artículos individuales (`layouts/_default/single.html` y `assets/css/main.css`):
+  1. Sustitución de la insignia tipográfica circular "XA" por la fotografía real de Xavi Alonso (`images/xavi-alonso.jpeg` / `xavi-alonso.jpg`), con clase `.author-avatar-img` (56x56px, circular con borde sutil en naranja corporativo `var(--o)` y sombra difuminada).
+  2. Sustitución del texto del botón secundario del sidebar "Hacer Cyber-Check" por la marca concisa `Cybercheck` a secas, destacando exactamente la mitad de la palabra en naranja corporativo (`Cyber<span style="color: var(--o);">check</span>`) y clase `.btn-cybercheck` con hover glow.
+- **Archivos modificados:**
+  - `layouts/_default/single.html`
+  - `assets/css/main.css`
+  - `static/images/xavi-alonso.jpeg`
+  - `package.json`
+  - `PROJECT_CONTEXT.md`
+  - `TASKS.md`
 
 ## TASK-038 — Rediseño Editorial y Optimización Responsive Integral del Blog y Guías (2026-09-17)
 
