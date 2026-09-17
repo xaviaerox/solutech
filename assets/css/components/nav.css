@@ -1,4 +1,4 @@
-nav a.nav-active { color: var(--o) !important; }
+#main-nav a.nav-active { color: var(--o) !important; }
 
 /* Estilos del Menú Hamburguesa */
 .burger-menu {

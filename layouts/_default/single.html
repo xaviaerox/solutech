@@ -1,77 +1,143 @@
 {{ define "main" }}
-<div class="blog-container">
-  <article class="blog-post">
-    <nav class="breadcrumbs" aria-label="Breadcrumbs" style="font-family: var(--f-m); font-size: 10px; margin-bottom: 24px; color: var(--ts); text-transform: uppercase; letter-spacing: 0.05em; display: flex; gap: 8px; align-items: center;">
-      <a href="{{ "/" | relURL }}" style="color: var(--ts); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--o)'" onmouseout="this.style.color='var(--ts)'">Inicio</a>
-      <span style="opacity: 0.5;">&gt;</span>
-      {{ if eq .Section "guias" }}
-      <a href="{{ "/guias/" | relURL }}" style="color: var(--ts); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--o)'" onmouseout="this.style.color='var(--ts)'">Guías</a>
-      {{ else }}
-      <a href="{{ "/blog/" | relURL }}" style="color: var(--ts); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--o)'" onmouseout="this.style.color='var(--ts)'">Blog</a>
-      {{ end }}
-      <span style="opacity: 0.5;">&gt;</span>
-      <span style="color: var(--tm); font-weight: 500;">{{ .Title }}</span>
-    </nav>
-    <header class="blog-header">
-      <div class="section-tag">{{ range .Params.categories }}{{ . }}{{ end }}</div>
-      <h1 class="blog-title">{{ .Title }}</h1>
-      <div class="blog-meta">
-        <time>{{ .Date.Format "02 Jan 2006" }}</time>
-        <span>•</span>
-        <span>Lectura Premium</span>
-      </div>
-    </header>
+<div id="reading-progress-bar" class="reading-progress" aria-hidden="true"></div>
 
-    {{ if .Params.image }}
-      {{ $imgDest := strings.TrimPrefix "/" .Params.image }}
-      {{ $isRemote := or (hasPrefix $imgDest "http://") (hasPrefix $imgDest "https://") }}
-      {{ $img := "" }}
-      {{ if not $isRemote }}
-        {{ $img = .Page.Resources.GetMatch $imgDest }}
-        {{ if not $img }}
-          {{ $img = resources.Get $imgDest }}
-        {{ end }}
-      {{ end }}
-      <div class="blog-cover-container" style="margin-bottom: 2rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--br);">
-        {{ if $img }}
-          {{ $webp := $img.Resize "1200x webp" }}
-          <picture>
-            <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
-            <img src="{{ $img.RelPermalink }}" alt="{{ .Title }}" style="width: 100%; height: auto; max-height: 480px; object-fit: cover; display: block;" loading="eager" decoding="async">
-          </picture>
-        {{ else }}
-          <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" style="width: 100%; height: auto; max-height: 480px; object-fit: cover; display: block;" loading="eager" decoding="async">
-        {{ end }}
-      </div>
-    {{ end }}
+<section class="blog-single-wrapper">
+  <div class="section-bg bg-blog"></div>
+  <div class="section-glow"></div>
 
-    <div class="blog-content">
-      {{ .Content }}
-    </div>
+  <div class="blog-single-container">
+    <div class="blog-layout-grid">
+      <!-- MAIN READING COLUMN -->
+      <div class="blog-main-col">
+        <article class="blog-post-article">
+          <nav class="breadcrumbs" aria-label="Breadcrumbs">
+            <a href="{{ "/" | relURL }}">Inicio</a>
+            <span class="sep">&gt;</span>
+            {{ if eq .Section "guias" }}
+            <a href="{{ "/guias/" | relURL }}">Guías</a>
+            {{ else }}
+            <a href="{{ "/blog/" | relURL }}">Blog</a>
+            {{ end }}
+            <span class="sep">&gt;</span>
+            <span class="current">{{ .Title }}</span>
+          </nav>
 
-    {{ with .Params.projects }}
-      {{ range . }}
-        {{ $proj := site.GetPage (printf "/soluciones/%s" .) }}
-        {{ if $proj }}
-        <div class="blog-project-callout">
-          <div class="blog-project-callout-text">
-            <span class="section-tag" style="margin-bottom: 4px; font-size: 9px;">Proyecto & Caso de Estudio · Solutech Labs</span>
-            <h4>{{ $proj.Title }}</h4>
-            <p>{{ $proj.Params.tagline | default $proj.Description }}</p>
+          <header class="blog-header">
+            <div class="section-tag">{{ range .Params.categories }}{{ . }}{{ end }}</div>
+            <h1 class="blog-title">{{ .Title }}</h1>
+            <div class="blog-meta">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time>
+              <span>•</span>
+              <span>{{ .ReadingTime }} min de lectura</span>
+              <span>•</span>
+              <span>Por Xavi Alonso</span>
+            </div>
+          </header>
+
+          {{ if .Params.image }}
+            {{ $imgDest := strings.TrimPrefix "/" .Params.image }}
+            {{ $isRemote := or (hasPrefix $imgDest "http://") (hasPrefix $imgDest "https://") }}
+            {{ $img := "" }}
+            {{ if not $isRemote }}
+              {{ $img = .Page.Resources.GetMatch $imgDest }}
+              {{ if not $img }}
+                {{ $img = resources.Get $imgDest }}
+              {{ end }}
+            {{ end }}
+            <div class="blog-cover-container">
+              {{ if $img }}
+                {{ $webp := $img.Resize "1200x webp" }}
+                <picture>
+                  <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+                  <img src="{{ $img.RelPermalink }}" alt="{{ .Title }}" class="blog-cover-img" loading="eager" decoding="async">
+                </picture>
+              {{ else }}
+                <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="blog-cover-img" loading="eager" decoding="async">
+              {{ end }}
+            </div>
+          {{ end }}
+
+          {{ if .TableOfContents }}
+          <!-- ÍNDICE MÓVIL PLEGABLE (VISIBLE SÓLO EN MÓVIL Y TABLETS) -->
+          <details class="blog-toc-mobile">
+            <summary class="toc-mobile-trigger">
+              <span>📑 Índice del artículo ({{ .ReadingTime }} min de lectura)</span>
+              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="toc-mobile-content">
+              {{ .TableOfContents }}
+            </div>
+          </details>
+          {{ end }}
+
+          <div class="blog-content">
+            {{ .Content }}
           </div>
-          <a href="{{ $proj.RelPermalink }}" class="blog-project-callout-btn">Ver Ficha Técnica →</a>
+
+          {{ with .Params.projects }}
+            {{ range . }}
+              {{ $proj := site.GetPage (printf "/soluciones/%s" .) }}
+              {{ if $proj }}
+              <div class="blog-project-callout">
+                <div class="blog-project-callout-text">
+                  <span class="section-tag" style="margin-bottom: 4px; font-size: 9px;">Proyecto & Caso de Estudio · Solutech Labs</span>
+                  <h4>{{ $proj.Title }}</h4>
+                  <p>{{ $proj.Params.tagline | default $proj.Description }}</p>
+                </div>
+                <a href="{{ $proj.RelPermalink }}" class="blog-project-callout-btn">Ver Ficha Técnica →</a>
+              </div>
+              {{ end }}
+            {{ end }}
+          {{ end }}
+
+          <div class="blog-ai-disclosure" style="margin-top: 40px; padding: 18px 22px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--br); border-radius: 12px; font-size: 12px; color: var(--ts); display: flex; align-items: flex-start; gap: 14px; line-height: 1.5;">
+            <span style="font-size: 20px;">🛡️</span>
+            <div>
+              <strong style="color: var(--tm); display: block; margin-bottom: 3px;">Transparencia Editorial & Supervisión Técnica:</strong>
+              Este contenido técnico ha sido elaborado con asistencia de Inteligencia Artificial para documentación y estructuración, y ha sido íntegramente verificado, auditado y validado por el equipo técnico de Solutech. Consulta nuestra <a href="{{ "/uso-de-ia" | relURL }}" style="color: var(--o); text-decoration: underline;">Política de Uso de Inteligencia Artificial</a>.
+            </div>
+          </div>
+
+          <!-- AUTOR & AUTORIDAD TÉCNICA -->
+          <div class="blog-author-footer">
+            <div class="author-avatar-badge">XA</div>
+            <div class="author-details">
+              <div class="author-role-tag">Especialista en Ciberseguridad & Arquitectura IT</div>
+              <h3 class="author-name-title">Xavi Alonso</h3>
+              <p class="author-bio-text">Consultor técnico y responsable de Solutech. Especializado en soporte micro-MSP, blindaje de puestos de trabajo y continuidad operativa para pymes en Murcia y Almería.</p>
+              <div class="author-credentials">
+                <span class="badge-cred">CISCO CCNA</span>
+                <span class="badge-cred">GOOGLE CYBERSECURITY</span>
+                <span class="badge-cred">COMPTIA A+</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- SIDEBAR STICKY (DESKTOP) -->
+      <aside class="blog-sidebar">
+        {{ if .TableOfContents }}
+        <div class="blog-sidebar-widget blog-toc-widget">
+          <div class="sidebar-widget-header">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+            <span>Índice del Artículo</span>
+          </div>
+          <div class="toc-nav">
+            {{ .TableOfContents }}
+          </div>
         </div>
         {{ end }}
-      {{ end }}
-    {{ end }}
 
-    <div class="blog-ai-disclosure" style="margin-top: 40px; padding: 18px 22px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--br); border-radius: 12px; font-size: 12px; color: var(--ts); display: flex; align-items: flex-start; gap: 14px; line-height: 1.5;">
-      <span style="font-size: 18px;">🛡️</span>
-      <div>
-        <strong style="color: var(--tm); display: block; margin-bottom: 2px;">Transparencia Editorial & Supervisión Técnica:</strong>
-        Este contenido técnico ha sido elaborado con asistencia de Inteligencia Artificial para documentación y estructuración, y ha sido íntegramente verificado, auditado y validado por el equipo técnico de Solutech. Consulta nuestra <a href="{{ "/uso-de-ia" | relURL }}" style="color: var(--o); text-decoration: underline;">Política de Uso de Inteligencia Artificial</a>.
-      </div>
+        <div class="blog-sidebar-widget blog-cta-widget">
+          <div class="sidebar-cta-badge">Soporte & Diagnóstico</div>
+          <h4 class="sidebar-cta-title">¿Tu empresa está protegida?</h4>
+          <p class="sidebar-cta-desc">Auditoría preventiva sin coste para Pymes de Almería y Murcia. Detectamos brechas antes de que causen parálisis.</p>
+          <a href="{{ "/#contacto" | relURL }}" class="btn-p btn-sm" style="width: 100%; justify-content: center;">Diagnóstico Gratuito →</a>
+          <a href="{{ "/autodiagnostico/" | relURL }}" class="btn-o btn-sm" style="width: 100%; justify-content: center; margin-top: 8px;">Hacer Cyber-Check</a>
+        </div>
+      </aside>
     </div>
-  </article>
-</div>
+  </div>
+</section>
 {{ end }}

@@ -6,11 +6,11 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 37
+- **Total de tareas registradas:** 38
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 37
+- **Tareas completadas:** 38
 - **Tareas canceladas / descartadas:** 0
 - **Última actualización:** 2026-09-17
 
@@ -54,6 +54,30 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-038 — Rediseño Editorial y Optimización Responsive Integral del Blog y Guías (2026-09-17)
+
+- **Estado:** COMPLETADA
+- **Fecha de inicio:** 2026-09-17
+- **Fecha de finalización:** 2026-09-17
+- **Prioridad:** ALTA
+- **Descripción:** Reingeniería visual, ergonómica y responsive de la experiencia de lectura en artículos del blog y guías técnicas (`layouts/_default/single.html`, `main.css` y `scroll.js`):
+  1. Corrección del bug de navegación: el selector genérico `nav {` en `main.css` fue restringido a `nav#main-nav {`, evitando que `<nav class="breadcrumbs">` fuera arrancado del flujo y fijado indebidamente en la cabecera del navegador.
+  2. Arquitectura de lectura a 2 columnas (PC / Escritorio): retícula asimétrica de hasta 1280px (`.blog-layout-grid`) con columna principal de lectura (máx. 800px) y sidebar *sticky* de 320px fija al scroll.
+  3. Tabla de Contenidos interactiva (TOC): renderizado dinámico mediante Hugo (`{{ .TableOfContents }}`) en la barra lateral con Scrollspy activo mediante `IntersectionObserver` que resalta el encabezado actual en tiempo real.
+  4. Optimización para Smartphone: índice plegable nativo (`<details class="blog-toc-mobile">`) al inicio del post para navegación rápida sin scroll forzado, colapso fluido a columna única y paddings laterales reducidos de 48px a 18px para maximizar el área útil de lectura en pantallas pequeñas.
+  5. Tipografía ergonómica y alto contraste: eliminación de `text-align: justify` en favor de alineación izquierda natural con `text-wrap: pretty`, elevación del contraste del cuerpo a `rgba(240, 237, 232, 0.88)` para mitigar fatiga visual en dark mode, y jerarquía clara en encabezados H2 (52px margin-top con borde divisor) y H3.
+  6. Barra de progreso de lectura: creación de `#reading-progress-bar` (gradiente naranja 3px) sincronizado con el scroll del usuario mediante Lenis / fallback nativo.
+  7. Elementos de autoridad B2B: cálculo dinámico del tiempo de lectura (`{{ .ReadingTime }} min de lectura`), caja de autor técnica (`.blog-author-footer`) con badges de certificación (Cisco CCNA, Google Cybersecurity, CompTIA A+) y widgets de llamada al Diagnóstico IT y Cyber-Check.
+  8. Gobernanza y Versionado: incremento a `v1.3.0` en `package.json`, validación con `npm run lint` (ESLint + Stylelint sin errores) y actualización de `PROJECT_CONTEXT.md`.
+- **Archivos modificados/creados:**
+  - `layouts/_default/single.html` (MODIFICADO)
+  - `assets/css/main.css` (MODIFICADO)
+  - `assets/css/components/nav.css` (MODIFICADO)
+  - `assets/js/modules/scroll.js` (MODIFICADO)
+  - `package.json` (MODIFICADO)
+  - `PROJECT_CONTEXT.md` (MODIFICADO)
+  - `TASKS.md` (ACTUALIZADO)
 
 ## TASK-037 — Corrección de Maquetación, Overflow y Escapado de Precios en Página de Servicios (2026-09-17)
 

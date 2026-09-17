@@ -123,6 +123,57 @@ export function initScrollEffects() {
     }
   }
 
+  // Reading Progress Bar (for single blog posts & guides)
+  const progressBar = document.getElementById("reading-progress-bar");
+  const articleEl = document.querySelector(".blog-post-article");
+  if (progressBar && articleEl) {
+    const updateProgressBar = () => {
+      const rect = articleEl.getBoundingClientRect();
+      const articleHeight = rect.height;
+      const windowHeight = window.innerHeight;
+      const articleTop = rect.top;
+      const totalDistance = articleHeight - windowHeight;
+      if (totalDistance <= 0) {
+        progressBar.style.width = "100%";
+        return;
+      }
+      const scrolled = -articleTop;
+      const pct = Math.min(100, Math.max(0, (scrolled / totalDistance) * 100));
+      progressBar.style.width = `${pct}%`;
+    };
+
+    if (lenis) {
+      lenis.on("scroll", updateProgressBar);
+    } else {
+      window.addEventListener("scroll", updateProgressBar, { passive: true });
+    }
+  }
+
+  // Table of Contents Scrollspy
+  const tocLinks = document.querySelectorAll(".blog-toc-widget #TableOfContents a, .blog-toc-mobile #TableOfContents a");
+  const headings = document.querySelectorAll(".blog-content h2, .blog-content h3");
+  if (tocLinks.length > 0 && headings.length > 0) {
+    const headingObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute("id");
+          if (id) {
+            tocLinks.forEach(link => {
+              const href = link.getAttribute("href");
+              if (href === `#${id}`) {
+                link.classList.add("toc-active");
+              } else {
+                link.classList.remove("toc-active");
+              }
+            });
+          }
+        }
+      });
+    }, { rootMargin: "-80px 0px -70% 0px" });
+
+    headings.forEach(h => headingObserver.observe(h));
+  }
+
   // Emergency Widget Delay Display
   setTimeout(() => {
     const label = document.getElementById("emergency-label");
