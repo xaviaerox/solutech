@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 35
+- **Total de tareas registradas:** 36
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 35
+- **Tareas completadas:** 36
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-09-05
+- **Última actualización:** 2026-09-16
 
 ---
 
@@ -54,6 +54,18 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-036 — Publicación y Difusión Multicanal: Caso Revolut y Lecciones de Suplantación para Pymes (2026-09-16)
+
+- **Estado:** COMPLETADA
+- **Fecha de inicio:** 2026-09-16
+- **Fecha de finalización:** 2026-09-16
+- **Prioridad:** MEDIA
+- **Descripción:** Publicación del artículo técnico de ciberseguridad sobre el incidente de Revolut de septiembre de 2026 (fraude por solicitud institucional EDR). Adaptación editorial para la concienciación de Pymes de Murcia y Almería frente al fraude de la factura cambiada y suplantación de identidad. Generación de portada cinematográfica 16:9 y paquete multicanal (LinkedIn, Instagram, carrusel, prompt y meta.json) en content-system.
+- **Archivos modificados/creados:**
+  - `content/blog/2026-09-16-revolut-brecha-seguridad-suplantacion-lecciones-pymes.md` (NUEVO)
+  - `static/images/news-revolut-brecha-seguridad-suplantacion-lecciones-pymes.jpg` (NUEVO)
+  - `TASKS.md` (ACTUALIZADO)
 
 ## TASK-035 — Diseño e Implementación de la Capa Soluciones / Solutech Labs e Integración Bidireccional con Blog (2026-09-05)
 
