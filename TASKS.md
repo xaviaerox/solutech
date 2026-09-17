@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 36
+- **Total de tareas registradas:** 37
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 36
+- **Tareas completadas:** 37
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-09-16
+- **Última actualización:** 2026-09-17
 
 ---
 
@@ -54,6 +54,24 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-037 — Corrección de Maquetación, Overflow y Escapado de Precios en Página de Servicios (2026-09-17)
+
+- **Estado:** COMPLETADA
+- **Fecha de inicio:** 2026-09-17
+- **Fecha de finalización:** 2026-09-17
+- **Prioridad:** ALTA
+- **Descripción:** Corrección de la plantilla `layouts/servicios/single.html` (`/servicios/`):
+  1. Corrección de layout y desbordamiento: sustitución del selector erróneo `<section class="hero r">` (que limitaba el ancho a 1100px con `overflow: hidden`, recortando las tarjetas 3 y 4 del grid y dejando un vacío negro en pantallas anchas) por `<section class="services r in" style="max-width: 1400px; padding: 140px 5% 80px;">`.
+  2. Atmósfera de fondo: integración de `<div class="section-bg bg-services">` y `<div class="section-glow">` para cobertura `100vw` continua y sin cortes.
+  3. Renderizado de HTML en precios: aplicación del filtro `| safeHTML` a `{{ .period }}` para que `<small> / mes</small>` no se escape como texto plano.
+  4. Sincronización de iconos SVG: corrección de condiciones de ID (`pack-s-essential`, `pack-s-pro`, `pack-m-basic`) alineadas con `data/pricing.yaml`, restaurando los iconos específicos de cada plan en vez del rayo por defecto.
+  5. Versionado y gobernanza: incremento a `v1.2.1` en `package.json` y sincronización con `PROJECT_CONTEXT.md`.
+- **Archivos modificados/creados:**
+  - `layouts/servicios/single.html` (MODIFICADO)
+  - `package.json` (MODIFICADO)
+  - `PROJECT_CONTEXT.md` (MODIFICADO)
+  - `TASKS.md` (ACTUALIZADO)
 
 ## TASK-036 — Publicación y Difusión Multicanal: Caso Revolut y Lecciones de Suplantación para Pymes (2026-09-16)
 

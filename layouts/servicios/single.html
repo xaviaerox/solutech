@@ -1,36 +1,41 @@
 {{ define "main" }}
-<section class="hero r" style="min-height: auto; padding: 140px 5% 80px;">
+<section class="services r in" style="max-width: 1400px; padding: 140px 5% 80px;">
+  <div class="section-bg bg-services"></div>
+  <div class="section-glow"></div>
+
   <div style="max-width: 1200px; width: 100%; margin: 0 auto;">
     <div class="section-tag">Servicios de Gestión IT</div>
     <h1 class="section-h" style="font-size: clamp(36px, 5vw, 64px); margin-bottom: 24px;">Planes de Gestión MSP.<br><em>Sin letra pequeña.</em></h1>
     <p style="color: var(--tm); font-size: 16px; max-width: 560px; margin-bottom: 60px;">Todo lo que incluye cada plan, sin ambigüedad. Precio cerrado mensual, sin sorpresas en factura.</p>
+  </div>
     
-    <div class="svc-grid">
-      {{ range site.Data.pricing }}
-      <div class="svc {{ if .highlight }}mid{{ end }}">
-        {{ if .badge }}<div class="svc-badge">{{ .badge }}</div>{{ end }}
-        <div class="svc-icon-wrap">
-          {{ if eq .id "pack-esencial" }}<svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          {{ else if eq .id "pack-profesional" }}<svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          {{ else }}<svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>{{ end }}
-        </div>
-        <div class="svc-pack">{{ .name }}</div>
-        <div class="svc-name">{{ .target }}</div>
-        <div class="svc-list">
-          {{ range .features }}
-          <div class="svc-item">{{ . }}</div>
-          {{ end }}
-        </div>
-        <div class="svc-footer">
-          <span class="svc-price">{{ .price }}{{ .period }}</span>
-          <a href="{{ .link }}" class="svc-link">{{ .cta }} <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
+  <div class="svc-grid">
+    {{ range site.Data.pricing }}
+    <div class="svc {{ if .highlight }}mid{{ end }}">
+      {{ if .badge }}<div class="svc-badge">{{ .badge }}</div>{{ end }}
+      <div class="svc-icon-wrap">
+        {{ if eq .id "pack-s-essential" }}<svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        {{ else if eq .id "pack-s-pro" }}<svg viewBox="0 0 24 24"><path d="M1 6l11-4 11 4M1 6v12l11 4 11-4V6M12 2v20M1 12h22"/></svg>
+        {{ else if eq .id "pack-m-basic" }}<svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        {{ else }}<svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>{{ end }}
       </div>
-      {{ end }}
+      <div class="svc-pack">{{ .name }}</div>
+      <div class="svc-name">{{ .target }}</div>
+      <div class="svc-list">
+        {{ range .features }}
+        <div class="svc-item">{{ . }}</div>
+        {{ end }}
+      </div>
+      <div class="svc-footer">
+        <span class="svc-price">{{ .price }}{{ .period | safeHTML }}</span>
+        <a href="{{ .link }}" class="svc-link">{{ .cta }} <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
     </div>
+    {{ end }}
+  </div>
 
-    <!-- FAQ -->
-    <div style="margin-top: 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+  <!-- FAQ -->
+  <div style="max-width: 1200px; margin: 80px auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
       <div>
         <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 12px;">¿Hay permanencia?</h3>
         <p style="color: var(--tm); font-size: 14px; line-height: 1.7;">No exigimos permanencia. Nuestro modelo se basa en resultados continuos, no en contratos. Si no percibes valor, puedes cancelar con 30 días de preaviso.</p>
@@ -48,7 +53,6 @@
         <p style="color: var(--tm); font-size: 14px; line-height: 1.7;">El 90% de la gestión es remota mediante RustDesk + Tailscale. Para instalaciones físicas o urgencias presenciales, cubrimos Almería y Murcia.</p>
       </div>
     </div>
-  </div>
 </section>
 
 <section class="cta r" id="contacto" style="padding-top: 80px;">
