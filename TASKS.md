@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 40
+- **Total de tareas registradas:** 42
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 40
+- **Tareas completadas:** 42
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-09-17
+- **Última actualización:** 2026-10-09
 
 ---
 
@@ -54,6 +54,28 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-042 — Regeneración Masiva de Portadas Históricas Degradadas y Publicación de Nuevo Post de Noticias Verificado (2026-10-09)
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-10-09
+- **Tipo:** Mejora de Calidad Visual / Ejecución Editorial
+- **Descripción:** Se ejecutó con éxito la regeneración masiva de las 22 imágenes históricas degradadas que habían sido afectadas por la compresión y artefactos del modelo Pollinations/sana. Se utilizó el nuevo motor Tier 3 de SerpApi (Unsplash/Pexels HD) y el Compositor Procedural 3D en Pillow Studio, aplicando recorte exacto 16:9 (`1280x720`) y validación estricta de formato raster (evitando SVGs o buffers corruptos). Adicionalmente, se generó un nuevo artículo de noticias editorial completo (*"La Nueva Era del Riesgo Digital: IA, Cibercrimen Industrializado y Conflictos Híbridos Amenazan a su Pyme"*) con enlazado interno RAG y portada editorial HD de alta resolución. Hugo compila con 0 errores en 2.6s.
+- **Archivos Modificados:**
+  - `static/images/news-*.jpg` (22 imágenes regeneradas a alta resolución)
+  - `static/images/news-ia-cibercrimen-industrializado-riesgo-digital-pymes.jpg` (nueva portada generada)
+  - `content/blog/2026-10-09-ia-cibercrimen-industrializado-riesgo-digital-pymes.md` (nuevo post de noticias)
+  - `TASKS.md`
+
+## TASK-041 — Mitigación de Portadas Degradadas y Preparación para Nuevo Pipeline Visual (2026-10-09)
+
+- **Estado:** COMPLETADA
+- **Fecha de inicio:** 2026-10-09
+- **Fecha de finalización:** 2026-10-09
+- **Prioridad:** ALTA
+- **Descripción:** Verificación de integridad y compilación limpia del blog de Hugo (`hugo --minify` completado en ~7.9s) tras la reingeniería del pipeline visual en `content-system`. Validación de que los artículos del blog mantienen compatibilidad total con las nuevas portadas editoriales en 16:9 (`1280x720`) y con el compositor procedural en Pillow.
+- **Archivos creados/modificados:**
+  - `TASKS.md` (ACTUALIZADO)
 
 ## TASK-040 — Alineación de Perfil con la Realidad: Supresión de Certificaciones y Títulos No Acreditados (2026-09-17)
 
