@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 42
+- **Total de tareas registradas:** 43
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 42
+- **Tareas completadas:** 43
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-10-09
+- **Última actualización:** 2026-10-11
 
 ---
 
@@ -54,6 +54,18 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-043 — Regeneración de Portadas Defectuosas (07/10, 09/10, 11/10) e Integración de Pipeline Visual 16:9 HD (2026-10-11)
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-10-11
+- **Tipo:** Mejora de Calidad Visual / Reparación Editorial
+- **Descripción:** Detección de caída al renderizador procedural (72 KB) en el post del 11/10 (`dominios-durmientes-phishing-dns-predictivo-pymes`) y presencia de imágenes de baja calidad de Pollinations/sana en los posts del 07/10 y 09/10. Se sustituyeron de inmediato las 3 imágenes por fotografías editoriales nítidas en proporción panorámica 16:9 (`1280x720`) con pesos de 217 KB a 246 KB. El sitio web compila limpiamente con Hugo (290 páginas, 0 errores).
+- **Archivos Modificados:**
+  - `static/images/news-dominios-durmientes-phishing-dns-predictivo-pymes.jpg` (217 KB, sustituida)
+  - `static/images/news-ia-interviene-todas-fases-ciberataque-pyme-preparada.jpg` (246 KB, sustituida)
+  - `static/images/news-ia-agentica-defensa-cibercrimen-financiero-pymes.jpg` (223 KB, sustituida)
+  - `TASKS.md`
 
 ## TASK-042 — Regeneración Masiva de Portadas Históricas Degradadas y Publicación de Nuevo Post de Noticias Verificado (2026-10-09)
 
