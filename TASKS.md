@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 43
+- **Total de tareas registradas:** 44
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 43
+- **Tareas completadas:** 44
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-10-11
+- **Última actualización:** 2026-10-20
 
 ---
 
@@ -54,6 +54,38 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-044 — Resolución de Portadas Repetidas y Sustitución de Imágenes Procedurales en Guías y Noticias (2026-10-20)
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-10-20
+- **Tipo:** Reparación Editorial / Optimización de Calidad Visual
+- **Descripción:** Se corrigieron todas las imágenes duplicadas y de deficiente calidad en guías y noticias del sitio web:
+  1. **Guías técnicas con imagen procedural degradada:** Se reemplazaron las portadas estáticas de Pillow (71 KB) de las guías de SSH/MFA y VPN Mesh por fotografías editoriales panorámicas 16:9 (`1280x720`) nítidas y contextuales.
+  2. **Noticias con imágenes duplicadas:** Se regeneraron y desacoplaron 11 imágenes de noticias que compartían el mismo archivo procedural (71 KB) o la misma imagen fija de Wikimedia Commons (246 KB y 223 KB) debido a la ausencia de caché persistente de hashes en el motor.
+  3. **Desacoplamiento de artículos con referencias compartidas:** Se crearon 3 nuevos activos dedicados en alta resolución para auditorías RAG, Google Cloud IA y Fraude CEO por Deepfakes, actualizando sus frontmatters correspondientes.
+  4. **Verificación:** Cero colisiones de hashes en el sitio web (validado con script de integridad MD5) y compilación limpia con Hugo (`300` páginas procesadas en ~6s con 0 errores).
+- **Archivos Modificados:**
+  - `content/blog/2026-08-10-auditorias-rag-ia-pymes.md`
+  - `content/blog/2024-07-30-google-ia-ciberseguridad-pymes.md`
+  - `content/blog/2026-08-04-deepfake-fraude-ceo-empresas-2026.md`
+  - `static/images/blog-implementar-mfa-obligatorio-servidor-ssh.jpg` (sustituida)
+  - `static/images/blog-configurar-tunel-vpn-malla-seguro-oficinas.jpg` (sustituida)
+  - `static/images/news-vulnerabilidades-aws-waf-seguridad-web-pymes.jpg` (sustituida)
+  - `static/images/news-vulnerabilidades-ibm-tivoli-netcool-pymes.jpg` (sustituida)
+  - `static/images/news-vulnerabilidades-netscaler-citrix-pymes-riesgo.jpg` (sustituida)
+  - `static/images/news-vulnerabilidades-vmware-avi-load-balancer-pyme.jpg` (sustituida)
+  - `static/images/news-xss-tastyigniter-media-manager-pymes.jpg` (sustituida)
+  - `static/images/news-cibercrimen-industrializado-ia-infraestructuras-efimeras-pymes.jpg` (sustituida)
+  - `static/images/news-ia-interviene-todas-fases-ciberataque-pyme-preparada.jpg` (sustituida)
+  - `static/images/news-ciberataques-refrigeracion-comercial-danfoss-pymes.jpg` (sustituida)
+  - `static/images/news-talento-ciberseguridad-resiliencia-pyme.jpg` (sustituida)
+  - `static/images/news-ia-agentica-ciberdelincuentes-pymes-amenaza-escalada.jpg` (sustituida)
+  - `static/images/news-ia-agentica-defensa-cibercrimen-financiero-pymes.jpg` (sustituida)
+  - `static/images/blog-auditorias-rag-ia-pymes.jpg` (nueva)
+  - `static/images/blog-google-ia-ciberseguridad-pymes.jpg` (nueva)
+  - `static/images/blog-deepfake-fraude-ceo-empresas.jpg` (nueva)
+  - `TASKS.md`
 
 ## TASK-043 — Regeneración de Portadas Defectuosas (07/10, 09/10, 11/10) e Integración de Pipeline Visual 16:9 HD (2026-10-11)
 

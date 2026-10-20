@@ -7,7 +7,7 @@ categories: ["Ciberseguridad", "Noticias", "Inteligencia Artificial"]
 tags: ["deepfake", "fraude CEO", "IA maliciosa", "pymes", "ciberseguridad", "Almería", "Murcia"]
 keywords: ["deepfake fraude CEO", "IA maliciosa pymes", "clonación voz ciberseguridad", "fraude videollamada directivo", "ciberseguridad empresas Almería Murcia"]
 author: "Xavi Alonso - Solutech"
-image: "/images/blog-lado-oscuro-ia-cover.jpg"
+image: "images/blog-deepfake-fraude-ceo-empresas.jpg"
 draft: false
 business_impact: "Un ataque de suplantación mediante IA puede provocar la sustracción directa de fondos y el colapso financiero de la Pyme al eludir controles visuales tradicionales."
 ---

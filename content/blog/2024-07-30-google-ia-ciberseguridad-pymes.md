@@ -8,7 +8,7 @@ description: Analizamos cómo la IA de Google refuerza la ciberseguridad para
 categories:
   - Ciberseguridad
   - Inteligencia Artificial
-image: "images/news-ia-ofensiva-confianza-digital-pymes-protegerse.jpg"
+image: "images/blog-google-ia-ciberseguridad-pymes.jpg"
 draft: false
 ---
 
