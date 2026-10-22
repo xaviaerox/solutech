@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 44
+- **Total de tareas registradas:** 46
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 44
+- **Tareas completadas:** 46
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-10-20
+- **Última actualización:** 2026-10-22
 
 ---
 
@@ -54,6 +54,31 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-046 — Sustitución de Portada Editorial para Noticia IA Ciberamenazas Autónomas 2026 y Verificación Hugo (2026-10-22)
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-10-22
+- **Tipo:** Reparación Editorial / Optimización de Calidad Visual
+- **Descripción:** Sustitución del activo gráfico defectuoso `static/images/news-ia-ciberamenazas-autonomas-pymes-2026.jpg` perteneciente al artículo `ia-ciberamenazas-autonomas-pymes-2026`. La imagen anterior consistía en una diapositiva infográfica con marca comercial externa (`COE SECURITY`) y texto publicitario en inglés ("The Sentinel's Gaze: Cybersecurity in 2025"), vulnerando las directrices de marca de Solutech. Se generó y procesó una fotografía editorial auténtica en alta resolución (1280x720, relación exacta 16:9, 310 KB, 216.514 colores) que retrata a un equipo de operaciones de ciberseguridad en un centro de control SOC / datacenter corporativo. Verificación de compilación limpia con Hugo (`302` páginas compiladas en 1.770 ms con 0 errores).
+- **Archivos Modificados:**
+  - `static/images/news-ia-ciberamenazas-autonomas-pymes-2026.jpg` (reemplazada)
+  - `TASKS.md` (actualizado)
+
+## TASK-045 — Publicación de Noticia Crítica PHP2Shell (CVE-2026-109618 y CVE-2026-109619), Portada Editorial 16:9 y Estrategia de Conversión B2B (2026-10-22)
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-10-22
+- **Tipo:** Publicación Editorial / Inteligencia de Amenazas / Estrategia de Leads
+- **Descripción:** Investigación exhaustiva, redacción y publicación del artículo técnico y ejecutivo sobre las vulnerabilidades críticas de Ejecución Remota de Código sin autenticación en el núcleo de PHP conocidas como **PHP2Shell** (CVE-2026-109618 por corrupción de memoria longjmp() OOM y CVE-2026-109619 por *Use-After-Free* en estado global de subidas multipart/form-data, CVSS v4.0 9.2/10):
+  1. **Análisis de impacto empresarial y global:** Documentación de la movilización de AWS, Microsoft Azure WAF, Cloudflare, cPanel (EasyApache) y plataformas empresariales (Moodle, WordPress, PrestaShop, Laravel) ante la explotación activa.
+  2. **Traslación de riesgo a Pymes (Murcia y Almería):** Evaluación de exposición por deuda técnica en versiones EOL (PHP 7.4, 8.0, 8.1), riesgo de *Web Skimming* en tiendas online, fugas de bases de datos sujetas a sanciones RGPD y salto lateral a redes locales mediante intranets/ERPs expuestos.
+  3. **Contraste arquitectónico:** Puesta en valor de la inmunidad por diseño (superficie de ataque cero frente a RCE de intérprete) del portal Jamstack estático de Solutech frente a CMS tradicionales dinámicos.
+  4. **Elementos visuales y SEO:** Inclusión de 2 diagramas de arquitectura ASCII, matriz oficial de versiones parcheadas (8.2.35, 8.3.36, 8.4.27, 8.5.12), enlazado interno RAG, llamada a la acción hacia /autodiagnostico/ (*Cybercheck*), FAQs estructuradas y portada editorial panorámica 16:9 (1280x720).
+- **Archivos Modificados:**
+  - content/blog/2026-10-22-vulnerabilidad-critica-php-php2shell-rce-impacto-pymes.md (nuevo)
+  - static/images/news-vulnerabilidad-critica-php-php2shell-rce-impacto-pymes.jpg (nueva)
+  - TASKS.md
 
 ## TASK-044 — Resolución de Portadas Repetidas y Sustitución de Imágenes Procedurales en Guías y Noticias (2026-10-20)
 
