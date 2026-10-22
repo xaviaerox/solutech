@@ -6,11 +6,11 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 46
+- **Total de tareas registradas:** 47
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 46
+- **Tareas completadas:** 47
 - **Tareas canceladas / descartadas:** 0
 - **Última actualización:** 2026-10-22
 
@@ -54,6 +54,16 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-047 — Sustitución de Portada Editorial con Marcas de Agua Alamy en Noticia de Sabotaje a Refrigeración Danfoss (2026-10-22)
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-10-22
+- **Tipo:** Reparación Editorial / Optimización de Calidad Visual
+- **Descripción:** Detección y erradicación del activo gráfico `static/images/news-ciberataques-refrigeracion-comercial-danfoss-pymes.jpg` perteneciente al artículo sobre el ciberataque a controladores de frío Danfoss/Copeland en 700 supermercados. La imagen anterior correspondía a una fotografía de banco con marcas de agua repetidas de gran formato ("Alamy") sobrepuestas sobre la maquinaria. Se sustituyó por una fotografía editorial panorámica nítida (1280x720, 290 KB, 166.662 colores) que retrata con perspectiva simétrica los pasillos de refrigeración y congeladores comerciales de un supermercado moderno, libre de textos, logotipos y marcas de agua. Verificación de compilación limpia con Hugo (`302` páginas compiladas con 0 errores).
+- **Archivos Modificados:**
+  - `static/images/news-ciberataques-refrigeracion-comercial-danfoss-pymes.jpg` (reemplazada)
+  - `TASKS.md` (actualizado)
 
 ## TASK-046 — Sustitución de Portada Editorial para Noticia IA Ciberamenazas Autónomas 2026 y Verificación Hugo (2026-10-22)
 
