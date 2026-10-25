@@ -12,9 +12,22 @@ test.describe('Solutech Corporate Portal E2E Suite', () => {
     const h1 = page.locator('h1');
     await expect(h1).toBeVisible();
 
-    // Validate Schema.org structured data script present
+    // Validate Schema.org structured data script present with AggregateRating and Review
     const schemaScript = page.locator('script[type="application/ld+json"]');
     await expect(schemaScript.first()).toBeAttached();
+    const schemaJson = JSON.parse(await schemaScript.first().textContent());
+    expect(schemaJson.aggregateRating).toBeDefined();
+    expect(schemaJson.aggregateRating.ratingValue).toBe('5.0');
+    expect(Array.isArray(schemaJson.review)).toBe(true);
+    expect(schemaJson.review.length).toBeGreaterThanOrEqual(3);
+
+    // Validate Testimonials section renders dynamic rating stars
+    const testimonialCards = page.locator('#clientes .test-card');
+    await expect(testimonialCards).toHaveCount(schemaJson.review.length);
+    await expect(testimonialCards.first().locator('.test-stars')).toHaveAttribute(
+      'aria-label',
+      /Calificación \d de 5 estrellas/
+    );
   });
 
   test('Cookie Consent Banner appears and can be accepted', async ({ page }) => {

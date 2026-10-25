@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 47
+- **Total de tareas registradas:** 48
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 47
+- **Tareas completadas:** 48
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-10-22
+- **Última actualización:** 2026-10-23
 
 ---
 
@@ -54,6 +54,28 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-048 — Mejora Integral del Sistema de Reseñas: Estrellas Dinámicas, Colección Decap CMS y Datos Estructurados SEO (2026-10-23)
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-10-23
+- **Tipo:** Feature / SEO / CMS Integration
+- **Descripción:** Evolución completa del sistema de reseñas y testimonios de `solutech`:
+  1. **Renderizado dinámico de estrellas (`rating`):** Sustitución de las estrellas fijas en `layouts/index.html` por evaluación dinámica de `{{ .rating }}` (rango 1–5 con estrellas vacías `.star-empty` y atributo `aria-label="Calificación X de 5 estrellas"`), además de fallback automático para `initial` a partir de la primera letra de `name`.
+  2. **Edición desde Decap CMS (`/admin`):** Estructuración de `data/testimonials.yaml` bajo la clave `items` (manteniendo retrocompatibilidad en plantillas mediante `reflect.IsMap`) y registro de la File Collection `data` (`Reseñas y Testimonios`) en `static/admin/config.yml`.
+  3. **Datos estructurados SEO (`Schema.org`):** Cálculo en tiempo de compilación de `aggregateRating` (`ratingValue`, `reviewCount`) e inyección de la matriz `review` (`Review` + `Rating`) dentro del bloque JSON-LD `ProfessionalService` en `layouts/partials/head.html`, corrigiendo además la serialización de `dayOfWeek` con `safeJS`.
+  4. **Calidad y Verificación:** Ampliación de la suite E2E (`tests/e2e/homepage.spec.js`), validación con `npm run lint` y compilación limpia con `hugo --minify` (v1.3.2).
+- **Archivos Modificados:**
+  - `data/testimonials.yaml`
+  - `layouts/index.html`
+  - `layouts/partials/head.html`
+  - `static/admin/config.yml`
+  - `assets/css/main.css`
+  - `tests/e2e/homepage.spec.js`
+  - `package.json`
+  - `CHANGELOG.md`
+  - `PROJECT_CONTEXT.md`
+  - `TASKS.md`
 
 ## TASK-047 — Sustitución de Portada Editorial con Marcas de Agua Alamy en Noticia de Sabotaje a Refrigeración Danfoss (2026-10-22)
 

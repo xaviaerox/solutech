@@ -20,9 +20,9 @@
 
 **Repositorio:** `xaviaerox/solutech` (PÚBLICO en GitHub).
 
-**Versión actual:** `1.3.1`.
+**Versión actual:** `1.3.2`.
 
-**Última actualización:** 2026-09-17.
+**Última actualización:** 2026-10-23.
 
 ---
 

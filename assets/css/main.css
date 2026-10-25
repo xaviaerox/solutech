@@ -293,6 +293,7 @@ nav#main-nav {
 .test-card:hover { border-color: var(--o); background: var(--s2); transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
 .test-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
 .test-stars { color: #ffb703; font-size: 13px; letter-spacing: 2px; }
+.test-stars .star-empty { opacity: 0.25; }
 .test-quote-icon { color: var(--o); opacity: 0.35; display: flex; align-items: center; }
 .test-text { font-size: 13.5px; line-height: 1.65; color: var(--tm); margin-bottom: 24px; font-style: italic; flex-grow: 1; display: flex; align-items: flex-start; }
 .test-author { display: flex; align-items: center; gap: 14px; margin-top: auto; padding-top: 20px; border-top: 1px solid var(--br); min-height: 60px; }

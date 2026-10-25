@@ -47,6 +47,20 @@
     <!-- Schema.org LocalBusiness -->
     {{ if .IsHome }}
     {{ $b := .Site.Params.business }}
+    {{ $testimonials := site.Data.testimonials }}
+    {{ if reflect.IsMap $testimonials }}
+      {{ $testimonials = $testimonials.items }}
+    {{ end }}
+    {{ $reviewCount := len $testimonials }}
+    {{ $ratingSum := 0.0 }}
+    {{ range $testimonials }}
+      {{ $r := default 5 (int .rating) }}
+      {{ $ratingSum = add $ratingSum (float $r) }}
+    {{ end }}
+    {{ $avgRating := "5.0" }}
+    {{ if gt $reviewCount 0 }}
+      {{ $avgRating = printf "%.1f" (div $ratingSum (float $reviewCount)) }}
+    {{ end }}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -76,7 +90,7 @@
       ],
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": {{ $b.hours_days | jsonify }},
+        "dayOfWeek": {{ $b.hours_days | jsonify | safeJS }},
         "opens": "{{ $b.hours_opens }}",
         "closes": "{{ $b.hours_closes }}"
       },
@@ -85,7 +99,33 @@
         "{{ .Site.Params.social.instagram }}",
         "{{ .Site.Params.social.youtube }}",
         "{{ .Site.Params.social.github }}"
-      ]
+      ]{{ if gt $reviewCount 0 }},
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "{{ $avgRating }}",
+        "reviewCount": "{{ $reviewCount }}",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {{ range $i, $rev := $testimonials }}{{ if $i }},{{ end }}
+        {{ $rVal := default 5 (int $rev.rating) }}
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": {{ $rev.name | jsonify | safeJS }}
+          },
+          "reviewBody": {{ $rev.text | jsonify | safeJS }},
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "{{ $rVal }}",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        }
+        {{ end }}
+      ]{{ end }}
     }
     </script>
     {{ end }}

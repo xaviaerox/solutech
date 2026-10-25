@@ -69,3 +69,24 @@ collections:
       - { label: "Imagen Destacada", name: "image", widget: "image", required: false }
       - { label: "Borrador (Draft)", name: "draft", widget: "boolean", default: false }
       - { label: "Cuerpo / Caso de Estudio", name: "body", widget: "markdown" }
+
+  # Colección de Datos: Reseñas y Testimonios de Portada
+  - name: "data"
+    label: "Datos de Portada y Reseñas"
+    files:
+      - name: "testimonials"
+        label: "Reseñas y Testimonios"
+        file: "data/testimonials.yaml"
+        description: "Gestión de reseñas y casos reales de clientes mostrados en la página principal y en los datos estructurados SEO (Schema.org)."
+        fields:
+          - label: "Lista de Reseñas"
+            name: "items"
+            label_singular: "Reseña"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.role}} ({{fields.rating}}★)"
+            fields:
+              - { label: "Nombre del Cliente", name: "name", widget: "string", hint: "Ej: Conchi M." }
+              - { label: "Cargo / Sector / Ciudad", name: "role", widget: "string", hint: "Ej: Director de Operaciones · Climatización — Murcia" }
+              - { label: "Inicial del Avatar", name: "initial", widget: "string", required: false, hint: "Letra mayúscula para el avatar (si se deja vacío se toma la primera letra del nombre)" }
+              - { label: "Calificación (1 a 5 estrellas)", name: "rating", widget: "number", default: 5, value_type: "int", min: 1, max: 5 }
+              - { label: "Texto de la Reseña", name: "text", widget: "text" }
