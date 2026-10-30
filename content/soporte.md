@@ -1,6 +1,6 @@
 ---
 title: "Portal de Soporte y Cliente"
-description: "Portal de cliente y soporte técnico de Solutech. Acceso a asistencia remota con RustDesk, herramientas Quick Support y contacto para resolución de incidencias IT."
+description: "Portal de cliente y soporte técnico de Solutech. Acceso a asistencia remota segura, gestión de tickets y contacto directo para resolución de incidencias IT."
 date: 2026-05-29
 draft: false
 ---
@@ -15,7 +15,7 @@ Para que podamos ayudarte lo más rápido posible, por favor elige el canal adec
 
 ### 1. Sistema de Tickets (Recomendado)
 Envía un correo electrónico a **soporte@solutech.blog**.
-Automáticamente se generará un ticket en nuestro sistema y Xavi lo recibirá de inmediato.
+Automáticamente se generará un ticket en nuestro sistema y nuestro equipo técnico lo recibirá de inmediato.
 
 *Por favor, incluye:*
 - Descripción clara del problema.
@@ -42,7 +42,7 @@ Selecciona el día y la hora que mejor se adapte a tu disponibilidad para que po
 ## Preguntas Frecuentes (FAQ)
 
 **¿Cuál es el horario de soporte?**
-Nuestro horario de atención habitual es de Lunes a Viernes de 09:00 a 18:00. Las alertas críticas monitorizadas por nuestros agentes (Tactical RMM) son atendidas en base a tu nivel de SLA contratado.
+Nuestro horario de atención habitual es de Lunes a Viernes de 09:00 a 18:00. Las alertas críticas detectadas por nuestros sistemas de monitorización continua son atendidas en base a tu nivel de SLA contratado.
 
 **¿Qué hago si hay una caída total de mi servidor o red?**
 Si tu plan de servicio incluye soporte para incidencias críticas (P1), por favor utiliza el teléfono de contacto de emergencias que se te proporcionó durante el onboarding.

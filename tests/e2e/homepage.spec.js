@@ -20,14 +20,25 @@ test.describe('Solutech Corporate Portal E2E Suite', () => {
     expect(schemaJson.aggregateRating.ratingValue).toBe('5.0');
     expect(Array.isArray(schemaJson.review)).toBe(true);
     expect(schemaJson.review.length).toBeGreaterThanOrEqual(3);
+  });
 
-    // Validate Testimonials section renders dynamic rating stars
+  test('Quienes Somos page renders corporate identity and client reviews with dynamic rating stars', async ({ page }) => {
+    await page.goto('/quienes-somos/');
+
     const testimonialCards = page.locator('#clientes .test-card');
-    await expect(testimonialCards).toHaveCount(schemaJson.review.length);
+    await expect(testimonialCards.first()).toBeVisible();
     await expect(testimonialCards.first().locator('.test-stars')).toHaveAttribute(
       'aria-label',
       /Calificación \d de 5 estrellas/
     );
+  });
+
+  test('Servicios page renders MSP plans, onboarding process, and collapsible FAQs', async ({ page }) => {
+    await page.goto('/servicios/');
+
+    await expect(page.locator('#primer-mes')).toBeVisible();
+    const faqItems = page.locator('details.svc-faq-item');
+    await expect(faqItems).toHaveCount(4);
   });
 
   test('Cookie Consent Banner appears and can be accepted', async ({ page }) => {
@@ -60,12 +71,12 @@ test.describe('Solutech Corporate Portal E2E Suite', () => {
     await expect(navLinks).toHaveClass(/open/);
   });
 
-  test('Honeypot field handles bot submissions gracefully', async ({ page }) => {
-    await page.goto('/#contacto');
+  test('Honeypot field handles bot submissions gracefully on /contacto/', async ({ page }) => {
+    await page.goto('/contacto/');
 
     const form = page.locator('.cta-form').first();
     if (await form.isVisible()) {
-      const honeypot = form.locator('input[name="website_url"]');
+      const honeypot = form.locator('input[name="website"]');
       if (await honeypot.count() > 0) {
         await honeypot.fill('http://spam-bot.com');
         await form.locator('button[type="submit"]').click();

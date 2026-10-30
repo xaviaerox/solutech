@@ -30,7 +30,7 @@
               <span>•</span>
               <span>{{ .ReadingTime }} min de lectura</span>
               <span>•</span>
-              <span>Por Xavi Alonso</span>
+              <span>Por Solutech</span>
             </div>
           </header>
 
@@ -74,22 +74,6 @@
             {{ .Content }}
           </div>
 
-          {{ with .Params.projects }}
-            {{ range . }}
-              {{ $proj := site.GetPage (printf "/soluciones/%s" .) }}
-              {{ if $proj }}
-              <div class="blog-project-callout">
-                <div class="blog-project-callout-text">
-                  <span class="section-tag" style="margin-bottom: 4px; font-size: 9px;">Proyecto & Caso de Estudio · Solutech Labs</span>
-                  <h4>{{ $proj.Title }}</h4>
-                  <p>{{ $proj.Params.tagline | default $proj.Description }}</p>
-                </div>
-                <a href="{{ $proj.RelPermalink }}" class="blog-project-callout-btn">Ver Ficha Técnica →</a>
-              </div>
-              {{ end }}
-            {{ end }}
-          {{ end }}
-
           <div class="blog-ai-disclosure" style="margin-top: 40px; padding: 18px 22px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--br); border-radius: 12px; font-size: 12px; color: var(--ts); display: flex; align-items: flex-start; gap: 14px; line-height: 1.5;">
             <span style="font-size: 20px;">🛡️</span>
             <div>
@@ -102,9 +86,9 @@
           <div class="blog-author-footer">
             <img src="{{ "images/xavi-alonso.jpeg" | relURL }}" alt="Xavi Alonso" class="author-avatar-img" width="56" height="56" loading="lazy">
             <div class="author-details">
-              <div class="author-role-tag">Sistemas & Seguridad Operativa</div>
+              <div class="author-role-tag">Dirección Técnica · Solutech</div>
               <h3 class="author-name-title">Xavi Alonso</h3>
-              <p class="author-bio-text">Responsable técnico y fundador de Solutech. Especialista en sistemas, soporte micro-MSP y continuidad operativa para pymes en Murcia y Almería.</p>
+              <p class="author-bio-text">Responsable técnico y fundador de Solutech. Especialista en sistemas, soporte IT gestionado y continuidad operativa para empresas en Murcia y Almería.</p>
             </div>
           </div>
         </article>
@@ -128,7 +112,7 @@
           <div class="sidebar-cta-badge">Soporte & Diagnóstico</div>
           <h4 class="sidebar-cta-title">¿Tu empresa está protegida?</h4>
           <p class="sidebar-cta-desc">Auditoría preventiva sin coste para Pymes de Almería y Murcia. Detectamos brechas antes de que causen parálisis.</p>
-          <a href="{{ "/#contacto" | relURL }}" class="btn-p btn-sm" style="width: 100%; justify-content: center;">Diagnóstico Gratuito →</a>
+          <a href="{{ "/contacto/" | relURL }}" class="btn-p btn-sm" style="width: 100%; justify-content: center;">Contactar ahora →</a>
           <a href="{{ "/autodiagnostico/" | relURL }}" class="btn-o btn-sm btn-cybercheck" style="width: 100%; justify-content: center; margin-top: 8px;">Cyber<span style="color: var(--o);">check</span></a>
         </div>
       </aside>

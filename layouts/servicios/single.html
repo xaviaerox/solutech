@@ -1,5 +1,5 @@
 {{ define "main" }}
-<section class="services r in" style="max-width: 1400px; padding: 140px 5% 80px;">
+<section class="services r in" style="max-width: 1400px; padding: 140px 5% 60px;">
   <div class="section-bg bg-services"></div>
   <div class="section-glow"></div>
 
@@ -28,39 +28,80 @@
       </div>
       <div class="svc-footer">
         <span class="svc-price">{{ .price }}{{ .period | safeHTML }}</span>
-        <a href="{{ .link }}" class="svc-link">{{ .cta }} <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="{{ .link | relURL }}" class="svc-link">{{ .cta }} <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
     {{ end }}
   </div>
-
-  <!-- FAQ -->
-  <div style="max-width: 1200px; margin: 80px auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
-      <div>
-        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 12px;">¿Hay permanencia?</h3>
-        <p style="color: var(--tm); font-size: 14px; line-height: 1.7;">No exigimos permanencia. Nuestro modelo se basa en resultados continuos, no en contratos. Si no percibes valor, puedes cancelar con 30 días de preaviso.</p>
-      </div>
-      <div>
-        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 12px;">¿Qué pasa si tengo una urgencia fuera de horario?</h3>
-        <p style="color: var(--tm); font-size: 14px; line-height: 1.7;">Los planes Profesional y Blindaje incluyen canal de WhatsApp Business para urgencias críticas. Tiempo de respuesta garantizado inferior a 2 horas.</p>
-      </div>
-      <div>
-        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 12px;">¿El precio incluye el hardware?</h3>
-        <p style="color: var(--tm); font-size: 14px; line-height: 1.7;">Los precios son de gestión y servicio, no incluyen hardware. Si necesitas equipos, te los presupuestamos aparte sin margen oculto.</p>
-      </div>
-      <div>
-        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 12px;">¿Funciona en remoto o necesitas venir en persona?</h3>
-        <p style="color: var(--tm); font-size: 14px; line-height: 1.7;">El 90% de la gestión es remota mediante RustDesk + Tailscale. Para instalaciones físicas o urgencias presenciales, cubrimos Almería y Murcia.</p>
-      </div>
-    </div>
 </section>
 
-<section class="cta r" id="contacto" style="padding-top: 80px;">
-  <h2>¿Tu empresa está<br><em>realmente protegida?</em></h2>
-  <p>Diagnóstico técnico gratuito. Sin presión. Si no puedo ayudarte, te lo digo.</p>
-  
-  {{ partial "contact-form.html" . }}
+<!-- PROCESO DE ONBOARDING -->
+{{ partial "onboarding.html" . }}
 
-  <div class="cta-note">{{ .Site.Params.email }} · Respuesta en menos de 24h</div>
+<!-- PREGUNTAS FRECUENTES DESPLEGABLES -->
+<section class="r in" id="preguntas-frecuentes" style="max-width: 960px; padding: 40px 5% 80px;">
+  <div class="section-tag">Resolución de Dudas</div>
+  <h2 class="section-h">Preguntas frecuentes<br><em>sobre nuestros servicios.</em></h2>
+
+  <div class="svc-faq-list">
+    <details class="svc-faq-item">
+      <summary class="svc-faq-summary">
+        <span>¿Hay compromiso de permanencia?</span>
+        <svg class="svc-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="svc-faq-body">
+        <p>No exigimos permanencia. Nuestro modelo se basa en resultados continuos, no en contratos que te aten. Si en algún momento no percibes valor, puedes cancelar con un simple preaviso.</p>
+      </div>
+    </details>
+
+    <details class="svc-faq-item">
+      <summary class="svc-faq-summary">
+        <span>¿Qué pasa si tengo una urgencia fuera de horario?</span>
+        <svg class="svc-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="svc-faq-body">
+        <p>Los planes superiores incluyen canal directo prioritario para incidencias críticas que detengan la operativa de la empresa, con tiempos de respuesta garantizados por SLA.</p>
+      </div>
+    </details>
+
+    <details class="svc-faq-item">
+      <summary class="svc-faq-summary">
+        <span>¿El precio mensual incluye el hardware o licencias de terceros?</span>
+        <svg class="svc-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="svc-faq-body">
+        <p>Los planes cubren la gestión, monitorización, seguridad y soporte técnico. Si tu empresa necesita renovar equipos o adquirir hardware específico, te lo presupuestamos aparte con total transparencia y sin márgenes ocultos.</p>
+      </div>
+    </details>
+
+    <details class="svc-faq-item">
+      <summary class="svc-faq-summary">
+        <span>¿El soporte es remoto o también acudís en persona?</span>
+        <svg class="svc-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="svc-faq-body">
+        <p>El 90% de las incidencias y tareas preventivas se resuelven de forma inmediata en remoto mediante canales seguros y cifrados. Para actuaciones físicas, mantenimiento presencial en oficina o urgencias de hardware, damos cobertura directa en Almería y Murcia.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- CTA LIMPIO HACIA CONTACTO -->
+<section class="cta r" style="min-height: auto; padding: 40px 5% 100px;">
+  <div class="section-bg bg-cta"></div>
+  <div class="section-glow"></div>
+
+  <div class="cta-form-card" style="max-width: 680px; padding: 48px 36px;">
+    <span class="section-tag">Asesoramiento sin compromiso</span>
+    <h2>¿No sabes qué plan encaja<br><em>con tu empresa?</em></h2>
+    <p style="max-width: 480px; font-size: 15px; margin-bottom: 32px;">Cuéntanos cuántos equipos tenéis y cómo trabajáis. Te recomendaremos el plan adecuado con total honestidad.</p>
+    
+    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+      <a href="{{ "/contacto/" | relURL }}" class="btn-p">Solicitar propuesta <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="{{ "/autodiagnostico/" | relURL }}" class="btn-o">Hacer Autodiagnóstico IT</a>
+    </div>
+
+    <div class="cta-note">{{ .Site.Params.email }} · Respuesta en menos de 24h</div>
+  </div>
 </section>
 {{ end }}

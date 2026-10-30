@@ -1,7 +1,7 @@
 /**
  * Navigation Module
  * Handles mobile burger menu toggle, click-outside dismissal,
- * and section active state via IntersectionObserver.
+ * active page matching, and section active state via IntersectionObserver.
  */
 export function initNavigation() {
   const sections = document.querySelectorAll("section[id], div[id]");
@@ -36,8 +36,17 @@ export function initNavigation() {
     });
   }
 
-  // Active section highlights via IntersectionObserver
-  if (sections.length > 0 && navLinks.length > 0) {
+  // Highlight active link based on current URL pathname
+  const currentPath = window.location.pathname;
+  navLinks.forEach(a => {
+    const section = a.dataset.section;
+    if (section && currentPath.includes(`/${section}`)) {
+      a.classList.add("nav-active");
+    }
+  });
+
+  // Active section highlights on homepage via IntersectionObserver
+  if (document.body.classList.contains("home") && sections.length > 0 && navLinks.length > 0) {
     const navObs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {

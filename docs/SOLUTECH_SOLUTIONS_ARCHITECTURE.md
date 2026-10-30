@@ -1,20 +1,24 @@
-# Arquitectura Técnica: Soluciones & Solutech Labs (`SOLUTECH_SOLUTIONS_ARCHITECTURE.md`)
+# Arquitectura Técnica: Sección Soluciones & Paquetes (`SOLUTECH_SOLUTIONS_ARCHITECTURE.md`)
 
 ---
 
-## 1. Propósito y Filosofía de Negocio
+## 1. Propósito y Filosofía de Negocio (`v1.4.0` / ADR-024)
 
-Solutech es una empresa tecnológica orientada primordialmente a servicios de gestión IT, ciberseguridad preventiva y continuidad operativa para pequeñas y medianas empresas.
+Solutech es una empresa tecnológica orientada a servicios de gestión IT, ciberseguridad preventiva y continuidad operativa para pequeñas y medianas empresas y particulares.
 
-La capa **Soluciones / Solutech Labs** no es un portfolio de desarrollador ni una oferta de agencia genérica de software bajo demanda. Su función estratégica dentro del sitio web corporativo es:
+A partir de la versión `1.4.0` (**ADR-024**), se ha eliminado la denominación **"Solutech Labs"** y se han retirado de la visualización y navegación los proyectos experimentales o de corte personal/portfolio (`Queryclin`, `MiraTEA`, `AeroGym`), diferenciando estrictamente la identidad corporativa de Solutech frente a un portfolio personal.
 
-> **Servicios = lo que Solutech ofrece comercialmente (Planes MSP de gestión informática y seguridad).**
+La función estratégica de cada sección del portal es:
+
+> **Servicios (`/servicios/`) = Planes MSP de mantenimiento recurrente, proceso de onboarding y preguntas frecuentes.**
 >
-> **Soluciones / Labs = lo que Solutech sabe diseñar, investigar y construir (prueba de capacidad técnica y solvencia metodológica).**
+> **Soluciones (`/soluciones/`) = Paquetes cerrados (*bundles*) asociados a herramientas concretas para pymes y particulares, con un enfoque directo, acotado y llave en mano.**
 >
-> **Blog = donde Solutech documenta, analiza y comparte conocimiento técnico aplicado a negocio.**
-
-Los proyectos propios actúan como **prueba irrefutable de competencia e innovación**, demostrando que Solutech domina arquitecturas de alta privacidad, sistemas distribuidos, inteligencia artificial en el borde y procesamiento de datos críticos.
+> **Quiénes somos (`/quienes-somos/`) = Identidad corporativa de Solutech, liderazgo técnico directo y reseñas reales de clientes.**
+>
+> **Autodiagnóstico (`/autodiagnostico/`) = Herramienta interactiva *Cyber-Check* aislada para evaluar el nivel de riesgo IT.**
+>
+> **Contacto (`/contacto/`) = Punto único y aislado de conversión con formulario protegido de 5 capas anti-spam para métricas limpias.**
 
 ---
 
@@ -22,124 +26,32 @@ Los proyectos propios actúan como **prueba irrefutable de competencia e innovac
 
 La implementación se apoya de forma nativa en **Hugo v0.163+ Extended** para garantizar cero dependencias en tiempo de ejecución y preservar las puntuaciones de 98.5/100 en Google Lighthouse.
 
-### 2.1. Rutas del Sistema
-- **Índice de Soluciones:** `https://solutech.blog/soluciones/`
-  - Archivo fuente: `content/soluciones/_index.md`
-  - Plantilla: `layouts/soluciones/list.html`
-- **Fichas Técnicas Individuales:**
-  - `https://solutech.blog/soluciones/queryclin/` (`content/soluciones/queryclin.md`)
-  - `https://solutech.blog/soluciones/miratea/` (`content/soluciones/miratea.md`)
-  - `https://solutech.blog/soluciones/aerogym/` (`content/soluciones/aerogym.md`)
-  - Plantilla: `layouts/soluciones/single.html`
+### 2.1. Rutas Principales del Sistema (`v1.4.0`)
+- **Portada (`/`):** `layouts/index.html` — Vista ejecutiva ligera (Hero, métricas de impacto, problemas frecuentes, buscador + últimos artículos del blog y CTA limpio sin formularios incrustados).
+- **Servicios (`/servicios/`):** `content/servicios.md` + `layouts/servicios/single.html` — Planes MSP (`data/pricing.yaml`), Proceso de Onboarding (`layouts/partials/onboarding.html`) y FAQs desplegables (`<details class="svc-faq-item">`).
+- **Soluciones (`/soluciones/`):** `content/soluciones/_index.md` + `layouts/soluciones/list.html` — Cabecera enfocada en paquetes cerrados (*bundles*) para pymes y particulares y botón de Call to Action directo hacia `/contacto/`.
+- **Quiénes somos (`/quienes-somos/`):** `content/quienes-somos.md` + `layouts/quienes-somos/single.html` — Presentación empresarial de Solutech (`data/founder.yaml`) y bloque de reseñas verificadas de clientes (`data/testimonials.yaml`).
+- **Diagnóstico IT (`/autodiagnostico/`):** `content/autodiagnostico.md` + `layouts/partials/cybercheck.html` — Test interactivo de 8 preguntas críticas que redirige al finalizar a `/contacto/?riesgo=...&pts=...`.
+- **Contacto (`/contacto/`):** `content/contacto.md` + `layouts/contacto/single.html` — Canales de atención directa y formulario de captación aislado (`layouts/partials/contact-form.html`).
 
 ### 2.2. Flujo de Navegación
-- **Header Principal (`nav.html`):** El enlace huérfano anterior (`/#stack`) fue sustituido por `/soluciones/`, ubicándolo de forma equilibrada tras "Servicios":
-  `Servicios | Soluciones | Proceso | Sobre mí | Blog | Guías | Diagnóstico IT` + CTA `Contacto`.
-- **Footer Corporativo (`footer.html`):** Enlace canónico a "Soluciones & Labs" en la columna *Explorar*, reemplazando el antiguo enlace a portfolio personal externo.
+- **Header Principal (`layouts/partials/nav.html`):**
+  `Servicios | Soluciones | Quiénes somos | Blog | Guías | Diagnóstico IT` + CTA `Contacto` (`/contacto/`).
+- **Footer Corporativo (`layouts/partials/footer.html`):** Enlaces directos a `Planes MSP`, `Soluciones`, `Quiénes somos`, `Blog Técnico`, `Guías`, `Autodiagnóstico IT` y `Contacto`.
 
 ---
 
-## 3. Modelo de Contenido de una Solución
+## 3. Reglas de Privacidad Operacional (OPSEC) y Stack Interno
 
-Cada solución se define como un archivo Markdown en `content/soluciones/<slug>.md` con el siguiente frontmatter estructurado:
-
-```yaml
----
-title: "Nombre Oficial del Proyecto"
-slug: "slug-url"
-tagline: "Subtítulo de alto nivel técnico"
-description: "Descripción resumida optimizada para SEO (máx. 155 caracteres)"
-status: "Demostración técnica | Producción activa | Validación comercial"
-nature: "Solución Local-First | PWA de Rendimiento | Plataforma TEA"
-version: "vX.Y.Z"
-date: "2026-09-05T10:00:00+02:00"
-image: "images/soluciones/imagen-destacada.jpg"
-demo_url: "https://enlace-a-demo-si-existe.com" # Opcional
-github_url: "https://github.com/usuario/repo"     # Opcional
-stack: ["React 19", "TypeScript", "IndexedDB"]
-architecture_pattern: "Clean Architecture / Offline-First / Multitenant RLS"
-collaboration: "Entidad o coordinador clínico/técnico si aplica" # Opcional
-draft: false
----
-```
-
-### Estados de Proyecto Permitidos
-Para no presentar como producto comercial aquello que sea I+D o validación, se definen tres badges semánticos en CSS (`soluciones.css`):
-1. `Producción activa` (`.sol-badge-prod` — Verde esmeralda): Software operativo, desplegado y mantenido activamente.
-2. `Demostración técnica` (`.sol-badge-demo` — Cian): Prueba de concepto, motor open-source o entorno de demostración técnica con datos sintéticos.
-3. `Validación comercial` (`.sol-badge-val` — Ámbar): Solución en fase de pruebas controladas con usuarios o instituciones antes de salida a mercado.
+Por directriz estricta de negocio y seguridad operacional:
+1. **No divulgación de herramientas internas:** En ninguna página comercial (`/servicios/`, `/soporte/`, `/`, etc.) se deben mencionar los nombres de las herramientas internas de administración remota, VPN o RMM (como `RustDesk`, `Tailscale`, `Tactical RMM`, `Proxmox`, `Docker` o `n8n`).
+2. **Preaviso simplificado:** En las condiciones y preguntas frecuentes de `/servicios/` se indica la ausencia de permanencia con baja mediante *preaviso general*, sin exigir plazos de 30 días.
+3. **Calculadora MSP desactivada en navegación:** Los componentes `layouts/partials/calculator.html`, `assets/js/modules/calculator.js` y `assets/css/components/calculator.css` se conservan en el código fuente pero no se renderizan ni enlazan en ninguna vista pública.
 
 ---
 
-## 4. Integración Bidireccional: Solución ↔ Blog
+## 4. Evolución Futura de `/soluciones/` (Paquetes / Bundles)
 
-El sistema implementa una relación bidireccional completamente desacoplada y calculada en build-time:
-
-```text
-       ┌────────────────────────┐
-       │   SOLUCIÓN TÉCNICA     │
-       │  /soluciones/queryclin │
-       └───────────┬────────────┘
-                   │
-                   │ Consulta automática:
-                   │ where Params.projects "intersect" "queryclin"
-                   ▼
-       ┌────────────────────────┐
-       │ ARTÍCULOS RELACIONADOS │
-       │ Artículos sobre BM25,  │
-       │ Privacidad o Local-1st │
-       └───────────▲────────────┘
-                   │
-                   │ Frontmatter en post:
-                   │ projects: ["queryclin"]
-                   │
-       ┌───────────┴────────────┐
-       │     ARTÍCULO BLOG      │
-       │ Callout card hacia la  │
-       │ Ficha de Solución      │
-       └────────────────────────┘
-```
-
-### Cómo Asociar un Artículo del Blog a una Solución
-En cualquier artículo nuevo o existente dentro de `content/blog/`, `content/guias/` o `content/news/`, añade el parámetro `projects` en su frontmatter con el slug del proyecto:
-
-```yaml
----
-title: "IA y Privacidad de Datos en la Pyme"
-projects: ["queryclin", "miratea"]
----
-```
-
-**Resultado Automático:**
-1. En el pie del artículo, Hugo inyecta el componente `.blog-project-callout` invitando a consultar la ficha técnica del proyecto.
-2. En la ficha de `/soluciones/queryclin/`, el artículo aparece listado automáticamente en `"Artículos y Notas Técnicas Relacionadas"`.
-
----
-
-## 5. SEO & Datos Estructurados
-
-- **Breadcrumbs:** `Inicio > Soluciones > [Nombre del Proyecto]`
-- **OpenGraph & Twitter Cards:** Generados dinámicamente según título, descripción e imagen.
-- **Marcado JSON-LD Schema.org:** En cada ficha de solución, `layouts/partials/head.html` inyecta un esquema semántico `SoftwareApplication` que define:
-  - Nombre y descripción técnica.
-  - `applicationCategory`: `BusinessApplication`
-  - `operatingSystem`: `Web, Modern Browser, PWA`
-  - Autor corporativo: `Solutech`
-
----
-
-## 6. Integración con Decap CMS
-
-El archivo `static/admin/config.yml` ha sido actualizado para permitir la gestión visual de Soluciones:
-- Colección `soluciones` (`content/soluciones/`): Permite añadir nuevos proyectos, actualizar estados y modificar stacks.
-- Colección `blog` (`content/blog/`): Incorpora el selector `projects` (lista de slugs) para vincular artículos a soluciones sin tocar código.
-
----
-
-## 7. Protocolo para Añadir Nuevos Proyectos
-
-1. **Crear archivo Markdown:** Añadir `content/soluciones/<nuevo-slug>.md`.
-2. **Definir Frontmatter:** Rellenar título, estado real, naturaleza, stack y URLs oficiales.
-3. **Redactar Caso Técnico:** Describir el problema real, la arquitectura diseñada (incluyendo diagrama de flujo o bloques ASCII), los retos superados y el valor para los clientes de Solutech.
-4. **Vincular Contenidos:** Asignar artículos existentes o redactar una nota técnica con `projects: ["<nuevo-slug>"]`.
-5. **Validación:** Ejecutar `npm run lint` y `hugo -M`.
+Cuando se incorporen los paquetes cerrados (*bundles*) para pymes y particulares en `/soluciones/`:
+1. Cada paquete deberá representar una solución acotada, directa y llave en mano asociada a una necesidad o herramienta concreta (ej. *Pack Backup Inmutable*, *Pack Seguridad de Correo & Identidades*, *Pack Puesto de Trabajo Seguro*).
+2. Su conversión apuntará siempre a `/contacto/` para mantener centralizada la analítica de leads.

@@ -1,15 +1,15 @@
 name: Xavi Alonso
-role: Operador IT & Arquitecto de Infraestructura
-location: Almería · Murcia · Remoto
+role: Dirección Técnica & Fundador · Solutech
+location: Almería · Murcia · Cobertura Remota
 bio: >-
-  Especialista en sistemas y seguridad operativa con más de 12 años de trayectoria. Fundé Solutech para transformar la informática de las pequeñas empresas en una ventaja tranquila e invisible. Mi enfoque no es solo reparar cuando algo se rompe, sino diseñar infraestructuras estables que no fallen. Gestiono tu tecnología con rigor profesional, priorizando la documentación clara, la automatización y la continuidad del negocio.
+  Solutech nació con una misión clara: convertir la informática de las pequeñas y medianas empresas en una ventaja competitiva tranquila, predecible y segura. A diferencia de las grandes consultoras impersonales donde cada incidencia pasa por múltiples intermediarios, en Solutech combinamos una metodología empresarial rigurosa con un trato directo y cercano. Nuestro enfoque no consiste en apagar fuegos cuando algo se rompe, sino en diseñar y mantener infraestructuras estables que simplemente no fallen, priorizando la documentación clara, la prevención y la continuidad del negocio.
 values:
   - title: Tecnología Silenciosa
-    desc: El éxito de mi trabajo es que te olvides de los problemas informáticos. Monitorización activa y prevención para que tu operativa diaria nunca se detenga.
+    desc: El éxito de nuestro trabajo es que tu equipo se olvide de los problemas informáticos. Monitorización activa y prevención continua para que la operativa diaria nunca se detenga.
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
   - title: Arquitectura de Continuidad
-    desc: Sin soluciones improvisadas. Construimos entornos estables basados en copias de seguridad verificadas, seguridad de red y procesos automatizados.
+    desc: Sin parches improvisados. Construimos entornos empresariales estables basados en copias de seguridad verificadas, seguridad perimetral y procesos estandarizados.
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-  - title: Partner IT Externo
-    desc: Actúo como tu propio departamento técnico. Documentación clara y centralizada, soporte directo y visión estratégica para el crecimiento de tu empresa.
+  - title: Departamento IT Externo
+    desc: Actuamos como el departamento técnico de tu empresa. Documentación centralizada, interlocución directa con dirección técnica y visión estratégica para acompañar tu crecimiento.
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>

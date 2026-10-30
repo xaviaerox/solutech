@@ -6,13 +6,13 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 48
+- **Total de tareas registradas:** 49
 - **Tareas pendientes:** 0
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
-- **Tareas completadas:** 48
+- **Tareas completadas:** 49
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-10-23
+- **Última actualización:** 2026-10-30
 
 ---
 
@@ -54,6 +54,48 @@ Resumen del estado operativo de la web pública y blog de Solutech:
 ---
 
 # Historial de Tareas
+
+## TASK-049 — Reestructuración Modular del Portal Web Solutech: Aislamiento de Secciones (/servicios/, /contacto/, /quienes-somos/, /soluciones/), OPSEC de Stack Interno y FAQs Desplegables (2026-10-30)
+
+- **Estado:** COMPLETADA
+- **Fecha:** 2026-10-30
+- **Tipo:** Architecture / UX / OPSEC / Analytics
+- **Descripción:** Reingeniería de navegación, arquitectura de páginas y posicionamiento corporativo del portal web `solutech` (v1.4.0):
+  1. **Aligeramiento de la Portada (`layouts/index.html`):** Retirada de las secciones incrustadas de planes MSP (`#servicios`), calculadora de precios (`calculator.html` mantenida únicamente en código/configuración), proceso de onboarding (`onboarding.html`), testimonios (`#clientes`), presentación personal (`#sobre-mi`) y formulario de contacto embebido (`contact-form.html`), dejando una portada limpia con CTAs directos hacia `/autodiagnostico/`, `/servicios/` y `/contacto/`.
+  2. **Consolidación de `/servicios/` (`layouts/servicios/single.html`):** Integración del Proceso de Onboarding (`onboarding.html`), transformación de las preguntas frecuentes en acordeones desplegables (`<details class="svc-faq-item">`), simplificación de la cláusula de baja a preaviso general (eliminando los 30 días) y erradicación de menciones a herramientas de stack interno (`RustDesk`, `Tailscale`, `Tactical RMM`, `Docker`, `Proxmox`, `n8n`).
+  3. **Aislamiento del Formulario de Contacto en `/contacto/`:** Creación de `content/contacto.md` y `layouts/contacto/single.html` como punto único de conversión de leads comerciales, con pre-rellenado automático desde `/autodiagnostico/` vía parámetros URL (`?riesgo=&pts=`) en `assets/js/forms.js` y `assets/js/modules/cybercheck.js`.
+  4. **Página Corporativa y Reseñas en `/quienes-somos/`:** Creación de `content/quienes-somos.md` y `layouts/quienes-somos/single.html`, diferenciando a Solutech de un portfolio personal (`data/founder.yaml`) y agrupando allí las reseñas verificadas de clientes (`data/testimonials.yaml`) junto con el marcado JSON-LD `ProfessionalService` (`AggregateRating` + `Review`).
+  5. **Limpieza de `/soluciones/` y Supresión de Solutech Labs:** Eliminación de referencias a "Solutech Labs" y despublicación (`draft: true`) de fichas de proyectos personales (`queryclin`, `miratea`, `aerogym`), dejando en `/soluciones/` una vista directa enfocada en futuros paquetes/bundles para pymes y particulares con botón de Call to Action.
+- **Archivos Modificados:**
+  - `layouts/index.html`
+  - `layouts/partials/nav.html`
+  - `layouts/partials/footer.html`
+  - `layouts/partials/head.html`
+  - `layouts/partials/cybercheck.html`
+  - `layouts/servicios/single.html`
+  - `layouts/soluciones/list.html`
+  - `layouts/_default/single.html`
+  - `layouts/contacto/single.html` (nuevo)
+  - `layouts/quienes-somos/single.html` (nuevo)
+  - `content/contacto.md` (nuevo)
+  - `content/quienes-somos.md` (nuevo)
+  - `content/soporte.md`
+  - `content/soluciones/_index.md`
+  - `content/soluciones/queryclin.md`
+  - `content/soluciones/miratea.md`
+  - `content/soluciones/aerogym.md`
+  - `data/pricing.yaml`
+  - `data/founder.yaml`
+  - `assets/css/main.css`
+  - `assets/js/forms.js`
+  - `assets/js/modules/cybercheck.js`
+  - `assets/js/modules/nav.js`
+  - `assets/js/modules/scroll.js`
+  - `tests/e2e/homepage.spec.js`
+  - `package.json`
+  - `CHANGELOG.md`
+  - `PROJECT_CONTEXT.md`
+  - `TASKS.md`
 
 ## TASK-048 — Mejora Integral del Sistema de Reseñas: Estrellas Dinámicas, Colección Decap CMS y Datos Estructurados SEO (2026-10-23)
 

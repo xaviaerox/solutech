@@ -1,4 +1,4 @@
----
+﻿---
 title: "MiraTEA — Plataforma Digital TEA & Neurodiversity-First"
 slug: "miratea"
 tagline: "Acompañamiento, Autonomía y Autorregulación Emocional en Entornos TEA"
@@ -10,7 +10,7 @@ date: "2026-09-05T10:00:00+02:00"
 image: "images/soluciones/miratea.jpg"
 stack: ["Next.js", "TypeScript", "Supabase", "PostgreSQL RLS", "Web Audio API", "pgvector RAG", "PWA"]
 architecture_pattern: "Dual-Adapter (Offline Static + Cloud Supabase) / Multitenant RLS"
-draft: false
+draft: true
 ---
 
 ### El Desafío: Tecnología Amable vs. Dinámicas de Ansiedad

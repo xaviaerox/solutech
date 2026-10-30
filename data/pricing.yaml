@@ -10,7 +10,7 @@
     - Backup gestionado verificado
     - 1 visita preventiva al trimestre
   cta: Empezar
-  link: "#contacto"
+  link: "/contacto/"
 
 - id: pack-s-pro
   name: S Pro
@@ -26,7 +26,7 @@
     - Gestión de red y WiFi corporativa
     - 1 visita preventiva al mes
   cta: Empezar
-  link: "#contacto"
+  link: "/contacto/"
 
 - id: pack-m-basic
   name: M Basic
@@ -40,7 +40,7 @@
     - Automatizaciones IT básicas
     - 2 visitas preventivas al mes
   cta: Empezar
-  link: "#contacto"
+  link: "/contacto/"
 
 - id: pack-m-pro
   name: M Pro
@@ -54,4 +54,4 @@
     - Roadmap y reunión tecnológica
     - 2 visitas preventivas al mes
   cta: Empezar
-  link: "#contacto"
+  link: "/contacto/"

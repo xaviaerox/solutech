@@ -1,4 +1,4 @@
----
+﻿---
 title: "AeroGym — PWA de Rendimiento Deportivo & Coach con IA"
 slug: "aerogym"
 tagline: "Entrenamiento de Fuerza, Ingesta Universal de Salud y Resiliencia Offline-First"
@@ -10,7 +10,7 @@ date: "2026-09-05T10:00:00+02:00"
 image: "images/soluciones/aerogym.jpg"
 stack: ["React 19", "TypeScript", "Vite", "Zustand", "Supabase Postgres", "pgvector RAG", "Groq Llama 3.3", "IndexedDB", "WebCrypto AES-256"]
 architecture_pattern: "Clean Architecture / Offline-First Queue / Inyección de Dependencias / Edge Proxy"
-draft: false
+draft: true
 ---
 
 ### El Desafío: Rendimiento Deportivo en Entornos Desconectados

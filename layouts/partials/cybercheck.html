@@ -151,25 +151,10 @@
       <h4 id="cc-risk-title" style="font-family: var(--cc-mono); color: #fff; margin-bottom: 8px;">-</h4>
       <p id="cc-risk-desc" style="color: var(--cc-text-dim); font-size: 14px; max-width: 500px; margin: 0 auto 20px;">-</p>
 
-      <a href="#contacto" class="cc-cta-btn">
+      <a href="{{ "/contacto/" | relURL }}" class="cc-cta-btn">
         <span>SOLICITAR INFORME DE MITIGACIÓN &rarr;</span>
       </a>
     </div>
 
   </main>
 </div>
-
-<!-- CTA / CONTACTO -->
-<section class="cta r" id="contacto" style="margin-top: 60px;">
-  <div class="section-bg bg-cta"></div>
-  <div class="section-glow"></div>
-  
-  <div class="cta-form-card">
-    <h2>Solicitar Informe de Mitigación<br><em>y Solución a Medida</em></h2>
-    <p>Cuéntanos sobre tu empresa y nos pondremos en contacto contigo en menos de 24 horas con un plan de acción personalizado.</p>
-    
-    {{ partial "contact-form.html" . }}
-
-    <div class="cta-note">{{ .Site.Params.email | default "xavi@solutech.blog" }} · Respuesta en menos de 24h · Sin compromiso</div>
-  </div>
-</section>

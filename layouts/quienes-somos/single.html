@@ -1,0 +1,83 @@
+{{ define "main" }}
+<!-- QUIÉNES SOMOS -->
+<section class="about r in" id="sobre-mi" style="max-width: 1200px; padding: 140px 5% 60px;">
+  <div class="section-bg bg-founder"></div>
+  <div class="section-glow"></div>
+  <div class="section-tag">Quiénes somos</div>
+  <h1 class="section-h" style="font-size: clamp(34px, 5vw, 56px); margin-bottom: 40px;">Rigor de consultora.<br><em>Compromiso y trato directo.</em></h1>
+  
+  <div class="about-grid" style="max-width: 1050px;">
+    <div class="about-photo" role="img" aria-label="Xavi Alonso, Dirección Técnica y Fundador de Solutech" style="background-image: url('{{ "images/xavi-alonso.jpg" | relURL }}'); background-size: cover; background-position: center;">
+      <div class="about-photo-caption">
+        <div class="about-name">{{ site.Data.founder.name }}</div>
+        <div class="about-role">{{ site.Data.founder.role }}</div>
+      </div>
+    </div>
+    <div class="about-content">
+      <div class="about-p">{{ site.Data.founder.bio | markdownify }}</div>
+      <div class="vals">
+        {{ range site.Data.founder.values }}
+        <div class="val">
+          <div class="val-icon">{{ .icon | safeHTML }}</div>
+          <div><div class="val-t">{{ .title }}</div><div class="val-d">{{ .desc }}</div></div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEÑAS / TESTIMONIOS DE CLIENTES -->
+{{ $testimonials := site.Data.testimonials }}
+{{ if reflect.IsMap $testimonials }}
+  {{ $testimonials = $testimonials.items }}
+{{ end }}
+<section class="testimonials r in" id="clientes" style="max-width: 1200px; padding: 40px 5% 80px;">
+  <div class="section-bg bg-testimonials" style="opacity: 0.06;"></div>
+  <div class="section-glow"></div>
+  <div class="section-tag">Clientes reales</div>
+  <h2 class="section-h">Lo que dicen las empresas<br><em>que confían en Solutech.</em></h2>
+  <div class="test-grid">
+    {{ range $testimonials }}
+    {{ $rawRating := default 5 (int .rating) }}
+    {{ $rating := cond (lt $rawRating 1) 1 (cond (gt $rawRating 5) 5 $rawRating) }}
+    {{ $emptyStars := sub 5 $rating }}
+    {{ $initial := default (upper (substr .name 0 1)) .initial }}
+    <div class="test-card">
+      <div class="test-header">
+        <div class="test-stars" aria-label="Calificación {{ $rating }} de 5 estrellas">
+          {{- range seq $rating }}★{{ end -}}
+          {{- if gt $emptyStars 0 }}<span class="star-empty">{{ range seq $emptyStars }}★{{ end }}</span>{{ end -}}
+        </div>
+        <div class="test-quote-icon">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        </div>
+      </div>
+      <p class="test-text">"{{ .text }}"</p>
+      <div class="test-author">
+        <div class="test-initial">{{ $initial }}</div>
+        <div class="test-info">
+          <div class="test-name">{{ .name }}</div>
+          <div class="test-role">{{ .role }}</div>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta r" style="min-height: auto; padding: 20px 5% 100px;">
+  <div class="section-bg bg-cta"></div>
+  <div class="section-glow"></div>
+  <div class="cta-form-card" style="max-width: 680px; padding: 48px 36px;">
+    <span class="section-tag">Hablemos de tu empresa</span>
+    <h2>¿Buscas un socio tecnológico<br><em>en el que poder delegar?</em></h2>
+    <p style="max-width: 480px; font-size: 15px; margin-bottom: 32px;">Conoce nuestros planes de mantenimiento preventivo o escríbenos directamente para analizar el caso de tu empresa.</p>
+    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+      <a href="{{ "/contacto/" | relURL }}" class="btn-p">Contactar ahora <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="{{ "/servicios/" | relURL }}" class="btn-o">Ver planes MSP</a>
+    </div>
+  </div>
+</section>
+{{ end }}

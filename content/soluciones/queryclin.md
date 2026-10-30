@@ -1,4 +1,4 @@
----
+﻿---
 title: "Queryclin — HCE Intelligence & Admin Studio"
 slug: "queryclin"
 tagline: "Exploración y Auditoría de Historias Clínicas Electrónicas con Privacidad Local-First"
@@ -13,7 +13,7 @@ github_url: "https://github.com/xaviaerox/Queryclin"
 stack: ["React 19", "TypeScript", "Vite", "IndexedDB", "Web Workers", "Okapi BM25", "TailwindCSS"]
 architecture_pattern: "Local-First / Parallel Streaming Workers / Clean Architecture"
 collaboration: "Coordinación técnica y clínica con D. Ignacio Martínez Soriano (Jefe de Análisis de Datos, Hospital Rafael Méndez de Lorca)"
-draft: false
+draft: true
 ---
 
 ### El Desafío Clínico y Tecnológico

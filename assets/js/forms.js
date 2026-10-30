@@ -1,6 +1,28 @@
 document.addEventListener("DOMContentLoaded", function() {
   const pageLoadTime = Date.now();
   const forms = document.querySelectorAll(".cta-form");
+
+  // Pre-fill lead form if arriving from Cyber-Check (/autodiagnostico/)
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const riesgoParam = urlParams.get("riesgo");
+    const ptsParam = urlParams.get("pts");
+    if (riesgoParam) {
+      const msgInput = document.getElementById("mensaje-lead");
+      const preocupacionInput = document.getElementById("preocupacion-lead");
+      if (preocupacionInput && !preocupacionInput.value) {
+        preocupacionInput.value = "seguridad";
+      }
+      if (msgInput) {
+        const diagPrefix = `[Autodiagnóstico Cyber-Check: ${riesgoParam}${ptsParam ? ` (${ptsParam} pts)` : ""}] `;
+        if (!msgInput.value.includes(diagPrefix)) {
+          msgInput.value = msgInput.value ? `${diagPrefix}\n${msgInput.value}` : diagPrefix;
+        }
+      }
+    }
+  } catch (err) {
+    // Ignore URLSearchParams errors in legacy environments
+  }
   
   forms.forEach(form => {
     form.addEventListener("submit", function(event) {

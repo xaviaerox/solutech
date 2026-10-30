@@ -7,7 +7,7 @@
     <meta name="keywords" content="{{ delimit . ", " }}">
     {{ end }}
     <meta name="robots" content="index, follow">
-    <meta name="author" content="Xavi Alonso · Solutech">
+    <meta name="author" content="Solutech">
     
     <link rel="canonical" href="{{ .Permalink }}">
     <meta name="theme-color" content="#07070b">
@@ -45,7 +45,7 @@
     <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
 
     <!-- Schema.org LocalBusiness -->
-    {{ if .IsHome }}
+    {{ if or .IsHome (eq .Type "quienes-somos") }}
     {{ $b := .Site.Params.business }}
     {{ $testimonials := site.Data.testimonials }}
     {{ if reflect.IsMap $testimonials }}
@@ -146,8 +146,8 @@
       "dateModified": "{{ .Format "2006-01-02T15:04:05-07:00" }}",
       {{ end }}
       "author": {
-        "@type": "Person",
-        "name": "Xavi Alonso"
+        "@type": "Organization",
+        "name": "Solutech"
       },
       "publisher": {
         "@type": "Organization",
@@ -166,7 +166,7 @@
     {{ end }}
     {{ end }}
 
-    <!-- Schema.org SoftwareApplication para Soluciones & Labs -->
+    <!-- Schema.org SoftwareApplication para Soluciones -->
     {{ if eq .Section "soluciones" }}
     {{ if .IsPage }}
     <script type="application/ld+json">

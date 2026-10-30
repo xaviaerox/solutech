@@ -1240,3 +1240,59 @@ nav#main-nav {
 .search-input::placeholder {
     color: rgba(255, 255, 255, 0.4);
 }
+
+
+/* COLLAPSIBLE FAQ ACCORDION (/servicios/) */
+.svc-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 24px;
+}
+.svc-faq-item {
+    background: var(--s1);
+    border: 1px solid var(--br);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.25s ease, background 0.25s ease;
+}
+.svc-faq-item:hover {
+    border-color: rgba(232, 98, 26, 0.35);
+}
+.svc-faq-item[open] {
+    background: var(--s2);
+    border-color: var(--o);
+}
+.svc-faq-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    font-family: var(--f-h);
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+}
+.svc-faq-summary::-webkit-details-marker {
+    display: none;
+}
+.svc-faq-chevron {
+    color: var(--o);
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+.svc-faq-item[open] .svc-faq-chevron {
+    transform: rotate(180deg);
+}
+.svc-faq-body {
+    padding: 0 24px 22px;
+    color: var(--tm);
+    font-size: 14.5px;
+    line-height: 1.7;
+    border-top: 1px solid var(--br);
+    padding-top: 16px;
+}

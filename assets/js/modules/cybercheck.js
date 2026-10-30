@@ -132,38 +132,18 @@ export function initCyberCheck() {
         if (riskDesc) riskDesc.textContent = "Su pyme cuenta con una postura sólida de ciberseguridad. Recomendamos auditorías periódicas para mantener el nivel.";
       }
 
+      if (ctaBtn) {
+        const baseHref = ctaBtn.getAttribute("href").split("?")[0] || "/contacto/";
+        const params = new URLSearchParams({
+          riesgo: currentRiskLevel,
+          pts: String(currentTotalPoints)
+        });
+        ctaBtn.setAttribute("href", `${baseHref}?${params.toString()}`);
+      }
+
       setTimeout(() => {
         summaryCard.scrollIntoView({ behavior: "smooth", block: "center" });
       }, 350);
     }
-  }
-
-  // Pre-fill contact form when clicking on the mitigation report CTA
-  if (ctaBtn) {
-    ctaBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      const msgInput = document.getElementById("mensaje-lead");
-      const preocupacionInput = document.getElementById("preocupacion-lead");
-
-      if (preocupacionInput && !preocupacionInput.value) {
-        preocupacionInput.value = "seguridad";
-      }
-
-      if (msgInput && currentRiskLevel) {
-        const diagPrefix = `[Autodiagnóstico Cyber-Check: ${currentRiskLevel} (${currentTotalPoints} pts)] `;
-        if (!msgInput.value.includes(diagPrefix)) {
-          msgInput.value = msgInput.value ? `${diagPrefix}\n${msgInput.value}` : diagPrefix;
-        }
-      }
-
-      const contactSection = document.getElementById("contacto");
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
-        const firstInput = contactSection.querySelector("input:not([type='hidden']), textarea");
-        if (firstInput) {
-          setTimeout(() => firstInput.focus(), 600);
-        }
-      }
-    });
   }
 }
