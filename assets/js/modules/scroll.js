@@ -80,7 +80,7 @@ export function initScrollEffects() {
   if (document.body.classList.contains("home")) {
     const leftArrow = document.getElementById("scroll-left");
     const rightArrow = document.getElementById("scroll-right");
-    const homeSections = Array.from(document.querySelectorAll(".hero, .impact, #problema, #blog, #cta-home"));
+    const homeSections = Array.from(document.querySelectorAll(".hero, #blog, #cta-home"));
     const navOffset = 80;
 
     if (leftArrow && rightArrow) {

@@ -32,9 +32,9 @@ Explicación de alto nivel del sistema:
 El repositorio `solutech` gestiona el frontend comercial público de Solutech. Utiliza Hugo para generar HTML estático empaquetado a partir de plantillas en `layouts/` y archivos Markdown en `content/`. Incluye un sistema modular de estilos CSS Vanilla y módulos JavaScript ES6 puros. La edición de contenidos se realiza vía Decap CMS (`static/admin/config.yml`) conectándose a un servidor OAuth en VPS, y mediante publicación automatizada desde `content-system` a través de GitHub Actions (`.github/workflows/auto-blog.yml`).
 
 **Qué hace:**
-- Presenta una portada (`layouts/index.html`) ligera y enfocada (Hero, métricas de impacto, problemas habituales de las pymes, buscador + últimos artículos del blog y llamada a la acción limpia).
+- Presenta una portada (`layouts/index.html`) limpia y enfocada (Hero, Ticker de capacidades, buscador + últimos artículos del blog y llamada a la acción hacia `/autodiagnostico/` y `/contacto/`), manteniendo temporalmente ocultas en plantilla (`{{/* ... */}}`) las secciones de indicadores (`.impact`) y problemas habituales (`#problema`) hasta definir la estrategia definitiva del embudo de captación y el catálogo de *bundles*.
 - Presenta en `/servicios/` (`layouts/servicios/single.html`) los planes de soporte MSP, el proceso de onboarding paso a paso (`onboarding.html`) y preguntas frecuentes desplegables (`<details class="svc-faq-item">`), sin exponer herramientas del stack interno.
-- Presenta en `/quienes-somos/` (`layouts/quienes-somos/single.html`) la identidad corporativa de Solutech junto con las reseñas verificadas de clientes (`data/testimonials.yaml`) y datos estructurados Schema.org.
+- Presenta en `/quienes-somos/` (`layouts/quienes-somos/single.html`) la identidad corporativa canónica de Solutech (`data/founder.yaml`) junto con las reseñas verificadas de clientes (`data/testimonials.yaml`) y datos estructurados Schema.org.
 - Presenta la sección `/soluciones/` (`layouts/soluciones/list.html`) enfocada en futuros paquetes cerrados (*bundles*) para pymes y particulares con llamada a la acción directa (eliminando la antigua marca "Solutech Labs" y fichas de portfolio personal de la visualización y navegación).
 - Proporciona en `/autodiagnostico/` la herramienta *Cyber-Check* (autodiagnóstico interactivo de 8 preguntas críticas con interfaz Dark Terminal), redirigiendo al finalizar hacia `/contacto/` con pre-rellenado automático de resultados.
 - Aísla el formulario de contacto en `/contacto/` (`layouts/contacto/single.html`), protegido con un pipeline anti-spam de 5 capas en cliente y servidor (`assets/js/forms.js` -> `https://n8n.solutech.blog/webhook/leads`) para una medición analítica precisa.
@@ -118,7 +118,7 @@ solutech/
 # Seguridad & Protección de Datos Sensibles
 
 > [!CAUTION]
-> **REPOSITO PÚBLICO - REGLA DE SEGURIDAD STRICT-ZERO DISCLOSURE:**
+> **REPOSITORIO PÚBLICO - REGLA DE SEGURIDAD STRICT-ZERO DISCLOSURE:**
 > Este repositorio (`xaviaerox/solutech`) es **PÚBLICO**. Bajo ninguna circunstancia se debe incluir ni commitear información sensible, incluyendo:
 > - Claves API o tokens privados.
 > - Contraseñas o credenciales de correo.
@@ -133,9 +133,10 @@ solutech/
 # Guía para Agentes IA
 
 1. **Protección de Datos y OPSEC:** Verificar SIEMPRE que no se añadan credenciales, IPs, datos privados ni menciones al stack de administración interna en ningún archivo de este repositorio público.
-2. **Cero Frameworks Pesados:** Todo código UI en este repositorio debe mantenerse en **Vanilla CSS** y **JS ES6 nativo**. No instales ni utilices React, Vue, Tailwind ni Bootstrap.
-3. **Preservar la Puntuación Lighthouse:** Mantener la optimización de activos y huellas SRI (`js.Build` / `resources.Minify`).
-4. **Mantener la SSOT Actualizada:** Ante cualquier cambio en las rutas, diseño o integración de Decap CMS, actualiza este archivo y el SSOT global en `C:\Users\Xaviaerox\Documents\GitHub\PROJECT_CONTEXT.md`.
+2. **Inmutabilidad del Copy Institucional:** Nunca alterar de forma autónoma los textos canónicos de `layouts/partials/footer.html` (*"Arquitectura IT"*), `data/founder.yaml` ni `layouts/quienes-somos/single.html` sin presentar tabla comparativa previa y obtener validación expresa. Prohibido el uso de *"apagar fuegos"* o comparativas con *"grandes consultoras"*.
+3. **Cero Frameworks Pesados:** Todo código UI en este repositorio debe mantenerse en **Vanilla CSS** y **JS ES6 nativo**. No instales ni utilices React, Vue, Tailwind ni Bootstrap.
+4. **Preservar la Puntuación Lighthouse:** Mantener la optimización de activos y huellas SRI (`js.Build` / `resources.Minify`).
+5. **Mantener la SSOT Actualizada:** Ante cualquier cambio en las rutas, diseño o integración de Decap CMS, actualiza este archivo y el SSOT global en `C:\Users\Xaviaerox\Documents\GitHub\PROJECT_CONTEXT.md`.
 
 ---
 

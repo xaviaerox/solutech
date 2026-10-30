@@ -31,3 +31,8 @@ This file defines project-specific rules and behavior constraints for Antigravit
      - If services, SLAs, or operations changed ➔ Update `03_PRODUCTS/` or `04_OPERACIONES/`.
   5. **Master Credentials Synchronization:** Immediately update `C:\Users\Xaviaerox\Documents\GitHub\.env` if any env var, token, or key was added or modified.
 
+
+## Institutional Copy & Canonical Text Immutability
+- **Strict Rule:** Never alter, rewrite, or paraphrase institutional copy, founder bio (`data/founder.yaml`), section titles (`layouts/quienes-somos/single.html`, `layouts/index.html`), or footer branding (`layouts/partials/footer.html` -> `Arquitectura IT`) unless explicitly requested by the user.
+- **Comparison & Approval Protocol:** If a structural change suggests adjusting any copy, you **must** first present a side-by-side table (Original vs. Proposed + Justification) and wait for explicit user approval before modifying the text.
+- **Forbidden Expressions:** Never use colloquialisms like *"apagar fuegos"* or comparisons against *"grandes consultoras"* in Solutech's institutional texts.

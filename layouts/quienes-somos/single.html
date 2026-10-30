@@ -4,13 +4,13 @@
   <div class="section-bg bg-founder"></div>
   <div class="section-glow"></div>
   <div class="section-tag">Quiénes somos</div>
-  <h1 class="section-h" style="font-size: clamp(34px, 5vw, 56px); margin-bottom: 40px;">Rigor de consultora.<br><em>Compromiso y trato directo.</em></h1>
+  <h1 class="section-h" style="font-size: clamp(34px, 5vw, 56px); margin-bottom: 40px;">Tecnología estable.<br><em>Compromiso y trato directo.</em></h1>
   
   <div class="about-grid" style="max-width: 1050px;">
-    <div class="about-photo" role="img" aria-label="Xavi Alonso, Dirección Técnica y Fundador de Solutech" style="background-image: url('{{ "images/xavi-alonso.jpg" | relURL }}'); background-size: cover; background-position: center;">
+    <div class="about-photo" role="img" aria-label="Xavi Alonso, Especialista IT y Fundador de Solutech" style="background-image: url('{{ "images/xavi-alonso.jpg" | relURL }}'); background-size: cover; background-position: center;">
       <div class="about-photo-caption">
         <div class="about-name">{{ site.Data.founder.name }}</div>
-        <div class="about-role">{{ site.Data.founder.role }}</div>
+        <div class="about-role">{{ site.Data.founder.role }} · {{ site.Data.founder.location }}</div>
       </div>
     </div>
     <div class="about-content">
@@ -36,7 +36,7 @@
   <div class="section-bg bg-testimonials" style="opacity: 0.06;"></div>
   <div class="section-glow"></div>
   <div class="section-tag">Clientes reales</div>
-  <h2 class="section-h">Lo que dicen las empresas<br><em>que confían en Solutech.</em></h2>
+  <h2 class="section-h">Lo que dicen<br><em>los que confían en Solutech.</em></h2>
   <div class="test-grid">
     {{ range $testimonials }}
     {{ $rawRating := default 5 (int .rating) }}
