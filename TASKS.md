@@ -6,19 +6,27 @@
 
 Resumen del estado operativo de la web pública y blog de Solutech:
 
-- **Total de tareas registradas:** 49
-- **Tareas pendientes:** 0
+- **Total de tareas registradas:** 50
+- **Tareas pendientes:** 1
 - **Tareas en progreso:** 0
 - **Tareas bloqueadas:** 0
 - **Tareas completadas:** 49
 - **Tareas canceladas / descartadas:** 0
-- **Última actualización:** 2026-10-30
+- **Última actualización:** 2026-11-11
 
 ---
 
 # Tareas Activas
 
-*No hay tareas activas pendientes en este momento.*
+## TASK-050 — Evaluación e Integración Editorial de Recurso Externo en Artículo sobre Deepfake CFO (2026-11-11)
+
+- **Estado:** PENDIENTE DE REVISIÓN
+- **Fecha:** 2026-11-11
+- **Tipo:** Edición Editorial / Verificación de Fuentes Externas
+- **Descripción:** Evaluación independiente de la guía externa `https://identityphone.com/en/solutions/payment-request-verification/` e incorporación de un párrafo complementario y neutral al final de la sección `El patrón que sí funciona: verificar el proceso, no el contenido` en `content/blog/2026-08-04-deepfake-fraude-ceo-empresas-2026.md`, aportando controles operativos para departamentos financieros (doble aprobación, periodos de espera en primeros pagos, lista de comprobación y alcance real del cotejo titular-IBAN). Pendiente de revisión y autorización expresa del usuario antes de publicar/commitear cambios.
+- **Archivos Modificados:**
+  - `content/blog/2026-08-04-deepfake-fraude-ceo-empresas-2026.md`
+  - `TASKS.md`
 
 ---
 

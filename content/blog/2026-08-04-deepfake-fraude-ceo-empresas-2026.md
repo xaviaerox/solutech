@@ -42,6 +42,8 @@ Todos los ataques de *CEO Fraud* o suplantación de proveedores basados en IA co
 
 La defensa efectiva no requiere volverse un perito en detección sintética. La regla de oro en ciberseguridad procesal es tajante: **Ninguna instrucción que implique movimiento de fondos o cambio de cuentas bancarias se ejecuta basándose solo en el canal por el que llega.** Cualquier modificación de este tipo debe ser verificada obligatoriamente a través de un **canal secundario fuera de banda** (llamando a un número de teléfono prefijado en los sistemas internos, nunca al indicado en el mensaje sospechoso).
 
+Para aterrizar esta regla en la operativa del equipo financiero, puedes consultar como recurso complementario esta [guía sobre verificación de solicitudes de pago por teléfono](https://identityphone.com/en/solutions/payment-request-verification/) (en inglés). Detalla controles concretos —como la doble aprobación en cuentas nuevas o modificadas, periodos de espera en primeros pagos y una lista rápida de comprobación— y recuerda que el cotejo bancario entre titular e IBAN no valida que la orden sea legítima.
+
 ---
 
 ## Novedades legales: El Reglamento Europeo de IA (AI Act)
